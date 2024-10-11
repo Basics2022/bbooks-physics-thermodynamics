@@ -5,6 +5,7 @@ format: jb-book
 root: intro
 parts:
 - caption: Termodinamica
+  chapters:
   - file: ch/history
   - file: ch/principles
   - file: ch/potentials
