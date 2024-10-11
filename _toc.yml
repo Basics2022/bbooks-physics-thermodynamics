@@ -3,5 +3,15 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: markdown
+parts:
+- caption: Termodinamica
+  - file: ch/history
+  - file: ch/principles
+  - file: ch/potentials
+  - file: ch/coefficients
+  - file: ch/media
+    sections:
+    - file: ch/ideal_gases
+  - file: ch/thermodynamic_transformations
+  - file: ch/heat_engines
+  - file: ch/heat_transmission
