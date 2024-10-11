@@ -1,5 +1,5 @@
-(book:classical-mechanics)=
-# Meccanica classica
+(book:classical-thermodynamics)=
+# Termodinamica classica
 
 **Introduzione.**
 - la termodinamica si occupa della forme di energia, e delle sue variazioni attraverso scambi di lavoro e calore;
