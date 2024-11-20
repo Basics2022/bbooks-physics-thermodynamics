@@ -59,6 +59,6 @@ $$\begin{cases}
 e
 
 $$\begin{cases}
- \dfrac{\partial F_i}{x_j} & =  \dfrac{\partial F_j}{\partial x_i} \\
- \dfrac{\partial x_i}{F_j} & =  \dfrac{\partial x_j}{\partial F_i} \\
+ \dfrac{\partial F_i}{\partial x_j} & =  \dfrac{\partial F_j}{\partial x_i} \\
+ \dfrac{\partial x_i}{\partial F_j} & =  \dfrac{\partial x_j}{\partial F_i} \\
 \end{cases}$$

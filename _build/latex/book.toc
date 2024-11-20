@@ -1,0 +1,10 @@
+\selectlanguage *{english}
+\contentsline {chapter}{\numberline {1}Storia della termodinamica}{3}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Princìpi della termodinamica}{5}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Potenziali termodinamici}{9}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Coefficienti termodinamici}{11}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Stati della materia e modelli}{13}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Gas ideali}{13}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Trasformazioni termodinamiche}{15}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Cicli termodinamici e macchine termiche}{17}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Meccanismi di trasmissione del calore}{19}{chapter.8}%
