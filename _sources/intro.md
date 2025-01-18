@@ -1,5 +1,7 @@
 (book:classical-thermodynamics)=
-# Termodinamica classica
+# Classical thermodynamics
+
+This material is part of the [**basics-books project**](https://basics2022.github.io/bbooks). It is also available as a [.pdf document](_build/latex/book.pdf).
 
 **Introduzione.**
 - la termodinamica si occupa della forme di energia, e delle sue variazioni attraverso scambi di lavoro e calore;
