@@ -1,11 +1,17 @@
+<!--
 ```{article-info}
 :author: basics
 :date: "{sub-ref}`today`"
 :read-time: "{sub-ref}`wordcount-minutes` min read"
 ```
+-->
 
 (classical-thermodynamics:history)=
-# Storia della termodinamica
+# Brief History of Thermodynamics
+See introduction to thermodynamics in the material about [physics for high-schools](https://basics2022.github.io/bbooks-physics-hs/intro.html), relying on your browser translation (Italian only, so far)
+
+- [introduction to thermodynamics](https://basics2022.github.io/bbooks-physics-hs/ch/thermodynamics/foundation.html)
+- [brief history of experiments in thermodynamics](https://basics2022.github.io/bbooks-physics-hs/ch/thermodynamics/foundation-experiments.html)
 
 
 
