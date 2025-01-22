@@ -1,12 +1,7 @@
-```{article-info}
-:author: basics
-:date: "{sub-ref}`today`"
-:read-time: "{sub-ref}`wordcount-minutes` min read"
-```
-
 (classical-thermodynamics:potentials)=
-# Potenziali termodinamici
+# Thermodynamics potentials
 
+Starting from the 
 Partendo dall'espressione incrementale del primo principio della termodinamica è possivile definire altre funzioni delle variabili di stato (**TODO** *Ruolo della trasformata di Legendre*), chiamati **potenziali termodinamici**
 
 **Energia interna.** $E(\mathbf{x}, S)$

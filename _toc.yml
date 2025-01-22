@@ -8,6 +8,12 @@ parts:
   chapters:
   - file: ch/history
   - file: ch/principles
+    sections:
+    - file: ch/principles-lavoisier
+    - file: ch/principles-first
+    - file: ch/principles-gibbs-phase-rule
+    - file: ch/principles-second
+    - file: ch/principles-open
   - file: ch/potentials
   - file: ch/coefficients
   - file: ch/media

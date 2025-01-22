@@ -84,8 +84,8 @@
         % End of preamble defined in sphinx-jupyterbook-latex %
         
 
-\title{Termodinamica e fisica tecnica}
-\date{Dec 30, 2024}
+\title{Classical Thermodynamics}
+\date{Jan 22, 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -102,503 +102,762 @@
 
 
 \sphinxAtStartPar
-\sphinxstylestrong{Introduzione.}
+This material is part of the \sphinxhref{https://basics2022.github.io/bbooks}{\sphinxstylestrong{basics\sphinxhyphen{}books project}}. It is also available as a \DUrole{xref,download,myst}{.pdf document}.
+
+\sphinxAtStartPar
+Classical thermodynamics deal with energy, its forms and the ways it can be transferred.
+
+\sphinxAtStartPar
+Classical thermodynamics provides a macroscopic, average, description of complex systems composed by a “huge” number of elementary components, in equilibrium: equilibrium means statistical equilibrium, resulting in stationary macroscopic observable physical quatities \sphinxhyphen{} thermodynamic variables \sphinxhyphen{} even though non\sphinxhyphen{}stationary microscopic dynamics of the system. The development of thermodynamics is closely related with the development of chemistry and the re\sphinxhyphen{}born of an atomic theory of the matter. Classical thermodynamics is the results of studies on matter and energy performed from the early experiments of the XVII centuries on gas to the mathematical formulation of the late XIX century by Gibbs. A consistent theory of thermodynamics starts from conservation of mass and balance of total energy \sphinxhyphen{} whose changes result from input of work or heat \sphinxhyphen{}, provides a description of natural tendencies in nature, through Clausius’ statement of the second principle \sphinxhyphen{} degradation of mechanical energy and heat direction from hot to cold bodiess \sphinxhyphen{} in terms of a thermodynamic state variable, called entropy, and provides a definition of a thermodynamic scale of temperature \sphinxhyphen{} defined in terms of energy and entropy.
+
+
+
+\sphinxstepscope
+
+
+
+
+\chapter{Brief History of Thermodynamics}
+\label{\detokenize{ch/history:brief-history-of-thermodynamics}}\label{\detokenize{ch/history:classical-thermodynamics-history}}\label{\detokenize{ch/history::doc}}
+\sphinxAtStartPar
+See introduction to thermodynamics in the material about \sphinxhref{https://basics2022.github.io/bbooks-physics-hs/intro.html}{physics for high\sphinxhyphen{}schools}, relying on your browser translation (Italian only, so far)
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-la termodinamica si occupa della forme di energia, e delle sue variazioni attraverso scambi di lavoro e calore;
+\sphinxhref{https://basics2022.github.io/bbooks-physics-hs/ch/thermodynamics/foundation.html}{introduction to thermodynamics}
 
 \item {} 
 \sphinxAtStartPar
-la termodinamica classica fornisce una descrizione macroscopica di sistemi complessi, formati da un numero enorme di componenti elementari (atomi e molecole), per motivi di convenienza: la descrizione macroscopica media comporta una perdita di informazioni sul sistema, e la necessità di una grandezza legata ad essa che indichi il verso naturale di alcune trasformazioni, l’entropia;
-
-\item {} 
-\sphinxAtStartPar
-in equilibrio \sphinxstylestrong{todo}: in molti casi di interesse comune, l’\sphinxstylestrong{equilibrio} termodinamico \sphinxstylestrong{locale} viene raggiunto in intervalli di tempo che hanno durata caratteristica molto inferiore ai tempi caratteristici del sistema macrroscopico: le leggi della termodinamica vengono quindi applicate anche nello studio della meccanica dei solidi e dei fluidi;
+\sphinxhref{https://basics2022.github.io/bbooks-physics-hs/ch/thermodynamics/foundation-experiments.html}{brief history of experiments in thermodynamics}
 
 \end{itemize}
 
+
+
+\sphinxstepscope
+
+
+\chapter{Principles of Thermodynamics}
+\label{\detokenize{ch/principles:principles-of-thermodynamics}}\label{\detokenize{ch/principles:physics-hs-thermodynamics-principles}}\label{\detokenize{ch/principles::doc}}
 \sphinxAtStartPar
-\sphinxstylestrong{Argomenti.}
+In this chapter, the principles of classical thermodynamics, along with the relevant concepts and mathematical formalism, are introduced.
+The principles of thermodynamics are presented for \sphinxstylestrong{closed systems}, and subsequently extended to open systems.
+
+
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-Principi della termodinamica
-\begin{itemize}
+The {\hyperref[\detokenize{ch/principles-lavoisier:physics-hs-thermodynamics-foundation-principles-lavoisier}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{principle of conservation of mass \sphinxhyphen{} Lavoisier’s principle}}}}}, valid in classical mechanics and summarized by the formula \sphinxstyleemphasis{“nothing is created, nothing is destroyed, but everything is transformed”}, states that in a closed system, the mass is constant,
+\begin{equation*}
+\begin{split}d M = 0 \ .\end{split}
+\end{equation*}
 \item {} 
 \sphinxAtStartPar
-Modello matematico: funzioni di stato,…
+The {\hyperref[\detokenize{ch/principles-first:physics-hs-thermodynamics-foundation-principles-first}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{first law of thermodynamics}}}}} provides the general form of the \sphinxstyleemphasis{total} energy balance of a closed system, recognizing the work done by external forces \(\delta L^{ext}\) and the heat \(\delta Q^{ext}\) exchanged between the system and the external environment as the causes of the variation of the total energy of the system.
+\begin{equation*}
+\begin{split}d E^{tot} = \delta L^{ext} + \delta Q^{ext} \ .\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+The work of \sphinxstylestrong{Gibbs} provides {\hyperref[\detokenize{ch/principles-gibbs-phase-rule:physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{the necessary concepts and a rigorous mathematical formalization}}}}} of classical thermodynamics. The concepts of internal energy, state variables, and Gibbs’ phase rule are introduced; additionally, some \DUrole{xref,myst}{phase diagrams} for representing the state of a system and thermodynamic transformations are presented, which will be used in subsequent chapters.
 
 \item {} 
 \sphinxAtStartPar
-Dall’esperienza ai principi fisici, alla base del modello
-
+The {\hyperref[\detokenize{ch/principles-second:physics-hs-thermodynamics-foundation-principles-second}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{second law of thermodynamics}}}}} describes natural tendencies: the dissipation of macroscopic mechanical energy and the transfer of heat from a hot body to a cold body, in a principle expressible in terms of \sphinxstylestrong{entropy},
+\begin{equation*}
+\begin{split}d S \ge \frac{\delta Q}{T} \ .\end{split}
+\end{equation*}
 \item {} 
 \sphinxAtStartPar
-Principi per sistemi chiusi e per sistemi aperti: facendo riferiemnto al \sphinxstyleemphasis{thm del trasporto di Reynolds}
-
-\item {} 
-\sphinxAtStartPar
-grandezze intensive, estensive, sepcifiche,…
+Finally, the balance of physical quantities for {\hyperref[\detokenize{ch/principles-open:physics-hs-thermodynamics-foundation-principles-open}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{open systems}}}}} is derived by modifying the balance equations for closed systems, introducing terms for the \sphinxstylestrong{flux of physical quantities due to the transport of matter} across the system’s boundary.
 
 \end{itemize}
 
-\item {} 
+
+
+\sphinxstepscope
+
+
+\section{Lavoisier’s Principle}
+\label{\detokenize{ch/principles-lavoisier:lavoisier-s-principle}}\label{\detokenize{ch/principles-lavoisier:physics-hs-thermodynamics-foundation-principles-lavoisier}}\label{\detokenize{ch/principles-lavoisier::doc}}
 \sphinxAtStartPar
-Potenziali termodinamici e coefficienti termodinamici
+In the context of classical mechanics, the principle of mass conservation—also known as Lavoisier’s principle—states that the mass \(M\) of a closed system is constant,
+\begin{equation*}
+\begin{split}d M = 0 \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+that is, \sphinxstyleemphasis{“nothing is created, nothing is destroyed, everything is transformed.”}
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-potenziali termodinamici, relazioni di Maxwell
+This principle was discovered by early chemists through the measurement of the mass of products and reactants in chemical reaction experiments.
 
 \item {} 
 \sphinxAtStartPar
-coefficienti termodinamici: dilatazione, comprimibilità
-
-\item {} 
-\sphinxAtStartPar
-miscellanea nell’uso delle derivate parziali di funzioni multi\sphinxhyphen{}variabile in termodinamica
-
-\end{itemize}
-
-\item {} 
-\sphinxAtStartPar
-Stati della materia: equazioni di stato e equazioni costitutive
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-fluidi:
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-gas
-
-\item {} 
-\sphinxAtStartPar
-liquidi
-
-\end{itemize}
-
-\item {} 
-\sphinxAtStartPar
-solidi
-
-\item {} 
-\sphinxAtStartPar
-trasformazioni di fase
-
-\item {} 
-\sphinxAtStartPar
-altro…
-
-\end{itemize}
-
-\item {} 
-\sphinxAtStartPar
-Trasformazioni termodinamiche nei gas e macchine a fluido
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-trasformazioni nei piani termodinamici
-
-\item {} 
-\sphinxAtStartPar
-macchine termiche ideali e non: Carnot, efficienza massima, cicli reali, formulazioni di Kelvin e Plank del secondo principio della termodinamica; disuguaglianza di Clausis
-
-\item {} 
-\sphinxAtStartPar
-cicli termodinamici: Otto, Diesel, Rankine, Joule\sphinxhyphen{}Brayton,…
-
-\end{itemize}
-
-\item {} 
-\sphinxAtStartPar
-Meccanismi di trasmissione del calore:
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-conduzione
-
-\item {} 
-\sphinxAtStartPar
-convezione: naturale e forzata
-
-\item {} 
-\sphinxAtStartPar
-irraggiamento
-
-\end{itemize}
-
-\end{itemize}
-
-\sphinxAtStartPar
-\sphinxstylestrong{Extra.}
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-Formulazione assiomatica della termodinamica
-
-\item {} 
-\sphinxAtStartPar
-Cenni di meccanica statistica
+This principle ceases to hold in the framework of Einstein’s theory of relativity, which recognizes the equivalence of mass and energy: mass and energy are two representations of a single physical quantity and are part of a balance equation. In the special case of a body at rest, this reduces to the famous expression \(E = m c^2\).
 
 \end{itemize}
 
 \sphinxstepscope
 
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-p-0}
-\begin{sphinxuseclass}{sd-mt-2}
-\begin{sphinxuseclass}{sd-mb-4}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-gx-2}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-row-cols-xs-2}
-\begin{sphinxuseclass}{sd-row-cols-sm-3}
-\begin{sphinxuseclass}{sd-row-cols-md-3}
-\begin{sphinxuseclass}{sd-row-cols-lg-3}
-\begin{sphinxuseclass}{sd-gx-3}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
+
+\section{First Law of Thermodynamics}
+\label{\detokenize{ch/principles-first:first-law-of-thermodynamics}}\label{\detokenize{ch/principles-first:physics-hs-thermodynamics-foundation-principles-first}}\label{\detokenize{ch/principles-first::doc}}
 \sphinxAtStartPar
-basics
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
+The first law of thermodynamics is the total energy balance for closed systems. The variation in total energy \(d E^{tot}\) of a closed system is due to the work \(\delta L^{ext}\) performed on the system by external macroscopic actions and the heat \(\delta Q^{ext}\) transferred to the system from the outside,
+\begin{equation*}
+\begin{split}d E^{tot} = \delta L^{ext} + \delta Q^{ext} \ .\end{split}
+\end{equation*}
 \sphinxAtStartPar
-Dec 30, 2024
+Classical thermodynamics provides an average macroscopic description of the microscopic dynamics of a large number of elementary components (\sphinxstylestrong{todo} \sphinxstyleemphasis{atomic theory}). The total energy of the system can thus be interpreted as the sum of a macroscopic kinetic contribution and a microscopic content, both kinetic and potential; heat can be interpreted as the work performed on the system by microscopic actions.
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-0 min read
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-
-\chapter{Storia della termodinamica}
-\label{\detokenize{ch/history:storia-della-termodinamica}}\label{\detokenize{ch/history:classical-thermodynamics-history}}\label{\detokenize{ch/history::doc}}
 
 
 \sphinxstepscope
 
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-p-0}
-\begin{sphinxuseclass}{sd-mt-2}
-\begin{sphinxuseclass}{sd-mb-4}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-gx-2}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-row-cols-xs-2}
-\begin{sphinxuseclass}{sd-row-cols-sm-3}
-\begin{sphinxuseclass}{sd-row-cols-md-3}
-\begin{sphinxuseclass}{sd-row-cols-lg-3}
-\begin{sphinxuseclass}{sd-gx-3}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-basics
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
+\section{Gibbs: Internal Energy, Phase Rule, and Multivariable Functions}
+\label{\detokenize{ch/principles-gibbs-phase-rule:gibbs-internal-energy-phase-rule-and-multivariable-functions}}\label{\detokenize{ch/principles-gibbs-phase-rule:physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule}}\label{\detokenize{ch/principles-gibbs-phase-rule::doc}}
 \sphinxAtStartPar
-Dec 30, 2024
+Following Gibbs’ work, this section introduces concepts such as {\hyperref[\detokenize{ch/principles-gibbs-phase-rule:physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-state-vars}]{\sphinxcrossref{\DUrole{std,std-ref}{state variables}}}} and {\hyperref[\detokenize{ch/principles-gibbs-phase-rule:physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-internal-energy}]{\sphinxcrossref{\DUrole{std,std-ref}{internal energy}}}}, as well as the {\hyperref[\detokenize{ch/principles-gibbs-phase-rule:physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-gibbs-phase-rule}]{\sphinxcrossref{\DUrole{std,std-ref}{Gibbs phase rule}}}}. Later, the \DUrole{xref,myst}{first law of thermodynamics is reformulated} using the formalism introduced by Gibbs, which allows identifying the state of a system with a limited number of independent state variables and expressing the other (dependent) state variables as functions of multiple variables.
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
+
+\subsection{State Variables}
+\label{\detokenize{ch/principles-gibbs-phase-rule:state-variables}}\label{\detokenize{ch/principles-gibbs-phase-rule:physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-state-vars}}\label{ch/principles-gibbs-phase-rule:definition-0}
+\begin{sphinxadmonition}{note}{Definition 1 (State Variable)}
+
+
+
 \sphinxAtStartPar
-2 min read
+A state variable of a system is a physical property of the system that depends exclusively on the current state of the system.
+\end{sphinxadmonition}
+\label{ch/principles-gibbs-phase-rule:example-1}
+\begin{sphinxadmonition}{note}{Example 1 (State Variables and Non\sphinxhyphen{}State Variables)}
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
 
-\chapter{Princìpi della termodinamica}
-\label{\detokenize{ch/principles:principi-della-termodinamica}}\label{\detokenize{ch/principles:classical-thermodynamics-principles}}\label{\detokenize{ch/principles::doc}}
+
 \sphinxAtStartPar
-\sphinxstylestrong{Primo principio della termodinamica.} Il primo principio della termodinamica è il bilancio di energia totale di un sistema
+State variables include temperature, pressure, internal energy, entropy, etc.
+Non\sphinxhyphen{}state variables include work or heat exchanged by the system. \sphinxstylestrong{todo}
+\end{sphinxadmonition}
+
+
+\subsection{Internal Energy}
+\label{\detokenize{ch/principles-gibbs-phase-rule:internal-energy}}\label{\detokenize{ch/principles-gibbs-phase-rule:physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-internal-energy}}\label{ch/principles-gibbs-phase-rule:definition-2}
+\begin{sphinxadmonition}{note}{Definition 2 (Internal Energy)}
+
+
+
+\sphinxAtStartPar
+The internal energy of a system is defined as the difference between the total energy and the macroscopic kinetic energy of the system,
 \begin{equation*}
-\begin{split}\dot{E}^{tot} = P^{e} + \dot{Q}^{e}\end{split}
-\end{equation*}
+\begin{split}E = E^{tot} - K \ .\end{split}
+\end{equation*}\end{sphinxadmonition}
+
 \sphinxAtStartPar
-L’energia totale di un sistema può essere scritta come la somma dell’energia cinetica macroscopica \(K\) e l’energia interna \(E\), una rappresentazione macroscopica dell’energia cinetica delle componenti microscopiche del sistema, attorno ai valori medi macroscopici locali,
-\begin{equation*}
-\begin{split}E^{tot} = K + E \ .\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Usando il teorema dell’energia cinetica \sphinxstyleemphasis{macroscopica} \sphinxstylestrong{{[}REF{]}} noto dalla meccanica si può ricavare
+It is possible to derive a balance for the internal energy of a closed system by subtracting the balance of kinetic energy described by the kinetic energy theorem from the balance of total energy provided by the first law of thermodynamics,
 \begin{equation*}
 \begin{split}\begin{aligned}
-  \dot{E}^{tot} & = P^{e} + \dot{Q}^e \\
-  \dot{K}       & = P^{tot} = P^{e} + P^{i} \\
-  \dot{E}       & = \dot{Q}^e - P^{i} 
+  d E^{tot} & = \delta L^{ext} + \delta Q^{ext} \\
+  d K       & = \delta L^{ext} + \delta L^{int} \ ,
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Il bilancio dell’energia interna può essere scritto in forma incrementale come
+The energy balance for the internal energy of a closed system then becomes
 \begin{equation*}
-\begin{split}d E = d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q^e - d\hspace{-0.08pt}\bar{}\hspace{0.1pt} L^i \ ,\end{split}
+\begin{split}d E = \delta Q^{ext} - \delta L^{int} \ .\end{split}
 \end{equation*}
-\sphinxAtStartPar
-mettendo in evidenza con la notazione che l’energia interna è una variabile di stato del sistema, a differenza degli scambi di lavoro o di calore.
+
+\subsection{Gibbs Phase Rule}
+\label{\detokenize{ch/principles-gibbs-phase-rule:gibbs-phase-rule}}\label{\detokenize{ch/principles-gibbs-phase-rule:physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-gibbs-phase-rule}}\label{ch/principles-gibbs-phase-rule:definition-3}
+\begin{sphinxadmonition}{note}{Definition 3 (Phase)}
+
+
 
 \sphinxAtStartPar
-Si assume che l’energia interna del sistema può essere scritta come funzione di variabili di stato cinematiche locali \(\mathbf{x}\) (che non possono contribuire all’energia cinetica macroscopica del sistema) e almeno un’altra variabile di stato additiva, qui chiamata \(S\).
+A phase is defined as a portion of a chemical\sphinxhyphen{}physical system characterized by uniform chemical\sphinxhyphen{}physical (macroscopic) properties.
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Discussion of properties
+
+\item {} 
+\sphinxAtStartPar
+Examples: a mixture of miscible gases constitutes a single phase, in which the individual components cannot be macroscopically distinguished; immiscible liquids remain macroscopically separated and thus constitute multiple phases, in which distinct chemical compositions can be macroscopically identified;…
+
+\end{itemize}
+\label{ch/principles-gibbs-phase-rule:proposition-4}
+\begin{sphinxadmonition}{note}{Proposition 1 (Gibbs Phase Rule)}
+
+
+
+\sphinxAtStartPar
+The thermodynamic (equilibrium) state of a system is identified by a number \(F\) of independent \sphinxstylestrong{intensive} state variables, determined by the \sphinxstylestrong{Gibbs phase rule},
 \begin{equation*}
-\begin{split}E(\mathbf{x}, S)\end{split}
+\begin{split}F = C - P + 1 + W \ ,\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Il suo differenziale può essere scritto come
+i.e., the number of independent intensive variables (or degrees of freedom), \(F\), of a system is a function of the number of independent components \(C\), the number of phases \(P\), and the number \(W\) of ways the system can manifest internal work, such as:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+internal mechanical stresses
+
+\item {} 
+\sphinxAtStartPar
+contribution of surface tension
+
+\item {} 
+\sphinxAtStartPar
+bond energy of the molecules of the components
+
+\item {} 
+\sphinxAtStartPar
+contribution of the electromagnetic field
+
+\end{itemize}
+\end{sphinxadmonition}
+\subsubsection*{Discussion of the Gibbs Phase Rule}
+
+\sphinxAtStartPar
+The equilibrium state of a system is defined by the values of the state variables, which for a non\sphinxhyphen{}electrically charged gas system are: temperature \(T\), pressure \(p\), and concentrations \(C_{c,\phi}\) of the individual components \(c=1:C\) in the individual phases \(\phi = 1:P\) within the system.
+
+\sphinxAtStartPar
+The state of the system is thus determined by the values of the \(1+W\) intensive thermodynamic variables, here \(W+1=2\) (\(T\), \(p\)), and the \(C \, P\) molar or mass fractions \(n_{c,\phi}\), for a total of \(N \, P + W + 1\) variables.
+In general, these variables are constrained by some conditions:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\(C \, (P-1)\) phase equilibrium conditions for each component, described by the equality of chemical potentials
 \begin{equation*}
-\begin{split}d E = \dfrac{\partial E}{\partial \mathbf{x}}\Big|_{S} \cdot d \mathbf{x} + \dfrac{\partial E}{\partial S}\Big|_{\mathbf{x}} \cdot d \mathbf{S}\end{split}
+\begin{split}\mu_{c,\phi_1}(T,p) = \mu_{c,\phi_2}(T,p) = \dots = \mu_{c,\phi_P}(T,p)\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+\(P\) unitarity conditions of the fractions
+\begin{equation*}
+\begin{split}\sum_{c} n_{c,\phi} = 1\end{split}
+\end{equation*}
+\end{itemize}
+
+\sphinxAtStartPar
+Thus, with \(C \, P + W + 1\) variables and \(P + C\, (P-1) = C \, P - C + P\) equations, we find that the problem can be determined by
+\begin{equation*}
+\begin{split}C \, P + W + 1 - C \, P + C - P  =  C - P + W + 1 = F \ ,\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Il bilancio di energia interna in forma incrementale può essere riscritto come
+independent variables.
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Provide examples that clarify the definition of phase (e.g., pure solids or liquids represent phases on their own), and of independent component (e.g., chemical reactions, with no excess components, create constraints that reduce the number of independent substances, thanks to stoichiometric relationships between substances)
+
+\item {} 
+\sphinxAtStartPar
+Discuss the role of phase fractions of a single component and the fact that they are not state variables; example phase transition from liquid to vapor: equilibrium is determined by the value of \(P\) (or \(T\)), and the vapor fraction is a result of other extensive variables of the system.
+
+\end{itemize}
+\label{ch/principles-gibbs-phase-rule:example-5}
+\begin{sphinxadmonition}{note}{Example 2 (Closed system containing a single\sphinxhyphen{}component (or non\sphinxhyphen{}reactive), single\sphinxhyphen{}phase, electrically neutral (or not subjected to electromagnetic field))}
+
+
+
+\sphinxAtStartPar
+In a system consisting of a compressible gas, single\sphinxhyphen{}component and single\sphinxhyphen{}phase (gas phase), electrically neutral, \sphinxstylestrong{todo} \sphinxstyleemphasis{other?}, the only form of internal work is related to compression, \(\delta L^{int,rev} = P dV\), and thus \(W = 1\). Therefore, the system requires
+\begin{equation*}
+\begin{split}F = C - P + 1 + W = 1 - 1 + 1 + 1 = 2 \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+state variables to define the system state.
+\end{sphinxadmonition}
+\label{ch/principles-gibbs-phase-rule:example-6}
+\begin{sphinxadmonition}{note}{Example 3 (Open system containing a single\sphinxhyphen{}component (or non\sphinxhyphen{}reactive), single\sphinxhyphen{}phase, electrically neutral (or not subjected to electromagnetic field))}
+
+
+
+\sphinxAtStartPar
+In an open system, the variation in energy of the system also depends on the variation in the amount of gas contained in it. Thus, in general, there are \(W = 2\) ways to change the system’s energy: by compression work or by a flow of matter into the system. Therefore, \(F=3\) state variables are needed to define the system’s state.
+\end{sphinxadmonition}
+\label{ch/principles-gibbs-phase-rule:example-7}
+\begin{sphinxadmonition}{note}{Example 4 (Reactive gas mixture in a closed system)}
+
+
+
+\sphinxAtStartPar
+In a reactive gas mixture consisting of two compounds \(A\), \(B\) in equilibrium according to the equilibrium reaction
+\begin{equation*}
+\begin{split}n_a A + n_b B \leftrightarrow n A_a B_b\end{split}
+\end{equation*}
+\sphinxAtStartPar
+the energy of the system depends on the mechanical compression work of the gas mixture and the quantities of the 3 compounds present in the gas. However, the variation of these compounds is not independent but determined by the equilibrium reaction. Specifically,
 \begin{equation*}
 \begin{split}\begin{aligned}
-d E & = - d\hspace{-0.08pt}\bar{}\hspace{0.1pt} L^i + d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q^e =  \\
-    & = - \delta L^{i,rev} + d\hspace{-0.08pt}\bar{}\hspace{0.1pt}^+ D + d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q^e  \\
+  d n_{B} & = d n_{A} \frac{n_b}{n_a} \\
+  d n_{A_a B_b} & = - d n_{A} \frac{n}{n_a} \\
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-avendo separato nel lavoro interno il contributo delle azioni reversibili e non reversibili. In accordo con l’esperienza, si assume che il contributo al lavoro interno delle forze non reversibili è sempre positivo, \(d\hspace{-0.08pt}\bar{}\hspace{0.1pt}^+ D \ge 0\): questo contributo viene chiamato \sphinxstylestrong{dissipazione}.
+The reaction is thus determined by a single parameter. The variation in energy of the system is thus determined by \(W=2\) processes: from the compression work done on the system, and from the state of the reaction. To define the state of the system, \(F=3\) independent state variables are needed, such as \sphinxstylestrong{todo} \(T\), \(P\), \(n_A\)? Are the chemical potentials \(\mu_A\), \(\mu_B\), \(\mu_{A_a B_b}\) required? Are they uniquely determined?
+\end{sphinxadmonition}
+\label{ch/principles-gibbs-phase-rule:example-8}
+\begin{sphinxadmonition}{note}{Example 5 (Single\sphinxhyphen{}component system during a phase transition)}
+
+
 
 \sphinxAtStartPar
-Poiché sia il differenziale dell’energia e il contributo reversibile del lavoro interno sono dei termini reversibili, allora anche la somma di dissipazione e flusso di calore deve essere un contributo reversibile, indicato con \(\delta U\).
+\sphinxstylestrong{First\sphinxhyphen{}order phase transition.} During a first\sphinxhyphen{}order phase transition, two phases, \(P = 2\), are simultaneously present in the system. According to the Gibbs phase rule, the state of the system is determined by
+\begin{equation*}
+\begin{split}F = C - P + 1 + W = 1 - 2 + 1 + 1 = 1 \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+state variable.
 
 \sphinxAtStartPar
-Dal confronto delle due espressioni del differenziale dell’energia interna, avendo riconosciuto il contributo reversibile del lavoro interno nel primo termine, si può scrivere
+\sphinxstylestrong{Critical point.} The critical point in the phase diagram of a single\sphinxhyphen{}component system defines the condition where three phases, \(P = 3\), are simultaneously present in the system. According to the Gibbs phase rule, the state of the system is determined by \(F = 0\) state variables: the state of the system at the critical point is uniquely defined, with no degrees of freedom.
+\end{sphinxadmonition}
+\label{ch/principles-gibbs-phase-rule:example-9}
+\begin{sphinxadmonition}{note}{Example 6 (Solid)}
+
+
+
+\sphinxAtStartPar
+In the absence of other physical phenomena, the only form of work in a solid is related to deformation work, \(\delta L^{int,rev} = \sigma_{ij} \, d \varepsilon_{ij} dV\). The strain tensor is second\sphinxhyphen{}order and symmetric, and therefore has 6 independent components in 3\sphinxhyphen{}dimensional space, so \(W=6\)
+\end{sphinxadmonition}
+\label{ch/principles-gibbs-phase-rule:example-10}
+\begin{sphinxadmonition}{note}{Example 7 (Solid mixtures)}
+
+
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Phases in solid mixtures \sphinxstylestrong{todo}
+
+\end{itemize}
+\end{sphinxadmonition}
+\label{ch/principles-gibbs-phase-rule:example-11}
+\begin{sphinxadmonition}{note}{Example 8 (Influence of the electromagnetic field)}
+
+
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Electric field and magnetization \sphinxstylestrong{todo}
+
+\end{itemize}
+\end{sphinxadmonition}
+
+
+\subsection{First Law in terms of state variables}
+\label{\detokenize{ch/principles-gibbs-phase-rule:first-law-in-terms-of-state-variables}}
+\sphinxAtStartPar
+Internal energy is an extensive variable of a thermodynamic system. In general, it can be written as a function of extensive variables that represent the ways the system manifests its internal energy (\sphinxstylestrong{todo} \sphinxstyleemphasis{due to work done on it, heat transferred to the system, and its chemical composition, thus the energy contained in bonds}).
+\begin{equation*}
+\begin{split}E(S, X_k)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where ( X\_k ) are the state variables whose variations are associated with reversible internal work, and ( S ) is the state variable whose variation is associated with heat exchange with the external environment and internal dissipative actions. \sphinxstylestrong{todo} \sphinxstyleemphasis{referring to the chapter on functions and multivariable calculus}
+
+\sphinxAtStartPar
+Assuming the function ( E ) is continuous and differentiable, at least piecewise, the exact differential of internal energy can be written as a function of the increments of the independent variables:
 \begin{equation*}
 \begin{split}
-  \delta L^{i,rev} = - \dfrac{\partial E}{\partial \mathbf{x}} \Big|_{S} d \mathbf{x}  \qquad , \qquad 
-  \delta U         = \ \dfrac{\partial E}{\partial S} \Big|_{\mathbf{x}} d S 
+dE = \left. \dfrac{\partial E}{\partial S} \right|_{\mathbf{X}} d S + \left. \dfrac{\partial E}{\partial X_k} \right|_{S} d X_k = 
+T \, d S + \sum_k F_k \, d X_k
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Terzo principio della termodinamica: definizione e segno della temperatura.}
-La temperatura viene definita come la variabile parziale dell’energia interna del sistema rispetto alla variabile di stato \(S\),
-\begin{equation*}
-\begin{split}T := \dfrac{\partial E}{\partial S}\Big|_S{} \ .\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Il terzo principio della termodinamica postula che la temperatura sia sempre positiva.
-\begin{equation*}
-\begin{split}T := \dfrac{\partial E}{\partial S}\Big|_S{} > 0 \ .\end{split}
-\end{equation*}
-\sphinxAtStartPar
-\sphinxstylestrong{Secondo principio della termodinamica: enunciato di Clausius.} L’enunciato di Clausis del secondo principio della termodinamica può essere formulato in accordo con l’evidenza che la dissipazione sia sempre non negativa. Infatti
-\begin{equation*}
-\begin{split}T dS =: \partial U = \underbrace{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}^+ D}_{\ge 0} + d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q^e \ge  d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q^e \ ,\end{split}
-\end{equation*}
-\sphinxAtStartPar
-e quindi
-\begin{equation*}
-\begin{split}dS \ge \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q^e }{T} \ .\end{split}
-\end{equation*}
-\sphinxAtStartPar
-\sphinxstylestrong{Secondo principio della termodinamica per sistemi complessi e direzione dei trasferimenti di calore.}
+where ( F\_k ) are the generalized forces associated with changes in the generalized coordinates ( X\_k ), and ( T ) and ( S ) correspond to temperature and entropy as discussed further below. \sphinxstylestrong{todo}.
 
 \sphinxAtStartPar
-L’esperienza evidenzia che il trasferimento di calore avviene dai corpi a temperatura maggiore a corpi a temperatura minore, ossia il flusso di calore fa aumentare l’energia interna del corpo freddo e diminuire quella del corpo caldo.
+With this formalism, it is straightforward to express the \sphinxstylestrong{second} and \sphinxstylestrong{third} laws of thermodynamics as:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+( dS \textbackslash{}ge \textbackslash{}frac\{\textbackslash{}delta Q\textasciicircum{}\{ext\}\}\{T\} )
+
+\item {} 
+\sphinxAtStartPar
+( T \textbackslash{}ge 0 )
+
+\end{itemize}
 
 \sphinxAtStartPar
-Nello scabio di calore tra due corpi \(i\), \(j\) a temperature \(T_i\), \(T_j\), questa evidenza sperimentale può essere scritta come
+The expression for the differential of internal energy can be compared with the energy balance written in terms of heat transferred to the system and internal work:
 \begin{equation*}
-\begin{split}d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q_{ji} \gtreqless 0 \quad \text{se} \quad T_i \gtreqless T_j \qquad \rightarrow \qquad \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q_{ji}}{T_j} + \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q_{ij}}{T_i} \ge 0 \ ,\end{split}
+\begin{split}
+dE = \delta Q^{ext} - \delta L^{int} = 
+\delta Q^{ext} + \delta^+ D - \delta L^{int,rev}
+\end{split}
 \end{equation*}
 \sphinxAtStartPar
-dove \(d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q_{ji} = - d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q_{ij}\) è il flusso di calore dal corpo \(i\) al corpo \(j\), positivo se fa aumentare l’energia interna di \(j\) e diminuire quella di \(i\).
+where the internal work ( \textbackslash{}delta L\textasciicircum{}\{int\} ) is recognized as the sum of a reversible contribution and a dissipative contribution, which is never negative: ( \textbackslash{}delta L\textasciicircum{}\{int\} = \textbackslash{}delta L\textasciicircum{}\{int,rev\} \sphinxhyphen{} \textbackslash{}delta\textasciicircum{}+ D ).
+
+\sphinxAtStartPar
+Since ( dE ) is an exact differential and ( \textbackslash{}delta L\textasciicircum{}\{int,rev\} ) is a reversible contribution, it follows that the sum of the two non\sphinxhyphen{}reversible contributions, ( \textbackslash{}delta U := \textbackslash{}delta Q\textasciicircum{}\{ext\} + \textbackslash{}delta\textasciicircum{}+ D ), is a reversible contribution. Comparing the two expressions for the differential of internal energy, we can associate reversible internal work with the sum of works formed as the product of generalized forces ( F\_k ) and changes in the state variables ( X\_k ), and the term ( \textbackslash{}delta U ) with the product ( T , dS ):
 \begin{equation*}
-\begin{split}d S_i = \underbrace{\dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  D_i}{T_i}}_{\ge 0} + \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q^{e,i}}{T_i} + \sum_{j \ne i} \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q_{ij}}{T_i}\end{split}
+\begin{split}
+\begin{cases}
+  -\delta L^{int,rev} &= \sum_k F_k \, d X_k \\
+  \delta U &= T \, dS
+\end{cases}
+\end{split}
+\end{equation*}\subsubsection*{Temperature, ( T ), and entropy, ( S )}
+
+\sphinxAtStartPar
+In the absence of external work done on the system, and in the absence of dissipation ( \textbackslash{}delta\textasciicircum{}+ D = 0 ), we get:
+\begin{equation*}
+\begin{split}
+dE^{tot} = dE = \delta Q^{ext}
+\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+dS = \frac{\delta Q^{ext}}{T}
+\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Poichè \(S\) è una variabile estensiva, il valore associato all’intero sistema è uguale alla somma dei valori delle sue parti, \(S = \sum_i S_i\). E’ quindi possibile ricavare una relazione per l’intero sistema sommando i contributi dovuti a tutte le sue parti.
+Consider a closed and isolated system made of two subsystems in equilibrium, which can exchange heat but not work.
+
+\sphinxAtStartPar
+The total energy of the system is constant, ( E = E\_1 + E\_2 ). If the two subsystems are not initially at the same temperature, we observe a heat flow from the hotter system to the colder one, which satisfies the inequality:
 \begin{equation*}
-\begin{split}\begin{aligned}
-  d S & = \sum_i d S_i = \\
-      & = \sum_i \sum_i \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q^{e,i}}{T_i} + \sum_i \sum_{j \ne i} \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q_{ij}}{T_i} + \underbrace{\dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  D_i}{T_i}}_{\ge 0} = \\
-      & \ge \sum_i \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q^{e,i}}{T_i} + \sum_{\{i, j\}} \underbrace{\Big( \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q_{ij}}{T_i} + \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q_{ji}}{T_j} \Big)}_{ \ge 0 }  = \\
-      & \ge \sum_i \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q^{e,i}}{T_i} \ .
-\end{aligned}\end{split}
+\begin{split}
+\frac{\delta Q_{12}}{T_1} + \frac{\delta Q_{21}}{T_2} \ge 0 \quad \rightarrow \quad dS_1 + dS_2 \ge 0
+\end{split}
 \end{equation*}
+\sphinxAtStartPar
+The quantity ( S = S\_1 + S\_2 ) is non\sphinxhyphen{}decreasing.
+
+
+
+
+\subsection{Second and Third Laws of Thermodynamics}
+\label{\detokenize{ch/principles-gibbs-phase-rule:second-and-third-laws-of-thermodynamics}}
+\sphinxAtStartPar
+The formalism introduced in this section allows for a rather natural formulation of the second law and a version of the third law of thermodynamics.
+
+\sphinxAtStartPar
+This formulation of the third law of thermodynamics states that the thermodynamic temperature is always positive:
+\begin{equation*}
+\begin{split}
+T := \left.\frac{\partial E}{\partial S}\right|_{\mathbf{X}} > 0
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{Add some words about the significance, in terms of molecular agitation and probability}
+
+\sphinxAtStartPar
+In cases where this form or consequence of the third law of thermodynamics holds, the second law of thermodynamics is a consequence of the non\sphinxhyphen{}negativity of dissipation and the heat transfer mechanism, as will be discussed in more detail in the discussion of {\hyperref[\detokenize{ch/principles-second:physics-hs-thermodynamics-principles-second-composite}]{\sphinxcrossref{\DUrole{std,std-ref}{composite systems}}}}.
+
+\sphinxAtStartPar
+In the general case of a \sphinxstylestrong{simple system}, using the definition ( dS = \textbackslash{}frac\{\textbackslash{}delta U\}\{T\} = \textbackslash{}frac\{\textbackslash{}delta Q\textasciicircum{}\{ext\} + \textbackslash{}delta\textasciicircum{}+ D\}\{T\} ), the non\sphinxhyphen{}negativity of dissipation, ( \textbackslash{}delta\textasciicircum{}+ D \textbackslash{}ge 0 ), implies:
+\begin{equation*}
+\begin{split}
+dS \ge \frac{\delta Q^{ext}}{T}
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+This is an expression of the {\hyperref[\detokenize{ch/principles-second:physics-hs-thermodynamics-foundation-principles-second}]{\sphinxcrossref{\DUrole{std,std-ref}{Clausius statement of the second law of thermodynamics}}}}.
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstylestrong{oss} \sphinxstyleemphasis{The third law of thermodynamics: 1. It seems not to be a fundamental principle; 2. For some systems with limited energy, the definition of temperature ( T := \textbackslash{}left( \textbackslash{}frac\{\textbackslash{}partial E\}\{\textbackslash{}partial S\} \textbackslash{}right) ) produces a negative temperature} \sphinxstylestrong{todo} \sphinxstyleemphasis{add a section on statistical mechanics?}
+
+
+\bigskip\hrule\bigskip
+
+
+\sphinxAtStartPar
+From L.E. Reichl, \sphinxstyleemphasis{A Modern Course in Statistical Physics}, with some inconsistencies \sphinxstylestrong{todo} \sphinxstyleemphasis{check!}
+\begin{equation*}
+\begin{split}
+\delta W = - P dV + J dL + \sigma d A + V \left( \vec{e} \cdot d \vec{p} + \vec{h} \cdot d \vec{m}\right) + \phi d q
+\end{split}
+\end{equation*}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+where ( J ), ( \textbackslash{}sigma ) are tensions per unit length and area, ( d L ), ( d A ) are changes in length or area,
+
+\item {} 
+\sphinxAtStartPar
+where ( \textbackslash{}vec\{e\} ), ( \textbackslash{}vec\{h\} ) are the electric and magnetic fields, ( \textbackslash{}vec\{p\} ), ( \textbackslash{}vec\{m\} ) are polarization and magnetization,
+
+\item {} 
+\sphinxAtStartPar
+( \textbackslash{}phi ) is the electric potential, and ( q ) is electric charge (for open systems, otherwise ( dq \textbackslash{}equiv 0 ) or net charge would be created!)
+
+\end{itemize}
+\label{ch/principles-gibbs-phase-rule:example-12}
+\begin{sphinxadmonition}{note}{Example 9 (Closed Monocomponent Gas System)}
+
+
+
+\sphinxAtStartPar
+The energy of the system, ( E(S,V) )
+\begin{equation*}
+\begin{split}
+dE = T \, dS - P \, dV
+\end{split}
+\end{equation*}\end{sphinxadmonition}
+\label{ch/principles-gibbs-phase-rule:example-13}
+\begin{sphinxadmonition}{note}{Example 10 (Open Monocomponent Gas System)}
+
+
+
+\sphinxAtStartPar
+The energy of the system, ( E(S,V,N) )
+\begin{equation*}
+\begin{split}
+dE = T \, dS - P \, dV + \mu \, dN
+\end{split}
+\end{equation*}\end{sphinxadmonition}
+\label{ch/principles-gibbs-phase-rule:example-14}
+\begin{sphinxadmonition}{note}{Example 11 (Reactive Gas Mixture in a Closed System)}
+
+
+
+\sphinxAtStartPar
+The energy of the system
+\begin{equation*}
+\begin{split}
+\begin{aligned}
+  dE & = T \, dS - P \, dV + \mu_k \, dN_k = \\
+     & = T \, dS - P \, dV + \left( \mu_k n_k \right) dN
+\end{aligned}
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where ( n\_k ) are the stoichiometric coefficients (with sign) of the reaction, and ( N ) is a quantity that identifies the equilibrium of the reaction, such that the variation of each component can be written as ( dN\_k = n\_k , dN ).
+\end{sphinxadmonition}
+\label{ch/principles-gibbs-phase-rule:example-15}
+\begin{sphinxadmonition}{note}{Example 12 (Monocomponent Mixture During a Phase Transition)}
+
+
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo} how to treat the phase fractions?
+\end{sphinxadmonition}
+\label{ch/principles-gibbs-phase-rule:example-16}
+\begin{sphinxadmonition}{note}{Example 13 (Solid)}
+
+
+
+\sphinxAtStartPar
+Solid system with initial volume ( V ) under uniform stress and strain, with small deformations
+\begin{equation*}
+\begin{split}
+dE = T \, dS - V \, \sigma_{ij} \, d \varepsilon_{ij}
+\end{split}
+\end{equation*}\end{sphinxadmonition}
+\label{ch/principles-gibbs-phase-rule:example-17}
+\begin{sphinxadmonition}{note}{Example 14 (Solid Mixtures)}
+
+
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo}
+\end{sphinxadmonition}
+\label{ch/principles-gibbs-phase-rule:example-18}
+\begin{sphinxadmonition}{note}{Example 15 (Influence of the Magnetic Field)}
+
+
+\begin{equation*}
+\begin{split}
+dE = T \, dS - P \, d V + H \, dM
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{todo}
+\end{sphinxadmonition}
+
 \sphinxstepscope
 
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-p-0}
-\begin{sphinxuseclass}{sd-mt-2}
-\begin{sphinxuseclass}{sd-mb-4}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-gx-2}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-row-cols-xs-2}
-\begin{sphinxuseclass}{sd-row-cols-sm-3}
-\begin{sphinxuseclass}{sd-row-cols-md-3}
-\begin{sphinxuseclass}{sd-row-cols-lg-3}
-\begin{sphinxuseclass}{sd-gx-3}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-basics
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
+\section{Second Law of Thermodynamics \sphinxhyphen{} Clausius Statement}
+\label{\detokenize{ch/principles-second:second-law-of-thermodynamics-clausius-statement}}\label{\detokenize{ch/principles-second:physics-hs-thermodynamics-foundation-principles-second}}\label{\detokenize{ch/principles-second::doc}}
 \sphinxAtStartPar
-Dec 30, 2024
+The Clausius statement of the second law of thermodynamics can be formulated quite naturally using the formalism introduced. There are two other famous statements of the second law of thermodynamics, the Planck and Kelvin statements, which will be presented in the context of heat engines.
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
+
+\subsection{Simple Systems}
+\label{\detokenize{ch/principles-second:simple-systems}}\label{\detokenize{ch/principles-second:physics-hs-thermodynamics-foundation-principles-second-simple}}
 \sphinxAtStartPar
-0 min read
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-
-\chapter{Potenziali termodinamici}
-\label{\detokenize{ch/potentials:potenziali-termodinamici}}\label{\detokenize{ch/potentials:classical-thermodynamics-potentials}}\label{\detokenize{ch/potentials::doc}}
+The elementary variation of entropy \(d S\) of a simple closed system at uniform temperature \(T\) is greater than or equal to the ratio of the elementary heat flux introduced into the system and the temperature of the system itself,
+\begin{equation*}
+\begin{split}dS = \underbrace{\dfrac{\delta^+ D}{T}}_{\ge 0} + \dfrac{\delta Q^{ext}}{T} \ge \dfrac{\delta Q^{ext}}{T} \ .\end{split}
+\end{equation*}
 \sphinxAtStartPar
+This is the Clausius statement of the second law of thermodynamics for simple systems with uniform temperature.
+
+
+\subsection{Composite Systems}
+\label{\detokenize{ch/principles-second:composite-systems}}\label{\detokenize{ch/principles-second:physics-hs-thermodynamics-principles-second-composite}}
+\sphinxAtStartPar
+\sphinxstylestrong{todo} definition of a composite system. Heat conduction occurs between subsystems.
+
+\sphinxAtStartPar
+Entropy in classical thermodynamics is an extensive physical quantity: the entropy of a system composed of \(N\) simple subsystems is the sum of the entropies of the subsystems,
+\begin{equation*}
+\begin{split}S = \sum_{n=1:N} S_n \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The entropy balance of a single subsystem that exchanges heat with the other subsystems and the external environment is written as
+\begin{equation*}
+\begin{split}\begin{aligned}
+    dS_i & = \dfrac{\delta Q^{ext,i}_i}{T_i} + \dfrac{\delta^+ D_i}{T_i} = \\
+         & = \dfrac{\delta Q^{ext}_i}{T_i} + \dfrac{\sum_{k \ne i} \delta Q_{ik}}{T_i} + \dfrac{\delta^+ D_i}{T_i} \ge \\
+         & \ge \dfrac{\delta Q^{ext}_i}{T_i} + \dfrac{\sum_{k \ne i} \delta Q_{ik}}{T_i} \ . 
+  \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The entropy balance of the entire system is obtained by summing the entropy balances of the individual subsystems,
+\begin{equation*}
+\begin{split}\begin{aligned}
+    dS & = \sum_i d S_i \ge \\
+       & \ge \sum_i \left\{ \dfrac{\delta Q^{ext}_i}{T_i} + \dfrac{\sum_{k \ne i} \delta Q_{ik}}{T_i} \right\} = \\
+       & = \sum_i \dfrac{\delta Q^{ext}_i}{T_i} + \underbrace{\sum_{\left\{i,k\right\}} \delta Q_{ik} \left( \dfrac{1}{T_i} - \dfrac{1}{T_k} \right)}_{\ge 0} \ge \\
+       & \ge \sum_i \dfrac{\delta Q^{ext}_i}{T_i} \ . 
+  \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Using the relation that represents the natural tendency of heat transfer “from a system at a higher temperature to a system at a lower temperature,”
+\begin{equation*}
+\begin{split}\delta Q_{ik} \left( \dfrac{1}{T_i} - \dfrac{1}{T_k} \right) \ge 0 \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{add reference to the natural tendency in heat transfer}
+
+
+\subsection{Increase of Entropy in the Universe}
+\label{\detokenize{ch/principles-second:increase-of-entropy-in-the-universe}}\label{\detokenize{ch/principles-second:physics-hs-thermodynamics-principles-second-universe}}
+\sphinxAtStartPar
+If we consider the universe as the closed and isolated system (but is this true? Who knows? Maybe it’s reasonable for now, but many things that seem reasonable today might be nonsense in a few years) consisting of a system of interest \(sys\) and the external environment \(env\).
+
+\sphinxAtStartPar
+The variation of entropy in the universe is the sum of the variation in the system and in the external environment. We denote by \(\delta Q_{sys,env}\) the heat flux which, if positive, increases the energy of the system and decreases that of the external environment. Assuming that the two subsystems are internally homogeneous,
+\begin{equation*}
+\begin{split}\begin{aligned}
+d S^{univ} & = d S^{sys} + d S^{env} = \\
+           & = \dfrac{\delta Q_{sys,env}}{T^{sys}} + \dfrac{\delta Q_{env,sys}}{T^{env}} = \\
+           & = \dfrac{\delta Q_{sys,env}}{T^{sys}} - \dfrac{\delta Q_{sys,env}}{T^{env}} = \\
+           & = \delta Q_{sys,env} \left( \dfrac{1}{T^{sys}} - \dfrac{1}{T^{env}} \right) \ge 0 \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+we obtain the relation
+\begin{equation*}
+\begin{split}dS^{univ} \ge 0 \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+which predicts the “non\sphinxhyphen{}decrease” of the entropy of the universe.
+
+\sphinxstepscope
+
+
+\section{Open Systems}
+\label{\detokenize{ch/principles-open:open-systems}}\label{\detokenize{ch/principles-open:physics-hs-thermodynamics-foundation-principles-open}}\label{\detokenize{ch/principles-open::doc}}
+\sphinxAtStartPar
+In general, the balance equation for a physical quantity in an open system is derived from the balance of the same physical quantity for a closed system, adding the contribution of the flux terms of the desired physical quantity through the system’s boundary. Thus, if the balance of the physical quantity \(F\) for the closed system within volume \(V_t\) can be written as
+\begin{equation*}
+\begin{split}\dfrac{d}{dt} F_{V_t} = R^e_{V_t} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+the balance of the same physical quantity for an open system identified by the (geometric) volume \(v_t\) can be written as
+\begin{equation*}
+\begin{split}\frac{d}{dt} F_{v_t} = R^e_{v_t} - \Phi_{\partial v_t}(f) \ , \end{split}
+\end{equation*}
+\sphinxAtStartPar
+where \(f\) is defined as the specific quantity of \(F\) per unit mass. The flux term through the boundary \(\partial v_t\) can be written as the sum of the flux contributions through portions \(s_{k,t}\) of the surface \(\partial v_t = \cup_k s_{k,t}\),
+\begin{equation*}
+\begin{split}\Phi_{\partial v_t}(f) = \sum_{s_{k,t}} \dot{m}_k \, f_k \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where \(\dot{m}_k = \rho_k vi^{rel}_{n,k}\) is the mass flux through the surface \(s_{k,t}\), and it is assumed that the quantity \(f_k\) is constant over the surface \(s_{k,t}\), or that the average value over the surface has been considered.
+
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+In case the quantity \(f\) is not uniform over the domain boundary and varies continuously, the flux term can be written as the summation of infinite terms through surfaces whose area tends to zero, via a surface integral, following the definition of a Riemann integral.
+\end{sphinxadmonition}
+
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+A balance equation of a physical quantity for an open system also includes the balance equation of the same physical quantity for a closed system as a special case where the mass flux through the domain boundary is zero, \(\dot{m}_k = 0\).
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+Here, we consider the balances (integrals, global of a system) of some fundamental physical quantities in classical mechanics: mass, momentum, angular momentum, and total energy.
+
+
+\subsection{Mass Balance}
+\label{\detokenize{ch/principles-open:mass-balance}}
+\sphinxAtStartPar
+The mass balance, \(F = M\), \(f = 1\), for an open system is
+\begin{equation*}
+\begin{split}\frac{d}{dt} M_{v_t} = - \sum_k \dot{m}_k\end{split}
+\end{equation*}
+
+\subsection{Momentum Balance}
+\label{\detokenize{ch/principles-open:momentum-balance}}
+\sphinxAtStartPar
+ \sphinxstylestrong{todo} \sphinxstyleemphasis{reference to or from classical mechanics}
+
+
+\subsection{Angular Momentum Balance}
+\label{\detokenize{ch/principles-open:angular-momentum-balance}}
+\sphinxAtStartPar
+ \sphinxstylestrong{todo} \sphinxstyleemphasis{reference to or from classical mechanics}
+
+
+\subsection{Total Energy Balance}
+\label{\detokenize{ch/principles-open:total-energy-balance}}
+\sphinxAtStartPar
+The total energy balance \(F = E^{tot} = E + K\), \(f = e^{tot} = e + \frac{|\vec{v}|^2}{2}\),
+\begin{equation*}
+\begin{split}\frac{d}{dt} E^{tot}_{v_t} = P^{ext}_{v_t}  + \dot{Q}^{ext}_{v_t}  - \sum_k \dot{m}_k \, e^{tot}_k \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The power of external actions \(P^{ext}_{v_t}\) can be written as the sum of contributions on the surfaces of the system’s boundary through which there is mass flow, and impermeable surfaces that can be used to extract work from the system. If the effects of viscous stresses on the surfaces through which there is mass flow can be neglected, the power of the actions on the system can be written as
+\begin{equation*}
+\begin{split}\begin{aligned}
+  P^{ext} & = P^{ext,mech} + P^{ext,\Phi} = \\
+          & = P^{ext,mech} - \sum_{k} \dot{m}_k \frac{P_k}{\rho_k} \ , 
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and the total energy balance of the system becomes
+\begin{equation*}
+\begin{split}\dfrac{d}{dt} E^{tot}_{v_t} = P^{ext,mech}_{v_t} + \dot{Q}^{ext} - \sum_k \dot{m}_k h^{tot}_k \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where the specific total enthalpy is defined as \(h^{tot} = e^{tot} + \frac{P}{\rho} = e + \frac{P}{\rho} + \frac{|\vec{v}|^2}{2}\).
+\label{ch/principles-open:thermodynamics:principles:open:ex:turbine}
+\begin{sphinxadmonition}{note}{Example 16 (Turbine)}
+
+
+\end{sphinxadmonition}
+\label{ch/principles-open:thermodynamics:principles:open:ex:compressor}
+\begin{sphinxadmonition}{note}{Example 17 (Compressor)}
+
+
+\end{sphinxadmonition}
+\label{ch/principles-open:thermodynamics:principles:open:ex:comb-chamber}
+\begin{sphinxadmonition}{note}{Example 18 (Combustion Chamber)}
+
+
+\end{sphinxadmonition}
+
+\sphinxstepscope
+
+
+\chapter{Thermodynamics potentials}
+\label{\detokenize{ch/potentials:thermodynamics-potentials}}\label{\detokenize{ch/potentials:classical-thermodynamics-potentials}}\label{\detokenize{ch/potentials::doc}}
+\sphinxAtStartPar
+Starting from the
 Partendo dall’espressione incrementale del primo principio della termodinamica è possivile definire altre funzioni delle variabili di stato (\sphinxstylestrong{TODO} \sphinxstyleemphasis{Ruolo della trasformata di Legendre}), chiamati \sphinxstylestrong{potenziali termodinamici}
 
 \sphinxAtStartPar
@@ -1273,6 +1532,75 @@ Dec 30, 2024
 
 
 
+\renewcommand{\indexname}{Proof Index}
+\begin{sphinxtheindex}
+\let\bigletter\sphinxstyleindexlettergroup
+\bigletter{definition\sphinxhyphen{}0}
+\item\relax\sphinxstyleindexentry{definition\sphinxhyphen{}0}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}gibbs\sphinxhyphen{}phase\sphinxhyphen{}rule}\sphinxstyleindexpageref{ch/principles-gibbs-phase-rule:\detokenize{definition-0}}
+\indexspace
+\bigletter{definition\sphinxhyphen{}2}
+\item\relax\sphinxstyleindexentry{definition\sphinxhyphen{}2}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}gibbs\sphinxhyphen{}phase\sphinxhyphen{}rule}\sphinxstyleindexpageref{ch/principles-gibbs-phase-rule:\detokenize{definition-2}}
+\indexspace
+\bigletter{definition\sphinxhyphen{}3}
+\item\relax\sphinxstyleindexentry{definition\sphinxhyphen{}3}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}gibbs\sphinxhyphen{}phase\sphinxhyphen{}rule}\sphinxstyleindexpageref{ch/principles-gibbs-phase-rule:\detokenize{definition-3}}
+\indexspace
+\bigletter{example\sphinxhyphen{}1}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}1}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}gibbs\sphinxhyphen{}phase\sphinxhyphen{}rule}\sphinxstyleindexpageref{ch/principles-gibbs-phase-rule:\detokenize{example-1}}
+\indexspace
+\bigletter{example\sphinxhyphen{}10}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}10}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}gibbs\sphinxhyphen{}phase\sphinxhyphen{}rule}\sphinxstyleindexpageref{ch/principles-gibbs-phase-rule:\detokenize{example-10}}
+\indexspace
+\bigletter{example\sphinxhyphen{}11}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}11}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}gibbs\sphinxhyphen{}phase\sphinxhyphen{}rule}\sphinxstyleindexpageref{ch/principles-gibbs-phase-rule:\detokenize{example-11}}
+\indexspace
+\bigletter{example\sphinxhyphen{}12}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}12}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}gibbs\sphinxhyphen{}phase\sphinxhyphen{}rule}\sphinxstyleindexpageref{ch/principles-gibbs-phase-rule:\detokenize{example-12}}
+\indexspace
+\bigletter{example\sphinxhyphen{}13}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}13}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}gibbs\sphinxhyphen{}phase\sphinxhyphen{}rule}\sphinxstyleindexpageref{ch/principles-gibbs-phase-rule:\detokenize{example-13}}
+\indexspace
+\bigletter{example\sphinxhyphen{}14}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}14}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}gibbs\sphinxhyphen{}phase\sphinxhyphen{}rule}\sphinxstyleindexpageref{ch/principles-gibbs-phase-rule:\detokenize{example-14}}
+\indexspace
+\bigletter{example\sphinxhyphen{}15}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}15}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}gibbs\sphinxhyphen{}phase\sphinxhyphen{}rule}\sphinxstyleindexpageref{ch/principles-gibbs-phase-rule:\detokenize{example-15}}
+\indexspace
+\bigletter{example\sphinxhyphen{}16}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}16}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}gibbs\sphinxhyphen{}phase\sphinxhyphen{}rule}\sphinxstyleindexpageref{ch/principles-gibbs-phase-rule:\detokenize{example-16}}
+\indexspace
+\bigletter{example\sphinxhyphen{}17}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}17}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}gibbs\sphinxhyphen{}phase\sphinxhyphen{}rule}\sphinxstyleindexpageref{ch/principles-gibbs-phase-rule:\detokenize{example-17}}
+\indexspace
+\bigletter{example\sphinxhyphen{}18}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}18}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}gibbs\sphinxhyphen{}phase\sphinxhyphen{}rule}\sphinxstyleindexpageref{ch/principles-gibbs-phase-rule:\detokenize{example-18}}
+\indexspace
+\bigletter{example\sphinxhyphen{}5}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}5}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}gibbs\sphinxhyphen{}phase\sphinxhyphen{}rule}\sphinxstyleindexpageref{ch/principles-gibbs-phase-rule:\detokenize{example-5}}
+\indexspace
+\bigletter{example\sphinxhyphen{}6}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}6}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}gibbs\sphinxhyphen{}phase\sphinxhyphen{}rule}\sphinxstyleindexpageref{ch/principles-gibbs-phase-rule:\detokenize{example-6}}
+\indexspace
+\bigletter{example\sphinxhyphen{}7}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}7}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}gibbs\sphinxhyphen{}phase\sphinxhyphen{}rule}\sphinxstyleindexpageref{ch/principles-gibbs-phase-rule:\detokenize{example-7}}
+\indexspace
+\bigletter{example\sphinxhyphen{}8}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}8}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}gibbs\sphinxhyphen{}phase\sphinxhyphen{}rule}\sphinxstyleindexpageref{ch/principles-gibbs-phase-rule:\detokenize{example-8}}
+\indexspace
+\bigletter{example\sphinxhyphen{}9}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}9}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}gibbs\sphinxhyphen{}phase\sphinxhyphen{}rule}\sphinxstyleindexpageref{ch/principles-gibbs-phase-rule:\detokenize{example-9}}
+\indexspace
+\bigletter{proposition\sphinxhyphen{}4}
+\item\relax\sphinxstyleindexentry{proposition\sphinxhyphen{}4}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}gibbs\sphinxhyphen{}phase\sphinxhyphen{}rule}\sphinxstyleindexpageref{ch/principles-gibbs-phase-rule:\detokenize{proposition-4}}
+\indexspace
+\bigletter{thermodynamics:principles:open:ex:comb\sphinxhyphen{}chamber}
+\item\relax\sphinxstyleindexentry{thermodynamics:principles:open:ex:comb\sphinxhyphen{}chamber}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}open}\sphinxstyleindexpageref{ch/principles-open:\detokenize{thermodynamics:principles:open:ex:comb-chamber}}
+\indexspace
+\bigletter{thermodynamics:principles:open:ex:compressor}
+\item\relax\sphinxstyleindexentry{thermodynamics:principles:open:ex:compressor}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}open}\sphinxstyleindexpageref{ch/principles-open:\detokenize{thermodynamics:principles:open:ex:compressor}}
+\indexspace
+\bigletter{thermodynamics:principles:open:ex:turbine}
+\item\relax\sphinxstyleindexentry{thermodynamics:principles:open:ex:turbine}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}open}\sphinxstyleindexpageref{ch/principles-open:\detokenize{thermodynamics:principles:open:ex:turbine}}
+\end{sphinxtheindex}
 
 \renewcommand{\indexname}{Index}
 \printindex
