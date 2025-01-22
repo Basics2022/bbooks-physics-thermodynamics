@@ -10,9 +10,9 @@
 \contentsline {subsection}{\numberline {2.3.4}First Law in terms of state variables}{10}{subsection.2.3.4}%
 \contentsline {subsection}{\numberline {2.3.5}Second and Third Laws of Thermodynamics}{11}{subsection.2.3.5}%
 \contentsline {section}{\numberline {2.4}Second Law of Thermodynamics \sphinxhyphen {} Clausius Statement}{12}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Simple Systems}{12}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.1}Simple Systems}{13}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Composite Systems}{13}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Increase of Entropy in the Universe}{13}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.3}Increase of Entropy in the Universe}{14}{subsection.2.4.3}%
 \contentsline {section}{\numberline {2.5}Open Systems}{14}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}Mass Balance}{15}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}Momentum Balance}{15}{subsection.2.5.2}%

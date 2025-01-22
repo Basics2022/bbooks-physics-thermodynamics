@@ -1,0 +1,775 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gibbs: Internal Energy, Phase Rule, and Multivariable Functions &#8212; Classical Thermodynamics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/principles-gibbs-phase-rule';</script>
+    <link rel="shortcut icon" href="../_static/favicon.svg"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Second Law of Thermodynamics - Clausius Statement" href="principles-second.html" />
+    <link rel="prev" title="First Law of Thermodynamics" href="principles-first.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.svg" class="logo__image only-light" alt="Classical Thermodynamics - Home"/>
+    <script>document.write(`<img src="../_static/logo-dark.svg" class="logo__image only-dark" alt="Classical Thermodynamics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Termodinamica</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="history.html">Brief History of Thermodynamics</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="principles.html">Principles of Thermodynamics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="principles-lavoisier.html">Lavoisier’s Principle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-first.html">First Law of Thermodynamics</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Gibbs: Internal Energy, Phase Rule, and Multivariable Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-second.html">Second Law of Thermodynamics - Clausius Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-open.html">Open Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="potentials.html">Thermodynamics potentials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coefficients.html">Coefficienti termodinamici</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="media.html">Stati della materia e modelli</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ideal_gases.html">Gas ideali</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="thermodynamic_transformations.html">Trasformazioni termodinamiche</a></li>
+<li class="toctree-l1"><a class="reference internal" href="heat_engines.html">Cicli termodinamici e macchine termiche</a></li>
+<li class="toctree-l1"><a class="reference internal" href="heat_transmission.html">Meccanismi di trasmissione del calore</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/ch/principles-gibbs-phase-rule.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Gibbs: Internal Energy, Phase Rule, and Multivariable Functions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-variables">State Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-energy">Internal Energy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gibbs-phase-rule">Gibbs Phase Rule</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-law-in-terms-of-state-variables">First Law in terms of state variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#second-and-third-laws-of-thermodynamics">Second and Third Laws of Thermodynamics</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="gibbs-internal-energy-phase-rule-and-multivariable-functions">
+<span id="physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule"></span><h1>Gibbs: Internal Energy, Phase Rule, and Multivariable Functions<a class="headerlink" href="#gibbs-internal-energy-phase-rule-and-multivariable-functions" title="Permalink to this heading">#</a></h1>
+<p>Following Gibbs’ work, this section introduces concepts such as <a class="reference internal" href="#physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-state-vars"><span class="std std-ref">state variables</span></a> and <a class="reference internal" href="#physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-internal-energy"><span class="std std-ref">internal energy</span></a>, as well as the <a class="reference internal" href="#physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-gibbs-phase-rule"><span class="std std-ref">Gibbs phase rule</span></a>. Later, the <span class="xref myst">first law of thermodynamics is reformulated</span> using the formalism introduced by Gibbs, which allows identifying the state of a system with a limited number of independent state variables and expressing the other (dependent) state variables as functions of multiple variables.</p>
+<div class="section" id="state-variables">
+<span id="physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-state-vars"></span><h2>State Variables<a class="headerlink" href="#state-variables" title="Permalink to this heading">#</a></h2>
+<div class="proof definition admonition" id="definition-0">
+<p class="admonition-title"><span class="caption-number">Definition 1 </span> (State Variable)</p>
+<div class="definition-content section" id="proof-content">
+<p>A state variable of a system is a physical property of the system that depends exclusively on the current state of the system.</p>
+</div>
+</div><div class="proof example admonition" id="example-1">
+<p class="admonition-title"><span class="caption-number">Example 1 </span> (State Variables and Non-State Variables)</p>
+<div class="example-content section" id="proof-content">
+<p>State variables include temperature, pressure, internal energy, entropy, etc.
+Non-state variables include work or heat exchanged by the system. <strong>todo</strong></p>
+</div>
+</div></div>
+<div class="section" id="internal-energy">
+<span id="physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-internal-energy"></span><h2>Internal Energy<a class="headerlink" href="#internal-energy" title="Permalink to this heading">#</a></h2>
+<div class="proof definition admonition" id="definition-2">
+<p class="admonition-title"><span class="caption-number">Definition 2 </span> (Internal Energy)</p>
+<div class="definition-content section" id="proof-content">
+<p>The internal energy of a system is defined as the difference between the total energy and the macroscopic kinetic energy of the system,</p>
+<div class="math notranslate nohighlight">
+\[E = E^{tot} - K \ .\]</div>
+</div>
+</div><p>It is possible to derive a balance for the internal energy of a closed system by subtracting the balance of kinetic energy described by the kinetic energy theorem from the balance of total energy provided by the first law of thermodynamics,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  d E^{tot} &amp; = \delta L^{ext} + \delta Q^{ext} \\
+  d K       &amp; = \delta L^{ext} + \delta L^{int} \ ,
+\end{aligned}\end{split}\]</div>
+<p>The energy balance for the internal energy of a closed system then becomes</p>
+<div class="math notranslate nohighlight">
+\[d E = \delta Q^{ext} - \delta L^{int} \ .\]</div>
+</div>
+<div class="section" id="gibbs-phase-rule">
+<span id="physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-gibbs-phase-rule"></span><h2>Gibbs Phase Rule<a class="headerlink" href="#gibbs-phase-rule" title="Permalink to this heading">#</a></h2>
+<div class="proof definition admonition" id="definition-3">
+<p class="admonition-title"><span class="caption-number">Definition 3 </span> (Phase)</p>
+<div class="definition-content section" id="proof-content">
+<p>A phase is defined as a portion of a chemical-physical system characterized by uniform chemical-physical (macroscopic) properties.</p>
+</div>
+</div><p><strong>todo</strong></p>
+<ul class="simple">
+<li><p>Discussion of properties</p></li>
+<li><p>Examples: a mixture of miscible gases constitutes a single phase, in which the individual components cannot be macroscopically distinguished; immiscible liquids remain macroscopically separated and thus constitute multiple phases, in which distinct chemical compositions can be macroscopically identified;…</p></li>
+</ul>
+<div class="proof proposition admonition" id="proposition-4">
+<p class="admonition-title"><span class="caption-number">Proposition 1 </span> (Gibbs Phase Rule)</p>
+<div class="proposition-content section" id="proof-content">
+<p>The thermodynamic (equilibrium) state of a system is identified by a number <span class="math notranslate nohighlight">\(F\)</span> of independent <strong>intensive</strong> state variables, determined by the <strong>Gibbs phase rule</strong>,</p>
+<div class="math notranslate nohighlight">
+\[F = C - P + 1 + W \ ,\]</div>
+<p>i.e., the number of independent intensive variables (or degrees of freedom), <span class="math notranslate nohighlight">\(F\)</span>, of a system is a function of the number of independent components <span class="math notranslate nohighlight">\(C\)</span>, the number of phases <span class="math notranslate nohighlight">\(P\)</span>, and the number <span class="math notranslate nohighlight">\(W\)</span> of ways the system can manifest internal work, such as:</p>
+<ul class="simple">
+<li><p>internal mechanical stresses</p></li>
+<li><p>contribution of surface tension</p></li>
+<li><p>bond energy of the molecules of the components</p></li>
+<li><p>contribution of the electromagnetic field</p></li>
+</ul>
+</div>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Discussion of the Gibbs Phase Rule<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The equilibrium state of a system is defined by the values of the state variables, which for a non-electrically charged gas system are: temperature <span class="math notranslate nohighlight">\(T\)</span>, pressure <span class="math notranslate nohighlight">\(p\)</span>, and concentrations <span class="math notranslate nohighlight">\(C_{c,\phi}\)</span> of the individual components <span class="math notranslate nohighlight">\(c=1:C\)</span> in the individual phases <span class="math notranslate nohighlight">\(\phi = 1:P\)</span> within the system.</p>
+<p class="sd-card-text">The state of the system is thus determined by the values of the <span class="math notranslate nohighlight">\(1+W\)</span> intensive thermodynamic variables, here <span class="math notranslate nohighlight">\(W+1=2\)</span> (<span class="math notranslate nohighlight">\(T\)</span>, <span class="math notranslate nohighlight">\(p\)</span>), and the <span class="math notranslate nohighlight">\(C \, P\)</span> molar or mass fractions <span class="math notranslate nohighlight">\(n_{c,\phi}\)</span>, for a total of <span class="math notranslate nohighlight">\(N \, P + W + 1\)</span> variables.
+In general, these variables are constrained by some conditions:</p>
+<ul>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(C \, (P-1)\)</span> phase equilibrium conditions for each component, described by the equality of chemical potentials</p>
+<div class="math notranslate nohighlight">
+\[\mu_{c,\phi_1}(T,p) = \mu_{c,\phi_2}(T,p) = \dots = \mu_{c,\phi_P}(T,p)\]</div>
+</li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(P\)</span> unitarity conditions of the fractions</p>
+<div class="math notranslate nohighlight">
+\[\sum_{c} n_{c,\phi} = 1\]</div>
+</li>
+</ul>
+<p class="sd-card-text">Thus, with <span class="math notranslate nohighlight">\(C \, P + W + 1\)</span> variables and <span class="math notranslate nohighlight">\(P + C\, (P-1) = C \, P - C + P\)</span> equations, we find that the problem can be determined by</p>
+<div class="math notranslate nohighlight">
+\[C \, P + W + 1 - C \, P + C - P  =  C - P + W + 1 = F \ ,\]</div>
+<p class="sd-card-text">independent variables.</p>
+</div>
+</details><p><strong>todo</strong></p>
+<ul class="simple">
+<li><p>Provide examples that clarify the definition of phase (e.g., pure solids or liquids represent phases on their own), and of independent component (e.g., chemical reactions, with no excess components, create constraints that reduce the number of independent substances, thanks to stoichiometric relationships between substances)</p></li>
+<li><p>Discuss the role of phase fractions of a single component and the fact that they are not state variables; example phase transition from liquid to vapor: equilibrium is determined by the value of <span class="math notranslate nohighlight">\(P\)</span> (or <span class="math notranslate nohighlight">\(T\)</span>), and the vapor fraction is a result of other extensive variables of the system.</p></li>
+</ul>
+<div class="proof example dropdown admonition" id="example-5">
+<p class="admonition-title"><span class="caption-number">Example 2 </span> (Closed system containing a single-component (or non-reactive), single-phase, electrically neutral (or not subjected to electromagnetic field))</p>
+<div class="example-content section" id="proof-content">
+<p>In a system consisting of a compressible gas, single-component and single-phase (gas phase), electrically neutral, <strong>todo</strong> <em>other?</em>, the only form of internal work is related to compression, <span class="math notranslate nohighlight">\(\delta L^{int,rev} = P dV\)</span>, and thus <span class="math notranslate nohighlight">\(W = 1\)</span>. Therefore, the system requires</p>
+<div class="math notranslate nohighlight">
+\[F = C - P + 1 + W = 1 - 1 + 1 + 1 = 2 \ ,\]</div>
+<p>state variables to define the system state.</p>
+</div>
+</div><div class="proof example dropdown admonition" id="example-6">
+<p class="admonition-title"><span class="caption-number">Example 3 </span> (Open system containing a single-component (or non-reactive), single-phase, electrically neutral (or not subjected to electromagnetic field))</p>
+<div class="example-content section" id="proof-content">
+<p>In an open system, the variation in energy of the system also depends on the variation in the amount of gas contained in it. Thus, in general, there are <span class="math notranslate nohighlight">\(W = 2\)</span> ways to change the system’s energy: by compression work or by a flow of matter into the system. Therefore, <span class="math notranslate nohighlight">\(F=3\)</span> state variables are needed to define the system’s state.</p>
+</div>
+</div><div class="proof example dropdown admonition" id="example-7">
+<p class="admonition-title"><span class="caption-number">Example 4 </span> (Reactive gas mixture in a closed system)</p>
+<div class="example-content section" id="proof-content">
+<p>In a reactive gas mixture consisting of two compounds <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span> in equilibrium according to the equilibrium reaction</p>
+<div class="math notranslate nohighlight">
+\[n_a A + n_b B \leftrightarrow n A_a B_b\]</div>
+<p>the energy of the system depends on the mechanical compression work of the gas mixture and the quantities of the 3 compounds present in the gas. However, the variation of these compounds is not independent but determined by the equilibrium reaction. Specifically,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  d n_{B} &amp; = d n_{A} \frac{n_b}{n_a} \\
+  d n_{A_a B_b} &amp; = - d n_{A} \frac{n}{n_a} \\
+\end{aligned}\end{split}\]</div>
+<p>The reaction is thus determined by a single parameter. The variation in energy of the system is thus determined by <span class="math notranslate nohighlight">\(W=2\)</span> processes: from the compression work done on the system, and from the state of the reaction. To define the state of the system, <span class="math notranslate nohighlight">\(F=3\)</span> independent state variables are needed, such as <strong>todo</strong> <span class="math notranslate nohighlight">\(T\)</span>, <span class="math notranslate nohighlight">\(P\)</span>, <span class="math notranslate nohighlight">\(n_A\)</span>? Are the chemical potentials <span class="math notranslate nohighlight">\(\mu_A\)</span>, <span class="math notranslate nohighlight">\(\mu_B\)</span>, <span class="math notranslate nohighlight">\(\mu_{A_a B_b}\)</span> required? Are they uniquely determined?</p>
+</div>
+</div><div class="proof example dropdown admonition" id="example-8">
+<p class="admonition-title"><span class="caption-number">Example 5 </span> (Single-component system during a phase transition)</p>
+<div class="example-content section" id="proof-content">
+<p><strong>First-order phase transition.</strong> During a first-order phase transition, two phases, <span class="math notranslate nohighlight">\(P = 2\)</span>, are simultaneously present in the system. According to the Gibbs phase rule, the state of the system is determined by</p>
+<div class="math notranslate nohighlight">
+\[F = C - P + 1 + W = 1 - 2 + 1 + 1 = 1 \ ,\]</div>
+<p>state variable.</p>
+<p><strong>Critical point.</strong> The critical point in the phase diagram of a single-component system defines the condition where three phases, <span class="math notranslate nohighlight">\(P = 3\)</span>, are simultaneously present in the system. According to the Gibbs phase rule, the state of the system is determined by <span class="math notranslate nohighlight">\(F = 0\)</span> state variables: the state of the system at the critical point is uniquely defined, with no degrees of freedom.</p>
+</div>
+</div><div class="proof example dropdown admonition" id="example-9">
+<p class="admonition-title"><span class="caption-number">Example 6 </span> (Solid)</p>
+<div class="example-content section" id="proof-content">
+<p>In the absence of other physical phenomena, the only form of work in a solid is related to deformation work, <span class="math notranslate nohighlight">\(\delta L^{int,rev} = \sigma_{ij} \, d \varepsilon_{ij} dV\)</span>. The strain tensor is second-order and symmetric, and therefore has 6 independent components in 3-dimensional space, so <span class="math notranslate nohighlight">\(W=6\)</span></p>
+</div>
+</div><div class="proof example dropdown admonition" id="example-10">
+<p class="admonition-title"><span class="caption-number">Example 7 </span> (Solid mixtures)</p>
+<div class="example-content section" id="proof-content">
+<ul class="simple">
+<li><p>Phases in solid mixtures <strong>todo</strong></p></li>
+</ul>
+</div>
+</div><div class="proof example dropdown admonition" id="example-11">
+<p class="admonition-title"><span class="caption-number">Example 8 </span> (Influence of the electromagnetic field)</p>
+<div class="example-content section" id="proof-content">
+<ul class="simple">
+<li><p>Electric field and magnetization <strong>todo</strong></p></li>
+</ul>
+</div>
+</div></div>
+<div class="section" id="first-law-in-terms-of-state-variables">
+<h2>First Law in terms of state variables<a class="headerlink" href="#first-law-in-terms-of-state-variables" title="Permalink to this heading">#</a></h2>
+<p>Internal energy is an extensive variable of a thermodynamic system. In general, it can be written as a function of extensive variables that represent the ways the system manifests its internal energy (<strong>todo</strong> <em>due to work done on it, heat transferred to the system, and its chemical composition, thus the energy contained in bonds</em>).</p>
+<div class="math notranslate nohighlight">
+\[E(S, X_k)\]</div>
+<p>where <span class="math notranslate nohighlight">\( X_k \)</span> are the state variables whose variations are associated with reversible internal work, and <span class="math notranslate nohighlight">\( S \)</span> is the state variable whose variation is associated with heat exchange with the external environment and internal dissipative actions. <strong>todo</strong> <em>referring to the chapter on functions and multivariable calculus</em></p>
+<p>Assuming the function <span class="math notranslate nohighlight">\( E \)</span> is continuous and differentiable, at least piecewise, the exact differential of internal energy can be written as a function of the increments of the independent variables:</p>
+<div class="math notranslate nohighlight">
+\[
+dE = \left. \dfrac{\partial E}{\partial S} \right|_{\mathbf{X}} d S + \left. \dfrac{\partial E}{\partial X_k} \right|_{S} d X_k = 
+T \, d S + \sum_k F_k \, d X_k
+\]</div>
+<p>where <span class="math notranslate nohighlight">\( F_k \)</span> are the generalized forces associated with changes in the generalized coordinates <span class="math notranslate nohighlight">\( X_k \)</span>, and <span class="math notranslate nohighlight">\( T \)</span> and <span class="math notranslate nohighlight">\( S \)</span> correspond to temperature and entropy as discussed further below. <strong>todo</strong>.</p>
+<p>With this formalism, it is straightforward to express the <strong>second</strong> and <strong>third</strong> laws of thermodynamics as:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\( dS \ge \frac{\delta Q^{ext}}{T} \)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( T \ge 0 \)</span></p></li>
+</ul>
+<p>The expression for the differential of internal energy can be compared with the energy balance written in terms of heat transferred to the system and internal work:</p>
+<div class="math notranslate nohighlight">
+\[
+dE = \delta Q^{ext} - \delta L^{int} = 
+\delta Q^{ext} + \delta^+ D - \delta L^{int,rev}
+\]</div>
+<p>where the internal work <span class="math notranslate nohighlight">\( \delta L^{int} \)</span> is recognized as the sum of a reversible contribution and a dissipative contribution, which is never negative: <span class="math notranslate nohighlight">\( \delta L^{int} = \delta L^{int,rev} - \delta^+ D \)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\( dE \)</span> is an exact differential and <span class="math notranslate nohighlight">\( \delta L^{int,rev} \)</span> is a reversible contribution, it follows that the sum of the two non-reversible contributions, <span class="math notranslate nohighlight">\( \delta U := \delta Q^{ext} + \delta^+ D \)</span>, is a reversible contribution. Comparing the two expressions for the differential of internal energy, we can associate reversible internal work with the sum of works formed as the product of generalized forces <span class="math notranslate nohighlight">\( F_k \)</span> and changes in the state variables <span class="math notranslate nohighlight">\( X_k \)</span>, and the term <span class="math notranslate nohighlight">\( \delta U \)</span> with the product <span class="math notranslate nohighlight">\( T \, dS \)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+  -\delta L^{int,rev} &amp;= \sum_k F_k \, d X_k \\
+  \delta U &amp;= T \, dS
+\end{cases}
+\end{split}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Temperature, <span class="math notranslate nohighlight">\( T \)</span>, and entropy, <span class="math notranslate nohighlight">\( S \)</span><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">In the absence of external work done on the system, and in the absence of dissipation <span class="math notranslate nohighlight">\( \delta^+ D = 0 \)</span>, we get:</p>
+<div class="math notranslate nohighlight">
+\[
+dE^{tot} = dE = \delta Q^{ext}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+dS = \frac{\delta Q^{ext}}{T}
+\]</div>
+<p class="sd-card-text">Consider a closed and isolated system made of two subsystems in equilibrium, which can exchange heat but not work.</p>
+<p class="sd-card-text">The total energy of the system is constant, <span class="math notranslate nohighlight">\( E = E_1 + E_2 \)</span>. If the two subsystems are not initially at the same temperature, we observe a heat flow from the hotter system to the colder one, which satisfies the inequality:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\delta Q_{12}}{T_1} + \frac{\delta Q_{21}}{T_2} \ge 0 \quad \rightarrow \quad dS_1 + dS_2 \ge 0
+\]</div>
+<p class="sd-card-text">The quantity <span class="math notranslate nohighlight">\( S = S_1 + S_2 \)</span> is non-decreasing.</p>
+<!--
+$$E_1(T_1) + E_2(T_2) = E = \text{const}$$
+
+$$\frac{d E_1}{d T_1} = -\frac{d E_2}{d T_2} \frac{d T_2}{d T_1}$$
+-->
+</div>
+</details></div>
+<div class="section" id="second-and-third-laws-of-thermodynamics">
+<h2>Second and Third Laws of Thermodynamics<a class="headerlink" href="#second-and-third-laws-of-thermodynamics" title="Permalink to this heading">#</a></h2>
+<p>The formalism introduced in this section allows for a rather natural formulation of the second law and a version of the third law of thermodynamics.</p>
+<p>This formulation of the third law of thermodynamics states that the thermodynamic temperature is always positive:</p>
+<div class="math notranslate nohighlight">
+\[
+T := \left.\frac{\partial E}{\partial S}\right|_{\mathbf{X}} &gt; 0
+\]</div>
+<p><strong>todo</strong> <em>Add some words about the significance, in terms of molecular agitation and probability</em></p>
+<p>In cases where this form or consequence of the third law of thermodynamics holds, the second law of thermodynamics is a consequence of the non-negativity of dissipation and the heat transfer mechanism, as will be discussed in more detail in the discussion of <a class="reference internal" href="principles-second.html#physics-hs-thermodynamics-principles-second-composite"><span class="std std-ref">composite systems</span></a>.</p>
+<p>In the general case of a <strong>simple system</strong>, using the definition <span class="math notranslate nohighlight">\( dS = \frac{\delta U}{T} = \frac{\delta Q^{ext} + \delta^+ D}{T} \)</span>, the non-negativity of dissipation, <span class="math notranslate nohighlight">\( \delta^+ D \ge 0 \)</span>, implies:</p>
+<div class="math notranslate nohighlight">
+\[
+dS \ge \frac{\delta Q^{ext}}{T}
+\]</div>
+<p>This is an expression of the <a class="reference internal" href="principles-second.html#physics-hs-thermodynamics-foundation-principles-second"><span class="std std-ref">Clausius statement of the second law of thermodynamics</span></a>.</p>
+<p><strong>todo</strong> <strong>oss</strong> <em>The third law of thermodynamics: 1. It seems not to be a fundamental principle; 2. For some systems with limited energy, the definition of temperature <span class="math notranslate nohighlight">\( T := \left( \frac{\partial E}{\partial S} \right) \)</span> produces a negative temperature</em> <strong>todo</strong> <em>add a section on statistical mechanics?</em></p>
+<hr class="docutils" />
+<p>From L.E. Reichl, <em>A Modern Course in Statistical Physics</em>, with some inconsistencies <strong>todo</strong> <em>check!</em></p>
+<div class="math notranslate nohighlight">
+\[
+\delta W = - P dV + J dL + \sigma d A + V \left( \vec{e} \cdot d \vec{p} + \vec{h} \cdot d \vec{m}\right) + \phi d q
+\]</div>
+<ul class="simple">
+<li><p>where <span class="math notranslate nohighlight">\( J \)</span>, <span class="math notranslate nohighlight">\( \sigma \)</span> are tensions per unit length and area, <span class="math notranslate nohighlight">\( d L \)</span>, <span class="math notranslate nohighlight">\( d A \)</span> are changes in length or area,</p></li>
+<li><p>where <span class="math notranslate nohighlight">\( \vec{e} \)</span>, <span class="math notranslate nohighlight">\( \vec{h} \)</span> are the electric and magnetic fields, <span class="math notranslate nohighlight">\( \vec{p} \)</span>, <span class="math notranslate nohighlight">\( \vec{m} \)</span> are polarization and magnetization,</p></li>
+<li><p><span class="math notranslate nohighlight">\( \phi \)</span> is the electric potential, and <span class="math notranslate nohighlight">\( q \)</span> is electric charge (for open systems, otherwise <span class="math notranslate nohighlight">\( dq \equiv 0 \)</span> or net charge would be created!)</p></li>
+</ul>
+<div class="proof example dropdown admonition" id="example-12">
+<p class="admonition-title"><span class="caption-number">Example 9 </span> (Closed Monocomponent Gas System)</p>
+<div class="example-content section" id="proof-content">
+<p>The energy of the system, <span class="math notranslate nohighlight">\( E(S,V) \)</span></p>
+<div class="math notranslate nohighlight">
+\[
+dE = T \, dS - P \, dV
+\]</div>
+</div>
+</div><div class="proof example dropdown admonition" id="example-13">
+<p class="admonition-title"><span class="caption-number">Example 10 </span> (Open Monocomponent Gas System)</p>
+<div class="example-content section" id="proof-content">
+<p>The energy of the system, <span class="math notranslate nohighlight">\( E(S,V,N) \)</span></p>
+<div class="math notranslate nohighlight">
+\[
+dE = T \, dS - P \, dV + \mu \, dN
+\]</div>
+</div>
+</div><div class="proof example dropdown admonition" id="example-14">
+<p class="admonition-title"><span class="caption-number">Example 11 </span> (Reactive Gas Mixture in a Closed System)</p>
+<div class="example-content section" id="proof-content">
+<p>The energy of the system</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+  dE &amp; = T \, dS - P \, dV + \mu_k \, dN_k = \\
+     &amp; = T \, dS - P \, dV + \left( \mu_k n_k \right) dN
+\end{aligned}
+\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\( n_k \)</span> are the stoichiometric coefficients (with sign) of the reaction, and <span class="math notranslate nohighlight">\( N \)</span> is a quantity that identifies the equilibrium of the reaction, such that the variation of each component can be written as <span class="math notranslate nohighlight">\( dN_k = n_k \, dN \)</span>.</p>
+</div>
+</div><div class="proof example dropdown admonition" id="example-15">
+<p class="admonition-title"><span class="caption-number">Example 12 </span> (Monocomponent Mixture During a Phase Transition)</p>
+<div class="example-content section" id="proof-content">
+<p><strong>todo</strong> how to treat the phase fractions?</p>
+</div>
+</div><div class="proof example dropdown admonition" id="example-16">
+<p class="admonition-title"><span class="caption-number">Example 13 </span> (Solid)</p>
+<div class="example-content section" id="proof-content">
+<p>Solid system with initial volume <span class="math notranslate nohighlight">\( V \)</span> under uniform stress and strain, with small deformations</p>
+<div class="math notranslate nohighlight">
+\[
+dE = T \, dS - V \, \sigma_{ij} \, d \varepsilon_{ij}
+\]</div>
+</div>
+</div><div class="proof example dropdown admonition" id="example-17">
+<p class="admonition-title"><span class="caption-number">Example 14 </span> (Solid Mixtures)</p>
+<div class="example-content section" id="proof-content">
+<p><strong>todo</strong></p>
+</div>
+</div><div class="proof example dropdown admonition" id="example-18">
+<p class="admonition-title"><span class="caption-number">Example 15 </span> (Influence of the Magnetic Field)</p>
+<div class="example-content section" id="proof-content">
+<div class="math notranslate nohighlight">
+\[
+dE = T \, dS - P \, d V + H \, dM
+\]</div>
+<p><strong>todo</strong></p>
+</div>
+</div></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./ch"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="principles-first.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">First Law of Thermodynamics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="principles-second.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Second Law of Thermodynamics - Clausius Statement</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-variables">State Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-energy">Internal Energy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gibbs-phase-rule">Gibbs Phase Rule</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-law-in-terms-of-state-variables">First Law in terms of state variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#second-and-third-laws-of-thermodynamics">Second and Third Laws of Thermodynamics</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By basics
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

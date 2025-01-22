@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Classical thermodynamics &#8212; Termodinamica e fisica tecnica</title>
+    <title>Classical thermodynamics &#8212; Classical Thermodynamics</title>
   
   
   
@@ -68,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.svg"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Storia della termodinamica" href="ch/history.html" />
+    <link rel="next" title="Brief History of Thermodynamics" href="ch/history.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -155,8 +155,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/logo.svg" class="logo__image only-light" alt="Termodinamica e fisica tecnica - Home"/>
-    <script>document.write(`<img src="_static/logo-dark.svg" class="logo__image only-dark" alt="Termodinamica e fisica tecnica - Home"/>`);</script>
+    <img src="_static/logo.svg" class="logo__image only-light" alt="Classical Thermodynamics - Home"/>
+    <script>document.write(`<img src="_static/logo-dark.svg" class="logo__image only-dark" alt="Classical Thermodynamics - Home"/>`);</script>
   
   
 </a></div>
@@ -164,11 +164,18 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Termodinamica</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="ch/history.html">Storia della termodinamica</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ch/principles.html">Princìpi della termodinamica</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ch/potentials.html">Potenziali termodinamici</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ch/history.html">Brief History of Thermodynamics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ch/principles.html">Principles of Thermodynamics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ch/principles-lavoisier.html">Lavoisier’s Principle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch/principles-first.html">First Law of Thermodynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch/principles-gibbs-phase-rule.html">Gibbs: Internal Energy, Phase Rule, and Multivariable Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch/principles-second.html">Second Law of Thermodynamics - Clausius Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch/principles-open.html">Open Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ch/potentials.html">Thermodynamics potentials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ch/coefficients.html">Coefficienti termodinamici</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="ch/media.html">Stati della materia e modelli</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ch/media.html">Stati della materia e modelli</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="ch/ideal_gases.html">Gas ideali</a></li>
 </ul>
 </li>
@@ -328,62 +335,44 @@ document.write(`
   <div class="tex2jax_ignore mathjax_ignore section" id="classical-thermodynamics">
 <span id="book-classical-thermodynamics"></span><h1>Classical thermodynamics<a class="headerlink" href="#classical-thermodynamics" title="Permalink to this heading">#</a></h1>
 <p>This material is part of the <a class="reference external" href="https://basics2022.github.io/bbooks"><strong>basics-books project</strong></a>. It is also available as a <a class="reference download internal" download="" href="_downloads/c563dd6b869263565ace01e935916696/book.pdf"><span class="xref download myst">.pdf document</span></a>.</p>
-<p><strong>Introduzione.</strong></p>
-<ul class="simple">
-<li><p>la termodinamica si occupa della forme di energia, e delle sue variazioni attraverso scambi di lavoro e calore;</p></li>
-<li><p>la termodinamica classica fornisce una descrizione macroscopica di sistemi complessi, formati da un numero enorme di componenti elementari (atomi e molecole), per motivi di convenienza: la descrizione macroscopica media comporta una perdita di informazioni sul sistema, e la necessità di una grandezza legata ad essa che indichi il verso naturale di alcune trasformazioni, l’entropia;</p></li>
-<li><p>in equilibrio <strong>todo</strong>: in molti casi di interesse comune, l’<strong>equilibrio</strong> termodinamico <strong>locale</strong> viene raggiunto in intervalli di tempo che hanno durata caratteristica molto inferiore ai tempi caratteristici del sistema macrroscopico: le leggi della termodinamica vengono quindi applicate anche nello studio della meccanica dei solidi e dei fluidi;</p></li>
-</ul>
-<p><strong>Argomenti.</strong></p>
-<ul class="simple">
-<li><p>Principi della termodinamica</p>
-<ul>
-<li><p>Modello matematico: funzioni di stato,…</p></li>
-<li><p>Dall’esperienza ai principi fisici, alla base del modello</p></li>
-<li><p>Principi per sistemi chiusi e per sistemi aperti: facendo riferiemnto al <em>thm del trasporto di Reynolds</em></p></li>
-<li><p>grandezze intensive, estensive, sepcifiche,…</p></li>
-</ul>
-</li>
-<li><p>Potenziali termodinamici e coefficienti termodinamici</p>
-<ul>
-<li><p>potenziali termodinamici, relazioni di Maxwell</p></li>
-<li><p>coefficienti termodinamici: dilatazione, comprimibilità</p></li>
-<li><p>miscellanea nell’uso delle derivate parziali di funzioni multi-variabile in termodinamica</p></li>
-</ul>
-</li>
-<li><p>Stati della materia: equazioni di stato e equazioni costitutive</p>
-<ul>
-<li><p>fluidi:</p>
-<ul>
-<li><p>gas</p></li>
-<li><p>liquidi</p></li>
-</ul>
-</li>
-<li><p>solidi</p></li>
-<li><p>trasformazioni di fase</p></li>
-<li><p>altro…</p></li>
-</ul>
-</li>
-<li><p>Trasformazioni termodinamiche nei gas e macchine a fluido</p>
-<ul>
-<li><p>trasformazioni nei piani termodinamici</p></li>
-<li><p>macchine termiche ideali e non: Carnot, efficienza massima, cicli reali, formulazioni di Kelvin e Plank del secondo principio della termodinamica; disuguaglianza di Clausis</p></li>
-<li><p>cicli termodinamici: Otto, Diesel, Rankine, Joule-Brayton,…</p></li>
-</ul>
-</li>
-<li><p>Meccanismi di trasmissione del calore:</p>
-<ul>
-<li><p>conduzione</p></li>
-<li><p>convezione: naturale e forzata</p></li>
-<li><p>irraggiamento</p></li>
-</ul>
-</li>
-</ul>
-<p><strong>Extra.</strong></p>
-<ul class="simple">
-<li><p>Formulazione assiomatica della termodinamica</p></li>
-<li><p>Cenni di meccanica statistica</p></li>
-</ul>
+<p>Classical thermodynamics deal with energy, its forms and the ways it can be transferred.</p>
+<p>Classical thermodynamics provides a macroscopic, average, description of complex systems composed by a “huge” number of elementary components, in equilibrium: equilibrium means statistical equilibrium, resulting in stationary macroscopic observable physical quatities - thermodynamic variables - even though non-stationary microscopic dynamics of the system. The development of thermodynamics is closely related with the development of chemistry and the re-born of an atomic theory of the matter. Classical thermodynamics is the results of studies on matter and energy performed from the early experiments of the XVII centuries on gas to the mathematical formulation of the late XIX century by Gibbs. A consistent theory of thermodynamics starts from conservation of mass and balance of total energy - whose changes result from input of work or heat -, provides a description of natural tendencies in nature, through Clausius’ statement of the second principle - degradation of mechanical energy and heat direction from hot to cold bodiess - in terms of a thermodynamic state variable, called entropy, and provides a definition of a thermodynamic scale of temperature - defined in terms of energy and entropy.</p>
+<!--
+**Introduzione.**
+- la termodinamica si occupa della forme di energia, e delle sue variazioni attraverso scambi di lavoro e calore;
+- la termodinamica classica fornisce una descrizione macroscopica di sistemi complessi, formati da un numero enorme di componenti elementari (atomi e molecole), per motivi di convenienza: la descrizione macroscopica media comporta una perdita di informazioni sul sistema, e la necessità di una grandezza legata ad essa che indichi il verso naturale di alcune trasformazioni, l'entropia;
+- in equilibrio **todo**: in molti casi di interesse comune, l'**equilibrio** termodinamico **locale** viene raggiunto in intervalli di tempo che hanno durata caratteristica molto inferiore ai tempi caratteristici del sistema macrroscopico: le leggi della termodinamica vengono quindi applicate anche nello studio della meccanica dei solidi e dei fluidi;
+
+**Argomenti.**
+- Principi della termodinamica
+  - Modello matematico: funzioni di stato,...
+  - Dall'esperienza ai principi fisici, alla base del modello
+  - Principi per sistemi chiusi e per sistemi aperti: facendo riferiemnto al *thm del trasporto di Reynolds*
+  - grandezze intensive, estensive, sepcifiche,...
+- Potenziali termodinamici e coefficienti termodinamici
+  - potenziali termodinamici, relazioni di Maxwell
+  - coefficienti termodinamici: dilatazione, comprimibilità
+  - miscellanea nell'uso delle derivate parziali di funzioni multi-variabile in termodinamica
+- Stati della materia: equazioni di stato e equazioni costitutive
+  - fluidi:
+    - gas
+    - liquidi
+  - solidi
+  - trasformazioni di fase
+  - altro...
+- Trasformazioni termodinamiche nei gas e macchine a fluido
+  - trasformazioni nei piani termodinamici
+  - macchine termiche ideali e non: Carnot, efficienza massima, cicli reali, formulazioni di Kelvin e Plank del secondo principio della termodinamica; disuguaglianza di Clausis
+  - cicli termodinamici: Otto, Diesel, Rankine, Joule-Brayton,...
+- Meccanismi di trasmissione del calore:
+  - conduzione
+  - convezione: naturale e forzata
+  - irraggiamento
+
+**Extra.**
+- Formulazione assiomatica della termodinamica
+- Cenni di meccanica statistica
+-->
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -423,7 +412,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Storia della termodinamica</p>
+        <p class="prev-next-title">Brief History of Thermodynamics</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

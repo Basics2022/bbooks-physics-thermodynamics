@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trasformazioni termodinamiche &#8212; Classical Thermodynamics</title>
+    <title>Open Systems &#8212; Classical Thermodynamics</title>
   
   
   
@@ -64,12 +64,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/thermodynamic_transformations';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/principles-open';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Cicli termodinamici e macchine termiche" href="heat_engines.html" />
-    <link rel="prev" title="Gas ideali" href="ideal_gases.html" />
+    <link rel="next" title="Thermodynamics potentials" href="potentials.html" />
+    <link rel="prev" title="Second Law of Thermodynamics - Clausius Statement" href="principles-second.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -166,12 +168,12 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Termodinamica</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="history.html">Brief History of Thermodynamics</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="principles.html">Principles of Thermodynamics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="principles.html">Principles of Thermodynamics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="principles-lavoisier.html">Lavoisier’s Principle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="principles-first.html">First Law of Thermodynamics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="principles-gibbs-phase-rule.html">Gibbs: Internal Energy, Phase Rule, and Multivariable Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="principles-second.html">Second Law of Thermodynamics - Clausius Statement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="principles-open.html">Open Systems</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Open Systems</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="potentials.html">Thermodynamics potentials</a></li>
@@ -180,7 +182,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="ideal_gases.html">Gas ideali</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Trasformazioni termodinamiche</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thermodynamic_transformations.html">Trasformazioni termodinamiche</a></li>
 <li class="toctree-l1"><a class="reference internal" href="heat_engines.html">Cicli termodinamici e macchine termiche</a></li>
 <li class="toctree-l1"><a class="reference internal" href="heat_transmission.html">Meccanismi di trasmissione del calore</a></li>
 </ul>
@@ -237,7 +239,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/thermodynamic_transformations.md" target="_blank"
+      <li><a href="../_sources/ch/principles-open.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -308,7 +310,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -319,11 +323,22 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Trasformazioni termodinamiche</h1>
+    <h1>Open Systems</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mass-balance">Mass Balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-balance">Momentum Balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-momentum-balance">Angular Momentum Balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#total-energy-balance">Total Energy Balance</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -333,27 +348,69 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
-<div class="sd-col sd-d-flex-row sd-align-minor-center docutils">
-<div class="sd-container-fluid sd-sphinx-override docutils">
-<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-gx-3 sd-gy-1 docutils">
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0">basics</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="open-systems">
+<span id="physics-hs-thermodynamics-foundation-principles-open"></span><h1>Open Systems<a class="headerlink" href="#open-systems" title="Permalink to this heading">#</a></h1>
+<p>In general, the balance equation for a physical quantity in an open system is derived from the balance of the same physical quantity for a closed system, adding the contribution of the flux terms of the desired physical quantity through the system’s boundary. Thus, if the balance of the physical quantity <span class="math notranslate nohighlight">\(F\)</span> for the closed system within volume <span class="math notranslate nohighlight">\(V_t\)</span> can be written as</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{d}{dt} F_{V_t} = R^e_{V_t} \ ,\]</div>
+<p>the balance of the same physical quantity for an open system identified by the (geometric) volume <span class="math notranslate nohighlight">\(v_t\)</span> can be written as</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dt} F_{v_t} = R^e_{v_t} - \Phi_{\partial v_t}(f) \ , \]</div>
+<p>where <span class="math notranslate nohighlight">\(f\)</span> is defined as the specific quantity of <span class="math notranslate nohighlight">\(F\)</span> per unit mass. The flux term through the boundary <span class="math notranslate nohighlight">\(\partial v_t\)</span> can be written as the sum of the flux contributions through portions <span class="math notranslate nohighlight">\(s_{k,t}\)</span> of the surface <span class="math notranslate nohighlight">\(\partial v_t = \cup_k s_{k,t}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\Phi_{\partial v_t}(f) = \sum_{s_{k,t}} \dot{m}_k \, f_k \ ,\]</div>
+<p>where <span class="math notranslate nohighlight">\(\dot{m}_k = \rho_k vi^{rel}_{n,k}\)</span> is the mass flux through the surface <span class="math notranslate nohighlight">\(s_{k,t}\)</span>, and it is assumed that the quantity <span class="math notranslate nohighlight">\(f_k\)</span> is constant over the surface <span class="math notranslate nohighlight">\(s_{k,t}\)</span>, or that the average value over the surface has been considered.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In case the quantity <span class="math notranslate nohighlight">\(f\)</span> is not uniform over the domain boundary and varies continuously, the flux term can be written as the summation of infinite terms through surfaces whose area tends to zero, via a surface integral, following the definition of a Riemann integral.</p>
 </div>
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Dec 30, 2024</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A balance equation of a physical quantity for an open system also includes the balance equation of the same physical quantity for a closed system as a special case where the mass flux through the domain boundary is zero, <span class="math notranslate nohighlight">\(\dot{m}_k = 0\)</span>.</p>
 </div>
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>0 min read</p>
+<p>Here, we consider the balances (integrals, global of a system) of some fundamental physical quantities in classical mechanics: mass, momentum, angular momentum, and total energy.</p>
+<div class="section" id="mass-balance">
+<h2>Mass Balance<a class="headerlink" href="#mass-balance" title="Permalink to this heading">#</a></h2>
+<p>The mass balance, <span class="math notranslate nohighlight">\(F = M\)</span>, <span class="math notranslate nohighlight">\(f = 1\)</span>, for an open system is</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dt} M_{v_t} = - \sum_k \dot{m}_k\]</div>
 </div>
+<div class="section" id="momentum-balance">
+<h2>Momentum Balance<a class="headerlink" href="#momentum-balance" title="Permalink to this heading">#</a></h2>
+<p><span style="color:red"> <strong>todo</strong> <em>reference to or from classical mechanics</em></span></p>
 </div>
+<div class="section" id="angular-momentum-balance">
+<h2>Angular Momentum Balance<a class="headerlink" href="#angular-momentum-balance" title="Permalink to this heading">#</a></h2>
+<p><span style="color:red"> <strong>todo</strong> <em>reference to or from classical mechanics</em></span></p>
 </div>
+<div class="section" id="total-energy-balance">
+<h2>Total Energy Balance<a class="headerlink" href="#total-energy-balance" title="Permalink to this heading">#</a></h2>
+<p>The total energy balance <span class="math notranslate nohighlight">\(F = E^{tot} = E + K\)</span>, <span class="math notranslate nohighlight">\(f = e^{tot} = e + \frac{|\vec{v}|^2}{2}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dt} E^{tot}_{v_t} = P^{ext}_{v_t}  + \dot{Q}^{ext}_{v_t}  - \sum_k \dot{m}_k \, e^{tot}_k \ .\]</div>
+<p>The power of external actions <span class="math notranslate nohighlight">\(P^{ext}_{v_t}\)</span> can be written as the sum of contributions on the surfaces of the system’s boundary through which there is mass flow, and impermeable surfaces that can be used to extract work from the system. If the effects of viscous stresses on the surfaces through which there is mass flow can be neglected, the power of the actions on the system can be written as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  P^{ext} &amp; = P^{ext,mech} + P^{ext,\Phi} = \\
+          &amp; = P^{ext,mech} - \sum_{k} \dot{m}_k \frac{P_k}{\rho_k} \ , 
+\end{aligned}\end{split}\]</div>
+<p>and the total energy balance of the system becomes</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{d}{dt} E^{tot}_{v_t} = P^{ext,mech}_{v_t} + \dot{Q}^{ext} - \sum_k \dot{m}_k h^{tot}_k \ ,\]</div>
+<p>where the specific total enthalpy is defined as <span class="math notranslate nohighlight">\(h^{tot} = e^{tot} + \frac{P}{\rho} = e + \frac{P}{\rho} + \frac{|\vec{v}|^2}{2}\)</span>.</p>
+<div class="proof example admonition" id="thermodynamics:principles:open:ex:turbine">
+<p class="admonition-title"><span class="caption-number">Example 16 </span> (Turbine)</p>
+<div class="example-content section" id="proof-content">
 </div>
+</div><div class="proof example admonition" id="thermodynamics:principles:open:ex:compressor">
+<p class="admonition-title"><span class="caption-number">Example 17 </span> (Compressor)</p>
+<div class="example-content section" id="proof-content">
 </div>
+</div><div class="proof example admonition" id="thermodynamics:principles:open:ex:comb-chamber">
+<p class="admonition-title"><span class="caption-number">Example 18 </span> (Combustion Chamber)</p>
+<div class="example-content section" id="proof-content">
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="trasformazioni-termodinamiche">
-<span id="classical-thermodynamics-transformations"></span><h1>Trasformazioni termodinamiche<a class="headerlink" href="#trasformazioni-termodinamiche" title="Permalink to this heading">#</a></h1>
+</div></div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -387,20 +444,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="ideal_gases.html"
+       href="principles-second.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Gas ideali</p>
+        <p class="prev-next-title">Second Law of Thermodynamics - Clausius Statement</p>
       </div>
     </a>
     <a class="right-next"
-       href="heat_engines.html"
+       href="potentials.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Cicli termodinamici e macchine termiche</p>
+        <p class="prev-next-title">Thermodynamics potentials</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -410,6 +467,23 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mass-balance">Mass Balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-balance">Momentum Balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-momentum-balance">Angular Momentum Balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#total-energy-balance">Total Energy Balance</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

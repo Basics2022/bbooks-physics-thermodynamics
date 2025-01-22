@@ -139,7 +139,7 @@ In the absence of other physical phenomena, the only form of work in a solid is 
 - Electric field and magnetization **todo**
 ```
 
-(physics-hs:thermodynamics:foundation:principles:gibbs-phase-rule:first)=
+
 ## First Law in terms of state variables
 Internal energy is an extensive variable of a thermodynamic system. In general, it can be written as a function of extensive variables that represent the ways the system manifests its internal energy (**todo** *due to work done on it, heat transferred to the system, and its chemical composition, thus the energy contained in bonds*).
 
@@ -156,11 +156,9 @@ $$
 
 where $ F_k $ are the generalized forces associated with changes in the generalized coordinates $ X_k $, and $ T $ and $ S $ correspond to temperature and entropy as discussed further below. **todo**.
 
-```{note}
-As shown later, with this formalism, it is straightforward to express [the **second** and **third** laws of thermodynamics](physics-hs:thermodynamics:foundation:principles:gibbs-phase-rule:second) as:
-- $ dS \ge \dfrac{\delta Q^{ext}}{T} $
+With this formalism, it is straightforward to express the **second** and **third** laws of thermodynamics as:
+- $ dS \ge \frac{\delta Q^{ext}}{T} $
 - $ T \ge 0 $
-```
 
 The expression for the differential of internal energy can be compared with the energy balance written in terms of heat transferred to the system and internal work:
 
@@ -211,7 +209,6 @@ $$\frac{d E_1}{d T_1} = -\frac{d E_2}{d T_2} \frac{d T_2}{d T_1}$$
 
 ```
 
-(physics-hs:thermodynamics:foundation:principles:gibbs-phase-rule:second)=
 ## Second and Third Laws of Thermodynamics
 
 The formalism introduced in this section allows for a rather natural formulation of the second law and a version of the third law of thermodynamics.

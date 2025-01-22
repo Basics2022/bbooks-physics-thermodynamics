@@ -3,12 +3,12 @@
 <!DOCTYPE html>
 
 
-<html lang="it" data-content_root="" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Princìpi della termodinamica &#8212; Termodinamica e fisica tecnica</title>
+    <title>Principles of Thermodynamics &#8212; Classical Thermodynamics</title>
   
   
   
@@ -56,7 +56,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -69,12 +68,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/principles';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
-    <link rel="index" title="Indice" href="../genindex.html" />
-    <link rel="search" title="Cerca" href="../search.html" />
-    <link rel="next" title="Potenziali termodinamici" href="potentials.html" />
-    <link rel="prev" title="Storia della termodinamica" href="history.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lavoisier’s Principle" href="principles-lavoisier.html" />
+    <link rel="prev" title="Brief History of Thermodynamics" href="history.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="it"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -159,8 +158,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.svg" class="logo__image only-light" alt="Termodinamica e fisica tecnica - Home"/>
-    <script>document.write(`<img src="../_static/logo-dark.svg" class="logo__image only-dark" alt="Termodinamica e fisica tecnica - Home"/>`);</script>
+    <img src="../_static/logo.svg" class="logo__image only-light" alt="Classical Thermodynamics - Home"/>
+    <script>document.write(`<img src="../_static/logo-dark.svg" class="logo__image only-dark" alt="Classical Thermodynamics - Home"/>`);</script>
   
   
 </a></div>
@@ -168,11 +167,18 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Termodinamica</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="history.html">Storia della termodinamica</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Princìpi della termodinamica</a></li>
-<li class="toctree-l1"><a class="reference internal" href="potentials.html">Potenziali termodinamici</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Brief History of Thermodynamics</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Principles of Thermodynamics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="principles-lavoisier.html">Lavoisier’s Principle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-first.html">First Law of Thermodynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-gibbs-phase-rule.html">Gibbs: Internal Energy, Phase Rule, and Multivariable Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-second.html">Second Law of Thermodynamics - Clausius Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-open.html">Open Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="potentials.html">Thermodynamics potentials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="coefficients.html">Coefficienti termodinamici</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="media.html">Stati della materia e modelli</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="media.html">Stati della materia e modelli</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="ideal_gases.html">Gas ideali</a></li>
 </ul>
 </li>
@@ -226,7 +232,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Scarica questa pagina">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
@@ -235,7 +241,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="../_sources/ch/principles.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Scarica il file sorgente"
+   title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
@@ -253,7 +259,7 @@ const thebe_selector_output = ".output, .cell_output"
       <li>
 <button onclick="window.print()"
   class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Stampa in PDF"
+  title="Print to PDF"
   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
@@ -273,7 +279,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 <button onclick="toggleFullScreen()"
   class="btn btn-sm btn-fullscreen-button"
-  title="Modalità schermo intero"
+  title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
@@ -299,7 +305,7 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Cerca" aria-label="Cerca" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -315,7 +321,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Princìpi della termodinamica</h1>
+    <h1>Principles of Thermodynamics</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -329,93 +335,76 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
-<div class="sd-col sd-d-flex-row sd-align-minor-center docutils">
-<div class="sd-container-fluid sd-sphinx-override docutils">
-<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-gx-3 sd-gy-1 docutils">
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0">basics</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="principles-of-thermodynamics">
+<span id="physics-hs-thermodynamics-principles"></span><h1>Principles of Thermodynamics<a class="headerlink" href="#principles-of-thermodynamics" title="Permalink to this heading">#</a></h1>
+<p>In this chapter, the principles of classical thermodynamics, along with the relevant concepts and mathematical formalism, are introduced.
+The principles of thermodynamics are presented for <strong>closed systems</strong>, and subsequently extended to open systems.</p>
+<!--
+Recalling that classical thermodynamics provides a macroscopic averaged description of the microscopic dynamics of systems composed of many elementary components, the microscopic level of detail can be used to give meaning to the thermodynamic variables used in the macroscopic description.
+-->
+<ul>
+<li><p>The <a class="reference internal" href="principles-lavoisier.html#physics-hs-thermodynamics-foundation-principles-lavoisier"><span class="std std-ref"><strong>principle of conservation of mass - Lavoisier’s principle</strong></span></a>, valid in classical mechanics and summarized by the formula <em>“nothing is created, nothing is destroyed, but everything is transformed”</em>, states that in a closed system, the mass is constant,</p>
+<div class="math notranslate nohighlight">
+\[d M = 0 \ .\]</div>
+</li>
+<li><p>The <a class="reference internal" href="principles-first.html#physics-hs-thermodynamics-foundation-principles-first"><span class="std std-ref"><strong>first law of thermodynamics</strong></span></a> provides the general form of the <em>total</em> energy balance of a closed system, recognizing the work done by external forces <span class="math notranslate nohighlight">\(\delta L^{ext}\)</span> and the heat <span class="math notranslate nohighlight">\(\delta Q^{ext}\)</span> exchanged between the system and the external environment as the causes of the variation of the total energy of the system.</p>
+<div class="math notranslate nohighlight">
+\[d E^{tot} = \delta L^{ext} + \delta Q^{ext} \ .\]</div>
+</li>
+<li><p>The work of <strong>Gibbs</strong> provides <a class="reference internal" href="principles-gibbs-phase-rule.html#physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule"><span class="std std-ref"><strong>the necessary concepts and a rigorous mathematical formalization</strong></span></a> of classical thermodynamics. The concepts of internal energy, state variables, and Gibbs’ phase rule are introduced; additionally, some <a class="reference internal" href="principles-phase-diagrams.html#physics-hs-thermodynamics-foundation-principles-phase-diagrams"><span class="std std-ref">phase diagrams</span></a> for representing the state of a system and thermodynamic transformations are presented, which will be used in subsequent chapters.</p></li>
+<li><p>The <a class="reference internal" href="principles-second.html#physics-hs-thermodynamics-foundation-principles-second"><span class="std std-ref"><strong>second law of thermodynamics</strong></span></a> describes natural tendencies: the dissipation of macroscopic mechanical energy and the transfer of heat from a hot body to a cold body, in a principle expressible in terms of <strong>entropy</strong>,</p>
+<div class="math notranslate nohighlight">
+\[d S \ge \frac{\delta Q}{T} \ .\]</div>
+</li>
+<li><p>Finally, the balance of physical quantities for <a class="reference internal" href="principles-open.html#physics-hs-thermodynamics-foundation-principles-open"><span class="std std-ref"><strong>open systems</strong></span></a> is derived by modifying the balance equations for closed systems, introducing terms for the <strong>flux of physical quantities due to the transport of matter</strong> across the system’s boundary.</p></li>
+</ul>
+<!--
+<span style="color:red">Organize this for presentation! The contents are divided into subsequent sections.</span>
+
+In this section, the fundamental principles of classical thermodynamics are presented. **todo**
+
+**Principle of conservation of mass.**
+In the context of classical physics, the mass of a closed system is constant.
+
+**First law of thermodynamics - total energy balance.**
+The first law of thermodynamics represents the total energy balance for a closed system (**todo** *references to open and closed systems*),
+
+  $$d E^{tot} = \delta L^{ext} + \delta Q^{ext} \ .$$
+  
+  Using the kinetic energy theorem (**todo** reference to mechanics), $dK = \delta L^{ext} + \delta L^{int}$, and the definition of internal energy as the difference between total energy and macroscopic kinetic energy, $E := E^{tot} - K$,
+  
+  $$d E = - \delta L^{int} + \delta Q^{ext} \ .$$
+
+**Gibbs' phase rule.**
+The internal energy can be written as a state function, $E(S, X_k)$, **todo** with independent variables ...
+
+$$\begin{aligned}
+dE & = \left(\dfrac{\partial E}{\partial S}\right)_{\mathbf{X}} d S 
+     + \left(\dfrac{\partial E}{\partial X_k}\right)_{S} d X_k  = \\
+   & = T \, d S + \sum_k F_k \, d X_k
+\end{aligned}$$
+
+The variation of internal energy with respect to the variable $S$ corresponds to the temperature,
+
+$$T = \left(\dfrac{\partial E}{\partial S}\right)_{\mathbf{X}} \ge 0 \ .$$
+
+
+**Second law of thermodynamics - irreversibility.**
+
+- Second law for simple systems **todo** *uniform temperature*
+
+  $$\begin{aligned}
+    dE & = \delta Q^{ext} - \delta L^{int} = \\
+       & = \underbrace{\delta Q^{ext} + \delta^+ D}_{\delta U} - \delta L^{int, rev} = \\
+  \end{aligned}$$
+  
+  $$\begin{cases}
+  -\delta L^{int,rev} & = \displaystyle\sum_k F_k \, d X_k \\
+  \delta U            & = T \, dS
+  \end{cases}$$
+-->
+<div class="toctree-wrapper compound">
 </div>
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>20 nov 2024</p>
-</div>
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>2 min read</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="principi-della-termodinamica">
-<span id="classical-thermodynamics-principles"></span><h1>Princìpi della termodinamica<a class="headerlink" href="#principi-della-termodinamica" title="Permalink to this heading">#</a></h1>
-<p><strong>Primo principio della termodinamica.</strong> Il primo principio della termodinamica è il bilancio di energia totale di un sistema</p>
-<div class="math notranslate nohighlight">
-\[\dot{E}^{tot} = P^{e} + \dot{Q}^{e}\]</div>
-<p>L’energia totale di un sistema può essere scritta come la somma dell’energia cinetica macroscopica <span class="math notranslate nohighlight">\(K\)</span> e l’energia interna <span class="math notranslate nohighlight">\(E\)</span>, una rappresentazione macroscopica dell’energia cinetica delle componenti microscopiche del sistema, attorno ai valori medi macroscopici locali,</p>
-<div class="math notranslate nohighlight">
-\[E^{tot} = K + E \ .\]</div>
-<p>Usando il teorema dell’energia cinetica <em>macroscopica</em> <strong>[REF]</strong> noto dalla meccanica si può ricavare</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \dot{E}^{tot} &amp; = P^{e} + \dot{Q}^e \\
-  \dot{K}       &amp; = P^{tot} = P^{e} + P^{i} \\
-  \dot{E}       &amp; = \dot{Q}^e - P^{i} 
-\end{aligned}\end{split}\]</div>
-<p>Il bilancio dell’energia interna può essere scritto in forma incrementale come</p>
-<div class="math notranslate nohighlight">
-\[d E = d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q^e - d\hspace{-0.08pt}\bar{}\hspace{0.1pt} L^i \ ,\]</div>
-<p>mettendo in evidenza con la notazione che l’energia interna è una variabile di stato del sistema, a differenza degli scambi di lavoro o di calore.</p>
-<p>Si assume che l’energia interna del sistema può essere scritta come funzione di variabili di stato cinematiche locali <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> (che non possono contribuire all’energia cinetica macroscopica del sistema) e almeno un’altra variabile di stato additiva, qui chiamata <span class="math notranslate nohighlight">\(S\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[E(\mathbf{x}, S)\]</div>
-<p>Il suo differenziale può essere scritto come</p>
-<div class="math notranslate nohighlight">
-\[d E = \dfrac{\partial E}{\partial \mathbf{x}}\Big|_{S} \cdot d \mathbf{x} + \dfrac{\partial E}{\partial S}\Big|_{\mathbf{x}} \cdot d \mathbf{S}\]</div>
-<p>Il bilancio di energia interna in forma incrementale può essere riscritto come</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-d E &amp; = - d\hspace{-0.08pt}\bar{}\hspace{0.1pt} L^i + d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q^e =  \\
-    &amp; = - \delta L^{i,rev} + d\hspace{-0.08pt}\bar{}\hspace{0.1pt}^+ D + d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q^e  \\
-\end{aligned}\end{split}\]</div>
-<p>avendo separato nel lavoro interno il contributo delle azioni reversibili e non reversibili. In accordo con l’esperienza, si assume che il contributo al lavoro interno delle forze non reversibili è sempre positivo, <span class="math notranslate nohighlight">\(d\hspace{-0.08pt}\bar{}\hspace{0.1pt}^+ D \ge 0\)</span>: questo contributo viene chiamato <strong>dissipazione</strong>.</p>
-<p>Poiché sia il differenziale dell’energia e il contributo reversibile del lavoro interno sono dei termini reversibili, allora anche la somma di dissipazione e flusso di calore deve essere un contributo reversibile, indicato con <span class="math notranslate nohighlight">\(\delta U\)</span>.</p>
-<p>Dal confronto delle due espressioni del differenziale dell’energia interna, avendo riconosciuto il contributo reversibile del lavoro interno nel primo termine, si può scrivere</p>
-<div class="math notranslate nohighlight">
-\[
-  \delta L^{i,rev} = - \dfrac{\partial E}{\partial \mathbf{x}} \Big|_{S} d \mathbf{x}  \qquad , \qquad 
-  \delta U         = \ \dfrac{\partial E}{\partial S} \Big|_{\mathbf{x}} d S 
-\]</div>
-<p><strong>Terzo principio della termodinamica: definizione e segno della temperatura.</strong>
-La temperatura viene definita come la variabile parziale dell’energia interna del sistema rispetto alla variabile di stato <span class="math notranslate nohighlight">\(S\)</span>,</p>
-<div class="math notranslate nohighlight">
-\[T := \dfrac{\partial E}{\partial S}\Big|_S{} \ .\]</div>
-<p>Il terzo principio della termodinamica postula che la temperatura sia sempre positiva.</p>
-<div class="math notranslate nohighlight">
-\[T := \dfrac{\partial E}{\partial S}\Big|_S{} &gt; 0 \ .\]</div>
-<p><strong>Secondo principio della termodinamica: enunciato di Clausius.</strong> L’enunciato di Clausis del secondo principio della termodinamica può essere formulato in accordo con l’evidenza che la dissipazione sia sempre non negativa. Infatti</p>
-<div class="math notranslate nohighlight">
-\[T dS =: \partial U = \underbrace{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}^+ D}_{\ge 0} + d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q^e \ge  d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q^e \ ,\]</div>
-<p>e quindi</p>
-<div class="math notranslate nohighlight">
-\[dS \ge \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q^e }{T} \ .\]</div>
-<p><strong>Secondo principio della termodinamica per sistemi complessi e direzione dei trasferimenti di calore.</strong></p>
-<p>L’esperienza evidenzia che il trasferimento di calore avviene dai corpi a temperatura maggiore a corpi a temperatura minore, ossia il flusso di calore fa aumentare l’energia interna del corpo freddo e diminuire quella del corpo caldo.</p>
-<p>Nello scabio di calore tra due corpi <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(j\)</span> a temperature <span class="math notranslate nohighlight">\(T_i\)</span>, <span class="math notranslate nohighlight">\(T_j\)</span>, questa evidenza sperimentale può essere scritta come</p>
-<div class="math notranslate nohighlight">
-\[d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q_{ji} \gtreqless 0 \quad \text{se} \quad T_i \gtreqless T_j \qquad \rightarrow \qquad \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q_{ji}}{T_j} + \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q_{ij}}{T_i} \ge 0 \ ,\]</div>
-<p>dove <span class="math notranslate nohighlight">\(d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q_{ji} = - d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q_{ij}\)</span> è il flusso di calore dal corpo <span class="math notranslate nohighlight">\(i\)</span> al corpo <span class="math notranslate nohighlight">\(j\)</span>, positivo se fa aumentare l’energia interna di <span class="math notranslate nohighlight">\(j\)</span> e diminuire quella di <span class="math notranslate nohighlight">\(i\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[d S_i = \underbrace{\dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  D_i}{T_i}}_{\ge 0} + \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q^{e,i}}{T_i} + \sum_{j \ne i} \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q_{ij}}{T_i}\]</div>
-<p>Poichè <span class="math notranslate nohighlight">\(S\)</span> è una variabile estensiva, il valore associato all’intero sistema è uguale alla somma dei valori delle sue parti, <span class="math notranslate nohighlight">\(S = \sum_i S_i\)</span>. E” quindi possibile ricavare una relazione per l’intero sistema sommando i contributi dovuti a tutte le sue parti.</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  d S &amp; = \sum_i d S_i = \\
-      &amp; = \sum_i \sum_i \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q^{e,i}}{T_i} + \sum_i \sum_{j \ne i} \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q_{ij}}{T_i} + \underbrace{\dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  D_i}{T_i}}_{\ge 0} = \\
-      &amp; \ge \sum_i \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q^{e,i}}{T_i} + \sum_{\{i, j\}} \underbrace{\Big( \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q_{ij}}{T_i} + \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q_{ji}}{T_j} \Big)}_{ \ge 0 }  = \\
-      &amp; \ge \sum_i \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q^{e,i}}{T_i} \ .
-\end{aligned}\end{split}\]</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -453,16 +442,16 @@ La temperatura viene definita come la variabile parziale dell’energia interna 
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">precedente</p>
-        <p class="prev-next-title">Storia della termodinamica</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Brief History of Thermodynamics</p>
       </div>
     </a>
     <a class="right-next"
-       href="potentials.html"
+       href="principles-lavoisier.html"
        title="next page">
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">successivo</p>
-        <p class="prev-next-title">Potenziali termodinamici</p>
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lavoisier’s Principle</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -482,7 +471,7 @@ La temperatura viene definita come la variabile parziale dell’energia interna 
   <div class="footer-item">
     
 <p class="component-author">
-Di basics
+By basics
 </p>
 
   </div>

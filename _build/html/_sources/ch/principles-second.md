@@ -12,7 +12,7 @@ The elementary variation of entropy $d S$ of a simple closed system at uniform t
 This is the Clausius statement of the second law of thermodynamics for simple systems with uniform temperature.
 
 (physics-hs:thermodynamics:principles:second:composite)=
-## Composite Discrete Systems
+## Composite Systems
 **todo** definition of a composite system. Heat conduction occurs between subsystems.
 
 Entropy in classical thermodynamics is an extensive physical quantity: the entropy of a system composed of $N$ simple subsystems is the sum of the entropies of the subsystems,
@@ -60,11 +60,4 @@ we obtain the relation
 $$dS^{univ} \ge 0 \ ,$$
 
 which predicts the "non-decrease" of the entropy of the universe.
-
-(physics-hs:thermodynamics:principles:second:continuum)=
-## Composite Continuous Systems
-
-
-
-
 

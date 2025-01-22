@@ -219,7 +219,7 @@ Classical thermodynamics provides an average macroscopic description of the micr
 \section{Gibbs: Internal Energy, Phase Rule, and Multivariable Functions}
 \label{\detokenize{ch/principles-gibbs-phase-rule:gibbs-internal-energy-phase-rule-and-multivariable-functions}}\label{\detokenize{ch/principles-gibbs-phase-rule:physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule}}\label{\detokenize{ch/principles-gibbs-phase-rule::doc}}
 \sphinxAtStartPar
-Following Gibbs’ work, this section introduces concepts such as {\hyperref[\detokenize{ch/principles-gibbs-phase-rule:physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-state-vars}]{\sphinxcrossref{\DUrole{std,std-ref}{state variables}}}} and {\hyperref[\detokenize{ch/principles-gibbs-phase-rule:physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-internal-energy}]{\sphinxcrossref{\DUrole{std,std-ref}{internal energy}}}}, as well as the {\hyperref[\detokenize{ch/principles-gibbs-phase-rule:physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-gibbs-phase-rule}]{\sphinxcrossref{\DUrole{std,std-ref}{Gibbs phase rule}}}}. Later, the \DUrole{xref,myst}{first law of thermodynamics is reformulated} using the formalism introduced by Gibbs, which allows identifying the state of a system with a limited number of independent state variables and expressing the other (dependent) state variables as functions of multiple variables.
+Following Gibbs’ work, this section introduces concepts such as {\hyperref[\detokenize{ch/principles-gibbs-phase-rule:physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-state-vars}]{\sphinxcrossref{\DUrole{std,std-ref}{state variables}}}} and {\hyperref[\detokenize{ch/principles-gibbs-phase-rule:physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-internal-energy}]{\sphinxcrossref{\DUrole{std,std-ref}{internal energy}}}}, as well as the {\hyperref[\detokenize{ch/principles-gibbs-phase-rule:physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-gibbs-phase-rule}]{\sphinxcrossref{\DUrole{std,std-ref}{Gibbs phase rule}}}}. Later, the {\hyperref[\detokenize{ch/principles-gibbs-phase-rule:physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-first}]{\sphinxcrossref{\DUrole{std,std-ref}{first law of thermodynamics is reformulated}}}} using the formalism introduced by Gibbs, which allows identifying the state of a system with a limited number of independent state variables and expressing the other (dependent) state variables as functions of multiple variables.
 
 
 \subsection{State Variables}
@@ -455,17 +455,17 @@ Electric field and magnetization \sphinxstylestrong{todo}
 
 
 \subsection{First Law in terms of state variables}
-\label{\detokenize{ch/principles-gibbs-phase-rule:first-law-in-terms-of-state-variables}}
+\label{\detokenize{ch/principles-gibbs-phase-rule:first-law-in-terms-of-state-variables}}\label{\detokenize{ch/principles-gibbs-phase-rule:physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-first}}
 \sphinxAtStartPar
 Internal energy is an extensive variable of a thermodynamic system. In general, it can be written as a function of extensive variables that represent the ways the system manifests its internal energy (\sphinxstylestrong{todo} \sphinxstyleemphasis{due to work done on it, heat transferred to the system, and its chemical composition, thus the energy contained in bonds}).
 \begin{equation*}
 \begin{split}E(S, X_k)\end{split}
 \end{equation*}
 \sphinxAtStartPar
-where ( X\_k ) are the state variables whose variations are associated with reversible internal work, and ( S ) is the state variable whose variation is associated with heat exchange with the external environment and internal dissipative actions. \sphinxstylestrong{todo} \sphinxstyleemphasis{referring to the chapter on functions and multivariable calculus}
+where \( X_k \) are the state variables whose variations are associated with reversible internal work, and \( S \) is the state variable whose variation is associated with heat exchange with the external environment and internal dissipative actions. \sphinxstylestrong{todo} \sphinxstyleemphasis{referring to the chapter on functions and multivariable calculus}
 
 \sphinxAtStartPar
-Assuming the function ( E ) is continuous and differentiable, at least piecewise, the exact differential of internal energy can be written as a function of the increments of the independent variables:
+Assuming the function \( E \) is continuous and differentiable, at least piecewise, the exact differential of internal energy can be written as a function of the increments of the independent variables:
 \begin{equation*}
 \begin{split}
 dE = \left. \dfrac{\partial E}{\partial S} \right|_{\mathbf{X}} d S + \left. \dfrac{\partial E}{\partial X_k} \right|_{S} d X_k = 
@@ -473,20 +473,22 @@ T \, d S + \sum_k F_k \, d X_k
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
-where ( F\_k ) are the generalized forces associated with changes in the generalized coordinates ( X\_k ), and ( T ) and ( S ) correspond to temperature and entropy as discussed further below. \sphinxstylestrong{todo}.
+where \( F_k \) are the generalized forces associated with changes in the generalized coordinates \( X_k \), and \( T \) and \( S \) correspond to temperature and entropy as discussed further below. \sphinxstylestrong{todo}.
 
+\begin{sphinxadmonition}{note}{Note:}
 \sphinxAtStartPar
-With this formalism, it is straightforward to express the \sphinxstylestrong{second} and \sphinxstylestrong{third} laws of thermodynamics as:
+As shown later, with this formalism, it is straightforward to express {\hyperref[\detokenize{ch/principles-gibbs-phase-rule:physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-second}]{\sphinxcrossref{\DUrole{std,std-ref}{the \sphinxstylestrong{second} and \sphinxstylestrong{third} laws of thermodynamics}}}} as:
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-( dS \textbackslash{}ge \textbackslash{}frac\{\textbackslash{}delta Q\textasciicircum{}\{ext\}\}\{T\} )
+\( dS \ge \dfrac{\delta Q^{ext}}{T} \)
 
 \item {} 
 \sphinxAtStartPar
-( T \textbackslash{}ge 0 )
+\( T \ge 0 \)
 
 \end{itemize}
+\end{sphinxadmonition}
 
 \sphinxAtStartPar
 The expression for the differential of internal energy can be compared with the energy balance written in terms of heat transferred to the system and internal work:
@@ -497,10 +499,10 @@ dE = \delta Q^{ext} - \delta L^{int} =
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
-where the internal work ( \textbackslash{}delta L\textasciicircum{}\{int\} ) is recognized as the sum of a reversible contribution and a dissipative contribution, which is never negative: ( \textbackslash{}delta L\textasciicircum{}\{int\} = \textbackslash{}delta L\textasciicircum{}\{int,rev\} \sphinxhyphen{} \textbackslash{}delta\textasciicircum{}+ D ).
+where the internal work \( \delta L^{int} \) is recognized as the sum of a reversible contribution and a dissipative contribution, which is never negative: \( \delta L^{int} = \delta L^{int,rev} - \delta^+ D \).
 
 \sphinxAtStartPar
-Since ( dE ) is an exact differential and ( \textbackslash{}delta L\textasciicircum{}\{int,rev\} ) is a reversible contribution, it follows that the sum of the two non\sphinxhyphen{}reversible contributions, ( \textbackslash{}delta U := \textbackslash{}delta Q\textasciicircum{}\{ext\} + \textbackslash{}delta\textasciicircum{}+ D ), is a reversible contribution. Comparing the two expressions for the differential of internal energy, we can associate reversible internal work with the sum of works formed as the product of generalized forces ( F\_k ) and changes in the state variables ( X\_k ), and the term ( \textbackslash{}delta U ) with the product ( T , dS ):
+Since \( dE \) is an exact differential and \( \delta L^{int,rev} \) is a reversible contribution, it follows that the sum of the two non\sphinxhyphen{}reversible contributions, \( \delta U := \delta Q^{ext} + \delta^+ D \), is a reversible contribution. Comparing the two expressions for the differential of internal energy, we can associate reversible internal work with the sum of works formed as the product of generalized forces \( F_k \) and changes in the state variables \( X_k \), and the term \( \delta U \) with the product \( T \, dS \):
 \begin{equation*}
 \begin{split}
 \begin{cases}
@@ -508,10 +510,10 @@ Since ( dE ) is an exact differential and ( \textbackslash{}delta L\textasciicir
   \delta U &= T \, dS
 \end{cases}
 \end{split}
-\end{equation*}\subsubsection*{Temperature, ( T ), and entropy, ( S )}
+\end{equation*}\subsubsection*{Temperature, \protect\( T \protect\), and entropy, \protect\( S \protect\)}
 
 \sphinxAtStartPar
-In the absence of external work done on the system, and in the absence of dissipation ( \textbackslash{}delta\textasciicircum{}+ D = 0 ), we get:
+In the absence of external work done on the system, and in the absence of dissipation \( \delta^+ D = 0 \), we get:
 \begin{equation*}
 \begin{split}
 dE^{tot} = dE = \delta Q^{ext}
@@ -525,20 +527,20 @@ dS = \frac{\delta Q^{ext}}{T}
 Consider a closed and isolated system made of two subsystems in equilibrium, which can exchange heat but not work.
 
 \sphinxAtStartPar
-The total energy of the system is constant, ( E = E\_1 + E\_2 ). If the two subsystems are not initially at the same temperature, we observe a heat flow from the hotter system to the colder one, which satisfies the inequality:
+The total energy of the system is constant, \( E = E_1 + E_2 \). If the two subsystems are not initially at the same temperature, we observe a heat flow from the hotter system to the colder one, which satisfies the inequality:
 \begin{equation*}
 \begin{split}
 \frac{\delta Q_{12}}{T_1} + \frac{\delta Q_{21}}{T_2} \ge 0 \quad \rightarrow \quad dS_1 + dS_2 \ge 0
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
-The quantity ( S = S\_1 + S\_2 ) is non\sphinxhyphen{}decreasing.
+The quantity \( S = S_1 + S_2 \) is non\sphinxhyphen{}decreasing.
 
 
 
 
 \subsection{Second and Third Laws of Thermodynamics}
-\label{\detokenize{ch/principles-gibbs-phase-rule:second-and-third-laws-of-thermodynamics}}
+\label{\detokenize{ch/principles-gibbs-phase-rule:second-and-third-laws-of-thermodynamics}}\label{\detokenize{ch/principles-gibbs-phase-rule:physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-second}}
 \sphinxAtStartPar
 The formalism introduced in this section allows for a rather natural formulation of the second law and a version of the third law of thermodynamics.
 
@@ -556,7 +558,7 @@ T := \left.\frac{\partial E}{\partial S}\right|_{\mathbf{X}} > 0
 In cases where this form or consequence of the third law of thermodynamics holds, the second law of thermodynamics is a consequence of the non\sphinxhyphen{}negativity of dissipation and the heat transfer mechanism, as will be discussed in more detail in the discussion of {\hyperref[\detokenize{ch/principles-second:physics-hs-thermodynamics-principles-second-composite}]{\sphinxcrossref{\DUrole{std,std-ref}{composite systems}}}}.
 
 \sphinxAtStartPar
-In the general case of a \sphinxstylestrong{simple system}, using the definition ( dS = \textbackslash{}frac\{\textbackslash{}delta U\}\{T\} = \textbackslash{}frac\{\textbackslash{}delta Q\textasciicircum{}\{ext\} + \textbackslash{}delta\textasciicircum{}+ D\}\{T\} ), the non\sphinxhyphen{}negativity of dissipation, ( \textbackslash{}delta\textasciicircum{}+ D \textbackslash{}ge 0 ), implies:
+In the general case of a \sphinxstylestrong{simple system}, using the definition \( dS = \frac{\delta U}{T} = \frac{\delta Q^{ext} + \delta^+ D}{T} \), the non\sphinxhyphen{}negativity of dissipation, \( \delta^+ D \ge 0 \), implies:
 \begin{equation*}
 \begin{split}
 dS \ge \frac{\delta Q^{ext}}{T}
@@ -566,7 +568,7 @@ dS \ge \frac{\delta Q^{ext}}{T}
 This is an expression of the {\hyperref[\detokenize{ch/principles-second:physics-hs-thermodynamics-foundation-principles-second}]{\sphinxcrossref{\DUrole{std,std-ref}{Clausius statement of the second law of thermodynamics}}}}.
 
 \sphinxAtStartPar
-\sphinxstylestrong{todo} \sphinxstylestrong{oss} \sphinxstyleemphasis{The third law of thermodynamics: 1. It seems not to be a fundamental principle; 2. For some systems with limited energy, the definition of temperature ( T := \textbackslash{}left( \textbackslash{}frac\{\textbackslash{}partial E\}\{\textbackslash{}partial S\} \textbackslash{}right) ) produces a negative temperature} \sphinxstylestrong{todo} \sphinxstyleemphasis{add a section on statistical mechanics?}
+\sphinxstylestrong{todo} \sphinxstylestrong{oss} \sphinxstyleemphasis{The third law of thermodynamics: 1. It seems not to be a fundamental principle; 2. For some systems with limited energy, the definition of temperature \( T := \left( \frac{\partial E}{\partial S} \right) \) produces a negative temperature} \sphinxstylestrong{todo} \sphinxstyleemphasis{add a section on statistical mechanics?}
 
 
 \bigskip\hrule\bigskip
@@ -581,15 +583,15 @@ From L.E. Reichl, \sphinxstyleemphasis{A Modern Course in Statistical Physics}, 
 \end{equation*}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
-where ( J ), ( \textbackslash{}sigma ) are tensions per unit length and area, ( d L ), ( d A ) are changes in length or area,
+where \( J \), \( \sigma \) are tensions per unit length and area, \( d L \), \( d A \) are changes in length or area,
 
 \item {} 
 \sphinxAtStartPar
-where ( \textbackslash{}vec\{e\} ), ( \textbackslash{}vec\{h\} ) are the electric and magnetic fields, ( \textbackslash{}vec\{p\} ), ( \textbackslash{}vec\{m\} ) are polarization and magnetization,
+where \( \vec{e} \), \( \vec{h} \) are the electric and magnetic fields, \( \vec{p} \), \( \vec{m} \) are polarization and magnetization,
 
 \item {} 
 \sphinxAtStartPar
-( \textbackslash{}phi ) is the electric potential, and ( q ) is electric charge (for open systems, otherwise ( dq \textbackslash{}equiv 0 ) or net charge would be created!)
+\( \phi \) is the electric potential, and \( q \) is electric charge (for open systems, otherwise \( dq \equiv 0 \) or net charge would be created!)
 
 \end{itemize}
 \label{ch/principles-gibbs-phase-rule:example-12}
@@ -598,7 +600,7 @@ where ( \textbackslash{}vec\{e\} ), ( \textbackslash{}vec\{h\} ) are the electri
 
 
 \sphinxAtStartPar
-The energy of the system, ( E(S,V) )
+The energy of the system, \( E(S,V) \)
 \begin{equation*}
 \begin{split}
 dE = T \, dS - P \, dV
@@ -610,7 +612,7 @@ dE = T \, dS - P \, dV
 
 
 \sphinxAtStartPar
-The energy of the system, ( E(S,V,N) )
+The energy of the system, \( E(S,V,N) \)
 \begin{equation*}
 \begin{split}
 dE = T \, dS - P \, dV + \mu \, dN
@@ -632,7 +634,7 @@ The energy of the system
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
-where ( n\_k ) are the stoichiometric coefficients (with sign) of the reaction, and ( N ) is a quantity that identifies the equilibrium of the reaction, such that the variation of each component can be written as ( dN\_k = n\_k , dN ).
+where \( n_k \) are the stoichiometric coefficients (with sign) of the reaction, and \( N \) is a quantity that identifies the equilibrium of the reaction, such that the variation of each component can be written as \( dN_k = n_k \, dN \).
 \end{sphinxadmonition}
 \label{ch/principles-gibbs-phase-rule:example-15}
 \begin{sphinxadmonition}{note}{Example 12 (Monocomponent Mixture During a Phase Transition)}
@@ -648,7 +650,7 @@ where ( n\_k ) are the stoichiometric coefficients (with sign) of the reaction, 
 
 
 \sphinxAtStartPar
-Solid system with initial volume ( V ) under uniform stress and strain, with small deformations
+Solid system with initial volume \( V \) under uniform stress and strain, with small deformations
 \begin{equation*}
 \begin{split}
 dE = T \, dS - V \, \sigma_{ij} \, d \varepsilon_{ij}

@@ -1,0 +1,904 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problemi &#8212; Classical Thermodynamics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/principles-problems';</script>
+    <link rel="shortcut icon" href="../_static/favicon.svg"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.svg" class="logo__image only-light" alt="Classical Thermodynamics - Home"/>
+    <script>document.write(`<img src="../_static/logo-dark.svg" class="logo__image only-dark" alt="Classical Thermodynamics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Termodinamica</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="history.html">Brief History of Thermodynamics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="principles.html">Principles of Thermodynamics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="principles-lavoisier.html">Lavoisier’s Principle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-first.html">First Law of Thermodynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-gibbs-phase-rule.html">Gibbs: Internal Energy, Phase Rule, and Multivariable Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-second.html">Second Law of Thermodynamics - Clausius Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-open.html">Open Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="potentials.html">Thermodynamics potentials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coefficients.html">Coefficienti termodinamici</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="media.html">Stati della materia e modelli</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ideal_gases.html">Gas ideali</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="thermodynamic_transformations.html">Trasformazioni termodinamiche</a></li>
+<li class="toctree-l1"><a class="reference internal" href="heat_engines.html">Cicli termodinamici e macchine termiche</a></li>
+<li class="toctree-l1"><a class="reference internal" href="heat_transmission.html">Meccanismi di trasmissione del calore</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/ch/principles-problems.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Problemi</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principio-di-lavoisier-conservazione-della-massa">Principio di Lavoisier (Conservazione della Massa)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prima-legge-della-termodinamica-conservazione-dell-energia">Prima Legge della Termodinamica (Conservazione dell’Energia)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seconda-legge-della-termodinamica-entropia">Seconda Legge della Termodinamica (Entropia)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regola-delle-fasi-di-gibbs">Regola delle Fasi di Gibbs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrammi-di-fase-e-trasformazioni-termodinamiche">Diagrammi di Fase e Trasformazioni Termodinamiche</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemi-aperti-turbine-compressori-camere-di-combustione-scambiatori-di-calore">Sistemi Aperti (Turbine, Compressori, Camere di Combustione, Scambiatori di Calore)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calorimetria">Calorimetria</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primo-principio">Primo principio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#secondo-principio">Secondo principio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemi-aperti">Sistemi aperti</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problemi-generali">Problemi generali</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="problemi">
+<span id="physics-hs-thermodynamics-principles-problems"></span><h1>Problemi<a class="headerlink" href="#problemi" title="Permalink to this heading">#</a></h1>
+<div class="section" id="principio-di-lavoisier-conservazione-della-massa">
+<h2>Principio di Lavoisier (Conservazione della Massa)<a class="headerlink" href="#principio-di-lavoisier-conservazione-della-massa" title="Permalink to this heading">#</a></h2>
+<div class="exercise admonition" id="ch/principles-problems-exercise-0">
+
+<p class="admonition-title"> (Conservazione della Massa in un Sistema Chiuso)</p>
+<div class="section" id="exercise-content">
+<p>Un sistema chiuso contiene due sostanze A e B che reagiscono per formare una sostanza C. Se la massa di A è <span class="math notranslate nohighlight">\(m_A = 5 \, \text{g}\)</span>, la massa di B è <span class="math notranslate nohighlight">\(m_B = 3 \, \text{g}\)</span>, e la massa di C è <span class="math notranslate nohighlight">\(m_C = 7.8 \, \text{g}\)</span>, verifica se la legge di conservazione della massa è rispettata.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-1">
+
+<p class="admonition-title"> (Reazione Chimica e Conservazione della Massa)</p>
+<div class="section" id="exercise-content">
+<p>In una reazione chimica, la sostanza A si trasforma in B con una variazione di massa del sistema. Se la massa iniziale di A è <span class="math notranslate nohighlight">\(10 \, \text{g}\)</span> e la massa finale di A è <span class="math notranslate nohighlight">\(6 \, \text{g}\)</span>, calcola la massa di B prodotto, assumendo che il sistema sia chiuso e la conservazione della massa sia valida.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-2">
+
+<p class="admonition-title"> (Massa di Gas in una Reazione)</p>
+<div class="section" id="exercise-content">
+<p>Durante una reazione tra due gas in un sistema chiuso, i gas A e B si combinano per formare il gas C. Se il volume e la temperatura del sistema sono costanti, calcola la massa di C se la massa iniziale di A è <span class="math notranslate nohighlight">\(20 \, \text{g}\)</span> e di B è <span class="math notranslate nohighlight">\(15 \, \text{g}\)</span>.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-3">
+
+<p class="admonition-title"> (Conservazione della Massa in una Reazione di Sintesi)</p>
+<div class="section" id="exercise-content">
+<p>Durante una reazione chimica, <span class="math notranslate nohighlight">\(10 \, \text{g}\)</span> di idrogeno e <span class="math notranslate nohighlight">\(80 \, \text{g}\)</span> di ossigeno reagiscono per formare acqua. Se la massa totale prima e dopo la reazione è la stessa, calcola la massa di acqua prodotta, verificando il principio di Lavoisier.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-4">
+
+<p class="admonition-title"> (Verifica della Conservazione della Massa in un Processo di Combinazione)</p>
+<div class="section" id="exercise-content">
+<p>In un processo di combinazione chimica, <span class="math notranslate nohighlight">\(30 \, \text{g}\)</span> di due sostanze A e B reagiscono per formare una sostanza C. Se la massa di C è <span class="math notranslate nohighlight">\(58 \, \text{g}\)</span>, verifica se la legge della conservazione della massa è rispettata nel sistema chiuso.</p>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="prima-legge-della-termodinamica-conservazione-dell-energia">
+<h2>Prima Legge della Termodinamica (Conservazione dell’Energia)<a class="headerlink" href="#prima-legge-della-termodinamica-conservazione-dell-energia" title="Permalink to this heading">#</a></h2>
+<div class="exercise admonition" id="ch/principles-problems-exercise-5">
+
+<p class="admonition-title"> (Lavoro Compiuto in un Ciclo Isobaro)</p>
+<div class="section" id="exercise-content">
+<p>Un gas ideale subisce una trasformazione isobara. Se il volume del gas aumenta da <span class="math notranslate nohighlight">\(V_1 = 2 \, \text{m}^3\)</span> a <span class="math notranslate nohighlight">\(V_2 = 4 \, \text{m}^3\)</span> mentre la pressione è costante a <span class="math notranslate nohighlight">\(P = 200 \, \text{kPa}\)</span>, calcola il lavoro compiuto dal gas durante la trasformazione.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-6">
+
+<p class="admonition-title"> (Energia Interna in una Trasformazione Isoentropica)</p>
+<div class="section" id="exercise-content">
+<p>Un gas ideale subisce una trasformazione isoentropica in cui il volume cambia da <span class="math notranslate nohighlight">\(V_1 = 1 \, \text{m}^3\)</span> a <span class="math notranslate nohighlight">\(V_2 = 0.5 \, \text{m}^3\)</span>. Calcola la variazione dell’energia interna, dato che il calore specifico a volume costante del gas è <span class="math notranslate nohighlight">\(c_V = 3 \, \text{J/g}^\circ \text{C}\)</span> e la temperatura iniziale è <span class="math notranslate nohighlight">\(T_1 = 300 \, \text{K}\)</span>.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-7">
+
+<p class="admonition-title"> (Calore Assorbito in una Trasformazione Adiabatica)</p>
+<div class="section" id="exercise-content">
+<p>Un gas ideale compie una trasformazione adiabatica. Se il volume del gas cambia da <span class="math notranslate nohighlight">\(V_1 = 2 \, \text{m}^3\)</span> a <span class="math notranslate nohighlight">\(V_2 = 1 \, \text{m}^3\)</span> e la temperatura iniziale è <span class="math notranslate nohighlight">\(T_1 = 350 \, \text{K}\)</span>, calcola il calore assorbito o ceduto durante la trasformazione.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-8">
+
+<p class="admonition-title"> (Energia Interna in un Ciclo Isocoro)</p>
+<div class="section" id="exercise-content">
+<p>Un gas ideale subisce una trasformazione isocora in cui la temperatura cambia da <span class="math notranslate nohighlight">\(T_1 = 300 \, \text{K}\)</span> a <span class="math notranslate nohighlight">\(T_2 = 600 \, \text{K}\)</span>. Se il volume del gas è mantenuto costante, calcola la variazione di energia interna.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-9">
+
+<p class="admonition-title"> (Lavoro di Espansione Isotermica)</p>
+<div class="section" id="exercise-content">
+<p>Un gas ideale subisce una trasformazione isotermica a <span class="math notranslate nohighlight">\(T = 273 \, \text{K}\)</span> in cui il volume cambia da <span class="math notranslate nohighlight">\(V_1 = 1 \, \text{m}^3\)</span> a <span class="math notranslate nohighlight">\(V_2 = 2 \, \text{m}^3\)</span>. Calcola il lavoro compiuto dal gas durante questa espansione.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-10">
+
+<p class="admonition-title"> (Energia Termica in una Trasformazione Isocora)</p>
+<div class="section" id="exercise-content">
+<p>Un gas ideale è riscaldato in un recipiente rigido da <span class="math notranslate nohighlight">\(T_1 = 250 \, \text{K}\)</span> a <span class="math notranslate nohighlight">\(T_2 = 350 \, \text{K}\)</span>. Se il gas ha un volume fisso e un calore specifico a volume costante <span class="math notranslate nohighlight">\(c_V = 3 \, \text{J/g}^\circ \text{C}\)</span>, calcola il calore assorbito dal gas.</p>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="seconda-legge-della-termodinamica-entropia">
+<h2>Seconda Legge della Termodinamica (Entropia)<a class="headerlink" href="#seconda-legge-della-termodinamica-entropia" title="Permalink to this heading">#</a></h2>
+<div class="exercise admonition" id="ch/principles-problems-exercise-11">
+
+<p class="admonition-title"> (Entropia in una Trasformazione Isotermica)</p>
+<div class="section" id="exercise-content">
+<p>Un gas ideale subisce una trasformazione isotermica da <span class="math notranslate nohighlight">\(V_1 = 1 \, \text{m}^3\)</span> a <span class="math notranslate nohighlight">\(V_2 = 2 \, \text{m}^3\)</span> mantenendo la temperatura costante a <span class="math notranslate nohighlight">\(T = 300 \, \text{K}\)</span>. Calcola la variazione di entropia del gas.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-12">
+
+<p class="admonition-title"> (Entropia e Trasformazione Irreversibile)</p>
+<div class="section" id="exercise-content">
+<p>Durante una trasformazione irreversibile di un gas, la variazione di entropia è data da <span class="math notranslate nohighlight">\(\Delta S = 5 \, \text{J/K}\)</span>. Se il gas subisce un’espansione adiabatico-reversibile, calcola la variazione di temperatura durante il processo, assumendo che il gas sia ideale.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-13">
+
+<p class="admonition-title"> (Ciclo Carnot e Seconda Legge)</p>
+<div class="section" id="exercise-content">
+<p>Un motore termico opera secondo il ciclo Carnot tra due sorgenti termiche a <span class="math notranslate nohighlight">\(T_1 = 600 \, \text{K}\)</span> e <span class="math notranslate nohighlight">\(T_2 = 300 \, \text{K}\)</span>. Calcola l’efficienza del ciclo e la quantità di calore ceduto alla sorgente fredda, se il calore assorbito dalla sorgente calda è <span class="math notranslate nohighlight">\(Q_1 = 1200 \, \text{J}\)</span>.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-14">
+
+<p class="admonition-title"> (Espansione Irreversibile e Entropia)</p>
+<div class="section" id="exercise-content">
+<p>Un gas ideale subisce un’espansione irreversibile in cui il volume aumenta da <span class="math notranslate nohighlight">\(V_1 = 2 \, \text{m}^3\)</span> a <span class="math notranslate nohighlight">\(V_2 = 4 \, \text{m}^3\)</span> mantenendo la temperatura costante a <span class="math notranslate nohighlight">\(T = 300 \, \text{K}\)</span>. Calcola la variazione di entropia durante l’espansione irreversibile.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-15">
+
+<p class="admonition-title"> (Entropia in un Ciclo di Carnot)</p>
+<div class="section" id="exercise-content">
+<p>Un motore termico opera secondo un ciclo Carnot, con la temperatura del serbatoio caldo a <span class="math notranslate nohighlight">\(T_1 = 500 \, \text{K}\)</span> e quella del serbatoio freddo a <span class="math notranslate nohighlight">\(T_2 = 300 \, \text{K}\)</span>. Se il calore assorbito dal serbatoio caldo è <span class="math notranslate nohighlight">\(Q_1 = 1000 \, \text{J}\)</span>, calcola la variazione di entropia durante il ciclo.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-16">
+
+<p class="admonition-title"> (Generazione di Entropia in una Espansione)</p>
+<div class="section" id="exercise-content">
+<p>Un gas ideale subisce una trasformazione adiabatica in cui il volume aumenta da <span class="math notranslate nohighlight">\(V_1 = 1 \, \text{m}^3\)</span> a <span class="math notranslate nohighlight">\(V_2 = 3 \, \text{m}^3\)</span>. Calcola la variazione di entropia, sapendo che questa espansione è irreversibile.</p>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="regola-delle-fasi-di-gibbs">
+<h2>Regola delle Fasi di Gibbs<a class="headerlink" href="#regola-delle-fasi-di-gibbs" title="Permalink to this heading">#</a></h2>
+<div class="exercise admonition" id="ch/principles-problems-exercise-17">
+
+<p class="admonition-title"> (Fasi di un Sistema in Equilibrio)</p>
+<div class="section" id="exercise-content">
+<p>Un sistema in equilibrio è costituito da due fasi (liquido e vapore). Se il sistema è a una temperatura di <span class="math notranslate nohighlight">\(T = 100^\circ \text{C}\)</span> e la pressione è di <span class="math notranslate nohighlight">\(P = 1 \, \text{atm}\)</span>, calcola il numero di gradi di libertà del sistema, assumendo che il sistema sia una miscela di acqua e vapore.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-18">
+
+<p class="admonition-title"> (Numero di Fasi in un Sistema)</p>
+<div class="section" id="exercise-content">
+<p>Considera un sistema costituito da una miscela di due solidi e un liquido. Determina il numero di gradi di libertà del sistema a una temperatura di <span class="math notranslate nohighlight">\(T = 350 \, \text{K}\)</span> e pressione di <span class="math notranslate nohighlight">\(P = 5 \, \text{atm}\)</span>.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-19">
+
+<p class="admonition-title"> (Equilibrio di Fasi e Soluzione di Gibbs)</p>
+<div class="section" id="exercise-content">
+<p>Un sistema contiene una sostanza pura in equilibrio tra le fasi solida e liquida. Se la pressione è mantenuta costante, calcola il numero di fasi in equilibrio a una temperatura di <span class="math notranslate nohighlight">\(T = 150 \, \text{K}\)</span>.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-20">
+
+<p class="admonition-title"> (Fasi di un Sistema Multicomponente)</p>
+<div class="section" id="exercise-content">
+<p>In un sistema composto da tre fasi, solido, liquido e vapore, il numero di gradi di libertà è determinato dal numero di componenti del sistema. Se il sistema è un composto binario, calcola il numero di gradi di libertà usando la regola delle fasi di Gibbs.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-21">
+
+<p class="admonition-title"> (Equilibrio di Fase in un Sistema Binario)</p>
+<div class="section" id="exercise-content">
+<p>Un sistema binario è costituito da due sostanze, A e B, e in un certo punto del diagramma di fase si trovano in equilibrio. Se la pressione è di <span class="math notranslate nohighlight">\(P = 1 \, \text{atm}\)</span>, calcola il numero di gradi di libertà del sistema al punto di equilibrio tra solido e liquido.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-22">
+
+<p class="admonition-title"> (Numero di Fasi in una Miscela di Sostanze)</p>
+<div class="section" id="exercise-content">
+<p>In un sistema ternario composto da tre sostanze, che si trovano in tre fasi (solido, liquido, gas), calcola il numero di gradi di libertà del sistema, se il numero di componenti è <span class="math notranslate nohighlight">\(C = 3\)</span>.</p>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="diagrammi-di-fase-e-trasformazioni-termodinamiche">
+<h2>Diagrammi di Fase e Trasformazioni Termodinamiche<a class="headerlink" href="#diagrammi-di-fase-e-trasformazioni-termodinamiche" title="Permalink to this heading">#</a></h2>
+<div class="exercise admonition" id="ch/principles-problems-exercise-23">
+
+<p class="admonition-title"> (Diagramma di Fase del Acqua)</p>
+<div class="section" id="exercise-content">
+<p>Schematicamente, disegna il diagramma di fase dell’acqua, indicando le linee di separazione tra i vari stati (solido, liquido e vapore). Considera il comportamento dell’acqua a diverse pressioni e temperature.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-24">
+
+<p class="admonition-title"> (Curva di Saturazione in un Diagramma di Fase)</p>
+<div class="section" id="exercise-content">
+<p>In un diagramma di fase, la curva di saturazione di una sostanza descrive la relazione tra temperatura e pressione. Se un gas viene riscaldato da <span class="math notranslate nohighlight">\(T_1 = 200^\circ \text{C}\)</span> a <span class="math notranslate nohighlight">\(T_2 = 300^\circ \text{C}\)</span>, calcola la pressione di saturazione alla temperatura finale, usando il diagramma di fase del gas.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-25">
+
+<p class="admonition-title"> (Trasformazioni in un Diagramma di Fase)</p>
+<div class="section" id="exercise-content">
+<p>Un gas viene compresso a temperatura costante da un volume <span class="math notranslate nohighlight">\(V_1 = 1 \, \text{m}^3\)</span> a <span class="math notranslate nohighlight">\(V_2 = 0.5 \, \text{m}^3\)</span>. Determina se questa trasformazione avviene all’interno del campo di compressione adiabatica di un diagramma di fase e calcola il lavoro compiuto.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-26">
+
+<p class="admonition-title"> (Cambiamento di Stato e Diagramma di Fase)</p>
+<div class="section" id="exercise-content">
+<p>Un liquido subisce un cambiamento di fase da liquido a vapore. Se il processo avviene a una temperatura di <span class="math notranslate nohighlight">\(T = 100^\circ \text{C}\)</span> e la pressione è <span class="math notranslate nohighlight">\(P = 1 \, \text{atm}\)</span>, determina se questo processo avviene lungo la curva di saturazione del diagramma di fase.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-27">
+
+<p class="admonition-title"> (Diagramma di Fase per il Carbonio)</p>
+<div class="section" id="exercise-content">
+<p>Considera il diagramma di fase del carbonio, che include le fasi solida, liquida e gassosa. Determina i cambiamenti di fase di una quantità di carbonio quando la temperatura cambia da <span class="math notranslate nohighlight">\(T_1 = 500 \, \text{K}\)</span> a <span class="math notranslate nohighlight">\(T_2 = 1000 \, \text{K}\)</span>, con la pressione costante.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-28">
+
+<p class="admonition-title"> (Diagramma di Fase per una Sostanza Pura)</p>
+<div class="section" id="exercise-content">
+<p>Un gas puro subisce una trasformazione a temperatura costante, e il diagramma di fase mostra la transizione tra le fasi solida e liquida. Calcola il calore necessario per fondere una quantità di questa sostanza a una temperatura di <span class="math notranslate nohighlight">\(T = 300 \, \text{K}\)</span> e pressione di <span class="math notranslate nohighlight">\(P = 1 \, \text{atm}\)</span>.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-29">
+
+<p class="admonition-title"> (Trasformazioni di Fase di un Liquido)</p>
+<div class="section" id="exercise-content">
+<p>Un liquido subisce una vaporizzazione isoterma a <span class="math notranslate nohighlight">\(T = 373 \, \text{K}\)</span> e una pressione di <span class="math notranslate nohighlight">\(P = 1 \, \text{atm}\)</span>. Determina il volume del vapore prodotto e il lavoro svolto durante la vaporizzazione, sapendo che il calore latente di vaporizzazione è <span class="math notranslate nohighlight">\(L = 2.25 \times 10^6 \, \text{J/kg}\)</span>.</p>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="sistemi-aperti-turbine-compressori-camere-di-combustione-scambiatori-di-calore">
+<h2>Sistemi Aperti (Turbine, Compressori, Camere di Combustione, Scambiatori di Calore)<a class="headerlink" href="#sistemi-aperti-turbine-compressori-camere-di-combustione-scambiatori-di-calore" title="Permalink to this heading">#</a></h2>
+<div class="exercise admonition" id="ch/principles-problems-exercise-30">
+
+<p class="admonition-title"> (Lavoro di una Turbina)</p>
+<div class="section" id="exercise-content">
+<p>In una turbina, il fluido entra con una velocità di <span class="math notranslate nohighlight">\(v_1 = 10 \, \text{m/s}\)</span> e una pressione di <span class="math notranslate nohighlight">\(P_1 = 200 \, \text{kPa}\)</span>. Se il fluido esce con una velocità di <span class="math notranslate nohighlight">\(v_2 = 5 \, \text{m/s}\)</span> e una pressione di <span class="math notranslate nohighlight">\(P_2 = 100 \, \text{kPa}\)</span>, calcola il lavoro netto compiuto dalla turbina durante il processo.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-31">
+
+<p class="admonition-title"> (Calore e Lavoro in un Compressore)</p>
+<div class="section" id="exercise-content">
+<p>In un compressore, un gas entra a una temperatura di <span class="math notranslate nohighlight">\(T_1 = 300 \, \text{K}\)</span> e una pressione di <span class="math notranslate nohighlight">\(P_1 = 1 \, \text{atm}\)</span> e viene compresso ad una temperatura finale di <span class="math notranslate nohighlight">\(T_2 = 400 \, \text{K}\)</span> e pressione di <span class="math notranslate nohighlight">\(P_2 = 5 \, \text{atm}\)</span>. Calcola il lavoro compiuto durante la compressione.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-32">
+
+<p class="admonition-title"> (Camere di Combustione e Lavoro)</p>
+<div class="section" id="exercise-content">
+<p>Una camera di combustione in un motore a combustione interna riceve una miscela di carburante e ossigeno a una temperatura di <span class="math notranslate nohighlight">\(T_1 = 300 \, \text{K}\)</span>. Se la temperatura finale dei gas è <span class="math notranslate nohighlight">\(T_2 = 1200 \, \text{K}\)</span>, calcola il calore liberato durante la combustione.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-33">
+
+<p class="admonition-title"> (Efficienza di uno Scambiatore di Calore)</p>
+<div class="section" id="exercise-content">
+<p>In uno scambiatore di calore, un fluido entra a <span class="math notranslate nohighlight">\(T_1 = 350 \, \text{K}\)</span> e lascia lo scambiatore a <span class="math notranslate nohighlight">\(T_2 = 250 \, \text{K}\)</span>. Calcola l’efficienza termica dello scambiatore, se il fluido riceve <span class="math notranslate nohighlight">\(Q = 1000 \, \text{J}\)</span> di calore.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-34">
+
+<p class="admonition-title"> (Energia Scambiata in un Sistema Aperto)</p>
+<div class="section" id="exercise-content">
+<p>Un fluido entra in un sistema aperto con una velocità di <span class="math notranslate nohighlight">\(v_1 = 5 \, \text{m/s}\)</span> e lascia il sistema con una velocità di <span class="math notranslate nohighlight">\(v_2 = 3 \, \text{m/s}\)</span>. Se il flusso di massa del fluido è <span class="math notranslate nohighlight">\(m = 10 \, \text{kg/s}\)</span>, calcola l’energia scambiata dal fluido durante il processo.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-35">
+
+<p class="admonition-title"> (Espansione in una Turbina)</p>
+<div class="section" id="exercise-content">
+<p>Un fluido entra in una turbina con una velocità di <span class="math notranslate nohighlight">\(v_1 = 15 \, \text{m/s}\)</span> e una pressione di <span class="math notranslate nohighlight">\(P_1 = 500 \, \text{kPa}\)</span> e lascia la turbina con una velocità di <span class="math notranslate nohighlight">\(v_2 = 5 \, \text{m/s}\)</span> e una pressione di <span class="math notranslate nohighlight">\(P_2 = 200 \, \text{kPa}\)</span>. Calcola il lavoro eseguito dalla turbina durante il processo.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-36">
+
+<p class="admonition-title"> (Compressore Adiabatico)</p>
+<div class="section" id="exercise-content">
+<p>In un compressore adiabatico, il gas entra con una temperatura di <span class="math notranslate nohighlight">\(T_1 = 300 \, \text{K}\)</span> e pressione di <span class="math notranslate nohighlight">\(P_1 = 1 \, \text{atm}\)</span> e viene compresso ad una temperatura finale di <span class="math notranslate nohighlight">\(T_2 = 400 \, \text{K}\)</span> e pressione di <span class="math notranslate nohighlight">\(P_2 = 4 \, \text{atm}\)</span>. Calcola il lavoro necessario per comprimere il gas.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-37">
+
+<p class="admonition-title"> (Lavoro in una Camera di Combustione)</p>
+<div class="section" id="exercise-content">
+<p>In una camera di combustione, il gas di alimentazione ha una temperatura di <span class="math notranslate nohighlight">\(T_1 = 300 \, \text{K}\)</span> e una pressione di <span class="math notranslate nohighlight">\(P_1 = 1 \, \text{atm}\)</span>. Se il gas di uscita ha una temperatura di <span class="math notranslate nohighlight">\(T_2 = 1200 \, \text{K}\)</span>, calcola il lavoro netto prodotto dalla combustione.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-38">
+
+<p class="admonition-title"> (Efficienza di uno Scambiatore di Calore)</p>
+<div class="section" id="exercise-content">
+<p>Un fluido entra in uno scambiatore di calore con una temperatura di <span class="math notranslate nohighlight">\(T_1 = 300 \, \text{K}\)</span> e lascia lo scambiatore a <span class="math notranslate nohighlight">\(T_2 = 250 \, \text{K}\)</span>. Calcola l’efficienza dello scambiatore di calore, sapendo che il fluido riceve <span class="math notranslate nohighlight">\(Q = 1000 \, \text{J}\)</span> di calore.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-39">
+
+<p class="admonition-title"> (Energia Recuperata da un Compressore)</p>
+<div class="section" id="exercise-content">
+<p>Un compressore riceve gas a una pressione di <span class="math notranslate nohighlight">\(P_1 = 2 \, \text{atm}\)</span> e temperatura <span class="math notranslate nohighlight">\(T_1 = 300 \, \text{K}\)</span> e lo comprime ad una pressione di <span class="math notranslate nohighlight">\(P_2 = 6 \, \text{atm}\)</span> e temperatura <span class="math notranslate nohighlight">\(T_2 = 500 \, \text{K}\)</span>. Calcola l’energia</p>
+</div>
+</div>
+</div>
+<div class="section" id="calorimetria">
+<h2>Calorimetria<a class="headerlink" href="#calorimetria" title="Permalink to this heading">#</a></h2>
+<div class="exercise admonition" id="ch/principles-problems-exercise-40">
+
+<p class="admonition-title"></p>
+<div class="section" id="exercise-content">
+<p>Vengono mescolati <span class="math notranslate nohighlight">\(m_{\text{H}_2\text{O}}\)</span> di acqua inizialmente a temperatura <span class="math notranslate nohighlight">\(T_{\text{H}_2\text{O}} = 20 \text{°C}\)</span> con <span class="math notranslate nohighlight">\(m_{\text{Hg}} = 1 \, \text{kg}\)</span> di mercurio inizialmente a temperatura <span class="math notranslate nohighlight">\(T_{\text{Hg},0} = 10 \text{°C}\)</span>. Sapendo che il rapporto tra i calori specifici di acqua e mercurio è <span class="math notranslate nohighlight">\(\frac{c_{H_2 O}}{c_{\text{Hg}}} = 29.9\)</span>, calcolare la massa necessaria di acqua per raggiungere una temperatura finale di equilibrio <span class="math notranslate nohighlight">\(T^{e} = 15 \text{°C}\)</span>.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-41">
+
+<p class="admonition-title"></p>
+<div class="section" id="exercise-content">
+<p>Vengono versati <span class="math notranslate nohighlight">\(150 \, \text{ml}\)</span> di caffé a temperatura <span class="math notranslate nohighlight">\(T_{coffee,0} = 80 \text{°C}\)</span>. Approssimando il calore specifico e la densità del caffè uguali al latte, si determini la quantità di latte preso dal frigo a <span class="math notranslate nohighlight">\(5 \text{°C}\)</span> necessaria per ottenere una miscela con una temperatura finale <span class="math notranslate nohighlight">\(T_e = 20 \, \text{°C}\)</span>.</p>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-42">
+
+<p class="admonition-title"></p>
+<div class="section" id="exercise-content">
+<p>Si usa questo metodo per raffreddare <span class="math notranslate nohighlight">\(m_{coffee} = 150 \, \text{g}\)</span> di caffé. Inizialmente il caffè si trova a temperatura <span class="math notranslate nohighlight">\(T_{coffee,0} = 90 \, \text{°C}\)</span> e viene versato in una tazza di <span class="math notranslate nohighlight">\(m = 200 \, \text{g}\)</span> inizalmente a temperatura ambiente <span class="math notranslate nohighlight">\(T_{amb} = 20 \, \text{°C}\)</span>, fatta di una sostanza che ha calore specifico <span class="math notranslate nohighlight">\(c\)</span>. Si raggiunge l’equilibrio termico e il caffé viene versato in un’altra tazza simile. La tazza precedente viene velocemente raffreddata a temperatura ambiente, e il caffé che ha raggiunto l’equilibrio termico con la seconda tazza viene nuovamente versato in essa. Si suppone che il processo avviene abbastanza velocemente da poter trascurare la trasmissione di calore con l’aria nella stanza. Si chiede di determinare il numero di passaggi necessari a raffreddare il caffé a una temperatura inferiore ai <span class="math notranslate nohighlight">\(30 \text{°C}\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="primo-principio">
+<h2>Primo principio<a class="headerlink" href="#primo-principio" title="Permalink to this heading">#</a></h2>
+<div class="exercise admonition" id="ch/principles-problems-exercise-43">
+
+<p class="admonition-title"> (Pollo scaldato a pugni)</p>
+<div class="section" id="exercise-content">
+<p>Si vuole scaldare un pollo di massa <span class="math notranslate nohighlight">\(m = 2 \, \text{kg}\)</span> a pugni. La temperatura iniziale del pollo è <span class="math notranslate nohighlight">\(T_{in} = 20 \text{°C}\)</span>, e in prima approssimazione si assume un calore specifico pari a quello dell’acqua. Supponendo che il putno sia modellabile con una massa di <span class="math notranslate nohighlight">\(m_{hand} = 1 \, \text{kg}\)</span> che colpisce il pollo con una velocità <span class="math notranslate nohighlight">\(v = 10 \, \text{m/s}\)</span> poco prima dell’impatto, si chiede di determinare:</p>
+<ol class="arabic simple">
+<li><p>l’energia trasferita da ogni pugno al pollo</p></li>
+<li><p>il numero di pugni necessari per scaldare il pollo fino a <span class="math notranslate nohighlight">\(T_{fin} = 80 \text{°C}\)</span> (freddino per essere cotto, forse, but è solo un esercizio and don’t try this at home!), nell’ipotesi che la raffica di pugni sia talmente veloce che si possa trascurare la trasmissione di calore tra il pollo e l’ambiente circostante.</p></li>
+</ol>
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-44">
+
+<p class="admonition-title"> (Mulinello)</p>
+<div class="section" id="exercise-content">
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-45">
+
+<p class="admonition-title"> (Attrito)</p>
+<div class="section" id="exercise-content">
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-46">
+
+<p class="admonition-title"> (Biologia)</p>
+<div class="section" id="exercise-content">
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-47">
+
+<p class="admonition-title"> (…)</p>
+<div class="section" id="exercise-content">
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-48">
+
+<p class="admonition-title"> (…)</p>
+<div class="section" id="exercise-content">
+</div>
+</div>
+</div>
+<div class="section" id="secondo-principio">
+<h2>Secondo principio<a class="headerlink" href="#secondo-principio" title="Permalink to this heading">#</a></h2>
+<div class="exercise admonition" id="ch/principles-problems-exercise-49">
+
+<p class="admonition-title"></p>
+<div class="section" id="exercise-content">
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-50">
+
+<p class="admonition-title"></p>
+<div class="section" id="exercise-content">
+</div>
+</div>
+</div>
+<div class="section" id="sistemi-aperti">
+<h2>Sistemi aperti<a class="headerlink" href="#sistemi-aperti" title="Permalink to this heading">#</a></h2>
+<div class="exercise admonition" id="ch/principles-problems-exercise-51">
+
+<p class="admonition-title"> (Turbina)</p>
+<div class="section" id="exercise-content">
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-52">
+
+<p class="admonition-title"> (Compressore)</p>
+<div class="section" id="exercise-content">
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-53">
+
+<p class="admonition-title"> (Camera di combustione)</p>
+<div class="section" id="exercise-content">
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-54">
+
+<p class="admonition-title"> (Scambiatore di calore)</p>
+<div class="section" id="exercise-content">
+</div>
+</div>
+</div>
+<div class="section" id="problemi-generali">
+<h2>Problemi generali<a class="headerlink" href="#problemi-generali" title="Permalink to this heading">#</a></h2>
+<div class="exercise admonition" id="ch/principles-problems-exercise-55">
+
+<p class="admonition-title"></p>
+<div class="section" id="exercise-content">
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-56">
+
+<p class="admonition-title"></p>
+<div class="section" id="exercise-content">
+</div>
+</div>
+<div class="exercise admonition" id="ch/principles-problems-exercise-57">
+
+<p class="admonition-title"></p>
+<div class="section" id="exercise-content">
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./ch"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principio-di-lavoisier-conservazione-della-massa">Principio di Lavoisier (Conservazione della Massa)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prima-legge-della-termodinamica-conservazione-dell-energia">Prima Legge della Termodinamica (Conservazione dell’Energia)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seconda-legge-della-termodinamica-entropia">Seconda Legge della Termodinamica (Entropia)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regola-delle-fasi-di-gibbs">Regola delle Fasi di Gibbs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrammi-di-fase-e-trasformazioni-termodinamiche">Diagrammi di Fase e Trasformazioni Termodinamiche</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemi-aperti-turbine-compressori-camere-di-combustione-scambiatori-di-calore">Sistemi Aperti (Turbine, Compressori, Camere di Combustione, Scambiatori di Calore)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calorimetria">Calorimetria</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primo-principio">Primo principio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#secondo-principio">Secondo principio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemi-aperti">Sistemi aperti</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problemi-generali">Problemi generali</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By basics
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
