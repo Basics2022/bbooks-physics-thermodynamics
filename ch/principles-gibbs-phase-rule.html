@@ -351,7 +351,7 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="gibbs-internal-energy-phase-rule-and-multivariable-functions">
 <span id="physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule"></span><h1>Gibbs: Internal Energy, Phase Rule, and Multivariable Functions<a class="headerlink" href="#gibbs-internal-energy-phase-rule-and-multivariable-functions" title="Permalink to this heading">#</a></h1>
-<p>Following Gibbs’ work, this section introduces concepts such as <a class="reference internal" href="#physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-state-vars"><span class="std std-ref">state variables</span></a> and <a class="reference internal" href="#physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-internal-energy"><span class="std std-ref">internal energy</span></a>, as well as the <a class="reference internal" href="#physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-gibbs-phase-rule"><span class="std std-ref">Gibbs phase rule</span></a>. Later, the <span class="xref myst">first law of thermodynamics is reformulated</span> using the formalism introduced by Gibbs, which allows identifying the state of a system with a limited number of independent state variables and expressing the other (dependent) state variables as functions of multiple variables.</p>
+<p>Following Gibbs’ work, this section introduces concepts such as <a class="reference internal" href="#physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-state-vars"><span class="std std-ref">state variables</span></a> and <a class="reference internal" href="#physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-internal-energy"><span class="std std-ref">internal energy</span></a>, as well as the <a class="reference internal" href="#physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-gibbs-phase-rule"><span class="std std-ref">Gibbs phase rule</span></a>. Later, the <a class="reference internal" href="#physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-first"><span class="std std-ref">first law of thermodynamics is reformulated</span></a> using the formalism introduced by Gibbs, which allows identifying the state of a system with a limited number of independent state variables and expressing the other (dependent) state variables as functions of multiple variables.</p>
 <div class="section" id="state-variables">
 <span id="physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-state-vars"></span><h2>State Variables<a class="headerlink" href="#state-variables" title="Permalink to this heading">#</a></h2>
 <div class="proof definition admonition" id="definition-0">
@@ -498,7 +498,7 @@ In general, these variables are constrained by some conditions:</p>
 </div>
 </div></div>
 <div class="section" id="first-law-in-terms-of-state-variables">
-<h2>First Law in terms of state variables<a class="headerlink" href="#first-law-in-terms-of-state-variables" title="Permalink to this heading">#</a></h2>
+<span id="physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-first"></span><h2>First Law in terms of state variables<a class="headerlink" href="#first-law-in-terms-of-state-variables" title="Permalink to this heading">#</a></h2>
 <p>Internal energy is an extensive variable of a thermodynamic system. In general, it can be written as a function of extensive variables that represent the ways the system manifests its internal energy (<strong>todo</strong> <em>due to work done on it, heat transferred to the system, and its chemical composition, thus the energy contained in bonds</em>).</p>
 <div class="math notranslate nohighlight">
 \[E(S, X_k)\]</div>
@@ -510,11 +510,14 @@ dE = \left. \dfrac{\partial E}{\partial S} \right|_{\mathbf{X}} d S + \left. \df
 T \, d S + \sum_k F_k \, d X_k
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( F_k \)</span> are the generalized forces associated with changes in the generalized coordinates <span class="math notranslate nohighlight">\( X_k \)</span>, and <span class="math notranslate nohighlight">\( T \)</span> and <span class="math notranslate nohighlight">\( S \)</span> correspond to temperature and entropy as discussed further below. <strong>todo</strong>.</p>
-<p>With this formalism, it is straightforward to express the <strong>second</strong> and <strong>third</strong> laws of thermodynamics as:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As shown later, with this formalism, it is straightforward to express <a class="reference internal" href="#physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-second"><span class="std std-ref">the <strong>second</strong> and <strong>third</strong> laws of thermodynamics</span></a> as:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\( dS \ge \frac{\delta Q^{ext}}{T} \)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( dS \ge \dfrac{\delta Q^{ext}}{T} \)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\( T \ge 0 \)</span></p></li>
 </ul>
+</div>
 <p>The expression for the differential of internal energy can be compared with the energy balance written in terms of heat transferred to the system and internal work:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -561,7 +564,7 @@ $$\frac{d E_1}{d T_1} = -\frac{d E_2}{d T_2} \frac{d T_2}{d T_1}$$
 </div>
 </details></div>
 <div class="section" id="second-and-third-laws-of-thermodynamics">
-<h2>Second and Third Laws of Thermodynamics<a class="headerlink" href="#second-and-third-laws-of-thermodynamics" title="Permalink to this heading">#</a></h2>
+<span id="physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule-second"></span><h2>Second and Third Laws of Thermodynamics<a class="headerlink" href="#second-and-third-laws-of-thermodynamics" title="Permalink to this heading">#</a></h2>
 <p>The formalism introduced in this section allows for a rather natural formulation of the second law and a version of the third law of thermodynamics.</p>
 <p>This formulation of the third law of thermodynamics states that the thermodynamic temperature is always positive:</p>
 <div class="math notranslate nohighlight">
