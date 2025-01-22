@@ -502,18 +502,18 @@ In general, these variables are constrained by some conditions:</p>
 <p>Internal energy is an extensive variable of a thermodynamic system. In general, it can be written as a function of extensive variables that represent the ways the system manifests its internal energy (<strong>todo</strong> <em>due to work done on it, heat transferred to the system, and its chemical composition, thus the energy contained in bonds</em>).</p>
 <div class="math notranslate nohighlight">
 \[E(S, X_k)\]</div>
-<p>where ( X_k ) are the state variables whose variations are associated with reversible internal work, and ( S ) is the state variable whose variation is associated with heat exchange with the external environment and internal dissipative actions. <strong>todo</strong> <em>referring to the chapter on functions and multivariable calculus</em></p>
-<p>Assuming the function ( E ) is continuous and differentiable, at least piecewise, the exact differential of internal energy can be written as a function of the increments of the independent variables:</p>
+<p>where <span class="math notranslate nohighlight">\( X_k \)</span> are the state variables whose variations are associated with reversible internal work, and <span class="math notranslate nohighlight">\( S \)</span> is the state variable whose variation is associated with heat exchange with the external environment and internal dissipative actions. <strong>todo</strong> <em>referring to the chapter on functions and multivariable calculus</em></p>
+<p>Assuming the function <span class="math notranslate nohighlight">\( E \)</span> is continuous and differentiable, at least piecewise, the exact differential of internal energy can be written as a function of the increments of the independent variables:</p>
 <div class="math notranslate nohighlight">
 \[
 dE = \left. \dfrac{\partial E}{\partial S} \right|_{\mathbf{X}} d S + \left. \dfrac{\partial E}{\partial X_k} \right|_{S} d X_k = 
 T \, d S + \sum_k F_k \, d X_k
 \]</div>
-<p>where ( F_k ) are the generalized forces associated with changes in the generalized coordinates ( X_k ), and ( T ) and ( S ) correspond to temperature and entropy as discussed further below. <strong>todo</strong>.</p>
+<p>where <span class="math notranslate nohighlight">\( F_k \)</span> are the generalized forces associated with changes in the generalized coordinates <span class="math notranslate nohighlight">\( X_k \)</span>, and <span class="math notranslate nohighlight">\( T \)</span> and <span class="math notranslate nohighlight">\( S \)</span> correspond to temperature and entropy as discussed further below. <strong>todo</strong>.</p>
 <p>With this formalism, it is straightforward to express the <strong>second</strong> and <strong>third</strong> laws of thermodynamics as:</p>
 <ul class="simple">
-<li><p>( dS \ge \frac{\delta Q^{ext}}{T} )</p></li>
-<li><p>( T \ge 0 )</p></li>
+<li><p><span class="math notranslate nohighlight">\( dS \ge \frac{\delta Q^{ext}}{T} \)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( T \ge 0 \)</span></p></li>
 </ul>
 <p>The expression for the differential of internal energy can be compared with the energy balance written in terms of heat transferred to the system and internal work:</p>
 <div class="math notranslate nohighlight">
@@ -521,8 +521,8 @@ T \, d S + \sum_k F_k \, d X_k
 dE = \delta Q^{ext} - \delta L^{int} = 
 \delta Q^{ext} + \delta^+ D - \delta L^{int,rev}
 \]</div>
-<p>where the internal work ( \delta L^{int} ) is recognized as the sum of a reversible contribution and a dissipative contribution, which is never negative: ( \delta L^{int} = \delta L^{int,rev} - \delta^+ D ).</p>
-<p>Since ( dE ) is an exact differential and ( \delta L^{int,rev} ) is a reversible contribution, it follows that the sum of the two non-reversible contributions, ( \delta U := \delta Q^{ext} + \delta^+ D ), is a reversible contribution. Comparing the two expressions for the differential of internal energy, we can associate reversible internal work with the sum of works formed as the product of generalized forces ( F_k ) and changes in the state variables ( X_k ), and the term ( \delta U ) with the product ( T , dS ):</p>
+<p>where the internal work <span class="math notranslate nohighlight">\( \delta L^{int} \)</span> is recognized as the sum of a reversible contribution and a dissipative contribution, which is never negative: <span class="math notranslate nohighlight">\( \delta L^{int} = \delta L^{int,rev} - \delta^+ D \)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\( dE \)</span> is an exact differential and <span class="math notranslate nohighlight">\( \delta L^{int,rev} \)</span> is a reversible contribution, it follows that the sum of the two non-reversible contributions, <span class="math notranslate nohighlight">\( \delta U := \delta Q^{ext} + \delta^+ D \)</span>, is a reversible contribution. Comparing the two expressions for the differential of internal energy, we can associate reversible internal work with the sum of works formed as the product of generalized forces <span class="math notranslate nohighlight">\( F_k \)</span> and changes in the state variables <span class="math notranslate nohighlight">\( X_k \)</span>, and the term <span class="math notranslate nohighlight">\( \delta U \)</span> with the product <span class="math notranslate nohighlight">\( T \, dS \)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{cases}
@@ -532,12 +532,12 @@ dE = \delta Q^{ext} - \delta L^{int} =
 \end{split}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Temperature, ( T ), and entropy, ( S )<div class="sd-summary-down docutils">
+Temperature, <span class="math notranslate nohighlight">\( T \)</span>, and entropy, <span class="math notranslate nohighlight">\( S \)</span><div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">In the absence of external work done on the system, and in the absence of dissipation ( \delta^+ D = 0 ), we get:</p>
+<p class="sd-card-text">In the absence of external work done on the system, and in the absence of dissipation <span class="math notranslate nohighlight">\( \delta^+ D = 0 \)</span>, we get:</p>
 <div class="math notranslate nohighlight">
 \[
 dE^{tot} = dE = \delta Q^{ext}
@@ -547,12 +547,12 @@ dE^{tot} = dE = \delta Q^{ext}
 dS = \frac{\delta Q^{ext}}{T}
 \]</div>
 <p class="sd-card-text">Consider a closed and isolated system made of two subsystems in equilibrium, which can exchange heat but not work.</p>
-<p class="sd-card-text">The total energy of the system is constant, ( E = E_1 + E_2 ). If the two subsystems are not initially at the same temperature, we observe a heat flow from the hotter system to the colder one, which satisfies the inequality:</p>
+<p class="sd-card-text">The total energy of the system is constant, <span class="math notranslate nohighlight">\( E = E_1 + E_2 \)</span>. If the two subsystems are not initially at the same temperature, we observe a heat flow from the hotter system to the colder one, which satisfies the inequality:</p>
 <div class="math notranslate nohighlight">
 \[
 \frac{\delta Q_{12}}{T_1} + \frac{\delta Q_{21}}{T_2} \ge 0 \quad \rightarrow \quad dS_1 + dS_2 \ge 0
 \]</div>
-<p class="sd-card-text">The quantity ( S = S_1 + S_2 ) is non-decreasing.</p>
+<p class="sd-card-text">The quantity <span class="math notranslate nohighlight">\( S = S_1 + S_2 \)</span> is non-decreasing.</p>
 <!--
 $$E_1(T_1) + E_2(T_2) = E = \text{const}$$
 
@@ -570,13 +570,13 @@ T := \left.\frac{\partial E}{\partial S}\right|_{\mathbf{X}} &gt; 0
 \]</div>
 <p><strong>todo</strong> <em>Add some words about the significance, in terms of molecular agitation and probability</em></p>
 <p>In cases where this form or consequence of the third law of thermodynamics holds, the second law of thermodynamics is a consequence of the non-negativity of dissipation and the heat transfer mechanism, as will be discussed in more detail in the discussion of <a class="reference internal" href="principles-second.html#physics-hs-thermodynamics-principles-second-composite"><span class="std std-ref">composite systems</span></a>.</p>
-<p>In the general case of a <strong>simple system</strong>, using the definition ( dS = \frac{\delta U}{T} = \frac{\delta Q^{ext} + \delta^+ D}{T} ), the non-negativity of dissipation, ( \delta^+ D \ge 0 ), implies:</p>
+<p>In the general case of a <strong>simple system</strong>, using the definition <span class="math notranslate nohighlight">\( dS = \frac{\delta U}{T} = \frac{\delta Q^{ext} + \delta^+ D}{T} \)</span>, the non-negativity of dissipation, <span class="math notranslate nohighlight">\( \delta^+ D \ge 0 \)</span>, implies:</p>
 <div class="math notranslate nohighlight">
 \[
 dS \ge \frac{\delta Q^{ext}}{T}
 \]</div>
 <p>This is an expression of the <a class="reference internal" href="principles-second.html#physics-hs-thermodynamics-foundation-principles-second"><span class="std std-ref">Clausius statement of the second law of thermodynamics</span></a>.</p>
-<p><strong>todo</strong> <strong>oss</strong> <em>The third law of thermodynamics: 1. It seems not to be a fundamental principle; 2. For some systems with limited energy, the definition of temperature ( T := \left( \frac{\partial E}{\partial S} \right) ) produces a negative temperature</em> <strong>todo</strong> <em>add a section on statistical mechanics?</em></p>
+<p><strong>todo</strong> <strong>oss</strong> <em>The third law of thermodynamics: 1. It seems not to be a fundamental principle; 2. For some systems with limited energy, the definition of temperature <span class="math notranslate nohighlight">\( T := \left( \frac{\partial E}{\partial S} \right) \)</span> produces a negative temperature</em> <strong>todo</strong> <em>add a section on statistical mechanics?</em></p>
 <hr class="docutils" />
 <p>From L.E. Reichl, <em>A Modern Course in Statistical Physics</em>, with some inconsistencies <strong>todo</strong> <em>check!</em></p>
 <div class="math notranslate nohighlight">
@@ -584,14 +584,14 @@ dS \ge \frac{\delta Q^{ext}}{T}
 \delta W = - P dV + J dL + \sigma d A + V \left( \vec{e} \cdot d \vec{p} + \vec{h} \cdot d \vec{m}\right) + \phi d q
 \]</div>
 <ul class="simple">
-<li><p>where ( J ), ( \sigma ) are tensions per unit length and area, ( d L ), ( d A ) are changes in length or area,</p></li>
-<li><p>where ( \vec{e} ), ( \vec{h} ) are the electric and magnetic fields, ( \vec{p} ), ( \vec{m} ) are polarization and magnetization,</p></li>
-<li><p>( \phi ) is the electric potential, and ( q ) is electric charge (for open systems, otherwise ( dq \equiv 0 ) or net charge would be created!)</p></li>
+<li><p>where <span class="math notranslate nohighlight">\( J \)</span>, <span class="math notranslate nohighlight">\( \sigma \)</span> are tensions per unit length and area, <span class="math notranslate nohighlight">\( d L \)</span>, <span class="math notranslate nohighlight">\( d A \)</span> are changes in length or area,</p></li>
+<li><p>where <span class="math notranslate nohighlight">\( \vec{e} \)</span>, <span class="math notranslate nohighlight">\( \vec{h} \)</span> are the electric and magnetic fields, <span class="math notranslate nohighlight">\( \vec{p} \)</span>, <span class="math notranslate nohighlight">\( \vec{m} \)</span> are polarization and magnetization,</p></li>
+<li><p><span class="math notranslate nohighlight">\( \phi \)</span> is the electric potential, and <span class="math notranslate nohighlight">\( q \)</span> is electric charge (for open systems, otherwise <span class="math notranslate nohighlight">\( dq \equiv 0 \)</span> or net charge would be created!)</p></li>
 </ul>
 <div class="proof example dropdown admonition" id="example-12">
 <p class="admonition-title"><span class="caption-number">Example 9 </span> (Closed Monocomponent Gas System)</p>
 <div class="example-content section" id="proof-content">
-<p>The energy of the system, ( E(S,V) )</p>
+<p>The energy of the system, <span class="math notranslate nohighlight">\( E(S,V) \)</span></p>
 <div class="math notranslate nohighlight">
 \[
 dE = T \, dS - P \, dV
@@ -600,7 +600,7 @@ dE = T \, dS - P \, dV
 </div><div class="proof example dropdown admonition" id="example-13">
 <p class="admonition-title"><span class="caption-number">Example 10 </span> (Open Monocomponent Gas System)</p>
 <div class="example-content section" id="proof-content">
-<p>The energy of the system, ( E(S,V,N) )</p>
+<p>The energy of the system, <span class="math notranslate nohighlight">\( E(S,V,N) \)</span></p>
 <div class="math notranslate nohighlight">
 \[
 dE = T \, dS - P \, dV + \mu \, dN
@@ -617,7 +617,7 @@ dE = T \, dS - P \, dV + \mu \, dN
      &amp; = T \, dS - P \, dV + \left( \mu_k n_k \right) dN
 \end{aligned}
 \end{split}\]</div>
-<p>where ( n_k ) are the stoichiometric coefficients (with sign) of the reaction, and ( N ) is a quantity that identifies the equilibrium of the reaction, such that the variation of each component can be written as ( dN_k = n_k , dN ).</p>
+<p>where <span class="math notranslate nohighlight">\( n_k \)</span> are the stoichiometric coefficients (with sign) of the reaction, and <span class="math notranslate nohighlight">\( N \)</span> is a quantity that identifies the equilibrium of the reaction, such that the variation of each component can be written as <span class="math notranslate nohighlight">\( dN_k = n_k \, dN \)</span>.</p>
 </div>
 </div><div class="proof example dropdown admonition" id="example-15">
 <p class="admonition-title"><span class="caption-number">Example 12 </span> (Monocomponent Mixture During a Phase Transition)</p>
@@ -627,7 +627,7 @@ dE = T \, dS - P \, dV + \mu \, dN
 </div><div class="proof example dropdown admonition" id="example-16">
 <p class="admonition-title"><span class="caption-number">Example 13 </span> (Solid)</p>
 <div class="example-content section" id="proof-content">
-<p>Solid system with initial volume ( V ) under uniform stress and strain, with small deformations</p>
+<p>Solid system with initial volume <span class="math notranslate nohighlight">\( V \)</span> under uniform stress and strain, with small deformations</p>
 <div class="math notranslate nohighlight">
 \[
 dE = T \, dS - V \, \sigma_{ij} \, d \varepsilon_{ij}

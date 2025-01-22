@@ -145,20 +145,20 @@ Internal energy is an extensive variable of a thermodynamic system. In general, 
 
 $$E(S, X_k)$$
 
-where \( X_k \) are the state variables whose variations are associated with reversible internal work, and \( S \) is the state variable whose variation is associated with heat exchange with the external environment and internal dissipative actions. **todo** *referring to the chapter on functions and multivariable calculus*
+where $ X_k $ are the state variables whose variations are associated with reversible internal work, and $ S $ is the state variable whose variation is associated with heat exchange with the external environment and internal dissipative actions. **todo** *referring to the chapter on functions and multivariable calculus*
 
-Assuming the function \( E \) is continuous and differentiable, at least piecewise, the exact differential of internal energy can be written as a function of the increments of the independent variables:
+Assuming the function $ E $ is continuous and differentiable, at least piecewise, the exact differential of internal energy can be written as a function of the increments of the independent variables:
 
 $$
 dE = \left. \dfrac{\partial E}{\partial S} \right|_{\mathbf{X}} d S + \left. \dfrac{\partial E}{\partial X_k} \right|_{S} d X_k = 
 T \, d S + \sum_k F_k \, d X_k
 $$
 
-where \( F_k \) are the generalized forces associated with changes in the generalized coordinates \( X_k \), and \( T \) and \( S \) correspond to temperature and entropy as discussed further below. **todo**.
+where $ F_k $ are the generalized forces associated with changes in the generalized coordinates $ X_k $, and $ T $ and $ S $ correspond to temperature and entropy as discussed further below. **todo**.
 
 With this formalism, it is straightforward to express the **second** and **third** laws of thermodynamics as:
-- \( dS \ge \frac{\delta Q^{ext}}{T} \)
-- \( T \ge 0 \)
+- $ dS \ge \frac{\delta Q^{ext}}{T} $
+- $ T \ge 0 $
 
 The expression for the differential of internal energy can be compared with the energy balance written in terms of heat transferred to the system and internal work:
 
@@ -167,9 +167,9 @@ dE = \delta Q^{ext} - \delta L^{int} =
 \delta Q^{ext} + \delta^+ D - \delta L^{int,rev}
 $$
 
-where the internal work \( \delta L^{int} \) is recognized as the sum of a reversible contribution and a dissipative contribution, which is never negative: \( \delta L^{int} = \delta L^{int,rev} - \delta^+ D \).
+where the internal work $ \delta L^{int} $ is recognized as the sum of a reversible contribution and a dissipative contribution, which is never negative: $ \delta L^{int} = \delta L^{int,rev} - \delta^+ D $.
 
-Since \( dE \) is an exact differential and \( \delta L^{int,rev} \) is a reversible contribution, it follows that the sum of the two non-reversible contributions, \( \delta U := \delta Q^{ext} + \delta^+ D \), is a reversible contribution. Comparing the two expressions for the differential of internal energy, we can associate reversible internal work with the sum of works formed as the product of generalized forces \( F_k \) and changes in the state variables \( X_k \), and the term \( \delta U \) with the product \( T \, dS \):
+Since $ dE $ is an exact differential and $ \delta L^{int,rev} $ is a reversible contribution, it follows that the sum of the two non-reversible contributions, $ \delta U := \delta Q^{ext} + \delta^+ D $, is a reversible contribution. Comparing the two expressions for the differential of internal energy, we can associate reversible internal work with the sum of works formed as the product of generalized forces $ F_k $ and changes in the state variables $ X_k $, and the term $ \delta U $ with the product $ T \, dS $:
 
 $$
 \begin{cases}
@@ -178,9 +178,9 @@ $$
 \end{cases}
 $$
 
-```{dropdown} Temperature, \( T \), and entropy, \( S \)
+```{dropdown} Temperature, $ T $, and entropy, $ S $
 
-In the absence of external work done on the system, and in the absence of dissipation \( \delta^+ D = 0 \), we get:
+In the absence of external work done on the system, and in the absence of dissipation $ \delta^+ D = 0 $, we get:
 
 $$
 dE^{tot} = dE = \delta Q^{ext}
@@ -192,13 +192,13 @@ $$
 
 Consider a closed and isolated system made of two subsystems in equilibrium, which can exchange heat but not work.
 
-The total energy of the system is constant, \( E = E_1 + E_2 \). If the two subsystems are not initially at the same temperature, we observe a heat flow from the hotter system to the colder one, which satisfies the inequality:
+The total energy of the system is constant, $ E = E_1 + E_2 $. If the two subsystems are not initially at the same temperature, we observe a heat flow from the hotter system to the colder one, which satisfies the inequality:
 
 $$
 \frac{\delta Q_{12}}{T_1} + \frac{\delta Q_{21}}{T_2} \ge 0 \quad \rightarrow \quad dS_1 + dS_2 \ge 0
 $$
 
-The quantity \( S = S_1 + S_2 \) is non-decreasing.
+The quantity $ S = S_1 + S_2 $ is non-decreasing.
 
 
 <!--
@@ -223,7 +223,7 @@ $$
 
 In cases where this form or consequence of the third law of thermodynamics holds, the second law of thermodynamics is a consequence of the non-negativity of dissipation and the heat transfer mechanism, as will be discussed in more detail in the discussion of [composite systems](physics-hs:thermodynamics:principles:second:composite).
 
-In the general case of a **simple system**, using the definition \( dS = \frac{\delta U}{T} = \frac{\delta Q^{ext} + \delta^+ D}{T} \), the non-negativity of dissipation, \( \delta^+ D \ge 0 \), implies:
+In the general case of a **simple system**, using the definition $ dS = \frac{\delta U}{T} = \frac{\delta Q^{ext} + \delta^+ D}{T} $, the non-negativity of dissipation, $ \delta^+ D \ge 0 $, implies:
 
 $$
 dS \ge \frac{\delta Q^{ext}}{T}
@@ -231,7 +231,7 @@ $$
 
 This is an expression of the [Clausius statement of the second law of thermodynamics](physics-hs:thermodynamics:foundation:principles:second).
 
-**todo** **oss** *The third law of thermodynamics: 1. It seems not to be a fundamental principle; 2. For some systems with limited energy, the definition of temperature \( T := \left( \frac{\partial E}{\partial S} \right) \) produces a negative temperature* **todo** *add a section on statistical mechanics?*
+**todo** **oss** *The third law of thermodynamics: 1. It seems not to be a fundamental principle; 2. For some systems with limited energy, the definition of temperature $ T := \left( \frac{\partial E}{\partial S} \right) $ produces a negative temperature* **todo** *add a section on statistical mechanics?*
 
 ---
 
@@ -241,14 +241,14 @@ $$
 \delta W = - P dV + J dL + \sigma d A + V \left( \vec{e} \cdot d \vec{p} + \vec{h} \cdot d \vec{m}\right) + \phi d q
 $$
 
-- where \( J \), \( \sigma \) are tensions per unit length and area, \( d L \), \( d A \) are changes in length or area,
-- where \( \vec{e} \), \( \vec{h} \) are the electric and magnetic fields, \( \vec{p} \), \( \vec{m} \) are polarization and magnetization,
-- \( \phi \) is the electric potential, and \( q \) is electric charge (for open systems, otherwise \( dq \equiv 0 \) or net charge would be created!)
+- where $ J $, $ \sigma $ are tensions per unit length and area, $ d L $, $ d A $ are changes in length or area,
+- where $ \vec{e} $, $ \vec{h} $ are the electric and magnetic fields, $ \vec{p} $, $ \vec{m} $ are polarization and magnetization,
+- $ \phi $ is the electric potential, and $ q $ is electric charge (for open systems, otherwise $ dq \equiv 0 $ or net charge would be created!)
 
 ```{prf:example} Closed Monocomponent Gas System
 :class: dropdown
 
-The energy of the system, \( E(S,V) \)
+The energy of the system, $ E(S,V) $
 
 $$
 dE = T \, dS - P \, dV
@@ -259,7 +259,7 @@ $$
 ```{prf:example} Open Monocomponent Gas System
 :class: dropdown
 
-The energy of the system, \( E(S,V,N) \)
+The energy of the system, $ E(S,V,N) $
 
 $$
 dE = T \, dS - P \, dV + \mu \, dN
@@ -279,7 +279,7 @@ $$
 \end{aligned}
 $$
 
-where \( n_k \) are the stoichiometric coefficients (with sign) of the reaction, and \( N \) is a quantity that identifies the equilibrium of the reaction, such that the variation of each component can be written as \( dN_k = n_k \, dN \).
+where $ n_k $ are the stoichiometric coefficients (with sign) of the reaction, and $ N $ is a quantity that identifies the equilibrium of the reaction, such that the variation of each component can be written as $ dN_k = n_k \, dN $.
 
 ```
 
@@ -293,7 +293,7 @@ where \( n_k \) are the stoichiometric coefficients (with sign) of the reaction,
 ```{prf:example} Solid
 :class: dropdown
 
-Solid system with initial volume \( V \) under uniform stress and strain, with small deformations
+Solid system with initial volume $ V $ under uniform stress and strain, with small deformations
 
 $$
 dE = T \, dS - V \, \sigma_{ij} \, d \varepsilon_{ij}
