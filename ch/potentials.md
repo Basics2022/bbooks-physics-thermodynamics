@@ -198,7 +198,6 @@ $$\begin{aligned}
 \end{aligned}$$
 
 
-
 **Partial derivatives of potentials.**
 
 $$\begin{aligned}
@@ -212,6 +211,9 @@ $$\begin{aligned}
 
 **Maxwell's relations.**
 
+$$\text{\textbf{todo} Uncomment}$$
+
+<!--
 $$\begin{aligned}
  \left.\dfrac{\partial T}{\partial x_k}\right|_{s, x_{j \ne k}}    & = \ \ \left.\dfrac{\partial F_i}{\partial s}\right|_{x_k} && \qquad
  \left.\dfrac{\partial F_i}{\partial x_k}\right|_{s, x_{j \ne k}}  & = \ \ \left.\dfrac{\partial F_k}{\partial x_i}\right|_{s, x_{j \ne i}} \\
@@ -222,34 +224,6 @@ $$\begin{aligned}
  \left.\dfrac{\partial S}{\partial F_i}\right|_{} & = \ \ \left.\dfrac{\partial x_i}{\partial T}\right|_{} && \qquad
  \left.\dfrac{\partial F_i}{\partial x_k}\right|_{s, x_{j \ne k}}  & = \ \ \left.\dfrac{\partial F_k}{\partial x_i}\right|_{s, x_{j \ne i}} \\
 \end{aligned}$$
-
-e
-
-$$\begin{cases}
- \dfrac{\partial F_i}{\partial x_j} & =  \dfrac{\partial F_j}{\partial x_i} \\
- \dfrac{\partial x_i}{\partial F_j} & =  \dfrac{\partial x_j}{\partial F_i} \\
-\end{cases}$$
-
-
-<!--
-**Derivate parziali dei potenziali come definizione di variabili termodinamiche.** Osservando i differenziali dei potenziali termodinamici, si possono riconoscere che le variabili termodinamiche $T$, $S$, $\mathbf{F}$, $\mathbf{x}$ possono essere scritte come derivate parziali dei potenziali termodinamici,
-
-$$\begin{aligned}
- T & = \quad \frac{\partial E}{\partial S}\Big|_{\mathbf{x}} & = \quad \frac{\partial H}{\partial S}\Big|_{\mathbf{F}} \\
- S & =     - \frac{\partial F}{\partial T}\Big|_{\mathbf{x}} & =     - \frac{\partial G}{\partial T}\Big|_{\mathbf{F}} \\
- \mathbf{F} & =     - \frac{\partial E}{\partial \mathbf{x}}\Big|_{S} & = - \frac{\partial F}{\partial \mathbf{x}}\Big|_{T} \\
- \mathbf{x} & = \quad \frac{\partial H}{\partial \mathbf{F}}\Big|_{S} & = \quad \frac{\partial G}{\partial \mathbf{F}}\Big|_{T}\\
-\end{aligned}$$
-
-
-**Relazioni di Maxwell.** Applicando il **teorema di Schwarz** sulle derivate miste ai potenziali termodinamici, si ricavano le relazioni di Maxwell,
-
-$$\begin{cases}
- \dfrac{\partial T}{\partial x_i} & =   - \dfrac{\partial F_i}{\partial S} \\
- \dfrac{\partial S}{\partial x_i} & = \ \ \dfrac{\partial F_i}{\partial T} \\
- \dfrac{\partial T}{\partial F_i} & = \ \ \dfrac{\partial x_i}{\partial S} \\
- \dfrac{\partial S}{\partial F_i} & =   - \dfrac{\partial x_i}{\partial T} \\
-\end{cases}$$
 
 e
 

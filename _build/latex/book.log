@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  25 JAN 2025 02:15
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  25 JAN 2025 15:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1744,86 +1744,94 @@ LaTeX Info: Redefining \rmfamily on input line 1128.
 LaTeX Info: Redefining \sffamily on input line 1128.
 LaTeX Info: Redefining \ttfamily on input line 1128.
  [20]
-LaTeX Info: Redefining \rmfamily on input line 1173.
-LaTeX Info: Redefining \sffamily on input line 1173.
-LaTeX Info: Redefining \ttfamily on input line 1173.
+LaTeX Info: Redefining \rmfamily on input line 1156.
+LaTeX Info: Redefining \sffamily on input line 1156.
+LaTeX Info: Redefining \ttfamily on input line 1156.
  [21]
-LaTeX Info: Redefining \rmfamily on input line 1173.
-LaTeX Info: Redefining \sffamily on input line 1173.
-LaTeX Info: Redefining \ttfamily on input line 1173.
+LaTeX Info: Redefining \rmfamily on input line 1156.
+LaTeX Info: Redefining \sffamily on input line 1156.
+LaTeX Info: Redefining \ttfamily on input line 1156.
  [22
 
 ]
 Chapter 4.
 [23]
-LaTeX Info: Redefining \rmfamily on input line 1272.
-LaTeX Info: Redefining \sffamily on input line 1272.
-LaTeX Info: Redefining \ttfamily on input line 1272.
- [24
+LaTeX Info: Redefining \rmfamily on input line 1280.
+LaTeX Info: Redefining \sffamily on input line 1280.
+LaTeX Info: Redefining \ttfamily on input line 1280.
+ [24]
+LaTeX Info: Redefining \rmfamily on input line 1306.
+LaTeX Info: Redefining \sffamily on input line 1306.
+LaTeX Info: Redefining \ttfamily on input line 1306.
+ [25]
+LaTeX Info: Redefining \rmfamily on input line 1306.
+LaTeX Info: Redefining \sffamily on input line 1306.
+LaTeX Info: Redefining \ttfamily on input line 1306.
+ [26
 
 ]
 Chapter 5.
-[25]
-LaTeX Info: Redefining \rmfamily on input line 1522.
-LaTeX Info: Redefining \sffamily on input line 1522.
-LaTeX Info: Redefining \ttfamily on input line 1522.
- [26]
+[27]
+LaTeX Info: Redefining \rmfamily on input line 1556.
+LaTeX Info: Redefining \sffamily on input line 1556.
+LaTeX Info: Redefining \ttfamily on input line 1556.
+ [28]
 Chapter 6.
-[27
+[29
 
 ]
-LaTeX Info: Redefining \rmfamily on input line 1604.
-LaTeX Info: Redefining \sffamily on input line 1604.
-LaTeX Info: Redefining \ttfamily on input line 1604.
- [28
-
-]
-Chapter 7.
-[29]
-LaTeX Info: Redefining \rmfamily on input line 1698.
-LaTeX Info: Redefining \sffamily on input line 1698.
-LaTeX Info: Redefining \ttfamily on input line 1698.
+LaTeX Info: Redefining \rmfamily on input line 1638.
+LaTeX Info: Redefining \sffamily on input line 1638.
+LaTeX Info: Redefining \ttfamily on input line 1638.
  [30
 
 ]
-Chapter 8.
+Chapter 7.
 [31]
-LaTeX Info: Redefining \rmfamily on input line 1706.
-LaTeX Info: Redefining \sffamily on input line 1706.
-LaTeX Info: Redefining \ttfamily on input line 1706.
+LaTeX Info: Redefining \rmfamily on input line 1732.
+LaTeX Info: Redefining \sffamily on input line 1732.
+LaTeX Info: Redefining \ttfamily on input line 1732.
  [32
 
 ]
-Overfull \hbox (33.21036pt too wide) in paragraph at lines 1768--1769
+Chapter 8.
+[33]
+LaTeX Info: Redefining \rmfamily on input line 1740.
+LaTeX Info: Redefining \sffamily on input line 1740.
+LaTeX Info: Redefining \ttfamily on input line 1740.
+ [34
+
+]
+Overfull \hbox (33.21036pt too wide) in paragraph at lines 1802--1803
 []\TU/FreeSans(0)/m/n/14.4 thermodynamics:principles:open:ex:comb-
  []
 
 
-Overfull \hbox (4.1225pt too wide) in paragraph at lines 1769--1770
+Overfull \hbox (4.1225pt too wide) in paragraph at lines 1803--1804
 []\TU/FreeMono(0)/m/n/10 thermodynamics:principles:open:ex:comb-
  []
 
 
-Overfull \hbox (67.53998pt too wide) in paragraph at lines 1771--1772
+Overfull \hbox (67.53998pt too wide) in paragraph at lines 1805--1806
 []\TU/FreeSans(0)/m/n/14.4 thermodynamics:principles:open:ex:compressor 
  []
 
 
-Overfull \hbox (34.1225pt too wide) in paragraph at lines 1772--1773
+Overfull \hbox (34.1225pt too wide) in paragraph at lines 1806--1807
 []\TU/FreeMono(0)/m/n/10 thermodynamics:principles:open:ex:compressor
  []
 
 
-Overfull \hbox (36.89679pt too wide) in paragraph at lines 1774--1775
+Overfull \hbox (36.89679pt too wide) in paragraph at lines 1808--1809
 []\TU/FreeSans(0)/m/n/14.4 thermodynamics:principles:open:ex:turbine 
  []
 
 
-Overfull \hbox (16.1225pt too wide) in paragraph at lines 1775--1776
+Overfull \hbox (16.1225pt too wide) in paragraph at lines 1809--1810
 []\TU/FreeMono(0)/m/n/10 thermodynamics:principles:open:ex:turbine
  []
 
-[33
+[35
 
 ] (./book.ind)
 The property list \polyglossia@langsetup contains the pairs (without outer
@@ -1860,26 +1868,26 @@ braces):
 >  {english/babelname}  =>  {american}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1780.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1780.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1814.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1814.
  (./book.aux
 LaTeX Info: Redefining \rmfamily on input line 19.
 LaTeX Info: Redefining \sffamily on input line 19.
 LaTeX Info: Redefining \ttfamily on input line 19.
 )
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1780.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1780.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1814.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1814.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: A124C21EA5ED84D957710D6F070CF522;2959.
+(rerunfilecheck)             Checksum: 716E5EA70E1C771A195419652DC31B5C;3311.
  ) 
 Here is how much of TeX's memory you used:
- 42137 strings out of 481789
- 949671 string characters out of 5937152
- 1620959 words of memory out of 5000000
- 58322 multiletter control sequences out of 15000+600000
+ 42143 strings out of 481789
+ 949887 string characters out of 5937152
+ 1621960 words of memory out of 5000000
+ 58328 multiletter control sequences out of 15000+600000
  540088 words of font info for 119 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191
  71i,27n,109p,1346b,2084s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on book.pdf (37 pages).
+Output written on book.pdf (39 pages).

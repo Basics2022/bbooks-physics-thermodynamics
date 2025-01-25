@@ -28,10 +28,14 @@
 \contentsline {subsubsection}{First principle per unit volume}{19}{subsubsection*.7}%
 \contentsline {paragraph}{Different systems}{20}{paragraph*.8}%
 \contentsline {section}{\numberline {3.2}Potentials \sphinxhyphen {} specific quantities}{20}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Coefficienti termodinamici}{23}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Stati della materia e modelli}{25}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Gas ideali}{25}{section.5.1}%
-\contentsline {chapter}{\numberline {6}Trasformazioni termodinamiche}{27}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Cicli termodinamici e macchine termiche}{29}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Meccanismi di trasmissione del calore}{31}{chapter.8}%
-\contentsline {chapter}{Proof Index}{33}{section*.9}%
+\contentsline {chapter}{\numberline {4}Thermodynamic coefficients}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Thermodynamic coefficients of a single\sphinxhyphen {}component fluid}{23}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Thermodynamic equilibrium}{23}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Conditions on energy}{24}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Conditions on entropy}{24}{subsection.4.2.2}%
+\contentsline {chapter}{\numberline {5}Stati della materia e modelli}{27}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Gas ideali}{27}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Trasformazioni termodinamiche}{29}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Cicli termodinamici e macchine termiche}{31}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Meccanismi di trasmissione del calore}{33}{chapter.8}%
+\contentsline {chapter}{Proof Index}{35}{section*.9}%

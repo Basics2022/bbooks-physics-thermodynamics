@@ -1140,24 +1140,7 @@ Here mechanical \(\mathbf{X}_m\) and non\sphinxhyphen{}mechanical \(\mathbf{X}_n
 \sphinxAtStartPar
 \sphinxstylestrong{Maxwell’s relations.}
 \begin{equation*}
-\begin{split}\begin{aligned}
- \left.\dfrac{\partial T}{\partial x_k}\right|_{s, x_{j \ne k}}    & = \ \ \left.\dfrac{\partial F_i}{\partial s}\right|_{x_k} && \qquad
- \left.\dfrac{\partial F_i}{\partial x_k}\right|_{s, x_{j \ne k}}  & = \ \ \left.\dfrac{\partial F_k}{\partial x_i}\right|_{s, x_{j \ne i}} \\
--\left.\dfrac{\partial s}{\partial x_i}\right|_{T} & = \ \ \left.\dfrac{\partial F_k}{\partial T}\right|_{x_k} && \qquad
- \left.\dfrac{\partial F_i}{\partial x_k}\right|_{T, x_{j \ne k}}  & = \ \ \left.\dfrac{\partial F_k}{\partial x_i}\right|_{T, x_{j \ne i}} \\
- \left.\dfrac{\partial T}{\partial F_i}\right|_{} & = \ \ \left.\dfrac{\partial x_i}{\partial S}\right|_{} && \qquad
- \left.\dfrac{\partial F_i}{\partial x_k}\right|_{s, x_{j \ne k}}  & = \ \ \left.\dfrac{\partial F_k}{\partial x_i}\right|_{s, x_{j \ne i}} \\
- \left.\dfrac{\partial S}{\partial F_i}\right|_{} & = \ \ \left.\dfrac{\partial x_i}{\partial T}\right|_{} && \qquad
- \left.\dfrac{\partial F_i}{\partial x_k}\right|_{s, x_{j \ne k}}  & = \ \ \left.\dfrac{\partial F_k}{\partial x_i}\right|_{s, x_{j \ne i}} \\
-\end{aligned}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-e
-\begin{equation*}
-\begin{split}\begin{cases}
- \dfrac{\partial F_i}{\partial x_j} & =  \dfrac{\partial F_j}{\partial x_i} \\
- \dfrac{\partial x_i}{\partial F_j} & =  \dfrac{\partial x_j}{\partial F_i} \\
-\end{cases}\end{split}
+\begin{split}\text{\textbf{todo} Uncomment}\end{split}
 \end{equation*}
 
 
@@ -1170,104 +1153,155 @@ e
 
 
 
-\chapter{Coefficienti termodinamici}
-\label{\detokenize{ch/coefficients:coefficienti-termodinamici}}\label{\detokenize{ch/coefficients:classical-thermodynamics-coefficients}}\label{\detokenize{ch/coefficients::doc}}
+\chapter{Thermodynamic coefficients}
+\label{\detokenize{ch/coefficients:thermodynamic-coefficients}}\label{\detokenize{ch/coefficients:classical-thermodynamics-coefficients}}\label{\detokenize{ch/coefficients::doc}}
 \sphinxAtStartPar
-\sphinxstylestrong{Calore specifico.}
+In this section different related to first derivatives of thermodynamic state variables are introduced and discussed for different systems.
+
+
+\section{Thermodynamic coefficients of a single\sphinxhyphen{}component fluid}
+\label{\detokenize{ch/coefficients:thermodynamic-coefficients-of-a-single-component-fluid}}
+\sphinxAtStartPar
+For a 1\sphinxhyphen{}component fluid with constant composition, the first principle reads
 \begin{equation*}
-\begin{split}S_x := T \dfrac{\partial S}{\partial T}\Big|_x\end{split}
+\begin{split}de = T ds - P dv = T ds + \frac{P}{\rho^2} d \rho \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Coefficienti di espansione termica.}
+\sphinxstylestrong{Heat capacity.}
+\begin{equation*}
+\begin{split}c_x := T \dfrac{\partial s}{\partial T}\Big|_x\end{split}
+\end{equation*}
+\sphinxAtStartPar
+For fluid systems, usually heat capacity at constant pressure or constant density are the most used.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Thermal expansion coefficients.}
 \begin{equation*}
 \begin{split}\alpha_x := \dfrac{1}{v} \dfrac{\partial v}{\partial T}\Big|_x = - \dfrac{1}{\rho} \dfrac{\partial \rho}{\partial T}\Big|_x\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Coefficienti di comprimibilità.}
+For fluid systems, usually thermal expansion coefficent at constant pressure is the most used.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Compressibility coefficients.}
 \begin{equation*}
 \begin{split}\beta_x := - \dfrac{1}{v} \dfrac{\partial v}{\partial P}\Big|_x = \dfrac{1}{\rho} \dfrac{\partial \rho}{\partial P}\Big|_x\end{split}
+\end{equation*}
+\sphinxAtStartPar
+For fluid systems, usually compressibility coefficent at constant temperature or entropy are the most used.
+
+
+\section{Thermodynamic equilibrium}
+\label{\detokenize{ch/coefficients:thermodynamic-equilibrium}}
+\sphinxAtStartPar
+Here thermodynamic equilibrium is discussed for a single\sphinxhyphen{}component fluid, for which the first principle reads
+\begin{equation*}
+\begin{split}d e = T ds - P dv = T ds + \frac{P}{\rho^2} d \rho \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+First conditions on energy, \(e(s, \rho)\), as a function of entropy and density then the equivalent conditions on entropy \(s(e, \rho)\), as a function of energy and density are discussed.
+
+
+\subsection{Conditions on energy}
+\label{\detokenize{ch/coefficients:conditions-on-energy}}
+\sphinxAtStartPar
+Thermodynamic equilibrium implies conditions on the second order term in series expansion of the function \(e(s, \rho)\) (\sphinxstylestrong{todo} \sphinxstyleemphasis{why? Spend few words. Use Landau as a reference if needed})
+\begin{equation*}
+\begin{split}\begin{aligned}
+  e(s+ds, \rho+d\rho) 
+  & = e(s, \rho) + \partial_s e|_{\rho} (s,\rho) d \rho + \partial_\rho e|_{s} (s, \rho) ds + \\
+  & + \dfrac{1}{2} \left[ \partial_{ss} e|_{\rho}(s,\rho) ds^2 + 2 \partial_{s\rho} e(s, \rho) ds d\rho + \partial_{\rho \rho} e(s, \rho) d \rho^2 \right] \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The equilibrium energy must be a \sphinxstyleemphasis{minimum} (\sphinxstylestrong{todo} check the function that must be a \sphinxstyleemphasis{minimum}, since \(\partial_s e|_{\rho} = T\),… and \(T\) not zero, and thus it can be a minimum!): the second order term must be positive for any increment of independent physical variables \(d \rho\), \(d s\), i.e.
+\begin{equation*}
+\begin{split}\dfrac{1}{2} \left[ \partial_{ss} e|_{\rho} ds^2 + 2 \partial_{s\rho} e ds d\rho + \partial_{\rho \rho} e|_{s} d \rho^2 \right] \end{split}
+\end{equation*}
+\sphinxAtStartPar
+is a positive\sphinxhyphen{}definite quadratic form, i.e. the Hessian
+\begin{equation*}
+\begin{split}\begin{bmatrix} \partial_{ss} e|_{\rho} & \partial_{s \rho} e \\ \partial_{s \rho } e & \partial_{\rho \rho} e|_{s} \end{bmatrix} \end{split}
+\end{equation*}
+\sphinxAtStartPar
+is definite positive, and thus teh following conditions must hold
+\begin{equation*}
+\begin{split}\begin{cases}
+  \partial_{ss} e|_{\rho} > 0 \\
+  \partial_{ss} e|_{\rho} \partial_{\rho \rho} e|_{s} - \left( \partial_{s \rho} e \right)^2 < 0
+\end{cases}\end{split}
+\end{equation*}
+
+\subsection{Conditions on entropy}
+\label{\detokenize{ch/coefficients:conditions-on-entropy}}
+\sphinxAtStartPar
+Using \(e\), \(\rho\) as independent thermodynamic state variables, and the entropy \(s(e, \rho)\) it can be proved that the condition on \(e(s, \rho)\) for the thermodynamic equilibrium implies that \(s(e, \rho)\) is a \sphinxstyleemphasis{maxiumum} (\sphinxstylestrong{todo} \sphinxstyleemphasis{check the meaning of maximum here}), and thus
+\begin{equation*}
+\begin{split}\dfrac{1}{2} \left[ \partial_{ee} s|_{\rho} de^2 + 2 \partial_{e\rho} s de d\rho + \partial_{\rho \rho} s|_{e} d \rho^2 \right] \end{split}
+\end{equation*}
+\sphinxAtStartPar
+is a positive\sphinxhyphen{}definite quadratic form, i.e. the Hessian
+\begin{equation*}
+\begin{split}\begin{bmatrix} \partial_{ee} s|_{\rho} & \partial_{e \rho} s \\ \partial_{e \rho } s & \partial_{\rho \rho} s|_{e} \end{bmatrix} \end{split}
+\end{equation*}
+\sphinxAtStartPar
+is definite positive, and thus teh following conditions must hold
+\begin{equation*}
+\begin{split}\begin{cases}
+  \partial_{ee} s|_{\rho} < 0 \\
+  \partial_{ee} s|_{\rho} \partial_{\rho \rho} s|_{e} - \left( \partial_{e \rho} s \right)^2 < 0
+\end{cases}\end{split}
+\end{equation*}\subsubsection*{Relation between partial derivatives of \protect\(e(s,\rho)\protect\) and \protect\(s(e,\rho)\protect\)}
+
+\sphinxAtStartPar
+The relation
+\begin{equation*}
+\begin{split}e = e_{s \rho}(s_{e \rho}(e, \rho), \rho) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+provides the link between the two representations, having written \(e_{s,\rho}()\), \(s_{e,\rho}()\) the functions with the arguent indicated as indices. This relation contains only \(e\), \(\rho\) as independent variables. All the required relations are evaluated computing partial derivatives of this relation.
+
+\sphinxAtStartPar
+\sphinxstylestrong{First\sphinxhyphen{}order derivatives.} It can be proved that
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_e s |_{\rho} & = \dfrac{1}{\partial_s e |_{\rho}} \\
+  \partial_{\rho} s |_e & = - \dfrac{\partial_{\rho} e |_{s}}{\partial_s e |_{\rho}} \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Second\sphinxhyphen{}order derivatives.} It can be proved that
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_{ee}       s|_{\rho} & = - \dfrac{1}{\left( \partial_s e|_{\rho} \right)^3} \partial_{ss} e |_{\rho} \\
+  \partial_{e\rho}    s         & =   \dfrac{\partial_{\rho} e|_s}{\left( \partial_s e|_{\rho} \right)^3} \partial_{ss} e |_{\rho} - \dfrac{\partial_{s \rho} e}{(\partial_s e|_{\rho})^2} \\
+  \partial_{\rho\rho} s|_{e}    & = - \dfrac{1}{\left( \partial_s e|_{\rho} \right)^3} \left[ \left( -\frac{\partial_\rho e_s}{\partial_s e|_\rho} \right)^2 \partial_{ss} e |_{\rho} + 2 \left(-\frac{\partial_\rho e_s}{\partial_s e|_\rho}\right) \partial_{s \rho} e + \partial_{\rho \rho} e|_s  \right] \\
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{Equivalence of conditions on \protect\(e(s, \rho)\protect\) and on \protect\(s(e, \rho)\protect\) for thermodynamic equilibrium}
+
+\sphinxAtStartPar
+Exploiting first condition on partial derivatives of \(e(s,\rho)\), the first condition on the partial derivatives of \(s(e,\rho)\) is
+\begin{equation*}
+\begin{split}\partial_{ee} s|_{\rho} = - \dfrac{1}{\left( \partial_s e|_{\rho} \right)^3} \partial_{ss} e |_{\rho} = - \dfrac{1}{T^3} \partial_{ss} e |_{\rho}< 0 \end{split}
+\end{equation*}
+\sphinxAtStartPar
+since \(T > 0\) and \(\partial_{ss} e|_{\rho} > 0\).
+
+\sphinxAtStartPar
+Second condition for derivatives of \(s(e, \rho)\) is
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_{\rho \rho} s|_{e} \partial_{ee} s |_{\rho} - \left( \partial_{\rho s} e \right)^2 
+  & = \dots \\
+  & = \frac{1}{T^4} \left[ \partial_{ss} e|_{\rho} \partial_{\rho \rho} e|_{s} - \left( \partial_{s \rho} e \right)^2  \right] < 0 \ .
+\end{aligned} \end{split}
 \end{equation*}
 
 
 \sphinxstepscope
 
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-p-0}
-\begin{sphinxuseclass}{sd-mt-2}
-\begin{sphinxuseclass}{sd-mb-4}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-gx-2}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-row-cols-xs-2}
-\begin{sphinxuseclass}{sd-row-cols-sm-3}
-\begin{sphinxuseclass}{sd-row-cols-md-3}
-\begin{sphinxuseclass}{sd-row-cols-lg-3}
-\begin{sphinxuseclass}{sd-gx-3}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-basics
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-Dec 30, 2024
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-0 min read
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
 
 \chapter{Stati della materia e modelli}
 \label{\detokenize{ch/media:stati-della-materia-e-modelli}}\label{\detokenize{ch/media:classical-thermodynamics-media}}\label{\detokenize{ch/media::doc}}

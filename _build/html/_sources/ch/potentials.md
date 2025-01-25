@@ -202,21 +202,26 @@ $$\begin{aligned}
 **Partial derivatives of potentials.**
 
 $$\begin{aligned}
- T & = \quad \left.\frac{\partial e}{\partial s}\right|_{\mathbf{x}} & = \quad \left.\frac{\partial h}{\partial s}\right|_{\mathbf{F}_m,\mathbf{x}_n} \\
- s & =     - \left.\frac{\partial f}{\partial T}\right|_{\mathbf{x}} & =     - \left.\frac{\partial g}{\partial T}\right|_{\mathbf{F}_m,\mathbf{x}_n} \\
- \mathbf{F} & =     - \left.\frac{\partial E}{\partial \mathbf{x}}\right|_{S} & =     - \left.\frac{\partial F}{\partial \mathbf{x}}\right|_{T} \\
- \mathbf{x} & = \quad \left.\frac{\partial H}{\partial \mathbf{F}}\right|_{S} & = \quad \left.\frac{\partial G}{\partial \mathbf{F}}\right|_{T}\\
+ T & = \quad \left.\frac{\partial e}{\partial s}\right|_{\mathbf{x}} && = \quad \left.\frac{\partial h}{\partial s}\right|_{\mathbf{F}_m,\mathbf{x}_n} \\
+ s & =     - \left.\frac{\partial f}{\partial T}\right|_{\mathbf{x}} && =     - \left.\frac{\partial g}{\partial T}\right|_{\mathbf{F}_m,\mathbf{x}_n} \\
+ \mathbf{F}_m & = \quad \left.\frac{\partial e}{\partial \mathbf{x}_m}\right|_{s,\mathbf{x}_n} && = \quad \left.\frac{\partial f}{\partial \mathbf{x}_m}\right|_{T,\mathbf{x}_n} \\
+ \mathbf{F}_n & = \quad  \left.\frac{\partial e}{\partial \mathbf{x}_n}\right|_{s,\mathbf{x}_m} && = \quad \left.\frac{\partial f}{\partial \mathbf{x}_n}\right|_{T,\mathbf{x}_m} && = \quad  \left.\frac{\partial h}{\partial \mathbf{x}_n}\right|_{s,\mathbf{F}_m} && = \quad \left.\frac{\partial g}{\partial \mathbf{x}_n}\right|_{T,\mathbf{F}_m} \\
+ \mathbf{x}_m & = -\left.\frac{\partial h}{\partial \mathbf{F}_m}\right|_{s,\mathbf{x}_n} && =- \left.\frac{\partial g}{\partial \mathbf{F}_m}\right|_{T,\mathbf{x}_n}\\
 \end{aligned}$$
 
 
 **Maxwell's relations.**
 
-$$\begin{cases}
- \dfrac{\partial T}{\partial x_i} & =   - \dfrac{\partial F_i}{\partial S} \\
- \dfrac{\partial S}{\partial x_i} & = \ \ \dfrac{\partial F_i}{\partial T} \\
- \dfrac{\partial T}{\partial F_i} & = \ \ \dfrac{\partial x_i}{\partial S} \\
- \dfrac{\partial S}{\partial F_i} & =   - \dfrac{\partial x_i}{\partial T} \\
-\end{cases}$$
+$$\begin{aligned}
+ \left.\dfrac{\partial T}{\partial x_k}\right|_{s, x_{j \ne k}}    & = \ \ \left.\dfrac{\partial F_i}{\partial s}\right|_{x_k} && \qquad
+ \left.\dfrac{\partial F_i}{\partial x_k}\right|_{s, x_{j \ne k}}  & = \ \ \left.\dfrac{\partial F_k}{\partial x_i}\right|_{s, x_{j \ne i}} \\
+-\left.\dfrac{\partial s}{\partial x_i}\right|_{T} & = \ \ \left.\dfrac{\partial F_k}{\partial T}\right|_{x_k} && \qquad
+ \left.\dfrac{\partial F_i}{\partial x_k}\right|_{T, x_{j \ne k}}  & = \ \ \left.\dfrac{\partial F_k}{\partial x_i}\right|_{T, x_{j \ne i}} \\
+ \left.\dfrac{\partial T}{\partial F_i}\right|_{} & = \ \ \left.\dfrac{\partial x_i}{\partial S}\right|_{} && \qquad
+ \left.\dfrac{\partial F_i}{\partial x_k}\right|_{s, x_{j \ne k}}  & = \ \ \left.\dfrac{\partial F_k}{\partial x_i}\right|_{s, x_{j \ne i}} \\
+ \left.\dfrac{\partial S}{\partial F_i}\right|_{} & = \ \ \left.\dfrac{\partial x_i}{\partial T}\right|_{} && \qquad
+ \left.\dfrac{\partial F_i}{\partial x_k}\right|_{s, x_{j \ne k}}  & = \ \ \left.\dfrac{\partial F_k}{\partial x_i}\right|_{s, x_{j \ne i}} \\
+\end{aligned}$$
 
 e
 
