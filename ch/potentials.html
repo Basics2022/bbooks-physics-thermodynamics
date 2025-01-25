@@ -310,7 +310,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -326,6 +328,29 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-principle">First principle</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#first-principle-for-different-systems">First principle for different systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#first-principle-for-specific-quantities">First principle for specific quantities</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#first-principle-per-unit-mass">First principle per unit mass</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#different-systems">Different systems</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#first-principle-per-unit-volume">First principle per unit volume</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Different systems</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potentials-specific-quantities">Potentials - specific quantities</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -337,31 +362,178 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="thermodynamics-potentials">
 <span id="classical-thermodynamics-potentials"></span><h1>Thermodynamics potentials<a class="headerlink" href="#thermodynamics-potentials" title="Permalink to this heading">#</a></h1>
-<p>Starting from the
-Partendo dall’espressione incrementale del primo principio della termodinamica è possivile definire altre funzioni delle variabili di stato (<strong>TODO</strong> <em>Ruolo della trasformata di Legendre</em>), chiamati <strong>potenziali termodinamici</strong></p>
-<p><strong>Energia interna.</strong> <span class="math notranslate nohighlight">\(E(\mathbf{x}, S)\)</span></p>
+<p>In this section, principles and the mathematical formalism of classical thermodynamics are reviewed.</p>
+<div class="section" id="first-principle">
+<h2>First principle<a class="headerlink" href="#first-principle" title="Permalink to this heading">#</a></h2>
+<p>For an extensive system</p>
 <div class="math notranslate nohighlight">
-\[d E = - \mathbf{F} \cdot d \mathbf{x} + T dS\]</div>
-<p><strong>Energia libera di Helmholtz.</strong> <span class="math notranslate nohighlight">\(F(\mathbf{x}, T) := E - T S\)</span></p>
+\[d E = T \, d S + \mathbf{F} \cdot d \mathbf{X} \ ,\]</div>
+<p>being <span class="math notranslate nohighlight">\(E\)</span> the internal energy, <span class="math notranslate nohighlight">\(T\)</span> temperature, <span class="math notranslate nohighlight">\(S\)</span> entropy, <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> generalized force, <span class="math notranslate nohighlight">\(\mathbf{X}\)</span> generalized displacement.</p>
+<p>Following Gibbs’ formulation, internal energy <span class="math notranslate nohighlight">\(E\)</span> can be written as a function of a limited set of independent state variables,</p>
+<div class="math notranslate nohighlight">
+\[E(S, \mathbf{X}) \ .\]</div>
+<p>Internal energy <span class="math notranslate nohighlight">\(E\)</span>, entropy <span class="math notranslate nohighlight">\(S\)</span> and the generalized displacement <span class="math notranslate nohighlight">\(\mathbf{X}\)</span> are <strong>extensive</strong> physical quantities, and thus (<strong>thus?</strong>) the derivatives</p>
+<div class="math notranslate nohighlight">
+\[T := \left.\dfrac{\partial S}{\partial E}\right|_{\mathbf{X}} \quad , \quad \mathbf{F} := \left.\dfrac{\partial E}{\partial \mathbf{X}}\right|_S\]</div>
+<p>are <strong>intensive</strong> quantities. A discussion about the difference between the concept of <em>additivity</em> and <em>extensivity</em><a class="footnote-reference brackets" href="#additivity-extensivity" id="id1">1</a>.
+Beside being extensive, internal energy in classical thermodynamics is an homogeneous function<a class="footnote-reference brackets" href="#se-e-homogeneous" id="id2">2</a> of order 1 of its arguments, namely</p>
+<div class="math notranslate nohighlight">
+\[E(a \, S, a \, \mathbf{X}) = a \, E(S, \mathbf{X}) \ .\]</div>
+<p><strong>Euler’s theorem for homogeneous functions</strong> holds.</p>
+<div class="proof theorem admonition" id="theorem-0">
+<p class="admonition-title"><span class="caption-number">Theorem 1 </span> (Euler’s theorem for homogeneous functions)</p>
+<div class="theorem-content section" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f(x_i)\)</span> and homogeneous function of order <span class="math notranslate nohighlight">\(m\)</span>, i.e.</p>
+<div class="math notranslate nohighlight" id="equation-eq-homogeneous-fun-def">
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-homogeneous-fun-def" title="Permalink to this equation">#</a></span>\[f(a \, x_i) = a^m \, f(x_i) \ .\]</div>
+<p>It follows that</p>
+<div class="math notranslate nohighlight">
+\[f(x_k) = m \, x_i \, \dfrac{\partial f}{\partial x_i}(x_k) \ .\]</div>
+</div>
+</div><p>Proof immediately follows, evaluating the derivative of <a class="reference internal" href="#equation-eq-homogeneous-fun-def">(1)</a> w.r.t. <span class="math notranslate nohighlight">\(a\)</span>, and evaluating for <span class="math notranslate nohighlight">\(a = 1\)</span>, i.e.</p>
+<div class="math notranslate nohighlight">
+\[x_i \, \dfrac{\partial f}{\partial x_i} (a \, x_k) = m \, a^{m-1} \, f(x_k) \ ,\]</div>
+<p>and for <span class="math notranslate nohighlight">\(a = 1\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[f(x_k) = x_i \, \dfrac{\partial f}{\partial x_i} (x_k)\ .\]</div>
+<p>Thus, internal energy can be written as</p>
+<div class="math notranslate nohighlight">
+\[E(S, \mathbf{X}) = T \, S + \mathbf{F} \cdot \mathbf{X} \ .\]</div>
+<div class="section" id="first-principle-for-different-systems">
+<h3>First principle for different systems<a class="headerlink" href="#first-principle-for-different-systems" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>Single-component fluid, <span class="math notranslate nohighlight">\(E(S, V, N)\)</span></p>
+<div class="math notranslate nohighlight">
+\[d E = T \, d S - P \, d V + \mu \, d N\]</div>
+</li>
+<li><p>Multi-component fluid, <span class="math notranslate nohighlight">\(E(S, V, N_k)\)</span></p>
+<div class="math notranslate nohighlight">
+\[d E = T \, dS - P \, d V + \mu_k \, d N_k\]</div>
+<p>where the change of number of particles (or moles, it depends on the description - anyway a non-dimensional number) <span class="math notranslate nohighlight">\(d N_k\)</span> is governed by the stoichiometric ratios of the reactions occurring in the system.</p>
+</li>
+<li><p>Single-component solid, <span class="math notranslate nohighlight">\(E(S, \mathbf{X})\)</span></p>
+<div class="math notranslate nohighlight">
+\[d E = T \, dS + \mathbf{F} \cdot d \mathbf{X}\]</div>
+</li>
+</ul>
+</div>
+<div class="section" id="first-principle-for-specific-quantities">
+<h3>First principle for specific quantities<a class="headerlink" href="#first-principle-for-specific-quantities" title="Permalink to this heading">#</a></h3>
+<p>First principle and thermodynamics can be writtenin terms of specific quantites, usually either for unit volume or for unit mass.</p>
+<div class="section" id="first-principle-per-unit-mass">
+<h4>First principle per unit mass<a class="headerlink" href="#first-principle-per-unit-mass" title="Permalink to this heading">#</a></h4>
+<p>All the extensive quantites are written as the product of the mass of the system <span class="math notranslate nohighlight">\(M\)</span> and its density, namely</p>
+<div class="math notranslate nohighlight">
+\[E = M  e \quad , \quad S = M  s \quad , \quad \mathbf{X} = M \mathbf{x} \ ,\]</div>
+<p>and, using the product rule for differential <span class="math notranslate nohighlight">\(d E = d (M e) = dM \, e + M \, de\)</span>, first principle can be written as</p>
+<div class="math notranslate nohighlight">
+\[0 = d M \underbrace{\left( e - T s - \mathbf{F} \cdot \mathbf{x} \right)}_{= 0} + M \left( d e - T ds - \mathbf{F} \cdot d \mathbf{x} \right) \ .\]</div>
+<p>The first term is identically zero, since it’s the expression of the internal energy divided by <span class="math notranslate nohighlight">\(M\)</span>. Being <span class="math notranslate nohighlight">\(M &gt; 0\)</span>, the second term gives the first principle per unit mass</p>
+<div class="math notranslate nohighlight">
+\[d e = T ds + \mathbf{F} \cdot d \mathbf{x} \ .\]</div>
+<div class="section" id="different-systems">
+<h5>Different systems<a class="headerlink" href="#different-systems" title="Permalink to this heading">#</a></h5>
+<ul>
+<li><p>Single-component fluid;</p>
+<div class="math notranslate nohighlight">
+\[V = M \dfrac{1}{\rho} \quad , \quad N = M \dfrac{1}{m} \ , \]</div>
+<p>being <span class="math notranslate nohighlight">\(\rho\)</span> the mass density and <span class="math notranslate nohighlight">\(m\)</span> the mass of a particle (or mole, it depends on the description) of the medium; <span class="math notranslate nohighlight">\(m\)</span> is <strong>constant</strong>. First principle becomes</p>
+<div class="math notranslate nohighlight">
+\[0 = d M \underbrace{\left( e - T s + \dfrac{P}{\rho} - \dfrac{\mu}{m} \right)}_{= 0} + M \left( d e - T ds - \dfrac{P}{\rho^2} d\rho \right) \ ,\]</div>
+<p>and thus</p>
+<div class="math notranslate nohighlight">
+\[de = T ds + \dfrac{P}{\rho^2} d \rho \ .\]</div>
+</li>
+<li><p>Multi-component fluid</p>
+<div class="math notranslate nohighlight">
+\[V = M \dfrac{1}{\rho} \quad , \quad N_k = M_k \dfrac{1}{m}_k = M \dfrac{M_k}{M} \dfrac{1}{m_k} = M \dfrac{1}{m_k} \dfrac{\rho_k}{\rho} = M \dfrac{1}{m_k} w_k \ , \]</div>
+<p>being <span class="math notranslate nohighlight">\(\rho\)</span> the mass density and <span class="math notranslate nohighlight">\(m\)</span> the mass of a particle (or mole, it depends on the description) of the <span class="math notranslate nohighlight">\(k^{th}\)</span> substance; <span class="math notranslate nohighlight">\(m_k\)</span> is <strong>constant</strong>. The first principle becomes</p>
+<div class="math notranslate nohighlight">
+\[0 = d M \underbrace{\left( e - T s + \dfrac{P}{\rho} - \dfrac{\mu_k}{m_k} w_k \dfrac{}{} \right)}_{= 0} + M \left[ d e - T ds - \dfrac{P}{\rho^2} d\rho - \dfrac{\mu_k}{m_k} d w_k \right] \ ,\]</div>
+<p>and thus</p>
+<div class="math notranslate nohighlight">
+\[de = T ds + \dfrac{P}{\rho^2} d \rho + \dfrac{\mu_k}{m_k} d w_k\ .\]</div>
+</li>
+<li><p>Single-component solid</p>
+<div class="math notranslate nohighlight">
+\[\text{\textbf{todo}}\]</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="first-principle-per-unit-volume">
+<h4>First principle per unit volume<a class="headerlink" href="#first-principle-per-unit-volume" title="Permalink to this heading">#</a></h4>
+<p>All the extensive quantites are written as the product of the mass of the system <span class="math notranslate nohighlight">\(M\)</span> and its density, namely</p>
+<div class="math notranslate nohighlight">
+\[E = V  \mathcal{E} \quad , \quad S = M  \mathcal{S} \quad , \quad \mathbf{X} = M \symbf{\chi} \ ,\]</div>
+<p>and, using the product rule for differential <span class="math notranslate nohighlight">\(d E = d (V \mathcal{E}) = dV \, \mathcal{E} + V \, d\mathcal{E}\)</span>, first principle can be written as</p>
+<div class="math notranslate nohighlight">
+\[0 = d V \underbrace{\left( \mathcal{E} - T \mathcal{S} - \mathbf{F} \cdot \symbf{\chi} \right)}_{= 0} + V \left( d \mathcal{E} - T d \mathcal{S} - \mathbf{F} \cdot d \symbf{\chi} \right) \ .\]</div>
+<p>The first term is identically zero, since it’s the expression of the internal energy divided by <span class="math notranslate nohighlight">\(V\)</span>. Being <span class="math notranslate nohighlight">\(V &gt; 0\)</span>, the second term gives the first principle per unit volume</p>
+<div class="math notranslate nohighlight">
+\[d \mathcal{E} = T d\mathcal{S} + \mathbf{F} \cdot d \symbf{\chi} \ .\]</div>
+<div class="section" id="id3">
+<h5>Different systems<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h5>
+<ul>
+<li><p>Single-component fluid;</p>
+<div class="math notranslate nohighlight">
+\[V = V \cdot 1 \quad , \quad N = V \dfrac{M}{V} \dfrac{1}{m} = V \dfrac{\rho}{m} \ , \]</div>
+<p>being <span class="math notranslate nohighlight">\(\rho\)</span> the mass density and <span class="math notranslate nohighlight">\(m\)</span> the mass of a particle (or mole, it depends on the description) of the medium; <span class="math notranslate nohighlight">\(m\)</span> is <strong>constant</strong>. First principle becomes</p>
+<div class="math notranslate nohighlight">
+\[0 = d V \underbrace{\left( \mathcal{E} - T \mathcal{S} + P - \mu \dfrac{\rho}{m} \right)}_{= 0} + V \left( d \mathcal{E} - T d\mathcal{S} + 0 - \frac{\mu}{m} \, d \rho  \right) \ ,\]</div>
+<p>and thus</p>
+<div class="math notranslate nohighlight">
+\[d \mathcal{E} = T d \mathcal{S} + \dfrac{\mu}{m} d \rho \ .\]</div>
+<p>This latter formulation is consistent with the principle per unit mass. Volume density can be written as the product of mass density and the mass density of the physical quantity of interest, namely <span class="math notranslate nohighlight">\(\mathcal{E} = \rho e\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-d F &amp; = d E - T dS - S dT = \\
-    &amp; = - \mathbf{F} \cdot d \mathbf{x} + T dS - T dS - S dT = \\
-    &amp; = - \mathbf{F} \cdot d \mathbf{x} - S dT 
+    0 &amp; = - d( \rho e ) + T d (\rho s) + \frac{\mu}{m} d \rho = \\
+      &amp; = d \rho \left( - e + T s + \frac{\mu}{m} \right) - \rho \left( d e + T d s \right) = \\
+      &amp; = d \rho \underbrace{\left( - e - \dfrac{P}{\rho} + T s + \frac{\mu}{m} \right)}_{\text{def. of $e$}} + \rho \underbrace{\left( - d e + \dfrac{P}{\rho^2} d \rho + T d s \right)}_{1^{st} \text{ pr. per unit mass}} \ .
+  \end{aligned}\end{split}\]</div>
+</li>
+<li><p>Multi-component fluid</p>
+<div class="math notranslate nohighlight">
+\[\text{\textbf{todo}}\]</div>
+</li>
+<li><p>Single-component solid</p>
+<div class="math notranslate nohighlight">
+\[\text{\textbf{todo}}\]</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="potentials-specific-quantities">
+<h2>Potentials - specific quantities<a class="headerlink" href="#potentials-specific-quantities" title="Permalink to this heading">#</a></h2>
+<p>Here mechanical <span class="math notranslate nohighlight">\(\mathbf{X}_m\)</span> and non-mechanical <span class="math notranslate nohighlight">\(\mathbf{X}_n\)</span> generalized forces and displacements are recognized to define enthaply and Gibbs’ free energy later.</p>
+<div class="math notranslate nohighlight">
+\[e(s, \mathbf{x}) = e \left( \frac{S}{M}, \frac{\mathbf{X}}{M} \right) = \frac{1}{M} E\left( \frac{S}{M}, \frac{\mathbf{X}}{M} \right) \qquad \text{\textbf{todo check}} \]</div>
+<p><strong>Internal energy, <span class="math notranslate nohighlight">\(e(s, \mathbf{x})\)</span>.</strong></p>
+<div class="math notranslate nohighlight">
+\[d e = T ds + \mathbf{F} \cdot d \mathbf{x}\]</div>
+<p><strong>Helmholtz free energy, <span class="math notranslate nohighlight">\(f(T, \mathbf{x}) = e - T s\)</span>.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  d f 
+  &amp; = de - T d s - s d T= \\
+  &amp; =- s d T + \mathbf{F} \cdot d \mathbf{x} \ .
 \end{aligned}\end{split}\]</div>
-<p><strong>Entalpia.</strong> <span class="math notranslate nohighlight">\(H(\mathbf{F}, S) := E + \mathbf{F} \cdot \mathbf{x}\)</span></p>
+<p><strong>Enthaply, <span class="math notranslate nohighlight">\(h(T, \mathbf{F}_m, \mathbf{x}_n) = e - \mathbf{F}_m \cdot \mathbf{x}_m\)</span>.</strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-d H &amp; = d E + \mathbf{F} \cdot d \mathbf{x} + \mathbf{x} \cdot d \mathbf{F} = \\
-    &amp; = - \mathbf{F} \cdot d \mathbf{x} + T dS + \mathbf{F} \cdot d \mathbf{x} + \mathbf{x} \cdot d \mathbf{F}= \\
-    &amp; = \ \mathbf{x} \cdot d \mathbf{F} + T dS 
+  d h 
+  &amp; = de - d \mathbf{F}_m \cdot \mathbf{x}_m - \mathbf{F}_m \cdot d \mathbf{x}_m = \\
+  &amp; = T d S - \mathbf{x}_m \cdot d \mathbf{F}_m + \mathbf{F}_n \cdot d \mathbf{x}_n \ .
 \end{aligned}\end{split}\]</div>
-<p><strong>Energia libera di Gibbs.</strong> <span class="math notranslate nohighlight">\(G(\mathbf{F}, T) := H - T S\)</span></p>
+<p><strong>Gibbs’ free energy, <span class="math notranslate nohighlight">\(g(T, \mathbf{F}_m, \mathbf{x}_n) = h - T s = e - \mathbf{F}_m \cdot \mathbf{x}_m - T s = f - \mathbf{F}_m \cdot \mathbf{x}_m = \mathbf{F}_n \cdot \mathbf{x}_n\)</span>.</strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-d G &amp; = d H - T dS - S dT = \\
-    &amp; = \ \mathbf{x} \cdot d \mathbf{F} + T dS - T dS - S dT = \\
-    &amp; = \ \mathbf{x} \cdot d \mathbf{F} - S dT 
+  d g 
+  &amp; = dh - T ds - s dT = \\
+  &amp; = - S  dT - \mathbf{x}_m \cdot d \mathbf{F}_m + \mathbf{F}_n \cdot d \mathbf{x}_n = \\
+  &amp; = \mathbf{x}_n \cdot d \mathbf{F}_n + \mathbf{F}_n \cdot d \mathbf{x}_n \ .
 \end{aligned}\end{split}\]</div>
 <p><strong>Derivate parziali dei potenziali come definizione di variabili termodinamiche.</strong> Osservando i differenziali dei potenziali termodinamici, si possono riconoscere che le variabili termodinamiche <span class="math notranslate nohighlight">\(T\)</span>, <span class="math notranslate nohighlight">\(S\)</span>, <span class="math notranslate nohighlight">\(\mathbf{F}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> possono essere scritte come derivate parziali dei potenziali termodinamici,</p>
 <div class="math notranslate nohighlight">
@@ -385,6 +557,16 @@ d G &amp; = d H - T dS - S dT = \\
  \dfrac{\partial F_i}{\partial x_j} &amp; =  \dfrac{\partial F_j}{\partial x_i} \\
  \dfrac{\partial x_i}{\partial F_j} &amp; =  \dfrac{\partial x_j}{\partial F_i} \\
 \end{cases}\end{split}\]</div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="additivity-extensivity"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><a class="reference external" href="https://arxiv.org/pdf/cond-mat/0201134">H.Touchette, When is a quantity additive, and when is it extensive?</a></p>
+</dd>
+<dt class="label" id="se-e-homogeneous"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p><a class="reference external" href="https://physics.stackexchange.com/q/677855">https://physics.stackexchange.com/q/677855</a></p>
+</dd>
+</dl>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -441,6 +623,35 @@ d G &amp; = d H - T dS - S dT = \\
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-principle">First principle</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#first-principle-for-different-systems">First principle for different systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#first-principle-for-specific-quantities">First principle for specific quantities</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#first-principle-per-unit-mass">First principle per unit mass</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#different-systems">Different systems</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#first-principle-per-unit-volume">First principle per unit volume</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Different systems</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potentials-specific-quantities">Potentials - specific quantities</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
