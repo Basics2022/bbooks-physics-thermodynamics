@@ -85,7 +85,7 @@
         
 
 \title{Classical Thermodynamics}
-\date{Jan 22, 2025}
+\date{Jan 25, 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -697,8 +697,8 @@ The elementary variation of entropy \(d S\) of a simple closed system at uniform
 This is the Clausius statement of the second law of thermodynamics for simple systems with uniform temperature.
 
 
-\subsection{Composite Systems}
-\label{\detokenize{ch/principles-second:composite-systems}}\label{\detokenize{ch/principles-second:physics-hs-thermodynamics-principles-second-composite}}
+\subsection{Composite Discrete Systems}
+\label{\detokenize{ch/principles-second:composite-discrete-systems}}\label{\detokenize{ch/principles-second:physics-hs-thermodynamics-principles-second-composite}}
 \sphinxAtStartPar
 \sphinxstylestrong{todo} definition of a composite system. Heat conduction occurs between subsystems.
 
@@ -758,6 +758,9 @@ we obtain the relation
 \sphinxAtStartPar
 which predicts the “non\sphinxhyphen{}decrease” of the entropy of the universe.
 
+
+\subsection{Composite Continuous Systems}
+\label{\detokenize{ch/principles-second:composite-continuous-systems}}\label{\detokenize{ch/principles-second:physics-hs-thermodynamics-principles-second-continuum}}
 \sphinxstepscope
 
 
@@ -859,39 +862,268 @@ where the specific total enthalpy is defined as \(h^{tot} = e^{tot} + \frac{P}{\
 \chapter{Thermodynamics potentials}
 \label{\detokenize{ch/potentials:thermodynamics-potentials}}\label{\detokenize{ch/potentials:classical-thermodynamics-potentials}}\label{\detokenize{ch/potentials::doc}}
 \sphinxAtStartPar
-Starting from the
-Partendo dall’espressione incrementale del primo principio della termodinamica è possivile definire altre funzioni delle variabili di stato (\sphinxstylestrong{TODO} \sphinxstyleemphasis{Ruolo della trasformata di Legendre}), chiamati \sphinxstylestrong{potenziali termodinamici}
+In this section, principles and the mathematical formalism of classical thermodynamics are reviewed.
+
+
+\section{First principle}
+\label{\detokenize{ch/potentials:first-principle}}
+\sphinxAtStartPar
+For an extensive system
+\begin{equation*}
+\begin{split}d E = T \, d S + \mathbf{F} \cdot d \mathbf{X} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+being \(E\) the internal energy, \(T\) temperature, \(S\) entropy, \(\mathbf{F}\) generalized force, \(\mathbf{X}\) generalized displacement.
 
 \sphinxAtStartPar
-\sphinxstylestrong{Energia interna.} \(E(\mathbf{x}, S)\)
+Following Gibbs’ formulation, internal energy \(E\) can be written as a function of a limited set of independent state variables,
 \begin{equation*}
-\begin{split}d E = - \mathbf{F} \cdot d \mathbf{x} + T dS\end{split}
+\begin{split}E(S, \mathbf{X}) \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Energia libera di Helmholtz.} \(F(\mathbf{x}, T) := E - T S\)
+Internal energy \(E\), entropy \(S\) and the generalized displacement \(\mathbf{X}\) are \sphinxstylestrong{extensive} physical quantities, and thus (\sphinxstylestrong{thus?}) the derivatives
+\begin{equation*}
+\begin{split}T := \left.\dfrac{\partial S}{\partial E}\right|_{\mathbf{X}} \quad , \quad \mathbf{F} := \left.\dfrac{\partial E}{\partial \mathbf{X}}\right|_S\end{split}
+\end{equation*}
+\sphinxAtStartPar
+are \sphinxstylestrong{intensive} quantities. A discussion about the difference between the concept of \sphinxstyleemphasis{additivity} and \sphinxstyleemphasis{extensivity}%
+\begin{footnote}[1]\sphinxAtStartFootnote
+\sphinxhref{https://arxiv.org/pdf/cond-mat/0201134}{H.Touchette, When is a quantity additive, and when is it extensive?}
+%
+\end{footnote}.
+Beside being extensive, internal energy in classical thermodynamics is an homogeneous function%
+\begin{footnote}[2]\sphinxAtStartFootnote
+\sphinxurl{https://physics.stackexchange.com/q/677855}
+%
+\end{footnote} of order 1 of its arguments, namely
+\begin{equation*}
+\begin{split}E(a \, S, a \, \mathbf{X}) = a \, E(S, \mathbf{X}) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Euler’s theorem for homogeneous functions} holds.
+\label{ch/potentials:theorem-0}
+\begin{sphinxadmonition}{note}{Theorem 1 (Euler’s theorem for homogeneous functions)}
+
+
+
+\sphinxAtStartPar
+Let \(f(x_i)\) and homogeneous function of order \(m\), i.e.
+\begin{equation}\label{equation:ch/potentials:eq:homogeneous-fun:def}
+\begin{split}f(a \, x_i) = a^m \, f(x_i) \ .\end{split}
+\end{equation}
+\sphinxAtStartPar
+It follows that
+\begin{equation*}
+\begin{split}f(x_k) = m \, x_i \, \dfrac{\partial f}{\partial x_i}(x_k) \ .\end{split}
+\end{equation*}\end{sphinxadmonition}
+
+\sphinxAtStartPar
+Proof immediately follows, evaluating the derivative of \eqref{equation:ch/potentials:eq:homogeneous-fun:def} w.r.t. \(a\), and evaluating for \(a = 1\), i.e.
+\begin{equation*}
+\begin{split}x_i \, \dfrac{\partial f}{\partial x_i} (a \, x_k) = m \, a^{m-1} \, f(x_k) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and for \(a = 1\),
+\begin{equation*}
+\begin{split}f(x_k) = x_i \, \dfrac{\partial f}{\partial x_i} (x_k)\ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Thus, internal energy can be written as
+\begin{equation*}
+\begin{split}E(S, \mathbf{X}) = T \, S + \mathbf{F} \cdot \mathbf{X} \ .\end{split}
+\end{equation*}
+
+\subsection{First principle for different systems}
+\label{\detokenize{ch/potentials:first-principle-for-different-systems}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Single\sphinxhyphen{}component fluid, \(E(S, V, N)\)
+\begin{equation*}
+\begin{split}d E = T \, d S - P \, d V + \mu \, d N\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+Multi\sphinxhyphen{}component fluid, \(E(S, V, N_k)\)
+\begin{equation*}
+\begin{split}d E = T \, dS - P \, d V + \mu_k \, d N_k\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where the change of number of particles (or moles, it depends on the description \sphinxhyphen{} anyway a non\sphinxhyphen{}dimensional number) \(d N_k\) is governed by the stoichiometric ratios of the reactions occurring in the system.
+
+\item {} 
+\sphinxAtStartPar
+Single\sphinxhyphen{}component solid, \(E(S, \mathbf{X})\)
+\begin{equation*}
+\begin{split}d E = T \, dS + \mathbf{F} \cdot d \mathbf{X}\end{split}
+\end{equation*}
+\end{itemize}
+
+
+\subsection{First principle for specific quantities}
+\label{\detokenize{ch/potentials:first-principle-for-specific-quantities}}
+\sphinxAtStartPar
+First principle and thermodynamics can be writtenin terms of specific quantites, usually either for unit volume or for unit mass.
+
+
+\subsubsection{First principle per unit mass}
+\label{\detokenize{ch/potentials:first-principle-per-unit-mass}}
+\sphinxAtStartPar
+All the extensive quantites are written as the product of the mass of the system \(M\) and its density, namely
+\begin{equation*}
+\begin{split}E = M  e \quad , \quad S = M  s \quad , \quad \mathbf{X} = M \mathbf{x} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and, using the product rule for differential \(d E = d (M e) = dM \, e + M \, de\), first principle can be written as
+\begin{equation*}
+\begin{split}0 = d M \underbrace{\left( e - T s - \mathbf{F} \cdot \mathbf{x} \right)}_{= 0} + M \left( d e - T ds - \mathbf{F} \cdot d \mathbf{x} \right) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The first term is identically zero, since it’s the expression of the internal energy divided by \(M\). Being \(M > 0\), the second term gives the first principle per unit mass
+\begin{equation*}
+\begin{split}d e = T ds + \mathbf{F} \cdot d \mathbf{x} \ .\end{split}
+\end{equation*}
+
+\paragraph{Different systems}
+\label{\detokenize{ch/potentials:different-systems}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Single\sphinxhyphen{}component fluid;
+\begin{equation*}
+\begin{split}V = M \dfrac{1}{\rho} \quad , \quad N = M \dfrac{1}{m} \ , \end{split}
+\end{equation*}
+\sphinxAtStartPar
+being \(\rho\) the mass density and \(m\) the mass of a particle (or mole, it depends on the description) of the medium; \(m\) is \sphinxstylestrong{constant}. First principle becomes
+\begin{equation*}
+\begin{split}0 = d M \underbrace{\left( e - T s + \dfrac{P}{\rho} - \dfrac{\mu}{m} \right)}_{= 0} + M \left( d e - T ds - \dfrac{P}{\rho^2} d\rho \right) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}de = T ds + \dfrac{P}{\rho^2} d \rho \ .\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+Multi\sphinxhyphen{}component fluid
+\begin{equation*}
+\begin{split}V = M \dfrac{1}{\rho} \quad , \quad N_k = M_k \dfrac{1}{m}_k = M \dfrac{M_k}{M} \dfrac{1}{m_k} = M \dfrac{1}{m_k} \dfrac{\rho_k}{\rho} = M \dfrac{1}{m_k} w_k \ , \end{split}
+\end{equation*}
+\sphinxAtStartPar
+being \(\rho\) the mass density and \(m\) the mass of a particle (or mole, it depends on the description) of the \(k^{th}\) substance; \(m_k\) is \sphinxstylestrong{constant}. The first principle becomes
+\begin{equation*}
+\begin{split}0 = d M \underbrace{\left( e - T s + \dfrac{P}{\rho} - \dfrac{\mu_k}{m_k} w_k \dfrac{}{} \right)}_{= 0} + M \left[ d e - T ds - \dfrac{P}{\rho^2} d\rho - \dfrac{\mu_k}{m_k} d w_k \right] \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}de = T ds + \dfrac{P}{\rho^2} d \rho + \dfrac{\mu_k}{m_k} d w_k\ .\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+Single\sphinxhyphen{}component solid
+\begin{equation*}
+\begin{split}\text{\textbf{todo}}\end{split}
+\end{equation*}
+\end{itemize}
+
+
+\subsubsection{First principle per unit volume}
+\label{\detokenize{ch/potentials:first-principle-per-unit-volume}}
+\sphinxAtStartPar
+All the extensive quantites are written as the product of the mass of the system \(M\) and its density, namely
+\begin{equation*}
+\begin{split}E = V  \mathcal{E} \quad , \quad S = M  \mathcal{S} \quad , \quad \mathbf{X} = M \symbf{\chi} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and, using the product rule for differential \(d E = d (V \mathcal{E}) = dV \, \mathcal{E} + V \, d\mathcal{E}\), first principle can be written as
+\begin{equation*}
+\begin{split}0 = d V \underbrace{\left( \mathcal{E} - T \mathcal{S} - \mathbf{F} \cdot \symbf{\chi} \right)}_{= 0} + V \left( d \mathcal{E} - T d \mathcal{S} - \mathbf{F} \cdot d \symbf{\chi} \right) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The first term is identically zero, since it’s the expression of the internal energy divided by \(V\). Being \(V > 0\), the second term gives the first principle per unit volume
+\begin{equation*}
+\begin{split}d \mathcal{E} = T d\mathcal{S} + \mathbf{F} \cdot d \symbf{\chi} \ .\end{split}
+\end{equation*}
+
+\paragraph{Different systems}
+\label{\detokenize{ch/potentials:id3}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Single\sphinxhyphen{}component fluid;
+\begin{equation*}
+\begin{split}V = V \cdot 1 \quad , \quad N = V \dfrac{M}{V} \dfrac{1}{m} = V \dfrac{\rho}{m} \ , \end{split}
+\end{equation*}
+\sphinxAtStartPar
+being \(\rho\) the mass density and \(m\) the mass of a particle (or mole, it depends on the description) of the medium; \(m\) is \sphinxstylestrong{constant}. First principle becomes
+\begin{equation*}
+\begin{split}0 = d V \underbrace{\left( \mathcal{E} - T \mathcal{S} + P - \mu \dfrac{\rho}{m} \right)}_{= 0} + V \left( d \mathcal{E} - T d\mathcal{S} + 0 - \frac{\mu}{m} \, d \rho  \right) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}d \mathcal{E} = T d \mathcal{S} + \dfrac{\mu}{m} d \rho \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+This latter formulation is consistent with the principle per unit mass. Volume density can be written as the product of mass density and the mass density of the physical quantity of interest, namely \(\mathcal{E} = \rho e\)
 \begin{equation*}
 \begin{split}\begin{aligned}
-d F & = d E - T dS - S dT = \\
-    & = - \mathbf{F} \cdot d \mathbf{x} + T dS - T dS - S dT = \\
-    & = - \mathbf{F} \cdot d \mathbf{x} - S dT 
+    0 & = - d( \rho e ) + T d (\rho s) + \frac{\mu}{m} d \rho = \\
+      & = d \rho \left( - e + T s + \frac{\mu}{m} \right) - \rho \left( d e + T d s \right) = \\
+      & = d \rho \underbrace{\left( - e - \dfrac{P}{\rho} + T s + \frac{\mu}{m} \right)}_{\text{def. of $e$}} + \rho \underbrace{\left( - d e + \dfrac{P}{\rho^2} d \rho + T d s \right)}_{1^{st} \text{ pr. per unit mass}} \ .
+  \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+Multi\sphinxhyphen{}component fluid
+\begin{equation*}
+\begin{split}\text{\textbf{todo}}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+Single\sphinxhyphen{}component solid
+\begin{equation*}
+\begin{split}\text{\textbf{todo}}\end{split}
+\end{equation*}
+\end{itemize}
+
+
+\section{Potentials \sphinxhyphen{} specific quantities}
+\label{\detokenize{ch/potentials:potentials-specific-quantities}}
+\sphinxAtStartPar
+Here mechanical \(\mathbf{X}_m\) and non\sphinxhyphen{}mechanical \(\mathbf{X}_n\) generalized forces and displacements are recognized to define enthaply and Gibbs’ free energy later.
+\begin{equation*}
+\begin{split}e(s, \mathbf{x}) = e \left( \frac{S}{M}, \frac{\mathbf{X}}{M} \right) = \frac{1}{M} E\left( \frac{S}{M}, \frac{\mathbf{X}}{M} \right) \qquad \text{\textbf{todo check}} \end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Internal energy, \(e(s, \mathbf{x})\).}
+\begin{equation*}
+\begin{split}d e = T ds + \mathbf{F} \cdot d \mathbf{x}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Helmholtz free energy, \(f(T, \mathbf{x}) = e - T s\).}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  d f 
+  & = de - T d s - s d T= \\
+  & =- s d T + \mathbf{F} \cdot d \mathbf{x} \ .
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Entalpia.} \(H(\mathbf{F}, S) := E + \mathbf{F} \cdot \mathbf{x}\)
+\sphinxstylestrong{Enthaply, \(h(T, \mathbf{F}_m, \mathbf{x}_n) = e - \mathbf{F}_m \cdot \mathbf{x}_m\).}
 \begin{equation*}
 \begin{split}\begin{aligned}
-d H & = d E + \mathbf{F} \cdot d \mathbf{x} + \mathbf{x} \cdot d \mathbf{F} = \\
-    & = - \mathbf{F} \cdot d \mathbf{x} + T dS + \mathbf{F} \cdot d \mathbf{x} + \mathbf{x} \cdot d \mathbf{F}= \\
-    & = \ \mathbf{x} \cdot d \mathbf{F} + T dS 
+  d h 
+  & = de - d \mathbf{F}_m \cdot \mathbf{x}_m - \mathbf{F}_m \cdot d \mathbf{x}_m = \\
+  & = T d S - \mathbf{x}_m \cdot d \mathbf{F}_m + \mathbf{F}_n \cdot d \mathbf{x}_n \ .
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Energia libera di Gibbs.} \(G(\mathbf{F}, T) := H - T S\)
+\sphinxstylestrong{Gibbs’ free energy, \(g(T, \mathbf{F}_m, \mathbf{x}_n) = h - T s = e - \mathbf{F}_m \cdot \mathbf{x}_m - T s = f - \mathbf{F}_m \cdot \mathbf{x}_m = \mathbf{F}_n \cdot \mathbf{x}_n\).}
 \begin{equation*}
 \begin{split}\begin{aligned}
-d G & = d H - T dS - S dT = \\
-    & = \ \mathbf{x} \cdot d \mathbf{F} + T dS - T dS - S dT = \\
-    & = \ \mathbf{x} \cdot d \mathbf{F} - S dT 
+  d g 
+  & = dh - T ds - s dT = \\
+  & = - S  dT - \mathbf{x}_m \cdot d \mathbf{F}_m + \mathbf{F}_n \cdot d \mathbf{x}_n = \\
+  & = \mathbf{x}_n \cdot d \mathbf{F}_n + \mathbf{F}_n \cdot d \mathbf{x}_n \ .
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
@@ -922,85 +1154,14 @@ e
  \dfrac{\partial x_i}{\partial F_j} & =  \dfrac{\partial x_j}{\partial F_i} \\
 \end{cases}\end{split}
 \end{equation*}
+
+\bigskip\hrule\bigskip
+
+
 \sphinxstepscope
 
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-p-0}
-\begin{sphinxuseclass}{sd-mt-2}
-\begin{sphinxuseclass}{sd-mb-4}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-gx-2}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-row-cols-xs-2}
-\begin{sphinxuseclass}{sd-row-cols-sm-3}
-\begin{sphinxuseclass}{sd-row-cols-md-3}
-\begin{sphinxuseclass}{sd-row-cols-lg-3}
-\begin{sphinxuseclass}{sd-gx-3}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-basics
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-Dec 30, 2024
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-0 min read
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
 
 \chapter{Coefficienti termodinamici}
 \label{\detokenize{ch/coefficients:coefficienti-termodinamici}}\label{\detokenize{ch/coefficients:classical-thermodynamics-coefficients}}\label{\detokenize{ch/coefficients::doc}}
@@ -1593,6 +1754,9 @@ Dec 30, 2024
 \indexspace
 \bigletter{proposition\sphinxhyphen{}4}
 \item\relax\sphinxstyleindexentry{proposition\sphinxhyphen{}4}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}gibbs\sphinxhyphen{}phase\sphinxhyphen{}rule}\sphinxstyleindexpageref{ch/principles-gibbs-phase-rule:\detokenize{proposition-4}}
+\indexspace
+\bigletter{theorem\sphinxhyphen{}0}
+\item\relax\sphinxstyleindexentry{theorem\sphinxhyphen{}0}\sphinxstyleindexextra{ch/potentials}\sphinxstyleindexpageref{ch/potentials:\detokenize{theorem-0}}
 \indexspace
 \bigletter{thermodynamics:principles:open:ex:comb\sphinxhyphen{}chamber}
 \item\relax\sphinxstyleindexentry{thermodynamics:principles:open:ex:comb\sphinxhyphen{}chamber}\sphinxstyleindexextra{ch/principles\sphinxhyphen{}open}\sphinxstyleindexpageref{ch/principles-open:\detokenize{thermodynamics:principles:open:ex:comb-chamber}}

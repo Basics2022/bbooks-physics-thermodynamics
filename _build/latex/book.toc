@@ -11,18 +11,27 @@
 \contentsline {subsection}{\numberline {2.3.5}Second and Third Laws of Thermodynamics}{11}{subsection.2.3.5}%
 \contentsline {section}{\numberline {2.4}Second Law of Thermodynamics \sphinxhyphen {} Clausius Statement}{12}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Simple Systems}{13}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Composite Systems}{13}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.2}Composite Discrete Systems}{13}{subsection.2.4.2}%
 \contentsline {subsection}{\numberline {2.4.3}Increase of Entropy in the Universe}{14}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Composite Continuous Systems}{14}{subsection.2.4.4}%
 \contentsline {section}{\numberline {2.5}Open Systems}{14}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}Mass Balance}{15}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}Momentum Balance}{15}{subsection.2.5.2}%
 \contentsline {subsection}{\numberline {2.5.3}Angular Momentum Balance}{15}{subsection.2.5.3}%
 \contentsline {subsection}{\numberline {2.5.4}Total Energy Balance}{15}{subsection.2.5.4}%
 \contentsline {chapter}{\numberline {3}Thermodynamics potentials}{17}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Coefficienti termodinamici}{19}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Stati della materia e modelli}{21}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Gas ideali}{21}{section.5.1}%
-\contentsline {chapter}{\numberline {6}Trasformazioni termodinamiche}{23}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Cicli termodinamici e macchine termiche}{25}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Meccanismi di trasmissione del calore}{27}{chapter.8}%
-\contentsline {chapter}{Proof Index}{29}{section*.3}%
+\contentsline {section}{\numberline {3.1}First principle}{17}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}First principle for different systems}{18}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}First principle for specific quantities}{18}{subsection.3.1.2}%
+\contentsline {subsubsection}{First principle per unit mass}{18}{subsubsection*.5}%
+\contentsline {paragraph}{Different systems}{19}{paragraph*.6}%
+\contentsline {subsubsection}{First principle per unit volume}{19}{subsubsection*.7}%
+\contentsline {paragraph}{Different systems}{20}{paragraph*.8}%
+\contentsline {section}{\numberline {3.2}Potentials \sphinxhyphen {} specific quantities}{20}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Coefficienti termodinamici}{23}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Stati della materia e modelli}{25}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Gas ideali}{25}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Trasformazioni termodinamiche}{27}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Cicli termodinamici e macchine termiche}{29}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Meccanismi di trasmissione del calore}{31}{chapter.8}%
+\contentsline {chapter}{Proof Index}{33}{section*.9}%
