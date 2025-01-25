@@ -538,19 +538,24 @@ Beside being extensive, internal energy in classical thermodynamics is an homoge
 <p><strong>Partial derivatives of potentials.</strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
- T &amp; = \quad \left.\frac{\partial e}{\partial s}\right|_{\mathbf{x}} &amp; = \quad \left.\frac{\partial h}{\partial s}\right|_{\mathbf{F}_m,\mathbf{x}_n} \\
- s &amp; =     - \left.\frac{\partial f}{\partial T}\right|_{\mathbf{x}} &amp; =     - \left.\frac{\partial g}{\partial T}\right|_{\mathbf{F}_m,\mathbf{x}_n} \\
- \mathbf{F} &amp; =     - \left.\frac{\partial E}{\partial \mathbf{x}}\right|_{S} &amp; =     - \left.\frac{\partial F}{\partial \mathbf{x}}\right|_{T} \\
- \mathbf{x} &amp; = \quad \left.\frac{\partial H}{\partial \mathbf{F}}\right|_{S} &amp; = \quad \left.\frac{\partial G}{\partial \mathbf{F}}\right|_{T}\\
+ T &amp; = \quad \left.\frac{\partial e}{\partial s}\right|_{\mathbf{x}} &amp;&amp; = \quad \left.\frac{\partial h}{\partial s}\right|_{\mathbf{F}_m,\mathbf{x}_n} \\
+ s &amp; =     - \left.\frac{\partial f}{\partial T}\right|_{\mathbf{x}} &amp;&amp; =     - \left.\frac{\partial g}{\partial T}\right|_{\mathbf{F}_m,\mathbf{x}_n} \\
+ \mathbf{F}_m &amp; = \quad \left.\frac{\partial e}{\partial \mathbf{x}_m}\right|_{s,\mathbf{x}_n} &amp;&amp; = \quad \left.\frac{\partial f}{\partial \mathbf{x}_m}\right|_{T,\mathbf{x}_n} \\
+ \mathbf{F}_n &amp; = \quad  \left.\frac{\partial e}{\partial \mathbf{x}_n}\right|_{s,\mathbf{x}_m} &amp;&amp; = \quad \left.\frac{\partial f}{\partial \mathbf{x}_n}\right|_{T,\mathbf{x}_m} &amp;&amp; = \quad  \left.\frac{\partial h}{\partial \mathbf{x}_n}\right|_{s,\mathbf{F}_m} &amp;&amp; = \quad \left.\frac{\partial g}{\partial \mathbf{x}_n}\right|_{T,\mathbf{F}_m} \\
+ \mathbf{x}_m &amp; = -\left.\frac{\partial h}{\partial \mathbf{F}_m}\right|_{s,\mathbf{x}_n} &amp;&amp; =- \left.\frac{\partial g}{\partial \mathbf{F}_m}\right|_{T,\mathbf{x}_n}\\
 \end{aligned}\end{split}\]</div>
 <p><strong>Maxwell’s relations.</strong></p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases}
- \dfrac{\partial T}{\partial x_i} &amp; =   - \dfrac{\partial F_i}{\partial S} \\
- \dfrac{\partial S}{\partial x_i} &amp; = \ \ \dfrac{\partial F_i}{\partial T} \\
- \dfrac{\partial T}{\partial F_i} &amp; = \ \ \dfrac{\partial x_i}{\partial S} \\
- \dfrac{\partial S}{\partial F_i} &amp; =   - \dfrac{\partial x_i}{\partial T} \\
-\end{cases}\end{split}\]</div>
+\[\begin{split}\begin{aligned}
+ \left.\dfrac{\partial T}{\partial x_k}\right|_{s, x_{j \ne k}}    &amp; = \ \ \left.\dfrac{\partial F_i}{\partial s}\right|_{x_k} &amp;&amp; \qquad
+ \left.\dfrac{\partial F_i}{\partial x_k}\right|_{s, x_{j \ne k}}  &amp; = \ \ \left.\dfrac{\partial F_k}{\partial x_i}\right|_{s, x_{j \ne i}} \\
+-\left.\dfrac{\partial s}{\partial x_i}\right|_{T} &amp; = \ \ \left.\dfrac{\partial F_k}{\partial T}\right|_{x_k} &amp;&amp; \qquad
+ \left.\dfrac{\partial F_i}{\partial x_k}\right|_{T, x_{j \ne k}}  &amp; = \ \ \left.\dfrac{\partial F_k}{\partial x_i}\right|_{T, x_{j \ne i}} \\
+ \left.\dfrac{\partial T}{\partial F_i}\right|_{} &amp; = \ \ \left.\dfrac{\partial x_i}{\partial S}\right|_{} &amp;&amp; \qquad
+ \left.\dfrac{\partial F_i}{\partial x_k}\right|_{s, x_{j \ne k}}  &amp; = \ \ \left.\dfrac{\partial F_k}{\partial x_i}\right|_{s, x_{j \ne i}} \\
+ \left.\dfrac{\partial S}{\partial F_i}\right|_{} &amp; = \ \ \left.\dfrac{\partial x_i}{\partial T}\right|_{} &amp;&amp; \qquad
+ \left.\dfrac{\partial F_i}{\partial x_k}\right|_{s, x_{j \ne k}}  &amp; = \ \ \left.\dfrac{\partial F_k}{\partial x_i}\right|_{s, x_{j \ne i}} \\
+\end{aligned}\end{split}\]</div>
 <p>e</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
