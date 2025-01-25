@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coefficienti termodinamici &#8212; Classical Thermodynamics</title>
+    <title>Thermodynamic coefficients &#8212; Classical Thermodynamics</title>
   
   
   
@@ -177,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="potentials.html">Thermodynamics potentials</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Coefficienti termodinamici</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Thermodynamic coefficients</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="media.html">Stati della materia e modelli</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="ideal_gases.html">Gas ideali</a></li>
 </ul>
@@ -310,7 +310,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -321,11 +323,24 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Coefficienti termodinamici</h1>
+    <h1>Thermodynamic coefficients</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermodynamic-coefficients-of-a-single-component-fluid">Thermodynamic coefficients of a single-component fluid</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermodynamic-equilibrium">Thermodynamic equilibrium</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-on-energy">Conditions on energy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-on-entropy">Conditions on entropy</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -342,20 +357,120 @@ document.write(`
 :read-time: "{sub-ref}`wordcount-minutes` min read"
 ```
 -->
-<div class="tex2jax_ignore mathjax_ignore section" id="coefficienti-termodinamici">
-<span id="classical-thermodynamics-coefficients"></span><h1>Coefficienti termodinamici<a class="headerlink" href="#coefficienti-termodinamici" title="Permalink to this heading">#</a></h1>
-<p><strong>Calore specifico.</strong></p>
+<div class="tex2jax_ignore mathjax_ignore section" id="thermodynamic-coefficients">
+<span id="classical-thermodynamics-coefficients"></span><h1>Thermodynamic coefficients<a class="headerlink" href="#thermodynamic-coefficients" title="Permalink to this heading">#</a></h1>
+<p>In this section different related to first derivatives of thermodynamic state variables are introduced and discussed for different systems.</p>
+<div class="section" id="thermodynamic-coefficients-of-a-single-component-fluid">
+<h2>Thermodynamic coefficients of a single-component fluid<a class="headerlink" href="#thermodynamic-coefficients-of-a-single-component-fluid" title="Permalink to this heading">#</a></h2>
+<p>For a 1-component fluid with constant composition, the first principle reads</p>
 <div class="math notranslate nohighlight">
-\[S_x := T \dfrac{\partial S}{\partial T}\Big|_x\]</div>
-<p><strong>Coefficienti di espansione termica.</strong></p>
+\[de = T ds - P dv = T ds + \frac{P}{\rho^2} d \rho \ .\]</div>
+<p><strong>Heat capacity.</strong></p>
+<div class="math notranslate nohighlight">
+\[c_x := T \dfrac{\partial s}{\partial T}\Big|_x\]</div>
+<p>For fluid systems, usually heat capacity at constant pressure or constant density are the most used.</p>
+<p><strong>Thermal expansion coefficients.</strong></p>
 <div class="math notranslate nohighlight">
 \[\alpha_x := \dfrac{1}{v} \dfrac{\partial v}{\partial T}\Big|_x = - \dfrac{1}{\rho} \dfrac{\partial \rho}{\partial T}\Big|_x\]</div>
-<p><strong>Coefficienti di comprimibilità.</strong></p>
+<p>For fluid systems, usually thermal expansion coefficent at constant pressure is the most used.</p>
+<p><strong>Compressibility coefficients.</strong></p>
 <div class="math notranslate nohighlight">
 \[\beta_x := - \dfrac{1}{v} \dfrac{\partial v}{\partial P}\Big|_x = \dfrac{1}{\rho} \dfrac{\partial \rho}{\partial P}\Big|_x\]</div>
+<p>For fluid systems, usually compressibility coefficent at constant temperature or entropy are the most used.</p>
+</div>
+<div class="section" id="thermodynamic-equilibrium">
+<h2>Thermodynamic equilibrium<a class="headerlink" href="#thermodynamic-equilibrium" title="Permalink to this heading">#</a></h2>
+<p>Here thermodynamic equilibrium is discussed for a single-component fluid, for which the first principle reads</p>
+<div class="math notranslate nohighlight">
+\[d e = T ds - P dv = T ds + \frac{P}{\rho^2} d \rho \ .\]</div>
+<p>First conditions on energy, <span class="math notranslate nohighlight">\(e(s, \rho)\)</span>, as a function of entropy and density then the equivalent conditions on entropy <span class="math notranslate nohighlight">\(s(e, \rho)\)</span>, as a function of energy and density are discussed.</p>
+<div class="section" id="conditions-on-energy">
+<h3>Conditions on energy<a class="headerlink" href="#conditions-on-energy" title="Permalink to this heading">#</a></h3>
+<p>Thermodynamic equilibrium implies conditions on the second order term in series expansion of the function <span class="math notranslate nohighlight">\(e(s, \rho)\)</span> (<strong>todo</strong> <em>why? Spend few words. Use Landau as a reference if needed</em>)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  e(s+ds, \rho+d\rho) 
+  &amp; = e(s, \rho) + \partial_s e|_{\rho} (s,\rho) d \rho + \partial_\rho e|_{s} (s, \rho) ds + \\
+  &amp; + \dfrac{1}{2} \left[ \partial_{ss} e|_{\rho}(s,\rho) ds^2 + 2 \partial_{s\rho} e(s, \rho) ds d\rho + \partial_{\rho \rho} e(s, \rho) d \rho^2 \right] \ .
+\end{aligned}\end{split}\]</div>
+<p>The equilibrium energy must be a <em>minimum</em> (<strong>todo</strong> check the function that must be a <em>minimum</em>, since <span class="math notranslate nohighlight">\(\partial_s e|_{\rho} = T\)</span>,… and <span class="math notranslate nohighlight">\(T\)</span> not zero, and thus it can be a minimum!): the second order term must be positive for any increment of independent physical variables <span class="math notranslate nohighlight">\(d \rho\)</span>, <span class="math notranslate nohighlight">\(d s\)</span>, i.e.</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{1}{2} \left[ \partial_{ss} e|_{\rho} ds^2 + 2 \partial_{s\rho} e ds d\rho + \partial_{\rho \rho} e|_{s} d \rho^2 \right] \]</div>
+<p>is a positive-definite quadratic form, i.e. the Hessian</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix} \partial_{ss} e|_{\rho} &amp; \partial_{s \rho} e \\ \partial_{s \rho } e &amp; \partial_{\rho \rho} e|_{s} \end{bmatrix} \end{split}\]</div>
+<p>is definite positive, and thus teh following conditions must hold</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \partial_{ss} e|_{\rho} &gt; 0 \\
+  \partial_{ss} e|_{\rho} \partial_{\rho \rho} e|_{s} - \left( \partial_{s \rho} e \right)^2 &lt; 0
+\end{cases}\end{split}\]</div>
+</div>
+<div class="section" id="conditions-on-entropy">
+<h3>Conditions on entropy<a class="headerlink" href="#conditions-on-entropy" title="Permalink to this heading">#</a></h3>
+<p>Using <span class="math notranslate nohighlight">\(e\)</span>, <span class="math notranslate nohighlight">\(\rho\)</span> as independent thermodynamic state variables, and the entropy <span class="math notranslate nohighlight">\(s(e, \rho)\)</span> it can be proved that the condition on <span class="math notranslate nohighlight">\(e(s, \rho)\)</span> for the thermodynamic equilibrium implies that <span class="math notranslate nohighlight">\(s(e, \rho)\)</span> is a <em>maxiumum</em> (<strong>todo</strong> <em>check the meaning of maximum here</em>), and thus</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{1}{2} \left[ \partial_{ee} s|_{\rho} de^2 + 2 \partial_{e\rho} s de d\rho + \partial_{\rho \rho} s|_{e} d \rho^2 \right] \]</div>
+<p>is a positive-definite quadratic form, i.e. the Hessian</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix} \partial_{ee} s|_{\rho} &amp; \partial_{e \rho} s \\ \partial_{e \rho } s &amp; \partial_{\rho \rho} s|_{e} \end{bmatrix} \end{split}\]</div>
+<p>is definite positive, and thus teh following conditions must hold</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \partial_{ee} s|_{\rho} &lt; 0 \\
+  \partial_{ee} s|_{\rho} \partial_{\rho \rho} s|_{e} - \left( \partial_{e \rho} s \right)^2 &lt; 0
+\end{cases}\end{split}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Relation between partial derivatives of <span class="math notranslate nohighlight">\(e(s,\rho)\)</span> and <span class="math notranslate nohighlight">\(s(e,\rho)\)</span><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The relation</p>
+<div class="math notranslate nohighlight">
+\[e = e_{s \rho}(s_{e \rho}(e, \rho), \rho) \ ,\]</div>
+<p class="sd-card-text">provides the link between the two representations, having written <span class="math notranslate nohighlight">\(e_{s,\rho}()\)</span>, <span class="math notranslate nohighlight">\(s_{e,\rho}()\)</span> the functions with the arguent indicated as indices. This relation contains only <span class="math notranslate nohighlight">\(e\)</span>, <span class="math notranslate nohighlight">\(\rho\)</span> as independent variables. All the required relations are evaluated computing partial derivatives of this relation.</p>
+<p class="sd-card-text"><strong>First-order derivatives.</strong> It can be proved that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \partial_e s |_{\rho} &amp; = \dfrac{1}{\partial_s e |_{\rho}} \\
+  \partial_{\rho} s |_e &amp; = - \dfrac{\partial_{\rho} e |_{s}}{\partial_s e |_{\rho}} \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text"><strong>Second-order derivatives.</strong> It can be proved that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \partial_{ee}       s|_{\rho} &amp; = - \dfrac{1}{\left( \partial_s e|_{\rho} \right)^3} \partial_{ss} e |_{\rho} \\
+  \partial_{e\rho}    s         &amp; =   \dfrac{\partial_{\rho} e|_s}{\left( \partial_s e|_{\rho} \right)^3} \partial_{ss} e |_{\rho} - \dfrac{\partial_{s \rho} e}{(\partial_s e|_{\rho})^2} \\
+  \partial_{\rho\rho} s|_{e}    &amp; = - \dfrac{1}{\left( \partial_s e|_{\rho} \right)^3} \left[ \left( -\frac{\partial_\rho e_s}{\partial_s e|_\rho} \right)^2 \partial_{ss} e |_{\rho} + 2 \left(-\frac{\partial_\rho e_s}{\partial_s e|_\rho}\right) \partial_{s \rho} e + \partial_{\rho \rho} e|_s  \right] \\
+\end{aligned}\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Equivalence of conditions on <span class="math notranslate nohighlight">\(e(s, \rho)\)</span> and on <span class="math notranslate nohighlight">\(s(e, \rho)\)</span> for thermodynamic equilibrium<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Exploiting first condition on partial derivatives of <span class="math notranslate nohighlight">\(e(s,\rho)\)</span>, the first condition on the partial derivatives of <span class="math notranslate nohighlight">\(s(e,\rho)\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\partial_{ee} s|_{\rho} = - \dfrac{1}{\left( \partial_s e|_{\rho} \right)^3} \partial_{ss} e |_{\rho} = - \dfrac{1}{T^3} \partial_{ss} e |_{\rho}&lt; 0 \]</div>
+<p class="sd-card-text">since <span class="math notranslate nohighlight">\(T &gt; 0\)</span> and <span class="math notranslate nohighlight">\(\partial_{ss} e|_{\rho} &gt; 0\)</span>.</p>
+<p class="sd-card-text">Second condition for derivatives of <span class="math notranslate nohighlight">\(s(e, \rho)\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \partial_{\rho \rho} s|_{e} \partial_{ee} s |_{\rho} - \left( \partial_{\rho s} e \right)^2 
+  &amp; = \dots \\
+  &amp; = \frac{1}{T^4} \left[ \partial_{ss} e|_{\rho} \partial_{\rho \rho} e|_{s} - \left( \partial_{s \rho} e \right)^2  \right] &lt; 0 \ .
+\end{aligned} \end{split}\]</div>
+</div>
+</details><!--
 <br>
 **Relazioni tra coefficienti.**
 <br>
+-->
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -412,6 +527,25 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermodynamic-coefficients-of-a-single-component-fluid">Thermodynamic coefficients of a single-component fluid</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermodynamic-equilibrium">Thermodynamic equilibrium</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-on-energy">Conditions on energy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-on-entropy">Conditions on entropy</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
