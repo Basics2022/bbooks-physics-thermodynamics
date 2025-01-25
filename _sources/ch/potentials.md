@@ -185,7 +185,7 @@ $$\begin{aligned}
 $$\begin{aligned}
   d h 
   & = de - d \mathbf{F}_m \cdot \mathbf{x}_m - \mathbf{F}_m \cdot d \mathbf{x}_m = \\
-  & = T d S - \mathbf{x}_m \cdot d \mathbf{F}_m + \mathbf{F}_n \cdot d \mathbf{x}_n \ .
+  & = T d s - \mathbf{x}_m \cdot d \mathbf{F}_m + \mathbf{F}_n \cdot d \mathbf{x}_n \ .
 \end{aligned}$$
 
 **Gibbs' free energy, $g(T, \mathbf{F}_m, \mathbf{x}_n) = h - T s = e - \mathbf{F}_m \cdot \mathbf{x}_m - T s = f - \mathbf{F}_m \cdot \mathbf{x}_m = \mathbf{F}_n \cdot \mathbf{x}_n$.**
@@ -193,12 +193,40 @@ $$\begin{aligned}
 $$\begin{aligned}
   d g 
   & = dh - T ds - s dT = \\
-  & = - S  dT - \mathbf{x}_m \cdot d \mathbf{F}_m + \mathbf{F}_n \cdot d \mathbf{x}_n = \\
+  & = - s  dT - \mathbf{x}_m \cdot d \mathbf{F}_m + \mathbf{F}_n \cdot d \mathbf{x}_n = \\
   & = \mathbf{x}_n \cdot d \mathbf{F}_n + \mathbf{F}_n \cdot d \mathbf{x}_n \ .
 \end{aligned}$$
 
 
 
+**Partial derivatives of potentials.**
+
+$$\begin{aligned}
+ T & = \quad \left.\frac{\partial e}{\partial s}\right|_{\mathbf{x}} & = \quad \left.\frac{\partial h}{\partial s}\right|_{\mathbf{F}_m,\mathbf{x}_n} \\
+ s & =     - \left.\frac{\partial f}{\partial T}\right|_{\mathbf{x}} & =     - \left.\frac{\partial g}{\partial T}\right|_{\mathbf{F}_m,\mathbf{x}_n} \\
+ \mathbf{F} & =     - \left.\frac{\partial E}{\partial \mathbf{x}}\right|_{S} & =     - \left.\frac{\partial F}{\partial \mathbf{x}}\right|_{T} \\
+ \mathbf{x} & = \quad \left.\frac{\partial H}{\partial \mathbf{F}}\right|_{S} & = \quad \left.\frac{\partial G}{\partial \mathbf{F}}\right|_{T}\\
+\end{aligned}$$
+
+
+**Maxwell's relations.**
+
+$$\begin{cases}
+ \dfrac{\partial T}{\partial x_i} & =   - \dfrac{\partial F_i}{\partial S} \\
+ \dfrac{\partial S}{\partial x_i} & = \ \ \dfrac{\partial F_i}{\partial T} \\
+ \dfrac{\partial T}{\partial F_i} & = \ \ \dfrac{\partial x_i}{\partial S} \\
+ \dfrac{\partial S}{\partial F_i} & =   - \dfrac{\partial x_i}{\partial T} \\
+\end{cases}$$
+
+e
+
+$$\begin{cases}
+ \dfrac{\partial F_i}{\partial x_j} & =  \dfrac{\partial F_j}{\partial x_i} \\
+ \dfrac{\partial x_i}{\partial F_j} & =  \dfrac{\partial x_j}{\partial F_i} \\
+\end{cases}$$
+
+
+<!--
 **Derivate parziali dei potenziali come definizione di variabili termodinamiche.** Osservando i differenziali dei potenziali termodinamici, si possono riconoscere che le variabili termodinamiche $T$, $S$, $\mathbf{F}$, $\mathbf{x}$ possono essere scritte come derivate parziali dei potenziali termodinamici,
 
 $$\begin{aligned}
@@ -224,3 +252,4 @@ $$\begin{cases}
  \dfrac{\partial F_i}{\partial x_j} & =  \dfrac{\partial F_j}{\partial x_i} \\
  \dfrac{\partial x_i}{\partial F_j} & =  \dfrac{\partial x_j}{\partial F_i} \\
 \end{cases}$$
+-->
