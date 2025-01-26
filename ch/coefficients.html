@@ -334,6 +334,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermodynamic-coefficients-of-a-single-component-fluid">Thermodynamic coefficients of a single-component fluid</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relations-between-thermodynamic-coefficients">Relations between thermodynamic coefficients</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermodynamic-equilibrium">Thermodynamic equilibrium</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-on-energy">Conditions on energy</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-on-entropy">Conditions on entropy</a></li>
@@ -378,6 +379,93 @@ document.write(`
 \[\beta_x := - \dfrac{1}{v} \dfrac{\partial v}{\partial P}\Big|_x = \dfrac{1}{\rho} \dfrac{\partial \rho}{\partial P}\Big|_x\]</div>
 <p>For fluid systems, usually compressibility coefficent at constant temperature or entropy are the most used.</p>
 </div>
+<div class="section" id="relations-between-thermodynamic-coefficients">
+<h2>Relations between thermodynamic coefficients<a class="headerlink" href="#relations-between-thermodynamic-coefficients" title="Permalink to this heading">#</a></h2>
+<p><strong>Relation between <span class="math notranslate nohighlight">\(c_v\)</span> and <span class="math notranslate nohighlight">\(c_p\)</span>.</strong></p>
+<div class="math notranslate nohighlight" id="equation-eq-cv-cp">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq-cv-cp" title="Permalink to this equation">#</a></span>\[c_P - c_v = T \, v \, \dfrac{\alpha_P^2}{\beta_T} \ . \]</div>
+<p><strong>Relation between <span class="math notranslate nohighlight">\(\beta_s\)</span> and <span class="math notranslate nohighlight">\(\beta_T\)</span> - 1</strong></p>
+<div class="math notranslate nohighlight" id="equation-eq-beta-1">
+<span class="eqno">(3)<a class="headerlink" href="#equation-eq-beta-1" title="Permalink to this equation">#</a></span>\[\beta_s = \frac{c_v}{c_P} \beta_T \ .\]</div>
+<p><strong>Relation between <span class="math notranslate nohighlight">\(\beta_s\)</span> and <span class="math notranslate nohighlight">\(\beta_T\)</span> - 2</strong></p>
+<div class="math notranslate nohighlight" id="equation-eq-beta-2">
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq-beta-2" title="Permalink to this equation">#</a></span>\[\beta_s - \beta_T = - \frac{v T}{c_P} \alpha_P^2 \ .\]</div>
+<p><strong>Relation between <span class="math notranslate nohighlight">\(\beta_s\)</span> and <span class="math notranslate nohighlight">\(\beta_T\)</span> - 3</strong></p>
+<div class="math notranslate nohighlight" id="equation-eq-beta-3">
+<span class="eqno">(5)<a class="headerlink" href="#equation-eq-beta-3" title="Permalink to this equation">#</a></span>\[\dfrac{1}{\beta_s} - \dfrac{1}{\beta_T} = \dfrac{T}{v c_v} \left( \partial_T P|_v \right)^2 \ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Proof of the relation between heat capacities <span class="math notranslate nohighlight">\(c_v\)</span>, <span class="math notranslate nohighlight">\(c_P\)</span><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Changing independent variables from <span class="math notranslate nohighlight">\((T,v)\)</span> to <span class="math notranslate nohighlight">\((P,v)\)</span> in the expression of entropy <span class="math notranslate nohighlight">\(s(T,v) = s(T, P(v,T))\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \dfrac{c_v}{T} := \left.\dfrac{\partial s}{\partial T}\right|_v 
+  &amp; = \left.\dfrac{\partial s}{\partial T}\right|_P + \left.\dfrac{\partial s}{\partial P}\right|_T \left.\dfrac{\partial P}{\partial T}\right|_v = &amp; \qquad \text{(Maxwell $\partial_P s|_T = - \partial_T v|_P$)} \\
+  &amp; = \left.\dfrac{\partial s}{\partial T}\right|_P - \left.\dfrac{\partial v}{\partial T}\right|_P \left.\dfrac{\partial P}{\partial T}\right|_v = &amp; \qquad \text{(relation below $\partial_T P|_v = \dots$)} \\
+  &amp; = \partial_T s|_P + \dfrac{\left( \partial_P v |_T \right)^2}{\partial_P v |_T} = &amp; \qquad \text{(def of TD coeffs)} \\
+  &amp; = \dfrac{c_P}{T} - \dfrac{ v \alpha_P^2}{\beta_T} 
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">having exploited the relation</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \left.\dfrac{\partial P}{\partial T}\right|_v 
+    = \dfrac{\partial(P,v)}{\partial (T,v)} 
+    = \dfrac{\partial(P,v) / \partial(T,P)}{\partial (T,v) / \partial(T,P)} 
+    = - \dfrac{\partial_P v|_T}{\partial_P v|_T} \ .
+\end{aligned}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Proof of the relation between <span class="math notranslate nohighlight">\(\beta_s\)</span> and <span class="math notranslate nohighlight">\(\beta_T\)</span> - 1<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ v \beta_T &amp; = \partial_P v |_T \\
+ v \beta_s &amp; = \partial_P v |_s 
+ = \dfrac{\partial(v,s)}{\partial(P,s)} \dfrac{\partial(v,T)}{\partial(v,T)}  \dfrac{\partial(P,T)}{\partial(P,T)} 
+ = \underbrace{\dfrac{\partial(P,T)}{\partial(P,s)}}_{= \dfrac{1}{\partial_T s|_P}} \underbrace{\dfrac{\partial(v,T)}{\partial(P,T)}}_{\partial_P v|_T} \underbrace{\dfrac{\partial(v,s)}{\partial(v,T)}}_{\partial_T s|_v} 
+ = \dfrac{c_v}{c_P} \left( v \beta_T \right)
+\end{aligned}\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Proof of the relation between <span class="math notranslate nohighlight">\(\beta_s\)</span> and <span class="math notranslate nohighlight">\(\beta_T\)</span> - 2<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[
+\beta_s = \frac{c_v}{c_P} \beta_T 
+  = \dfrac{\beta_T}{c_P} \left[ c_P - T v \frac{\alpha^2_P}{\beta_T} \right]
+  = \beta_T - T v \frac{\alpha^2_P}{c_P} \ .
+\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Proof of the relation between <span class="math notranslate nohighlight">\(\beta_s\)</span> and <span class="math notranslate nohighlight">\(\beta_T\)</span> - 3<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\dfrac{1}{\beta_s} = \frac{c_P}{c_v} \dfrac{1}{\beta_T}
+  &amp; = \dfrac{1}{c_v \, \beta_T} \left[ c_v + T v \frac{\alpha^2_P}{\beta_T} \right] = \\
+  &amp; = \dfrac{1}{\beta_T} \, \dfrac{1}{c_v} \left[ c_v + T v \frac{\alpha^2_P}{\beta_T} \right] = \\
+  &amp; = \dfrac{1}{\beta_T} + T v \frac{\frac{1}{v^2} (\partial_T v|_P)^2}{-\frac{1}{v} \partial_P v|_T} \frac{1}{-\frac{1}{v} \partial_P v|_T} = \\
+  &amp; = \dfrac{1}{\beta_T} + T v \left( \frac{\partial_T v|_P}{\partial_P v|_T} \right)^2
+    = \dfrac{1}{\beta_T} + T v \left( \frac{\partial (v,P)}{\partial (T,P)} \frac{\partial (P,T)}{\partial (v,T)} \right)^2 = \dfrac{1}{\beta_T} + T v \left( \left.\dfrac{\partial P}{\partial T}\right|_v  \right)^2
+\end{aligned}\end{split}\]</div>
+</div>
+</details></div>
 <div class="section" id="thermodynamic-equilibrium">
 <h2>Thermodynamic equilibrium<a class="headerlink" href="#thermodynamic-equilibrium" title="Permalink to this heading">#</a></h2>
 <p>Here thermodynamic equilibrium is discussed for a single-component fluid, for which the first principle reads</p>
@@ -537,6 +625,7 @@ Equivalence of conditions on <span class="math notranslate nohighlight">\(e(s, \
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermodynamic-coefficients-of-a-single-component-fluid">Thermodynamic coefficients of a single-component fluid</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relations-between-thermodynamic-coefficients">Relations between thermodynamic coefficients</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermodynamic-equilibrium">Thermodynamic equilibrium</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-on-energy">Conditions on energy</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-on-entropy">Conditions on entropy</a></li>
