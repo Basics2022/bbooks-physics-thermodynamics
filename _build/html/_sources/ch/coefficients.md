@@ -35,6 +35,82 @@ $$\beta_x := - \dfrac{1}{v} \dfrac{\partial v}{\partial P}\Big|_x = \dfrac{1}{\r
 
 For fluid systems, usually compressibility coefficent at constant temperature or entropy are the most used.
 
+## Relations between thermodynamic coefficients
+
+**Relation between $c_v$ and $c_p$.**
+
+$$c_P - c_v = T \, v \, \dfrac{\alpha_P^2}{\beta_T} \ . $$ (eq:cv-cp)
+
+**Relation between $\beta_s$ and $\beta_T$ - 1**
+
+$$\beta_s = \frac{c_v}{c_P} \beta_T \ .$$ (eq:beta-1)
+
+**Relation between $\beta_s$ and $\beta_T$ - 2**
+
+$$\beta_s - \beta_T = - \frac{v T}{c_P} \alpha_P^2 \ .$$ (eq:beta-2)
+
+**Relation between $\beta_s$ and $\beta_T$ - 3**
+
+$$\dfrac{1}{\beta_s} - \dfrac{1}{\beta_T} = \dfrac{T}{v c_v} \left( \partial_T P|_v \right)^2 \ .$$ (eq:beta-3)
+
+```{dropdown} Proof of the relation between heat capacities $c_v$, $c_P$
+
+Changing independent variables from $(T,v)$ to $(P,v)$ in the expression of entropy $s(T,v) = s(T, P(v,T))$, 
+
+$$\begin{aligned}
+  \dfrac{c_v}{T} := \left.\dfrac{\partial s}{\partial T}\right|_v 
+  & = \left.\dfrac{\partial s}{\partial T}\right|_P + \left.\dfrac{\partial s}{\partial P}\right|_T \left.\dfrac{\partial P}{\partial T}\right|_v = & \qquad \text{(Maxwell $\partial_P s|_T = - \partial_T v|_P$)} \\
+  & = \left.\dfrac{\partial s}{\partial T}\right|_P - \left.\dfrac{\partial v}{\partial T}\right|_P \left.\dfrac{\partial P}{\partial T}\right|_v = & \qquad \text{(relation below $\partial_T P|_v = \dots$)} \\
+  & = \partial_T s|_P + \dfrac{\left( \partial_P v |_T \right)^2}{\partial_P v |_T} = & \qquad \text{(def of TD coeffs)} \\
+  & = \dfrac{c_P}{T} - \dfrac{ v \alpha_P^2}{\beta_T} 
+\end{aligned}$$
+
+having exploited the relation
+
+$$\begin{aligned}
+  \left.\dfrac{\partial P}{\partial T}\right|_v 
+    = \dfrac{\partial(P,v)}{\partial (T,v)} 
+    = \dfrac{\partial(P,v) / \partial(T,P)}{\partial (T,v) / \partial(T,P)} 
+    = - \dfrac{\partial_P v|_T}{\partial_P v|_T} \ .
+\end{aligned}$$ 
+
+```
+
+```{dropdown} Proof of the relation between $\beta_s$ and $\beta_T$ - 1
+
+$$\begin{aligned}
+ v \beta_T & = \partial_P v |_T \\
+ v \beta_s & = \partial_P v |_s 
+ = \dfrac{\partial(v,s)}{\partial(P,s)} \dfrac{\partial(v,T)}{\partial(v,T)}  \dfrac{\partial(P,T)}{\partial(P,T)} 
+ = \underbrace{\dfrac{\partial(P,T)}{\partial(P,s)}}_{= \dfrac{1}{\partial_T s|_P}} \underbrace{\dfrac{\partial(v,T)}{\partial(P,T)}}_{\partial_P v|_T} \underbrace{\dfrac{\partial(v,s)}{\partial(v,T)}}_{\partial_T s|_v} 
+ = \dfrac{c_v}{c_P} \left( v \beta_T \right)
+\end{aligned}$$
+
+```
+
+```{dropdown} Proof of the relation between $\beta_s$ and $\beta_T$ - 2
+
+$$
+\beta_s = \frac{c_v}{c_P} \beta_T 
+  = \dfrac{\beta_T}{c_P} \left[ c_P - T v \frac{\alpha^2_P}{\beta_T} \right]
+  = \beta_T - T v \frac{\alpha^2_P}{c_P} \ .
+$$
+
+```
+
+```{dropdown} Proof of the relation between $\beta_s$ and $\beta_T$ - 3
+
+$$\begin{aligned}
+\dfrac{1}{\beta_s} = \frac{c_P}{c_v} \dfrac{1}{\beta_T}
+  & = \dfrac{1}{c_v \, \beta_T} \left[ c_v + T v \frac{\alpha^2_P}{\beta_T} \right] = \\
+  & = \dfrac{1}{\beta_T} \, \dfrac{1}{c_v} \left[ c_v + T v \frac{\alpha^2_P}{\beta_T} \right] = \\
+  & = \dfrac{1}{\beta_T} + T v \frac{\frac{1}{v^2} (\partial_T v|_P)^2}{-\frac{1}{v} \partial_P v|_T} \frac{1}{-\frac{1}{v} \partial_P v|_T} = \\
+  & = \dfrac{1}{\beta_T} + T v \left( \frac{\partial_T v|_P}{\partial_P v|_T} \right)^2
+    = \dfrac{1}{\beta_T} + T v \left( \frac{\partial (v,P)}{\partial (T,P)} \frac{\partial (P,T)}{\partial (v,T)} \right)^2 = \dfrac{1}{\beta_T} + T v \left( \left.\dfrac{\partial P}{\partial T}\right|_v  \right)^2
+\end{aligned}$$
+
+```
+
 
 ## Thermodynamic equilibrium
 

@@ -4,7 +4,7 @@
 format: jb-book
 root: intro
 parts:
-- caption: Termodinamica
+- caption: Thermodynamics
   chapters:
   - file: ch/history
   - file: ch/principles
@@ -19,6 +19,9 @@ parts:
   - file: ch/media
     sections:
     - file: ch/ideal_gases
+- caption: Thermal Engineering
+  chapters:
+  - file: ch/thermal-engineering
   - file: ch/thermodynamic_transformations
   - file: ch/heat_engines
-  - file: ch/heat_transmission
+  - file: ch/heat-transfer
