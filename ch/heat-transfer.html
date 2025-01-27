@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Principles of Thermodynamics &#8212; Classical Thermodynamics</title>
+    <title>Heat transfer &#8212; Classical Thermodynamics</title>
   
   
   
@@ -64,12 +64,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/principles-ita';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/heat-transfer';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Thermodynamic cycles and heat engines" href="heat-engines.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -182,11 +181,11 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermal Engineering</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="thermal-engineering.html">Principles of Thermal Engineering</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thermodynamic_transformations.html">Thermodynamic transformations and thermomechanical systems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="heat-engines.html">Thermodynamic cycles and heat engines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="heat-transfer.html">Heat transfer</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Heat transfer</a></li>
 </ul>
 
     </div>
@@ -241,7 +240,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/principles-ita.md" target="_blank"
+      <li><a href="../_sources/ch/heat-transfer.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -323,7 +322,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Principles of Thermodynamics</h1>
+    <h1>Heat transfer</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -337,74 +336,25 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="principles-of-thermodynamics">
-<span id="classical-thermodynamics-principles"></span><h1>Principles of Thermodynamics<a class="headerlink" href="#principles-of-thermodynamics" title="Permalink to this heading">#</a></h1>
-<p><strong>Primo principio della termodinamica.</strong> Il primo principio della termodinamica è il bilancio di energia totale di un sistema</p>
-<div class="math notranslate nohighlight">
-\[\dot{E}^{tot} = P^{e} + \dot{Q}^{e}\]</div>
-<p>L’energia totale di un sistema può essere scritta come la somma dell’energia cinetica macroscopica <span class="math notranslate nohighlight">\(K\)</span> e l’energia interna <span class="math notranslate nohighlight">\(E\)</span>, una rappresentazione macroscopica dell’energia cinetica delle componenti microscopiche del sistema, attorno ai valori medi macroscopici locali,</p>
-<div class="math notranslate nohighlight">
-\[E^{tot} = K + E \ .\]</div>
-<p>Usando il teorema dell’energia cinetica <em>macroscopica</em> <strong>[REF]</strong> noto dalla meccanica si può ricavare</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \dot{E}^{tot} &amp; = P^{e} + \dot{Q}^e \\
-  \dot{K}       &amp; = P^{tot} = P^{e} + P^{i} \\
-  \dot{E}       &amp; = \dot{Q}^e - P^{i} 
-\end{aligned}\end{split}\]</div>
-<p>Il bilancio dell’energia interna può essere scritto in forma incrementale come</p>
-<div class="math notranslate nohighlight">
-\[d E = d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q^e - d\hspace{-0.08pt}\bar{}\hspace{0.1pt} L^i \ ,\]</div>
-<p>mettendo in evidenza con la notazione che l’energia interna è una variabile di stato del sistema, a differenza degli scambi di lavoro o di calore.</p>
-<p>Si assume che l’energia interna del sistema può essere scritta come funzione di variabili di stato cinematiche locali <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> (che non possono contribuire all’energia cinetica macroscopica del sistema) e almeno un’altra variabile di stato additiva, qui chiamata <span class="math notranslate nohighlight">\(S\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[E(\mathbf{x}, S)\]</div>
-<p>Il suo differenziale può essere scritto come</p>
-<div class="math notranslate nohighlight">
-\[d E = \dfrac{\partial E}{\partial \mathbf{x}}\Big|_{S} \cdot d \mathbf{x} + \dfrac{\partial E}{\partial S}\Big|_{\mathbf{x}} \cdot d \mathbf{S}\]</div>
-<p>Il bilancio di energia interna in forma incrementale può essere riscritto come</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-d E &amp; = - d\hspace{-0.08pt}\bar{}\hspace{0.1pt} L^i + d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q^e =  \\
-    &amp; = - \delta L^{i,rev} + d\hspace{-0.08pt}\bar{}\hspace{0.1pt}^+ D + d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q^e  \\
-\end{aligned}\end{split}\]</div>
-<p>avendo separato nel lavoro interno il contributo delle azioni reversibili e non reversibili. In accordo con l’esperienza, si assume che il contributo al lavoro interno delle forze non reversibili è sempre positivo, <span class="math notranslate nohighlight">\(d\hspace{-0.08pt}\bar{}\hspace{0.1pt}^+ D \ge 0\)</span>: questo contributo viene chiamato <strong>dissipazione</strong>.</p>
-<p>Poiché sia il differenziale dell’energia e il contributo reversibile del lavoro interno sono dei termini reversibili, allora anche la somma di dissipazione e flusso di calore deve essere un contributo reversibile, indicato con <span class="math notranslate nohighlight">\(\delta U\)</span>.</p>
-<p>Dal confronto delle due espressioni del differenziale dell’energia interna, avendo riconosciuto il contributo reversibile del lavoro interno nel primo termine, si può scrivere</p>
-<div class="math notranslate nohighlight">
-\[
-  \delta L^{i,rev} = - \dfrac{\partial E}{\partial \mathbf{x}} \Big|_{S} d \mathbf{x}  \qquad , \qquad 
-  \delta U         = \ \dfrac{\partial E}{\partial S} \Big|_{\mathbf{x}} d S 
-\]</div>
-<p><strong>Terzo principio della termodinamica: definizione e segno della temperatura.</strong>
-La temperatura viene definita come la variabile parziale dell’energia interna del sistema rispetto alla variabile di stato <span class="math notranslate nohighlight">\(S\)</span>,</p>
-<div class="math notranslate nohighlight">
-\[T := \dfrac{\partial E}{\partial S}\Big|_S{} \ .\]</div>
-<p>Il terzo principio della termodinamica postula che la temperatura sia sempre positiva.</p>
-<div class="math notranslate nohighlight">
-\[T := \dfrac{\partial E}{\partial S}\Big|_S{} &gt; 0 \ .\]</div>
-<p><strong>Secondo principio della termodinamica: enunciato di Clausius.</strong> L’enunciato di Clausis del secondo principio della termodinamica può essere formulato in accordo con l’evidenza che la dissipazione sia sempre non negativa. Infatti</p>
-<div class="math notranslate nohighlight">
-\[T dS =: \partial U = \underbrace{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}^+ D}_{\ge 0} + d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q^e \ge  d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q^e \ ,\]</div>
-<p>e quindi</p>
-<div class="math notranslate nohighlight">
-\[dS \ge \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q^e }{T} \ .\]</div>
-<p><strong>Secondo principio della termodinamica per sistemi complessi e direzione dei trasferimenti di calore.</strong></p>
-<p>L’esperienza evidenzia che il trasferimento di calore avviene dai corpi a temperatura maggiore a corpi a temperatura minore, ossia il flusso di calore fa aumentare l’energia interna del corpo freddo e diminuire quella del corpo caldo.</p>
-<p>Nello scabio di calore tra due corpi <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(j\)</span> a temperature <span class="math notranslate nohighlight">\(T_i\)</span>, <span class="math notranslate nohighlight">\(T_j\)</span>, questa evidenza sperimentale può essere scritta come</p>
-<div class="math notranslate nohighlight">
-\[d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q_{ji} \gtreqless 0 \quad \text{se} \quad T_i \gtreqless T_j \qquad \rightarrow \qquad \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q_{ji}}{T_j} + \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q_{ij}}{T_i} \ge 0 \ ,\]</div>
-<p>dove <span class="math notranslate nohighlight">\(d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q_{ji} = - d\hspace{-0.08pt}\bar{}\hspace{0.1pt} Q_{ij}\)</span> è il flusso di calore dal corpo <span class="math notranslate nohighlight">\(i\)</span> al corpo <span class="math notranslate nohighlight">\(j\)</span>, positivo se fa aumentare l’energia interna di <span class="math notranslate nohighlight">\(j\)</span> e diminuire quella di <span class="math notranslate nohighlight">\(i\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[d S_i = \underbrace{\dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  D_i}{T_i}}_{\ge 0} + \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q^{e,i}}{T_i} + \sum_{j \ne i} \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q_{ij}}{T_i}\]</div>
-<p>Poichè <span class="math notranslate nohighlight">\(S\)</span> è una variabile estensiva, il valore associato all’intero sistema è uguale alla somma dei valori delle sue parti, <span class="math notranslate nohighlight">\(S = \sum_i S_i\)</span>. E’ quindi possibile ricavare una relazione per l’intero sistema sommando i contributi dovuti a tutte le sue parti.</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  d S &amp; = \sum_i d S_i = \\
-      &amp; = \sum_i \sum_i \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q^{e,i}}{T_i} + \sum_i \sum_{j \ne i} \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q_{ij}}{T_i} + \underbrace{\dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  D_i}{T_i}}_{\ge 0} = \\
-      &amp; \ge \sum_i \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q^{e,i}}{T_i} + \sum_{\{i, j\}} \underbrace{\Big( \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q_{ij}}{T_i} + \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q_{ji}}{T_j} \Big)}_{ \ge 0 }  = \\
-      &amp; \ge \sum_i \dfrac{d\hspace{-0.08pt}\bar{}\hspace{0.1pt}  Q^{e,i}}{T_i} \ .
-\end{aligned}\end{split}\]</div>
+  <!--
+```{article-info}
+:author: basics
+:date: "{sub-ref}`today`"
+:read-time: "{sub-ref}`wordcount-minutes` min read"
+```
+-->
+<div class="tex2jax_ignore mathjax_ignore section" id="heat-transfer">
+<span id="classical-thermodynamics-heat-transmission"></span><h1>Heat transfer<a class="headerlink" href="#heat-transfer" title="Permalink to this heading">#</a></h1>
+<p>Three main heat transfer mechanisms exist: conduction, convection, radiation.</p>
+<p><strong>Conduction.</strong> Main heat transfer mechanism in solid media: molecules of the solid are not free to move and conduction is a diffusion process of the microscopical thermal agitation of the molecules of the solid structure.</p>
+<p><strong>Convection.</strong> Main heat transfer machanism in fluid media: moldeculus of the fluid are free to move; as they move, they transport “thermal energy” and xechange heat with the surrounding environment.</p>
+<p><strong>Radiation.</strong> It’s the only heat transfer mechanism that needs no matter to occur, as it can occur in “vacuum”<a class="footnote-reference brackets" href="#vacuum" id="id1">1</a></p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="vacuum"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Vacuum of matter, mass, but not physical properties, as the dielectric constant and magnetic permeability of free space/”vacuum”.</p>
+</dd>
+</dl>
 </div>
 
     <script type="text/x-thebe-config">
@@ -437,6 +387,15 @@ La temperatura viene definita come la variabile parziale dell’energia interna 
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="heat-engines.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Thermodynamic cycles and heat engines</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
