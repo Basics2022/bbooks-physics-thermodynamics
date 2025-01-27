@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thermodynamic transformations and thermomechanical systems &#8212; Classical Thermodynamics</title>
+    <title>Thermodynamic cycles and heat engines &#8212; Classical Thermodynamics</title>
   
   
   
@@ -64,12 +64,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/thermodynamic_transformations';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/heat-engines';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Thermodynamic cycles and heat engines" href="heat-engines.html" />
-    <link rel="prev" title="Principles of Thermal Engineering" href="thermal-engineering.html" />
+    <link rel="next" title="Heat transfer" href="heat-transfer.html" />
+    <link rel="prev" title="Thermodynamic transformations and thermomechanical systems" href="thermodynamic-transformations.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -184,8 +186,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermal Engineering</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="thermal-engineering.html">Principles of Thermal Engineering</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Thermodynamic transformations and thermomechanical systems</a></li>
-<li class="toctree-l1"><a class="reference internal" href="heat-engines.html">Thermodynamic cycles and heat engines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thermodynamic-transformations.html">Thermodynamic transformations and thermomechanical systems</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Thermodynamic cycles and heat engines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="heat-transfer.html">Heat transfer</a></li>
 </ul>
 
@@ -241,7 +243,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/thermodynamic_transformations.md" target="_blank"
+      <li><a href="../_sources/ch/heat-engines.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -325,7 +327,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Thermodynamic transformations and thermomechanical systems</h1>
+    <h1>Thermodynamic cycles and heat engines</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -335,8 +337,23 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#turbine">Turbine</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compressor">Compressor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#carnot-cycle-and-heat-engine">Carnot cycle and heat engine</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#second-principle-of-thermodynamics-planck-and-kelvin-statements">Second principle of thermodynamics: Planck and Kelvin statements</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-engines-and-cycles">Heat engines and cycles</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#otto">Otto</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diesel">Diesel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joule-brayton">Joule-Brayton</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rankine">Rankine</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mechanical-power">Mechanical power</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-generation">Power generation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-pump-and-or-refrigeration">Heat pump and/or refrigeration</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -355,13 +372,101 @@ document.write(`
 :read-time: "{sub-ref}`wordcount-minutes` min read"
 ```
 -->
-<div class="tex2jax_ignore mathjax_ignore section" id="thermodynamic-transformations-and-thermomechanical-systems">
-<span id="classical-thermodynamics-transformations"></span><h1>Thermodynamic transformations and thermomechanical systems<a class="headerlink" href="#thermodynamic-transformations-and-thermomechanical-systems" title="Permalink to this heading">#</a></h1>
-<div class="section" id="turbine">
-<span id="classical-thermodynamics-transformations-turbine"></span><h2>Turbine<a class="headerlink" href="#turbine" title="Permalink to this heading">#</a></h2>
+<div class="tex2jax_ignore mathjax_ignore section" id="thermodynamic-cycles-and-heat-engines">
+<span id="classical-thermodynamics-heat-engines"></span><h1>Thermodynamic cycles and heat engines<a class="headerlink" href="#thermodynamic-cycles-and-heat-engines" title="Permalink to this heading">#</a></h1>
+<p><strong>Direct and reversed thermodynamic cycles.</strong> Direct cycles: transform heat to mechanical work. Reverset cycle: transform mechanical work to heat transfer (e.g. refrigeration/cooling - refrigerator cycles - or heating - heat pump cycles)</p>
+<p><strong>Carnot cycle - reversible cycle between two constant temperatur sources.</strong> Planck and Kelvin statements of <span class="math notranslate nohighlight">\(2^{nd}\)</span> principle of thermodynamics. Maximum efficiency….</p>
+<p><strong>Ideal models of real cycles.</strong> Otto, Diesel, Atkinson, Stirling (ICE), Rankine, Joule-Brayton</p>
+<p><strong>Principle.</strong> Reciprocating (piston)/reactive (turbine) engines</p>
+<p><strong>Circuit.</strong> Open/close</p>
+<div class="section" id="carnot-cycle-and-heat-engine">
+<span id="classical-thermodynamics-heat-engines-carnot"></span><h2>Carnot cycle and heat engine<a class="headerlink" href="#carnot-cycle-and-heat-engine" title="Permalink to this heading">#</a></h2>
+<div class="section" id="second-principle-of-thermodynamics-planck-and-kelvin-statements">
+<span id="id1"></span><h3>Second principle of thermodynamics: Planck and Kelvin statements<a class="headerlink" href="#second-principle-of-thermodynamics-planck-and-kelvin-statements" title="Permalink to this heading">#</a></h3>
 </div>
-<div class="section" id="compressor">
-<span id="classical-thermodynamics-transformations-compressor"></span><h2>Compressor<a class="headerlink" href="#compressor" title="Permalink to this heading">#</a></h2>
+</div>
+<div class="section" id="heat-engines-and-cycles">
+<span id="classical-thermodynamics-heat-engines-real"></span><h2>Heat engines and cycles<a class="headerlink" href="#heat-engines-and-cycles" title="Permalink to this heading">#</a></h2>
+<p>In this section, the idealization/model of real thermodynamic cycles performed by real-life machines are discussed.</p>
+<div class="section" id="otto">
+<span id="classical-thermodynamics-heat-engines-real-otto"></span><h3>Otto<a class="headerlink" href="#otto" title="Permalink to this heading">#</a></h3>
+<p><strong>Introduction.</strong></p>
+<p><strong>Applications.</strong></p>
+<p><strong>Thermodynamic cycle.</strong> Reciprocating operation, with (approximately<a class="footnote-reference brackets" href="#closed-system" id="id2">1</a>) close system between intake and exhaust processes:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(0 \rightarrow 1\)</span> intake, approximately isobaric</p></li>
+<li><p><span class="math notranslate nohighlight">\(1 \rightarrow 2\)</span> adiabatic compression</p></li>
+<li><p><span class="math notranslate nohighlight">\(2 \rightarrow 3\)</span> combustion, approximately isochoric at TDC: <strong>spark ignition</strong> usually makes combustion fast enough to be modeled as an immediate process occurring at TDC; this is in contast to <a class="reference internal" href="#classical-thermodynamics-heat-engines-real-diesel"><span class="std std-ref">Diesel engines</span></a>, where combustion starts with self-ignition due to high temperature reached at the end of the compression</p></li>
+<li><p><span class="math notranslate nohighlight">\(3 \rightarrow 4\)</span> adiabatic expansion</p></li>
+<li><p><span class="math notranslate nohighlight">\(4 \rightarrow 0\)</span> exhaust, approximately isochoric BDC followed by isobaric</p></li>
+</ul>
+</div>
+<div class="section" id="diesel">
+<span id="classical-thermodynamics-heat-engines-real-diesel"></span><h3>Diesel<a class="headerlink" href="#diesel" title="Permalink to this heading">#</a></h3>
+<p><strong>Introduction.</strong></p>
+<p><strong>Applications.</strong></p>
+<p><strong>Thermodynamic cycle.</strong> Reciprocating operation, with (approximately<a class="footnote-reference brackets" href="#closed-system" id="id3">1</a>) close system between intake and exhaust processes:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(0 \rightarrow 1\)</span> intake, approximately isobaric</p></li>
+<li><p><span class="math notranslate nohighlight">\(1 \rightarrow 2\)</span> adiabatic compression</p></li>
+<li><p><span class="math notranslate nohighlight">\(2 \rightarrow 3\)</span> combustion, approximately isobaric at TDC: <strong>self ignition</strong> usually triggers slower combustion if compared with <a class="reference internal" href="#classical-thermodynamics-heat-engines-real-otto"><span class="std std-ref">Otto engines</span></a>, that can be modeled as an isobaric transformation</p></li>
+<li><p><span class="math notranslate nohighlight">\(3 \rightarrow 4\)</span> adiabatic expansion</p></li>
+<li><p><span class="math notranslate nohighlight">\(4 \rightarrow 0\)</span> exhaust, approximately isochoric BDC followed by isobaric</p></li>
+</ul>
+</div>
+<div class="section" id="joule-brayton">
+<span id="classical-thermodynamics-heat-engines-real-joule-brayton"></span><h3>Joule-Brayton<a class="headerlink" href="#joule-brayton" title="Permalink to this heading">#</a></h3>
+<p><strong>Introduction.</strong> It’s the reference thermodynamic cycle for <strong>gas turbine</strong> heat engines. These systems have continuous operation and can work both in open (jet propulsion) and close cycles (electric power generation).</p>
+<p><strong>Applications.</strong> Joule-Brayton close cycle is used in electric power generation: heat producesd by combustion is transferred to an operating fluid(chemical power to thermal power), entnering a turbine that converts “thermal power of the fluid” into mechanical power, then converted to electric power by an electric generator. Joule-Brayton open cycle is used for jet propulsion (typically for aircraft): operating fluid is usually air, undergoing the thermodynamic cylce through the jet engine; air is compressed before entering the combustion chamber, and released after passing throught a turbine: turbine extracts the power required to drive the compressor, and “extra power” contained in the fluid is used to accelerating exhaust fluid, producing thrust.</p>
+<p><strong>Thermodynamic cycle - close cycle.</strong> Components involved in the system are usually open systems. Steady operation of these systems is described by balance of total enthalpy flux. Kinetic energy of the fhe fluid is usually negligible if compared with internal energy and enthapy: total entalphy reduces to <strong>enthalpy</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(1 \rightarrow 2\)</span> adiabatic compression</p></li>
+<li><p><span class="math notranslate nohighlight">\(2 \rightarrow 3\)</span> combustion, approximately isobaric at in combustion chamber</p></li>
+<li><p><span class="math notranslate nohighlight">\(3 \rightarrow 4\)</span> adiabatic expansion</p></li>
+<li><p><span class="math notranslate nohighlight">\(4 \rightarrow 1\)</span> isobaric cooling</p></li>
+</ul>
+<p><strong>Thermodynamic cycle - open cycle.</strong> Components involved in the system are usually open systems. Steady operation of these systems is described by balance of <strong>total enthalpy</strong> flux. Kinetic energy of the fhe fluid is usually <strong>not</strong> negligible if compared with internal energy and enthapy</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(0 \rightarrow 1\)</span> adiabatic compression in free air before or at the engine intake</p></li>
+<li><p><span class="math notranslate nohighlight">\(1 \rightarrow 2\)</span> adiabatic compression in compressor</p></li>
+<li><p><span class="math notranslate nohighlight">\(2 \rightarrow 3\)</span> combustion, approximately isobaric at in combustion chamber</p></li>
+<li><p><span class="math notranslate nohighlight">\(3 \rightarrow 4\)</span> adiabatic expansion in turbine</p></li>
+<li><p><span class="math notranslate nohighlight">\(4 \rightarrow 5\)</span> adiabatic expansion in the nozzle</p></li>
+</ul>
+</div>
+<div class="section" id="rankine">
+<span id="classical-thermodynamics-heat-engines-real-rankine"></span><h3>Rankine<a class="headerlink" href="#rankine" title="Permalink to this heading">#</a></h3>
+<p><strong>Introduction.</strong></p>
+<p><strong>Application.</strong></p>
+<p><strong>Thermodynamic cycle.</strong></p>
+</div>
+</div>
+<div class="section" id="applications">
+<span id="classical-thermodynamics-heat-engines-systems"></span><h2>Applications<a class="headerlink" href="#applications" title="Permalink to this heading">#</a></h2>
+<div class="section" id="mechanical-power">
+<span id="classical-thermodynamics-heat-engines-systems-engine"></span><h3>Mechanical power<a class="headerlink" href="#mechanical-power" title="Permalink to this heading">#</a></h3>
+</div>
+<div class="section" id="power-generation">
+<span id="classical-thermodynamics-heat-engines-systems-power-generation"></span><h3>Power generation<a class="headerlink" href="#power-generation" title="Permalink to this heading">#</a></h3>
+</div>
+<div class="section" id="heat-pump-and-or-refrigeration">
+<span id="classical-thermodynamics-heat-engines-systems-heat-pump-refrigeration"></span><h3>Heat pump and/or refrigeration<a class="headerlink" href="#heat-pump-and-or-refrigeration" title="Permalink to this heading">#</a></h3>
+<!--
+Le macchine termiche sono sistemi che sfruttano scambi di calore per produrre lavoro (**macchine dirette**, come i motori a combustione) o lavoro per scambiare calore da sistemi freddi a sistemi più caldi (**macchine inverse**, come i frigoriferi).
+
+Di solito, le macchine termiche sfruttano un fluido di lavoro. Le macchine a fluido possono essere un sistema aperto (es. motori aeronautici) o chiuso (circuiti delle centrali elettriche e di frigoriferi), o un sistema che è aperto solo in alcune fasi (es. nei motori alternativi, la camera di combustione è un sistema aperto solo durante le fasi di aspirazione e scarico, se si trascurano le perdite).
+
+**Macchine ideali.** *Macchina ideale di Carnot; efficienza massima; enunciati di Planck e Kelvin del secondo principio della termodinamica.*
+
+**Macchine reali.** *Cicli ideali: Otto, Diesel, Rankine, Joule-Brayton,...;*
+-->
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="closed-system"><span class="brackets">1</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id3">2</a>)</span></dt>
+<dd><p>Combustion chamber is an approximately close system during a cycle between intake and exhaust, because of: 1. fuel injection, 2. leakage through the clearance between the walls of the piston and the cylinder.</p>
+</dd>
+</dl>
+</div>
 </div>
 </div>
 
@@ -396,20 +501,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="thermal-engineering.html"
+       href="thermodynamic-transformations.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Principles of Thermal Engineering</p>
+        <p class="prev-next-title">Thermodynamic transformations and thermomechanical systems</p>
       </div>
     </a>
     <a class="right-next"
-       href="heat-engines.html"
+       href="heat-transfer.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Thermodynamic cycles and heat engines</p>
+        <p class="prev-next-title">Heat transfer</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -428,8 +533,23 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#turbine">Turbine</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compressor">Compressor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#carnot-cycle-and-heat-engine">Carnot cycle and heat engine</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#second-principle-of-thermodynamics-planck-and-kelvin-statements">Second principle of thermodynamics: Planck and Kelvin statements</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-engines-and-cycles">Heat engines and cycles</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#otto">Otto</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diesel">Diesel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joule-brayton">Joule-Brayton</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rankine">Rankine</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mechanical-power">Mechanical power</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-generation">Power generation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-pump-and-or-refrigeration">Heat pump and/or refrigeration</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

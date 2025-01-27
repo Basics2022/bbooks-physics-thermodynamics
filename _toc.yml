@@ -22,6 +22,6 @@ parts:
 - caption: Thermal Engineering
   chapters:
   - file: ch/thermal-engineering
-  - file: ch/thermodynamic_transformations
+  - file: ch/thermodynamic-transformations
   - file: ch/heat-engines
   - file: ch/heat-transfer
