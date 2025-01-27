@@ -382,7 +382,23 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[  \displaystyle\int_{s_{in}} \rho h^t \vec{u} \cdot \hat{n} + \int_{s_{out}} \rho e^t ( \vec{u} - \vec{u}_b ) \cdot \hat{n} = \int_{s_{rot}} \vec{t}_{\hat{n}} \cdot \vec{v} \ ,
 \]</div>
-<p>i.e. the <strong>total power done on the fluid by the turbine</strong><a class="footnote-reference brackets" href="#turbine-power" id="id1">1</a>, <span class="math notranslate nohighlight">\(\int_{s_{rot}} \vec{t}_{\hat{n}} \cdot \hat{n}\)</span>,</p>
+<p>i.e. the <strong>total power done on the fluid by the turbine</strong><a class="footnote-reference brackets" href="#turbine-power" id="id1">1</a>, <span class="math notranslate nohighlight">\(P_{sf} = \int_{s_{rot}} \vec{t}_{\hat{n}} \cdot \vec{u}\)</span>, equals the difference of total entaphy fluxes through the inflow and outflow manifolds.</p>
+<p>For action/reaction principle, <span class="math notranslate nohighlight">\(3^{rd}\)</span> principle of Newton mechanics, the stress transferred by the fluid to the solid walls of the turbine is <span class="math notranslate nohighlight">\(\vec{t}_{\hat{n},fs} = -\vec{t}_{\hat{n},sf}\)</span>; for boundary conditions (no slip for viscous fluids), the velocity of solid and fluid particle at walls concides, <span class="math notranslate nohighlight">\(\vec{v}_s = \vec{v}_f\)</span>, and thus the power transferred by the fluid to the solid reads</p>
+<div class="math notranslate nohighlight">
+\[P_{fs} = \int_{s_{rot}} \vec{t}_{\hat{n},fs} \cdot \vec{v}_s = - \int_{s_{rot}} \vec{t}_{\hat{n},sf} \cdot \vec{v}_f = - P_{sf} \ .\]</div>
+<p>Mass and total energy balance equations can be recast as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \dot{m}_{in} = \dot{m}_{out} = \dot{m} \quad \text{const.} \\
+  \Phi(h^t)_{in} - \Phi(h^t)_{out} = P_{fs} \ .
+\end{cases}\end{split}\]</div>
+<p>being</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \dot{m}_k = \Phi(\rho)_k  &amp; = - \int_{s_k} \rho \, \vec{v}_{rel} \cdot \hat{x} \\
+             \Phi(h^t)_k   &amp; = - \int_{s_k} \rho \, h^t \, \vec{v}_{rel} \cdot \hat{x} \\
+\end{aligned}\end{split}\]</div>
+<p>the mass and total enthalpy fluxes through the surfaces “in the main direction of the fluid”.</p>
 </div>
 <div class="section" id="compressor">
 <span id="classical-thermodynamics-transformations-compressor"></span><h2>Compressor<a class="headerlink" href="#compressor" title="Permalink to this heading">#</a></h2>

@@ -38,7 +38,27 @@ Mass balance equation reduces to equality of inflow and outflow mass flux: mass 
 $$  \displaystyle\int_{s_{in}} \rho h^t \vec{u} \cdot \hat{n} + \int_{s_{out}} \rho e^t ( \vec{u} - \vec{u}_b ) \cdot \hat{n} = \int_{s_{rot}} \vec{t}_{\hat{n}} \cdot \vec{v} \ ,
 $$
 
-i.e. the **total power done on the fluid by the turbine**[^turbine-power], $\int_{s_{rot}} \vec{t}_{\hat{n}} \cdot \hat{n}$,
+i.e. the **total power done on the fluid by the turbine**[^turbine-power], $P_{sf} = \int_{s_{rot}} \vec{t}_{\hat{n}} \cdot \vec{u}$, equals the difference of total entaphy fluxes through the inflow and outflow manifolds. 
+
+For action/reaction principle, $3^{rd}$ principle of Newton mechanics, the stress transferred by the fluid to the solid walls of the turbine is $\vec{t}_{\hat{n},fs} = -\vec{t}_{\hat{n},sf}$; for boundary conditions (no slip for viscous fluids), the velocity of solid and fluid particle at walls concides, $\vec{v}_s = \vec{v}_f$, and thus the power transferred by the fluid to the solid reads
+
+$$P_{fs} = \int_{s_{rot}} \vec{t}_{\hat{n},fs} \cdot \vec{v}_s = - \int_{s_{rot}} \vec{t}_{\hat{n},sf} \cdot \vec{v}_f = - P_{sf} \ .$$
+
+Mass and total energy balance equations can be recast as
+
+$$\begin{cases}
+  \dot{m}_{in} = \dot{m}_{out} = \dot{m} \quad \text{const.} \\
+  \Phi(h^t)_{in} - \Phi(h^t)_{out} = P_{fs} \ .
+\end{cases}$$
+
+being
+
+$$\begin{aligned}
+ \dot{m}_k = \Phi(\rho)_k  & = - \int_{s_k} \rho \, \vec{v}_{rel} \cdot \hat{x} \\
+             \Phi(h^t)_k   & = - \int_{s_k} \rho \, h^t \, \vec{v}_{rel} \cdot \hat{x} \\
+\end{aligned}$$
+
+the mass and total enthalpy fluxes through the surfaces "in the main direction of the fluid".
 
 
 [^turbine-power]: This contribution is the total power done by the turbine on the fluid, being the integral over the moving interface between the media of the dot product of the velocity of the material points and the stress acting *on the fluid*. Total power transferred from the turbine to the fluid could be written as the integral over the whole interface surface, namely $s_{sta} \cup s_{rot}$, but the power contribution of the stator is identically zero, being $\vec{v}|_{s_{sta}} = \vec{0}$.
