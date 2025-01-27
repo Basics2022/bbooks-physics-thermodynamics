@@ -9,3 +9,13 @@
 (classical-thermodynamics:transformations)=
 # Thermodynamic transformations and thermomechanical systems
 
+
+(classical-thermodynamics:transformations:turbine)=
+## Turbine
+
+(classical-thermodynamics:transformations:compressor)=
+## Compressor
+
+
+
+

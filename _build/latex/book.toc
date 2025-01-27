@@ -40,6 +40,19 @@
 \contentsline {part}{II\hspace {1em}Thermal Engineering}{31}{part.2}%
 \contentsline {chapter}{\numberline {6}Principles of Thermal Engineering}{33}{chapter.6}%
 \contentsline {chapter}{\numberline {7}Thermodynamic transformations and thermomechanical systems}{35}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Turbine}{35}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Compressor}{35}{section.7.2}%
 \contentsline {chapter}{\numberline {8}Thermodynamic cycles and heat engines}{37}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Heat transfer}{39}{chapter.9}%
-\contentsline {chapter}{Proof Index}{41}{section*.10}%
+\contentsline {section}{\numberline {8.1}Carnot cycle and heat engine}{37}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Second principle of thermodynamics: Planck and Kelvin statements}{37}{subsection.8.1.1}%
+\contentsline {section}{\numberline {8.2}Heat engines and cycles}{37}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Otto}{37}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Diesel}{38}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}Joule\sphinxhyphen {}Brayton}{38}{subsection.8.2.3}%
+\contentsline {subsection}{\numberline {8.2.4}Rankine}{39}{subsection.8.2.4}%
+\contentsline {section}{\numberline {8.3}Applications}{39}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Mechanical power}{39}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Power generation}{39}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}Heat pump and/or refrigeration}{39}{subsection.8.3.3}%
+\contentsline {chapter}{\numberline {9}Heat transfer}{41}{chapter.9}%
+\contentsline {chapter}{Proof Index}{43}{section*.11}%

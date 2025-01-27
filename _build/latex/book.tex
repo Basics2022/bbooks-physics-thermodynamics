@@ -85,7 +85,7 @@
         
 
 \title{Classical Thermodynamics}
-\date{Jan 26, 2025}
+\date{Jan 27, 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -1495,7 +1495,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-Jan 26, 2025
+Jan 27, 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -1577,13 +1577,19 @@ Applications: power plants, heat engines (direct cycles); refrigerator systems (
 
 \chapter{Thermodynamic transformations and thermomechanical systems}
 \label{\detokenize{ch/thermodynamic_transformations:thermodynamic-transformations-and-thermomechanical-systems}}\label{\detokenize{ch/thermodynamic_transformations:classical-thermodynamics-transformations}}\label{\detokenize{ch/thermodynamic_transformations::doc}}
+
+\section{Turbine}
+\label{\detokenize{ch/thermodynamic_transformations:turbine}}\label{\detokenize{ch/thermodynamic_transformations:classical-thermodynamics-transformations-turbine}}
+
+\section{Compressor}
+\label{\detokenize{ch/thermodynamic_transformations:compressor}}\label{\detokenize{ch/thermodynamic_transformations:classical-thermodynamics-transformations-compressor}}
 \sphinxstepscope
 
 
 
 
 \chapter{Thermodynamic cycles and heat engines}
-\label{\detokenize{ch/heat_engines:thermodynamic-cycles-and-heat-engines}}\label{\detokenize{ch/heat_engines:classical-thermodynamics-heat-engines}}\label{\detokenize{ch/heat_engines::doc}}
+\label{\detokenize{ch/heat-engines:thermodynamic-cycles-and-heat-engines}}\label{\detokenize{ch/heat-engines:classical-thermodynamics-heat-engines}}\label{\detokenize{ch/heat-engines::doc}}
 \sphinxAtStartPar
 \sphinxstylestrong{Direct and reversed thermodynamic cycles.} Direct cycles: transform heat to mechanical work. Reverset cycle: transform mechanical work to heat transfer (e.g. refrigeration/cooling \sphinxhyphen{} refrigerator cycles \sphinxhyphen{} or heating \sphinxhyphen{} heat pump cycles)
 
@@ -1594,8 +1600,178 @@ Applications: power plants, heat engines (direct cycles); refrigerator systems (
 \sphinxstylestrong{Ideal models of real cycles.} Otto, Diesel, Atkinson, Stirling (ICE), Rankine, Joule\sphinxhyphen{}Brayton
 
 \sphinxAtStartPar
-\sphinxstylestrong{Heat engines.} Reciprocating (piston)/reactive (turbine) engines
+\sphinxstylestrong{Principle.} Reciprocating (piston)/reactive (turbine) engines
 
+\sphinxAtStartPar
+\sphinxstylestrong{Circuit.} Open/close
+
+
+\section{Carnot cycle and heat engine}
+\label{\detokenize{ch/heat-engines:carnot-cycle-and-heat-engine}}\label{\detokenize{ch/heat-engines:classical-thermodynamics-heat-engines-carnot}}
+
+\subsection{Second principle of thermodynamics: Planck and Kelvin statements}
+\label{\detokenize{ch/heat-engines:second-principle-of-thermodynamics-planck-and-kelvin-statements}}\label{\detokenize{ch/heat-engines:id1}}
+
+\section{Heat engines and cycles}
+\label{\detokenize{ch/heat-engines:heat-engines-and-cycles}}\label{\detokenize{ch/heat-engines:classical-thermodynamics-heat-engines-real}}
+\sphinxAtStartPar
+In this section, the idealization/model of real thermodynamic cycles performed by real\sphinxhyphen{}life machines are discussed.
+
+
+\subsection{Otto}
+\label{\detokenize{ch/heat-engines:otto}}\label{\detokenize{ch/heat-engines:classical-thermodynamics-heat-engines-real-otto}}
+\sphinxAtStartPar
+\sphinxstylestrong{Introduction.}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Applications.}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Thermodynamic cycle.} Reciprocating operation, with (approximately%
+\begin{footnote}[1]\sphinxAtStartFootnote
+Combustion chamber is an approximately close system during a cycle between intake and exhaust, because of: 1. fuel injection, 2. leakage through the clearance between the walls of the piston and the cylinder.
+%
+\end{footnote}) close system between intake and exhaust processes:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\(0 \rightarrow 1\) intake, approximately isobaric
+
+\item {} 
+\sphinxAtStartPar
+\(1 \rightarrow 2\) adiabatic compression
+
+\item {} 
+\sphinxAtStartPar
+\(2 \rightarrow 3\) combustion, approximately isochoric at TDC: \sphinxstylestrong{spark ignition} usually makes combustion fast enough to be modeled as an immediate process occurring at TDC; this is in contast to {\hyperref[\detokenize{ch/heat-engines:classical-thermodynamics-heat-engines-real-diesel}]{\sphinxcrossref{\DUrole{std,std-ref}{Diesel engines}}}}, where combustion starts with self\sphinxhyphen{}ignition due to high temperature reached at the end of the compression
+
+\item {} 
+\sphinxAtStartPar
+\(3 \rightarrow 4\) adiabatic expansion
+
+\item {} 
+\sphinxAtStartPar
+\(4 \rightarrow 0\) exhaust, approximately isochoric BDC followed by isobaric
+
+\end{itemize}
+
+
+\subsection{Diesel}
+\label{\detokenize{ch/heat-engines:diesel}}\label{\detokenize{ch/heat-engines:classical-thermodynamics-heat-engines-real-diesel}}
+\sphinxAtStartPar
+\sphinxstylestrong{Introduction.}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Applications.}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Thermodynamic cycle.} Reciprocating operation, with (approximately\sphinxfootnotemark[1]) close system between intake and exhaust processes:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\(0 \rightarrow 1\) intake, approximately isobaric
+
+\item {} 
+\sphinxAtStartPar
+\(1 \rightarrow 2\) adiabatic compression
+
+\item {} 
+\sphinxAtStartPar
+\(2 \rightarrow 3\) combustion, approximately isobaric at TDC: \sphinxstylestrong{self ignition} usually triggers slower combustion if compared with {\hyperref[\detokenize{ch/heat-engines:classical-thermodynamics-heat-engines-real-otto}]{\sphinxcrossref{\DUrole{std,std-ref}{Otto engines}}}}, that can be modeled as an isobaric transformation
+
+\item {} 
+\sphinxAtStartPar
+\(3 \rightarrow 4\) adiabatic expansion
+
+\item {} 
+\sphinxAtStartPar
+\(4 \rightarrow 0\) exhaust, approximately isochoric BDC followed by isobaric
+
+\end{itemize}
+
+
+\subsection{Joule\sphinxhyphen{}Brayton}
+\label{\detokenize{ch/heat-engines:joule-brayton}}\label{\detokenize{ch/heat-engines:classical-thermodynamics-heat-engines-real-joule-brayton}}
+\sphinxAtStartPar
+\sphinxstylestrong{Introduction.} It’s the reference thermodynamic cycle for \sphinxstylestrong{gas turbine} heat engines. These systems have continuous operation and can work both in open (jet propulsion) and close cycles (electric power generation).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Applications.} Joule\sphinxhyphen{}Brayton close cycle is used in electric power generation: heat producesd by combustion is transferred to an operating fluid(chemical power to thermal power), entnering a turbine that converts “thermal power of the fluid” into mechanical power, then converted to electric power by an electric generator. Joule\sphinxhyphen{}Brayton open cycle is used for jet propulsion (typically for aircraft): operating fluid is usually air, undergoing the thermodynamic cylce through the jet engine; air is compressed before entering the combustion chamber, and released after passing throught a turbine: turbine extracts the power required to drive the compressor, and “extra power” contained in the fluid is used to accelerating exhaust fluid, producing thrust.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Thermodynamic cycle \sphinxhyphen{} close cycle.} Components involved in the system are usually open systems. Steady operation of these systems is described by balance of total enthalpy flux. Kinetic energy of the fhe fluid is usually negligible if compared with internal energy and enthapy: total entalphy reduces to \sphinxstylestrong{enthalpy}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\(1 \rightarrow 2\) adiabatic compression
+
+\item {} 
+\sphinxAtStartPar
+\(2 \rightarrow 3\) combustion, approximately isobaric at in combustion chamber
+
+\item {} 
+\sphinxAtStartPar
+\(3 \rightarrow 4\) adiabatic expansion
+
+\item {} 
+\sphinxAtStartPar
+\(4 \rightarrow 1\) isobaric cooling
+
+\end{itemize}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Thermodynamic cycle \sphinxhyphen{} open cycle.} Components involved in the system are usually open systems. Steady operation of these systems is described by balance of \sphinxstylestrong{total enthalpy} flux. Kinetic energy of the fhe fluid is usually \sphinxstylestrong{not} negligible if compared with internal energy and enthapy
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\(0 \rightarrow 1\) adiabatic compression in free air before or at the engine intake
+
+\item {} 
+\sphinxAtStartPar
+\(1 \rightarrow 2\) adiabatic compression in compressor
+
+\item {} 
+\sphinxAtStartPar
+\(2 \rightarrow 3\) combustion, approximately isobaric at in combustion chamber
+
+\item {} 
+\sphinxAtStartPar
+\(3 \rightarrow 4\) adiabatic expansion in turbine
+
+\item {} 
+\sphinxAtStartPar
+\(4 \rightarrow 5\) adiabatic expansion in the nozzle
+
+\end{itemize}
+
+
+\subsection{Rankine}
+\label{\detokenize{ch/heat-engines:rankine}}\label{\detokenize{ch/heat-engines:classical-thermodynamics-heat-engines-real-rankine}}
+\sphinxAtStartPar
+\sphinxstylestrong{Introduction.}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Application.}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Thermodynamic cycle.}
+
+
+\section{Applications}
+\label{\detokenize{ch/heat-engines:applications}}\label{\detokenize{ch/heat-engines:classical-thermodynamics-heat-engines-systems}}
+
+\subsection{Mechanical power}
+\label{\detokenize{ch/heat-engines:mechanical-power}}\label{\detokenize{ch/heat-engines:classical-thermodynamics-heat-engines-systems-engine}}
+
+\subsection{Power generation}
+\label{\detokenize{ch/heat-engines:power-generation}}\label{\detokenize{ch/heat-engines:classical-thermodynamics-heat-engines-systems-power-generation}}
+
+\subsection{Heat pump and/or refrigeration}
+\label{\detokenize{ch/heat-engines:heat-pump-and-or-refrigeration}}\label{\detokenize{ch/heat-engines:classical-thermodynamics-heat-engines-systems-heat-pump-refrigeration}}
+
+
+
+\bigskip\hrule\bigskip
 
 
 \sphinxstepscope
