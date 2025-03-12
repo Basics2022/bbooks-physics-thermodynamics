@@ -1,0 +1,745 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radiation &#8212; Classical Thermodynamics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/heat-transfer-radiation';</script>
+    <link rel="shortcut icon" href="../_static/favicon.svg"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Convection" href="heat-transfer-convection.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.svg" class="logo__image only-light" alt="Classical Thermodynamics - Home"/>
+    <script>document.write(`<img src="../_static/logo-dark.svg" class="logo__image only-dark" alt="Classical Thermodynamics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermodynamics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="history.html">Brief History of Thermodynamics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="principles.html">Principles of Thermodynamics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="principles-lavoisier.html">Lavoisier’s Principle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-first.html">First Law of Thermodynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-gibbs-phase-rule.html">Gibbs: Internal Energy, Phase Rule, and Multivariable Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-second.html">Second Law of Thermodynamics - Clausius Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-open.html">Open Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="potentials.html">Thermodynamics potentials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coefficients.html">Thermodynamic coefficients</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="media.html">Stati della materia e modelli</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ideal_gases.html">Gas ideali</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermal Engineering</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="thermal-engineering.html">Principles of Thermal Engineering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thermodynamic-transformations.html">Thermodynamic transformations and thermomechanical systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="heat-engines.html">Thermodynamic cycles and heat engines</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="heat-transfer.html">Heat transfer</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="heat-transfer-conduction.html">Conduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="heat-transfer-convection.html">Convection</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Radiation</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/ch/heat-transfer-radiation.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Radiation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planck-s-law">Planck’s law</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wien-s-law">Wien’s law</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-transfer-by-radiation">Energy transfer by radiation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stefan-boltzmann-law">Stefan-Boltzmann law</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#geometry-effects-on-radiation">Geometry effects on radiation</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#emissivity-and-coefficient-of-absorption">Emissivity and coefficient of absorption</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#kirchhoff-s-law">Kirchhoff’s law</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="radiation">
+<span id="classical-thermodynamics-heat-transmission-radiation"></span><h1>Radiation<a class="headerlink" href="#radiation" title="Permalink to this heading">#</a></h1>
+<p><span style="color:red">check all the nomenclature/definition</span></p>
+<div class="section" id="planck-s-law">
+<span id="classical-thermodynamics-heat-transmission-radiation-planck"></span><h2>Planck’s law<a class="headerlink" href="#planck-s-law" title="Permalink to this heading">#</a></h2>
+<div class="proof definition admonition" id="definition-0">
+<p class="admonition-title"><span class="caption-number">Definition 4 </span> (Black-body)</p>
+<div class="definition-content section" id="proof-content">
+</div>
+</div><p><strong>Spectral energy density</strong> for black-body radiation</p>
+<div class="math notranslate nohighlight">
+\[u_{f}(f, T) = \frac{8 \pi h f^3}{c^3} \frac{1}{e^{\frac{hf}{k_B T}} - 1}\]</div>
+<p>Spectral energy density has the physical dimension <span class="math notranslate nohighlight">\(\frac{\text{Energy}}{\text{Volume} \times \text{Frequency}}\)</span></p>
+<p><strong>Spectral radiance</strong> reads<a class="footnote-reference brackets" href="#spectral-radiance" id="id1">1</a> <span class="math notranslate nohighlight">\(B_f = \frac{1}{4 \pi} u_f(f,T) c\)</span> and thus for a black-body</p>
+<div class="math notranslate nohighlight">
+\[B_{f}(f, T) = \frac{2 h f^3}{c^2}\frac{1}{e^{\frac{hf}{k_B T}} - 1} \ .\]</div>
+<p>It has physical dimension <span class="math notranslate nohighlight">\(\frac{\text{Energy}}{\text{Volume} \times \text{Frequency}} \times \text{Velocity} = \frac{\text{Power}}{\text{Area} \times \text{Frequency}}\)</span>.</p>
+</div>
+<div class="section" id="wien-s-law">
+<span id="classical-thermodynamics-heat-transmission-radiation-wien"></span><h2>Wien’s law<a class="headerlink" href="#wien-s-law" title="Permalink to this heading">#</a></h2>
+<p>Wien’s law states that the maximum of the spectral energy is obtained at a frequency <span class="math notranslate nohighlight">\(f^*\)</span>, whose value is proportional with the temperature of the body.</p>
+<div class="math notranslate nohighlight">
+\[f^* = x^* \frac{k_B}{h} T \simeq 2.82  \frac{k_B}{h} T \ ,\]</div>
+<p>where <span class="math notranslate nohighlight">\(x^* \simeq 2.82\)</span> is the solution of the algebraic equation <span class="math notranslate nohighlight">\(3(1-e^x)-x=0\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Proof of Wien’s law<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">From direct evaluation of the derivative of the spectral radiance as a function of <span class="math notranslate nohighlight">\(f\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \partial_f B_{f}(f,T)
+  &amp; = \frac{2 h}{c^2} \left[ 3 f^2 \frac{1}{e^{\frac{hf}{k_B T}}-1} + f^3 \left(-\frac{\frac{h}{k_B T} e^{\frac{hf}{k_B T}}}{\left( e^{\frac{hf}{k_B T}} - 1 \right)^2}  \right) \right] = \\
+  &amp; = \frac{2 h f^2 e^{\frac{hf}{k_B T}}}{c^2 \left( e^{\frac{hf}{k_B T}} - 1 \right)^2} \left[ 3 \left( 1 - e^{-\frac{hf}{k_B T}} \right) - \frac{h f}{k_B T}  \right] \ .
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Now, if <span class="math notranslate nohighlight">\(\partial_f B_{f}(f,T) = 0\)</span> the frequency is either <span class="math notranslate nohighlight">\(f = 0\)</span>, or the solution of the nonlinear algebraic equation</p>
+<div class="math notranslate nohighlight">
+\[0 = 3 \left(1 - e^{-\frac{h f}{k_B T}} \right) - \frac{hf}{k_B T} \ .\]</div>
+<p class="sd-card-text">Defining <span class="math notranslate nohighlight">\(x := \frac{h f}{k_B T}\)</span>, this equation becomes</p>
+<div class="math notranslate nohighlight">
+\[0 = 3 (1 - e^x) - x \ ,\]</div>
+<p class="sd-card-text">whose solution <span class="math notranslate nohighlight">\(x^* \approx 2.82\)</span> can be easily evaluated with an iterative method (or expressed in term of the Lambert’s function <span class="math notranslate nohighlight">\(W\)</span>, so loved at Stanford and on Youtube: they’d probaly like to look at tabulated values, or pose). Once the solution <span class="math notranslate nohighlight">\(x^*\)</span> of this non-dimensional equation is found, the frequency where maximum energy density occurs reads</p>
+<div class="math notranslate nohighlight">
+\[f^* = \frac{k_B T}{h} x^* \simeq 2.82 \frac{k_B}{h} T \ .\]</div>
+</div>
+</details></div>
+<div class="section" id="energy-transfer-by-radiation">
+<span id="classical-thermodynamics-heat-transmission-radiation-energy-transfer"></span><h2>Energy transfer by radiation<a class="headerlink" href="#energy-transfer-by-radiation" title="Permalink to this heading">#</a></h2>
+<p>A list of physical quantities used to describe a radiation process follows.</p>
+<ul class="simple">
+<li><p><strong>Radiant flux</strong>, <span class="math notranslate nohighlight">\(\Phi_e\)</span>. Physical dimension: <span class="math notranslate nohighlight">\(\text{W}\)</span></p></li>
+<li><p><strong>Radiant intensity</strong> <span class="math notranslate nohighlight">\(I_{e, \Omega}\)</span> is the radiant flux per unit solid angle <span class="math notranslate nohighlight">\(\Omega\)</span>. Physical dimension: <span class="math notranslate nohighlight">\(\frac{\text{W}}{\text{sr}}\)</span></p></li>
+<li><p><strong>Spectral radiant intensity</strong> <span class="math notranslate nohighlight">\(I_{e, \Omega, f}\)</span> is the radiant flux per unit solid angle per frequency of the radiation: <span class="math notranslate nohighlight">\(\frac{\text{W}}{\text{sr} \, \text{Hz}}\)</span></p></li>
+<li><p><strong>Radiant exitance</strong>, <span class="math notranslate nohighlight">\(M_e\)</span> is the flux across an emispherical receiver surface, per unit surface of the source. Physical dimension <span class="math notranslate nohighlight">\(\frac{\text{W}}{\text{Area}}\)</span></p></li>
+</ul>
+<div class="proof definition admonition" id="definition-1">
+<p class="admonition-title"><span class="caption-number">Definition 5 </span> (Lambert medium)</p>
+<div class="definition-content section" id="proof-content">
+<p>A Lambert medium is defined as a medium that follows <strong>Lambert cosine law</strong>,</p>
+<div class="math notranslate nohighlight">
+\[I_{1}(\vec{r}_{12}, \hat{n}_1) = I_{1,0} \, \hat{r}_{12} \cdot \hat{n}_1 \ ,\]</div>
+<p>with <span class="math notranslate nohighlight">\(\vec{r}_{12} = \vec{r}_2 - \vec{r}_1\)</span>.</p>
+</div>
+</div><p>Elementary power flux of the radiation emitted by a source in <span class="math notranslate nohighlight">\(1\)</span> through a solid angle <span class="math notranslate nohighlight">\(d \Omega_{21}\)</span>, as seen from <span class="math notranslate nohighlight">\(1\)</span>, reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  d P_{1 \rightarrow 2}
+  &amp; = I_{1}(\vec{r}_{12}, \hat{n}_1) \, d \Omega_{2/1} \\
+\end{aligned}\end{split}\]</div>
+<p>The solid angle <span class="math notranslate nohighlight">\(d \Omega_{21}\)</span> of a surface <span class="math notranslate nohighlight">\(d S_2\)</span> as seen from a point in <span class="math notranslate nohighlight">\(\vec{r}_1\)</span> is <span class="math notranslate nohighlight">\(d \Omega_{21} = \frac{\hat{n}_2 \cdot \vec{r}_{12}}{|\vec{r}_{12}|^3} \, dS_2\)</span>. From the expression of the elementary power flux,</p>
+<div class="math notranslate nohighlight">
+\[
+ d P_{1 \rightarrow 2} = I_{1}(\vec{r}_{12}, \hat{n}_1) \, \frac{\vec{r}_{12} }{|\vec{r}_{12}|^3} \cdot \hat{n}_2 \, dS_2 = \vec{s}_{12} \cdot \hat{n}_2 \, dS_2 \ ,
+\]</div>
+<p>it’s possible to find the expression of the power flux density vector</p>
+<div class="math notranslate nohighlight">
+\[\vec{s}_{12} = I_{12} \frac{\vec{r}_{12}}{|\vec{r}_{12}|^3} \ .\]</div>
+<p>For a Lambert medium then</p>
+<div class="math notranslate nohighlight" id="equation-power-flux-radiant-intensity">
+<span class="eqno">(6)<a class="headerlink" href="#equation-power-flux-radiant-intensity" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
+ d P_{1 \rightarrow 2}
+ &amp; = I_{1}(\vec{r}_{12}, \hat{n}_1) \, \frac{\vec{r}_{12} }{|\vec{r}_{12}|^3} \cdot \hat{n}_2 \, dS_2 = \\
+ &amp; = I_{0,1} \frac{\vec{r}_{12}}{|\vec{r}_{12}|} \cdot \hat{n}_1 \, \frac{\vec{r}_{12} }{|\vec{r}_{12}|^3} \cdot \hat{n}_2 \, dS_2 \ .
+\end{aligned}\end{split}\]</div>
+<div class="section" id="stefan-boltzmann-law">
+<span id="classical-thermodynamics-heat-transmission-radiation-stefan-boltzmann"></span><h3>Stefan-Boltzmann law<a class="headerlink" href="#stefan-boltzmann-law" title="Permalink to this heading">#</a></h3>
+<p>The <strong>radiant exitance</strong>, <span class="math notranslate nohighlight">\(M_e^\circ\)</span>, - i.e. the total power through an emisphere emitted by a source, per unit area of the source - of a black body at temperature <span class="math notranslate nohighlight">\(T_1\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[M_e^\circ = \sigma T_1^4 \ ,\]</div>
+<p>with the <strong>Stefan-Boltzmann constant</strong>, <span class="math notranslate nohighlight">\(\sigma = 5.67 \cdot 10^{-8} \frac{\text{W}}{\text{m}^2 \text{K}^4}\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Total radiation and Stefan-Boltzmann constant <span class="math notranslate nohighlight">\(\ \sigma\)</span><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Integration over frequency <span class="math notranslate nohighlight">\(f \in [0, +\infty]\)</span>, and over an emisphere receiver surface (or better, over the equivalent solid angle) for a Lambert medium provide the <strong>radiant exitance</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  M_{e}^\circ = M_{1,2^{emisphere}}
+  &amp; = \frac{d P_{1 \rightarrow 2}}{d S_1} = \\
+  &amp; = \int_{f=0}^{+\infty} \int_{\Omega_{emisphere}} I_{1,0}(f) \cos \theta_{12} \, df \, d\Omega_{2/1} = \\
+  &amp; = \int_{f=0}^{+\infty}I_{1,0}(f) \, df \, \int_{\phi = 0}^{2\pi} \int_{\theta=0}^{\pi_2} \cos \theta \sin \theta \, d \theta \, d\phi \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">with the solid angle with spherical coordinates, <span class="math notranslate nohighlight">\(d\Omega_{2/1} = \sin \theta \, d \theta \, d\phi\)</span>. The geometric integral gives</p>
+<div class="math notranslate nohighlight">
+\[
+  \int_{\phi = 0}^{2\pi} \int_{\theta=0}^{\pi_2} \cos \theta_{} \, d \theta \, d\phi = \pi \ .
+\]</div>
+<p class="sd-card-text">For a black-body the integral over frequency gives</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \int_{f = 0}^{+\infty} I_{1,0}(f) \, df
+  &amp; = \int_{f=0}^{+\infty} \frac{2 h f^3}{c^2} \frac{1}{e^{\frac{hf}{k_B T}}-1} \, df \\
+  &amp; = T^4 \frac{2 h}{c^2} \left(\frac{k_B}{h}\right)^4 \int_{u=0}^{+\infty} \frac{u^3}{e^u-1} \, du =: T^4 \frac{\sigma}{\pi} \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">i.e. it’s proportional to <span class="math notranslate nohighlight">\(T^4\)</span> with a constant of proportionality built on constants of nature, speed of light <span class="math notranslate nohighlight">\(c\)</span>, Boltzmann constant <span class="math notranslate nohighlight">\(k_B\)</span>, and Planck constant <span class="math notranslate nohighlight">\(h\)</span>. The integral is non-dimensional and its value<a class="footnote-reference brackets" href="#stefan-boltzmann-integral" id="id2">2</a> is <span class="math notranslate nohighlight">\(\frac{\pi^4}{15}\)</span>. <strong>Stefan-Boltzmann constant</strong> <span class="math notranslate nohighlight">\(\sigma\)</span> is then defined as</p>
+<div class="math notranslate nohighlight">
+\[\sigma := \pi \cdot \frac{2 h}{c^2} \left( \frac{k_B}{h} \right)^4 \int_{u=0}^{+\infty} \frac{u^3}{e^{u}-1} du = \frac{2 \pi^5}{15}\frac{k_B^4}{c^2 h^3} = 5.67 \cdot 10^{-8} \frac{\text{W}}{\text{m}^2 \text{K}^4} \ .\]</div>
+</div>
+</details><p>Integration over a generic surface <span class="math notranslate nohighlight">\(S_2\)</span> of the power flux emitted by a source <span class="math notranslate nohighlight">\(1\)</span> per unit surface of the source gives</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  M_{12} = \frac{d P_{1 \rightarrow 2} }{d S_1} = T_1^4 \, \frac{\sigma}{\pi} \int_{S_2} \hat{n}_1 \cdot \frac{\vec{r}_{12}}{|\vec{r}_{12}|} \, \frac{\vec{r}_{12}}{|\vec{r}_{12}|^3} \cdot \hat{n}_2 \, dS_2
+\end{aligned}\]</div>
+<p>Thus the elementary power per unit surface of the source <span class="math notranslate nohighlight">\(1\)</span> and the receiver <span class="math notranslate nohighlight">\(2\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[dP_{1 \rightarrow 2} = T_1^4 \, \frac{\sigma}{\pi} \, \hat{n}_1 \cdot \frac{\vec{r}_{12}}{|\vec{r}_{12}|} \, \frac{\vec{r}_{12}}{|\vec{r}_{12}|^3} \cdot \hat{n}_2 \, dS_1 \, dS_2 \]</div>
+<p>Comparing this expression of the power flux from source <span class="math notranslate nohighlight">\(1\)</span> to the elementary surface <span class="math notranslate nohighlight">\(d S_2\)</span> with the expression <a class="reference internal" href="#equation-power-flux-radiant-intensity">(6)</a> using the radiant intensity <span class="math notranslate nohighlight">\(I_{0,1}\)</span>, it immediately follows that the elementary radiant intensity <span class="math notranslate nohighlight">\(d I_{0,1}\)</span> of the elementary surface <span class="math notranslate nohighlight">\(d S_1\)</span> of the source reads</p>
+<div class="math notranslate nohighlight">
+\[d I_{0,1} = T_1^4 \, \frac{\sigma}{\pi} \, d S_1 \ .\]</div>
+<div class="section" id="geometry-effects-on-radiation">
+<span id="classical-thermodynamics-heat-transmission-radiation-stefan-boltzmann-geometry"></span><h4>Geometry effects on radiation<a class="headerlink" href="#geometry-effects-on-radiation" title="Permalink to this heading">#</a></h4>
+<p>The elementary power is the product of <span class="math notranslate nohighlight">\(\frac{\sigma T_1^4}{\pi}\)</span> and a factor depending only on the geometry of the problem,</p>
+<div class="math notranslate nohighlight">
+\[d G_{12} := \hat{n}_1 \cdot \frac{\vec{r}_{12}}{|\vec{r}_{12}|} \, \frac{\vec{r}_{12}}{|\vec{r}_{12}|^3} \cdot \hat{n}_2 \, dS_1 \, dS_2 \ .\]</div>
+<p>This factor is <strong>symmetric</strong>, i.e. inverting the roles of the source and the receiver is irrelevant. Letting <span class="math notranslate nohighlight">\(G_{12} = \int_{S_1} \int_{S_2} dG_{12}\)</span>, if the source surface <span class="math notranslate nohighlight">\(1\)</span> has uniform temperature <span class="math notranslate nohighlight">\(T_1\)</span> and the receiver surface has uniform temperature <span class="math notranslate nohighlight">\(T_2\)</span>, (and assuming <a class="reference internal" href="#classical-thermodynamics-heat-transmission-radiation-emittivity"><span class="std std-ref">emissvity</span></a> <span class="math notranslate nohighlight">\(\varepsilon = 1\)</span>, for black-bodies) thus the power fluxes from <span class="math notranslate nohighlight">\(1\)</span> to <span class="math notranslate nohighlight">\(2\)</span> and from <span class="math notranslate nohighlight">\(2\)</span> to <span class="math notranslate nohighlight">\(1\)</span> read</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  P_{1 \rightarrow 2} &amp; = T_1^4 \frac{\sigma}{\pi} G_{12} \\
+  P_{2 \rightarrow 1} &amp; = T_2^4 \frac{\sigma}{\pi} G_{12} \ .
+\end{aligned}\end{split}\]</div>
+<p>Thus the net power into surfaces <span class="math notranslate nohighlight">\(1\)</span> and <span class="math notranslate nohighlight">\(2\)</span> are</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  P_{\rightarrow 1} &amp; = P_{2 \rightarrow 1} - P_{1 \rightarrow 2} \\
+  P_{\rightarrow 2} &amp; = P_{1 \rightarrow 2} - P_{2 \rightarrow 1} \ ,
+\end{aligned}\end{split}\]</div>
+<p>so that <span class="math notranslate nohighlight">\(P_{\rightarrow 1} + P_{\rightarrow 2} = 0\)</span>.</p>
+<p>In the limit of <strong>small surfaces compared with their distance</strong>, an approximate expression of the integral <span class="math notranslate nohighlight">\(\int_{S_1} \int_{S_2} d G\)</span> allows to write the power transmitted by radiation from surface <span class="math notranslate nohighlight">\(1\)</span> to surface <span class="math notranslate nohighlight">\(2\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  P_{1 \rightarrow 2} = \frac{\sigma T_1^4}{\pi} G_{12} 
+    = \frac{\sigma T_1^4}{\pi} A_{1, \perp \vec{r}_{12}} \Omega_{2/1}
+    = \frac{\sigma T_1^4}{\pi} A_{2, \perp \vec{r}_{12}} \Omega_{1/2}
+\end{aligned}\]</div>
+<p>i.e. as the product of the radiant … <strong>todo</strong> <em>find the right term</em> <span class="math notranslate nohighlight">\(\frac{\sigma T_1^4}{\pi}\)</span>, the projection of the surface <span class="math notranslate nohighlight">\(S_{1}\)</span> in a plane orthogonal to the distance vector <span class="math notranslate nohighlight">\(\vec{r}_{12}\)</span> and the solid angle <span class="math notranslate nohighlight">\(\Omega_{2/1}\)</span> of the surface <span class="math notranslate nohighlight">\(2\)</span> as seen by surface <span class="math notranslate nohighlight">\(1\)</span>, or viceversa.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Proof of the small surface limit<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+</div>
+</details></div>
+</div>
+<div class="section" id="emissivity-and-coefficient-of-absorption">
+<span id="classical-thermodynamics-heat-transmission-radiation-emittivity"></span><h3>Emissivity and coefficient of absorption<a class="headerlink" href="#emissivity-and-coefficient-of-absorption" title="Permalink to this heading">#</a></h3>
+<p>The radiation emission of a generic body differs from the radiation of a black-body. Its emittance can be written comparing its emission with that of of a black body. In general, the emission could differ as a function of the frequency of the radiation and the direction of the radiation.</p>
+<p>…</p>
+<p>If there’s no dependence on <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\hat{r}\)</span> - or taking the average values, neglecting the dependence on <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\hat{r}\)</span> if using the average coefficient - the radiant exitance is</p>
+<div class="math notranslate nohighlight">
+\[M_1 = \varepsilon_1 \sigma T_1^4 \ .\]</div>
+<p>Reflection coefficient <span class="math notranslate nohighlight">\(r\)</span> and absorbtion (or transmission) coefficient <span class="math notranslate nohighlight">\(a\)</span> are then defined as the reflected and absorbed ratios of the incident radiation. Given incident radiation with power <span class="math notranslate nohighlight">\(P_i\)</span>, power of reflected and absorbed radiation reads</p>
+<div class="math notranslate nohighlight">
+\[P_r = r \, P_i \quad , \quad P_a = a \, P_i \ .\]</div>
+<p>and for “power balance”, the sum of absorbed and reflected power must be equal to the incident power</p>
+<div class="math notranslate nohighlight">
+\[P_i = P_r + P_a \ ,\]</div>
+<p>and thus the coefficients must satistfy the following relation <strong>check</strong> <em>check the definition of the coefficients, if they should take into account the emission…</em></p>
+<div class="math notranslate nohighlight">
+\[1 = r + a \ .\]</div>
+<div class="proof example dropdown admonition" id="example-2">
+<p class="admonition-title"><span class="caption-number">Example 19 </span> (Energy exchange in isolated systems and relations between coefficients - <strong>todo</strong> <strong>check</strong>)</p>
+<div class="example-content section" id="proof-content">
+<p>Radiation transmission is assumed to be instantaneous here: this assumption holds for bodies close enough for the time <span class="math notranslate nohighlight">\(\Delta t = \frac{d_{12}}{c}\)</span> to be small enough to be treated as zero.</p>
+<p>A system composed of two bodies. Energy balance of a body immediately follows the first principle of thermodynamics: time derivative of energy of a system equals the net power done on the system. Here the net power equals the difference between the absorbed incoming power and the emitted power,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases} 
+  \dot{E}_1 = P^a_{\rightarrow 1} - P_1^e \\
+  \dot{E}_2 = P^a_{\rightarrow 2} - P_2^e
+\end{cases}\end{split}\]</div>
+<p><strong>Incoming power.</strong> The incoming power is due to the power emitted and reflected by the other body,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  P_{\rightarrow 1} = P_{2}^e + r_2 P_{\rightarrow 2} \\
+  P_{\rightarrow 2} = P_{1}^e + r_1 P_{\rightarrow 1} 
+\end{cases}\end{split}\]</div>
+<p>From these two relations, the incoming powers can be explitly written as function of the emitted powers,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  P_{\rightarrow 1} = \dfrac{P_2^e + r_2 P_1^e}{1 - r_1 r_2} \\
+  P_{\rightarrow 2} = \dfrac{P_1^e + r_1 P_2^e}{1 - r_1 r_2}
+\end{cases}\end{split}\]</div>
+<p><strong>Energy balance of the system.</strong> Energy of an isolated system is constant and thus the dime derivative of the energy is zero,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0
+  &amp; = \dot{E} = \dot{E}_1 + \dot{E}_2 = \\
+  &amp; = a_1 \dfrac{P_2^e + r_2 P_1^e}{1 - r_1 r_2} - P_1^e + a_2 \dfrac{P_1^e + r_1 P_2^e}{1 - r_1 r_2} - P_2^e = \\ 
+  &amp; = P_1 \frac{a_2 + a_1 r_2 - 1 + r_1 r_2}{1 - r_1 r_2} + P_2 \frac{a_1 + a_2 r_1 - 1 + r_1 r_2}{1 - r_1 r_2} \\ 
+  &amp; = T_1^4 \sigma \varepsilon_1 \frac{a_2 + a_1 r_2 - 1 + r_1 r_2}{1 - r_1 r_2} + T_2^4 \sigma \varepsilon_2 \frac{a_1 + a_2 r_1 - 1 + r_1 r_2}{1 - r_1 r_2} \ . 
+\end{aligned}\end{split}\]</div>
+<p>If this relation must hold in any condition, for any value of the emitted powers and for any independent choice of the materials of the bodies, the coefficients must be zero</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  a_2 + a_1 r_2 - 1 + r_1 r_2 = 0 \\
+  a_1 + a_2 r_1 - 1 + r_1 r_2 = 0 \\
+\end{cases}\end{split}\]</div>
+<p>Subtracting,</p>
+<div class="math notranslate nohighlight">
+\[a_2 (1 - r_1) = a_1 (1 - r_2) \ ,\]</div>
+<p>and, since the relation must hold for any choice of pair of materials, the relation <span class="math notranslate nohighlight">\(a_1 = 1 - r_1\)</span> is found again.</p>
+<p><strong>Bodies in thermal equlibrium.</strong> If each body is in thermal equilibrium,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  0 = \dfrac{P_2^e + r_2 P^{e}_1}{ 1 - r_1 r_2} - P_1^e = \sigma G_{12} \dfrac{ \varepsilon_2 T_2^4 + ( r_2 - 1 + r_1 r_2 ) \varepsilon_1 T_1^4 }{ 1 - r_1 r_2 } \\
+  0 = \dfrac{P_1^e + r_1 P^{e}_2}{ 1 - r_1 r_2} - P_2^e = \sigma G_{12} \dfrac{ \varepsilon_1 T_1^4 + ( r_1 - 1 + r_1 r_2 ) \varepsilon_2 T_2^4 }{ 1 - r_1 r_2 } \\
+\end{cases}\end{split}\]</div>
+</div>
+</div><div class="section" id="kirchhoff-s-law">
+<h4>Kirchhoff’s law<a class="headerlink" href="#kirchhoff-s-law" title="Permalink to this heading">#</a></h4>
+<p>For systems in thermodynamic equilibrium,…</p>
+<ul class="simple">
+<li><p>constant ratio of…</p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha = \varepsilon\)</span>? for a system in thermal equilibrium <strong>only</strong></p></li>
+</ul>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="spectral-radiance"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Show how to get this expression from the spectral energy density.</p>
+</dd>
+<dt class="label" id="stefan-boltzmann-integral"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p><strong>todo</strong> Evaluate it</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./ch"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="heat-transfer-convection.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Convection</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planck-s-law">Planck’s law</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wien-s-law">Wien’s law</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-transfer-by-radiation">Energy transfer by radiation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stefan-boltzmann-law">Stefan-Boltzmann law</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#geometry-effects-on-radiation">Geometry effects on radiation</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#emissivity-and-coefficient-of-absorption">Emissivity and coefficient of absorption</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#kirchhoff-s-law">Kirchhoff’s law</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By basics
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
