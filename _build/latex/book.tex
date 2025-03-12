@@ -85,7 +85,7 @@
         
 
 \title{Classical Thermodynamics}
-\date{Jan 27, 2025}
+\date{Mar 12, 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -1495,7 +1495,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-Jan 27, 2025
+Mar 12, 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -1849,17 +1849,227 @@ Combustion chamber is an approximately close system during a cycle between intak
 Three main heat transfer mechanisms exist: conduction, convection, radiation.
 
 \sphinxAtStartPar
-\sphinxstylestrong{Conduction.} Main heat transfer mechanism in solid media: molecules of the solid are not free to move and conduction is a diffusion process of the microscopical thermal agitation of the molecules of the solid structure.
+{\hyperref[\detokenize{ch/heat-transfer-conduction:classical-thermodynamics-heat-transmission-conduction}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Conduction}}}}}. Main heat transfer mechanism in solid media: molecules of the solid are not free to move and conduction is a diffusion process of the microscopical thermal agitation of the molecules of the solid structure.
 
 \sphinxAtStartPar
-\sphinxstylestrong{Convection.} Main heat transfer machanism in fluid media: moldeculus of the fluid are free to move; as they move, they transport “thermal energy” and xechange heat with the surrounding environment.
+{\hyperref[\detokenize{ch/heat-transfer-convection:classical-thermodynamics-heat-transmission-convection}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Convection}}}}}. Main heat transfer machanism in fluid media: moldeculus of the fluid are free to move; as they move, they transport “thermal energy” and xechange heat with the surrounding environment.
 
 \sphinxAtStartPar
-\sphinxstylestrong{Radiation.} It’s the only heat transfer mechanism that needs no matter to occur, as it can occur in “vacuum”%
+{\hyperref[\detokenize{ch/heat-transfer-radiation:classical-thermodynamics-heat-transmission-radiation}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Radiation}}}}}. It’s the only heat transfer mechanism that needs no matter to occur, as it can occur in “vacuum”%
 \begin{footnote}[1]\sphinxAtStartFootnote
 Vacuum of matter, mass, but not physical properties, as the dielectric constant and magnetic permeability of free space/”vacuum”.
 %
 \end{footnote}
+
+
+\bigskip\hrule\bigskip
+
+
+\sphinxstepscope
+
+
+\section{Conduction}
+\label{\detokenize{ch/heat-transfer-conduction:conduction}}\label{\detokenize{ch/heat-transfer-conduction:classical-thermodynamics-heat-transmission-conduction}}\label{\detokenize{ch/heat-transfer-conduction::doc}}
+\sphinxstepscope
+
+
+\section{Convection}
+\label{\detokenize{ch/heat-transfer-convection:convection}}\label{\detokenize{ch/heat-transfer-convection:classical-thermodynamics-heat-transmission-convection}}\label{\detokenize{ch/heat-transfer-convection::doc}}
+\sphinxstepscope
+
+
+\section{Radiation}
+\label{\detokenize{ch/heat-transfer-radiation:radiation}}\label{\detokenize{ch/heat-transfer-radiation:classical-thermodynamics-heat-transmission-radiation}}\label{\detokenize{ch/heat-transfer-radiation::doc}}
+\sphinxAtStartPar
+check all the nomenclature/definition
+
+
+\subsection{Planck’s law}
+\label{\detokenize{ch/heat-transfer-radiation:planck-s-law}}
+\sphinxAtStartPar
+\sphinxstylestrong{Spectral energy density} for black\sphinxhyphen{}body radiation
+\begin{equation*}
+\begin{split}u_{f}(f, T) = \frac{8 \pi h f^3}{c^3} \frac{1}{e^{\frac{hf}{k_B T}} - 1}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Spectral energy density has the physical dimension \(\frac{\text{Energy}}{\text{Volume} \times \text{Frequency}}\)
+
+\sphinxAtStartPar
+\sphinxstylestrong{Spectral radiance} reads%
+\begin{footnote}[1]\sphinxAtStartFootnote
+Show how to get this expression from the spectral energy density.
+%
+\end{footnote} \(B_f = \frac{1}{4 \pi} u_f(f,T) c\) and thus for a black\sphinxhyphen{}body
+\begin{equation*}
+\begin{split}B_{f}(f, T) = \frac{2 h f^3}{c^2}\frac{1}{e^{\frac{hf}{k_B T}} - 1} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+It has physical dimension \(\frac{\text{Energy}}{\text{Volume} \times \text{Frequency}} \times \text{Velocity} = \frac{\text{Power}}{\text{Area} \times \text{Frequency}}\).
+
+
+\subsection{Wien’s law}
+\label{\detokenize{ch/heat-transfer-radiation:wien-s-law}}
+\sphinxAtStartPar
+Wien’s law states that the maximum of the spectral energy is obtained at a frequency \(f^*\), whose value is proportional with the temperature of the body.
+\begin{equation*}
+\begin{split}f^* = x^* \frac{k_B}{h} T \simeq 2.82  \frac{k_B}{h} T \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where \(x^* \simeq 2.82\) is the solution of the algebraic equation \(3(1-e^x)-x=0\).
+\subsubsection*{Proof of Wien’s law}
+
+\sphinxAtStartPar
+From direct evaluation of the derivative of the spectral radiance as a function of \(f\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_f B_{f}(f,T)
+  & = \frac{2 h}{c^2} \left[ 3 f^2 \frac{1}{e^{\frac{hf}{k_B T}}-1} + f^3 \left(-\frac{\frac{h}{k_B T} e^{\frac{hf}{k_B T}}}{\left( e^{\frac{hf}{k_B T}} - 1 \right)^2}  \right) \right] = \\
+  & = \frac{2 h f^2 e^{\frac{hf}{k_B T}}}{c^2 \left( e^{\frac{hf}{k_B T}} - 1 \right)^2} \left[ 3 \left( 1 - e^{-\frac{hf}{k_B T}} \right) - \frac{h f}{k_B T}  \right] \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Now, if \(\partial_f B_{f}(f,T) = 0\) the frequency is either \(f = 0\), or the solution of the nonlinear algebraic equation
+\begin{equation*}
+\begin{split}0 = 3 \left(1 - e^{-\frac{h f}{k_B T}} \right) - \frac{hf}{k_B T} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Defining \(x := \frac{h f}{k_B T}\), this equation becomes
+\begin{equation*}
+\begin{split}0 = 3 (1 - e^x) - x \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+whose solution \(x^* \approx 2.82\) can be easily evaluated with an iterative method (or expressed in term of the Lambert’s function \(W\), so loved at Stanford and on Youtube: they’d probaly like to look at tabulated values, or pose). Once the solution \(x^*\) of this non\sphinxhyphen{}dimensional equation is found, the frequency where maximum energy density occurs reads
+\begin{equation*}
+\begin{split}f^* = \frac{k_B T}{h} x^* \simeq 2.82 \frac{k_B}{h} T \ .\end{split}
+\end{equation*}
+
+\subsection{Energy transfer by radiation}
+\label{\detokenize{ch/heat-transfer-radiation:energy-transfer-by-radiation}}
+\sphinxAtStartPar
+A list of physical quantities used to describe a radiation process follows.
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Radiant flux}, \(\Phi_e\). Physical dimension: \(\text{W}\)
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Radiant Intensity} \(I_{e, \Omega}\) is the radiant flux per unit solid angle \(\Omega\). Physical dimension: \(\frac{\text{W}}{\text{sr}}\)
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Spectral radiant intensity} \(I_{e, \Omega, f}\) is the radiant flux per unit solid angle per frequency of the radiation: \(\frac{\text{W}}{\text{sr} \, \text{Hz}}\)
+
+\end{itemize}
+\label{ch/heat-transfer-radiation:definition-0}
+\begin{sphinxadmonition}{note}{Definition 4 (Lambert medium)}
+
+
+
+\sphinxAtStartPar
+A Lambert medium is defined as a medium that follows \sphinxstylestrong{Lambert cosine law},
+\begin{equation*}
+\begin{split}I_{1}(\vec{r}_{12}, \hat{n}_1) = I_{1,0} \, \hat{r}_{12} \cdot \hat{n}_1 \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(\vec{r}_{12} = \vec{r}_2 - \vec{r}_1\).
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+Elementary power flux of the radiation emitted by a source in \(1\) through a solid angle \(d \Omega_{21}\), as seen from \(1\), reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  d P_{1 \rightarrow 2}
+  & = I_{1}(\vec{r}_{12}, \hat{n}_1) \, d \Omega_{12} \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The solid angle \(d \Omega_{21}\) of a surface \(d S_2\) as seen from a point in \(\vec{r}_1\) is \(d \Omega_{21} = \frac{\hat{n}_2 \cdot \vec{r}_{12}}{|\vec{r}_{12}|^3} \, dS_2\). From the expression of the elementary power flux,
+\begin{equation*}
+\begin{split}
+ d P_{1 \rightarrow 2} = I_{1}(\vec{r}_{12}, \hat{n}_1) \, \frac{\vec{r}_{12} }{|\vec{r}_{12}|^3} \cdot \hat{n}_2 \, dS_2 = \vec{s}_{12} \cdot \hat{n}_2 \, dS_2 \ ,
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+it’s possible to find the expression of the power flux density vector
+\begin{equation*}
+\begin{split}\vec{s}_{12} = I_{12} \frac{\vec{r}_{12}}{|\vec{r}_{12}|^3} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+For a Lambert medium then
+\begin{equation}\label{equation:ch/heat-transfer-radiation:power-flux:radiant-intensity}
+\begin{split}\begin{aligned}
+ d P_{1 \rightarrow 2}
+ & = I_{1}(\vec{r}_{12}, \hat{n}_1) \, \frac{\vec{r}_{12} }{|\vec{r}_{12}|^3} \cdot \hat{n}_2 \, dS_2 = \\
+ & = I_{0,1} \frac{\vec{r}_{12}}{|\vec{r}_{12}|} \cdot \hat{n}_1 \, \frac{\vec{r}_{12} }{|\vec{r}_{12}|^3} \cdot \hat{n}_2 \, dS_2 \ .
+\end{aligned}\end{split}
+\end{equation}
+
+\subsubsection{Stefan\sphinxhyphen{}Boltzmann law}
+\label{\detokenize{ch/heat-transfer-radiation:stefan-boltzmann-law}}\subsubsection*{Total radiation and Stefan\sphinxhyphen{}Boltzmann constant \protect\(\ \sigma\protect\)}
+
+\sphinxAtStartPar
+Integration over frequency \(f \in [0, +\infty]\), and over an emisphere receiver surface (or better, over the equivalent solid angle) for a Lambert medium
+\begin{equation*}
+\begin{split}\begin{aligned}
+  M_{1,2^{emisphere}}
+  & = \frac{d P_{1 \rightarrow 2}}{d S_1} = \\
+  & = \int_{f=0}^{+\infty} \int_{\Omega_{emisphere}} I_{1,0}(f) \cos \theta_{12} \, df \, d\Omega_{12} = \\
+  & = \int_{f=0}^{+\infty}I_{1,0}(f) \, df \, \int_{\phi = 0}^{2\pi} \int_{\theta=0}^{\pi_2} \cos \theta \sin \theta \, d \theta \, d\phi \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with the solid angle with spherical coordinates, \(d\Omega_{12} = \sin \theta \, d \theta \, d\phi\). The geometric integral gives
+\begin{equation*}
+\begin{split}
+  \int_{\phi = 0}^{2\pi} \int_{\theta=0}^{\pi_2} \cos \theta_{} \, d \theta \, d\phi = \pi \ .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+For a black\sphinxhyphen{}body the integral over frequency gives
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \int_{f = 0}^{+\infty} I_{1,0}(f) \, df
+  & = \int_{f=0}^{+\infty} \frac{2 h f^3}{c^2} \frac{1}{e^{\frac{hf}{k_B T}}-1} \, df \\
+  & = T^4 \frac{2 h}{c^2} \left(\frac{k_B}{h}\right)^4 \int_{u=0}^{+\infty} \frac{u^3}{e^u-1} \, du =: T^4 \frac{\sigma}{\pi} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+i.e. it’s proportional to \(T^4\) with a constant of proportionality built on constants of nature, speed of light \(c\), Boltzmann constant \(k_B\), and Planck constant \(h\). The integral is non\sphinxhyphen{}dimensional and its value%
+\begin{footnote}[2]\sphinxAtStartFootnote
+\sphinxstylestrong{todo} Evaluate it
+%
+\end{footnote} is \(\frac{\pi^4}{15}\). \sphinxstylestrong{Stefan\sphinxhyphen{}Boltzmann constant} \(\sigma\) is then defined as
+\begin{equation*}
+\begin{split}\sigma := \pi \cdot \frac{2 h}{c^2} \left( \frac{k_B}{h} \right)^4 \int_{u=0}^{+\infty} \frac{u^3}{e^{u}-1} du = \frac{2 \pi^5}{15}\frac{k_B^4}{c^2 h^3} = 5.67 \cdot 10^{-8} \frac{\text{W}}{\text{m}^2 \text{K}^4} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Integration over a generic surface \(S_2\) of the power flux emitted by a source \(1\) per unit surface of the source gives
+\begin{equation*}
+\begin{split}\begin{aligned}
+  M_{12} = \frac{d P_{1 \rightarrow 2} }{d S_1} = T_1^4 \, \frac{\sigma}{\pi} \int_{S_2} \hat{n}_1 \cdot \frac{\vec{r}_{12}}{|\vec{r}_{12}|} \, \frac{\vec{r}_{12}}{|\vec{r}_{12}|^3} \cdot \hat{n}_2 \, dS_2
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Thus the elementary power per unit surface of the source \(1\) and the receiver \(2\) is
+\begin{equation*}
+\begin{split}dP_{1 \rightarrow 2} = T_1^4 \, \frac{\sigma}{\pi} \, \hat{n}_1 \cdot \frac{\vec{r}_{12}}{|\vec{r}_{12}|} \, \frac{\vec{r}_{12}}{|\vec{r}_{12}|^3} \cdot \hat{n}_2 \, dS_1 \, dS_2 \end{split}
+\end{equation*}
+\sphinxAtStartPar
+Comparing this expression of the power flux from source \(1\) to the elementary surface \(d S_2\) with the expression \eqref{equation:ch/heat-transfer-radiation:power-flux:radiant-intensity} using the radiant intensity \(I_{0,1}\), it immediately follows that the elementary radiant intensity \(d I_{0,1}\) of the elementary surface \(d S_1\) of the source reads
+\begin{equation*}
+\begin{split}d I_{0,1} = T_1^4 \, \frac{\sigma}{\pi} \, d S_1 \ .\end{split}
+\end{equation*}
+
+\paragraph{Geometry effects on radiation}
+\label{\detokenize{ch/heat-transfer-radiation:geometry-effects-on-radiation}}
+\sphinxAtStartPar
+The elementary power is the product of \(\frac{\sigma T^4}{\pi}\) and a factor depending only on the geometry of the problem,
+\begin{equation*}
+\begin{split}d G := \hat{n}_1 \cdot \frac{\vec{r}_{12}}{|\vec{r}_{12}|} \, \frac{\vec{r}_{12}}{|\vec{r}_{12}|^3} \cdot \hat{n}_2 \, dS_1 \, dS_2 \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+This factor is symmetric, i.e. inverting the roles of the source and the receiver is irrelevant.
 
 
 \bigskip\hrule\bigskip

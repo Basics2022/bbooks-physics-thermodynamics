@@ -55,4 +55,12 @@
 \contentsline {subsection}{\numberline {8.3.2}Power generation}{39}{subsection.8.3.2}%
 \contentsline {subsection}{\numberline {8.3.3}Heat pump and/or refrigeration}{39}{subsection.8.3.3}%
 \contentsline {chapter}{\numberline {9}Heat transfer}{41}{chapter.9}%
-\contentsline {chapter}{Proof Index}{43}{section*.12}%
+\contentsline {section}{\numberline {9.1}Conduction}{41}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Convection}{41}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Radiation}{41}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Planck’s law}{41}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Wien’s law}{42}{subsection.9.3.2}%
+\contentsline {subsection}{\numberline {9.3.3}Energy transfer by radiation}{42}{subsection.9.3.3}%
+\contentsline {subsubsection}{Stefan\sphinxhyphen {}Boltzmann law}{43}{subsubsection*.13}%
+\contentsline {paragraph}{Geometry effects on radiation}{44}{paragraph*.15}%
+\contentsline {chapter}{Proof Index}{45}{section*.16}%

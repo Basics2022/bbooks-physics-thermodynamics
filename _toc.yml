@@ -25,3 +25,7 @@ parts:
   - file: ch/thermodynamic-transformations
   - file: ch/heat-engines
   - file: ch/heat-transfer
+    sections:
+    - file: ch/heat-transfer-conduction
+    - file: ch/heat-transfer-convection
+    - file: ch/heat-transfer-radiation
