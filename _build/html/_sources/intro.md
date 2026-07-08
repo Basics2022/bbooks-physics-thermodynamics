@@ -3,7 +3,13 @@
 
 This material is part of the [**basics-books project**](https://basics2022.github.io/bbooks). It is also available as a [.pdf document](_build/latex/book.pdf).
 
-Classical thermodynamics deal with energy, its forms and the ways it can be transferred. 
+Classical thermodynamics mainly deals with energy, its forms and the ways it can be transferred. 
+
+**Introduction to thermodynamics.** Principles of thermodynamics; Gibbs' formulation of classical thermodynamics: phase rule, state variables and internal energy; thermodynamic potentials and thermodynamic coefficients.
+
+**States of matter.** Gas and ideal gas; mixtures and humid air; liquids; solids and elastic solids.
+
+**Thermal Engineering.** Thermodynamic transformations and heat machines, converting heat and work; mechanisms of heat transfer.
 
 Classical thermodynamics provides a macroscopic, average, description of complex systems composed by a "huge" number of elementary components, in equilibrium: equilibrium means statistical equilibrium, resulting in stationary macroscopic observable physical quatities - thermodynamic variables - even though non-stationary microscopic dynamics of the system. The development of thermodynamics is closely related with the development of chemistry and the re-born of an atomic theory of the matter. Classical thermodynamics is the results of studies on matter and energy performed from the early experiments of the XVII centuries on gas to the mathematical formulation of the late XIX century by Gibbs. A consistent theory of thermodynamics starts from conservation of mass and balance of total energy - whose changes result from input of work or heat -, provides a description of natural tendencies in nature, through Clausius' statement of the second principle - degradation of mechanical energy and heat direction from hot to cold bodiess - in terms of a thermodynamic state variable, called entropy, and provides a definition of a thermodynamic scale of temperature - defined in terms of energy and entropy.
 

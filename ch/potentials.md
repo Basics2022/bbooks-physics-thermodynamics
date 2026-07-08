@@ -5,7 +5,7 @@ In this section, principles and the mathematical formalism of classical thermody
 
 ## First principle
 
-For an extensive system
+For an extensive system with uniform intensive pro
 
 $$d E = T \, d S + \mathbf{F} \cdot d \mathbf{X} \ ,$$
 
