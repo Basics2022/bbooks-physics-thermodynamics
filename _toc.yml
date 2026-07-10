@@ -15,7 +15,6 @@ parts:
     - file: ch/principles-gibbs-phase-rule
     - file: ch/principles-second
     - file: ch/principles-open
-    - file: ch/principles-electrochemical
   - file: ch/potentials
   - file: ch/coefficients
   - file: ch/media
@@ -32,3 +31,7 @@ parts:
     - file: ch/heat-transfer-conduction
     - file: ch/heat-transfer-convection
     - file: ch/heat-transfer-radiation
+- caption: Electro-chemical systems
+  numbered: True
+  chapters:
+  - file: ch/principles-electrochemical

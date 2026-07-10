@@ -36,6 +36,9 @@ It follows that
 $$f(x_k) = m \, x_i \, \dfrac{\partial f}{\partial x_i}(x_k) \ .$$
 
 ```
+```{dropdown} Proof
+:open:
+
 Proof immediately follows, evaluating the derivative of {eq}`eq:homogeneous-fun:def` w.r.t. $a$, and evaluating for $a = 1$, i.e.
 
 $$x_i \, \dfrac{\partial f}{\partial x_i} (a \, x_k) = m \, a^{m-1} \, f(x_k) \ ,$$
@@ -50,6 +53,8 @@ $$f(x_k) = x_i \, \dfrac{\partial f}{\partial x_i} (x_k)\ .$$
 Thus, internal energy can be written as
 
 $$E(S, \mathbf{X}) = T \, S + \mathbf{F} \cdot \mathbf{X} \ .$$ 
+
+```
 
 ### First principle for different systems
 

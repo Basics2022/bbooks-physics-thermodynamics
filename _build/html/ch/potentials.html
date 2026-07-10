@@ -71,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="4. Thermodynamic coefficients" href="coefficients.html" />
-    <link rel="prev" title="2.5. Open Systems" href="principles-open.html" />
+    <link rel="prev" title="2.6. Principles of Thermodynamics - Electro-chemical systems" href="principles-electrochemical.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -183,6 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="principles-gibbs-phase-rule.html">2.3. Gibbs: Internal Energy, Phase Rule, and Multivariable Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="principles-second.html">2.4. Second Law of Thermodynamics - Clausius Statement</a></li>
 <li class="toctree-l2"><a class="reference internal" href="principles-open.html">2.5. Open Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-electrochemical.html">2.6. Principles of Thermodynamics - Electro-chemical systems</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Thermodynamics potentials</a></li>
@@ -359,7 +360,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#first-principle-per-unit-volume">3.1.2.2. First principle per unit volume</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">3.1.2.2.1. Different systems</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.1.2.2.1. Different systems</a></li>
 </ul>
 </li>
 </ul>
@@ -393,8 +394,8 @@ document.write(`
 <p>Internal energy <span class="math notranslate nohighlight">\(E\)</span>, entropy <span class="math notranslate nohighlight">\(S\)</span> and the generalized displacement <span class="math notranslate nohighlight">\(\mathbf{X}\)</span> are <strong>extensive</strong> physical quantities, and thus (<strong>thus?</strong>) the derivatives</p>
 <div class="math notranslate nohighlight">
 \[T := \left.\dfrac{\partial S}{\partial E}\right|_{\mathbf{X}} \quad , \quad \mathbf{F} := \left.\dfrac{\partial E}{\partial \mathbf{X}}\right|_S\]</div>
-<p>are <strong>intensive</strong> quantities. A discussion about the difference between the concept of <em>additivity</em> and <em>extensivity</em><a class="footnote-reference brackets" href="#additivity-extensivity" id="id1">1</a>.
-Beside being extensive, internal energy in classical thermodynamics is an homogeneous function<a class="footnote-reference brackets" href="#se-e-homogeneous" id="id2">2</a> of order 1 of its arguments, namely</p>
+<p>are <strong>intensive</strong> quantities. A discussion about the difference between the concept of <em>additivity</em> and <em>extensivity</em>[^additivity-extensivity].
+Beside being extensive, internal energy in classical thermodynamics is an homogeneous function[^SE-e-homogeneous] of order 1 of its arguments, namely</p>
 <div class="math notranslate nohighlight">
 \[E(a \, S, a \, \mathbf{X}) = a \, E(S, \mathbf{X}) \ .\]</div>
 <p><strong>Euler’s theorem for homogeneous functions</strong> holds.</p>
@@ -408,16 +409,24 @@ Beside being extensive, internal energy in classical thermodynamics is an homoge
 <div class="math notranslate nohighlight">
 \[f(x_k) = m \, x_i \, \dfrac{\partial f}{\partial x_i}(x_k) \ .\]</div>
 </div>
-</div><p>Proof immediately follows, evaluating the derivative of <a class="reference internal" href="#equation-eq-homogeneous-fun-def">(3.1)</a> w.r.t. <span class="math notranslate nohighlight">\(a\)</span>, and evaluating for <span class="math notranslate nohighlight">\(a = 1\)</span>, i.e.</p>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Proof<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Proof immediately follows, evaluating the derivative of <a class="reference internal" href="#equation-eq-homogeneous-fun-def">(3.1)</a> w.r.t. <span class="math notranslate nohighlight">\(a\)</span>, and evaluating for <span class="math notranslate nohighlight">\(a = 1\)</span>, i.e.</p>
 <div class="math notranslate nohighlight">
 \[x_i \, \dfrac{\partial f}{\partial x_i} (a \, x_k) = m \, a^{m-1} \, f(x_k) \ ,\]</div>
-<p>and for <span class="math notranslate nohighlight">\(a = 1\)</span>,</p>
+<p class="sd-card-text">and for <span class="math notranslate nohighlight">\(a = 1\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[f(x_k) = x_i \, \dfrac{\partial f}{\partial x_i} (x_k)\ .\]</div>
-<p>Thus, internal energy can be written as</p>
+<p class="sd-card-text">Thus, internal energy can be written as</p>
 <div class="math notranslate nohighlight">
 \[E(S, \mathbf{X}) = T \, S + \mathbf{F} \cdot \mathbf{X} \ .\]</div>
-<div class="section" id="first-principle-for-different-systems">
+</div>
+</details><div class="section" id="first-principle-for-different-systems">
 <h3><span class="section-number">3.1.1. </span>First principle for different systems<a class="headerlink" href="#first-principle-for-different-systems" title="Permalink to this heading">#</a></h3>
 <ul>
 <li><p>Single-component fluid, <span class="math notranslate nohighlight">\(E(S, V, N)\)</span></p>
@@ -490,8 +499,8 @@ Beside being extensive, internal energy in classical thermodynamics is an homoge
 <p>The first term is identically zero, since it’s the expression of the internal energy divided by <span class="math notranslate nohighlight">\(V\)</span>. Being <span class="math notranslate nohighlight">\(V &gt; 0\)</span>, the second term gives the first principle per unit volume</p>
 <div class="math notranslate nohighlight">
 \[d \mathcal{E} = T d\mathcal{S} + \mathbf{F} \cdot d \symbf{\chi} \ .\]</div>
-<div class="section" id="id3">
-<h5><span class="section-number">3.1.2.2.1. </span>Different systems<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h5>
+<div class="section" id="id1">
+<h5><span class="section-number">3.1.2.2.1. </span>Different systems<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h5>
 <ul>
 <li><p>Single-component fluid;</p>
 <div class="math notranslate nohighlight">
@@ -584,15 +593,6 @@ $$\begin{cases}
  \dfrac{\partial x_i}{\partial F_j} & =  \dfrac{\partial x_j}{\partial F_i} \\
 \end{cases}$$
 -->
-<hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="additivity-extensivity"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p><a class="reference external" href="https://arxiv.org/pdf/cond-mat/0201134">H.Touchette, When is a quantity additive, and when is it extensive?</a></p>
-</dd>
-<dt class="label" id="se-e-homogeneous"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p><a class="reference external" href="https://physics.stackexchange.com/q/677855">https://physics.stackexchange.com/q/677855</a></p>
-</dd>
-</dl>
 </div>
 </div>
 
@@ -627,12 +627,12 @@ $$\begin{cases}
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="principles-open.html"
+       href="principles-electrochemical.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.5. </span>Open Systems</p>
+        <p class="prev-next-title"><span class="section-number">2.6. </span>Principles of Thermodynamics - Electro-chemical systems</p>
       </div>
     </a>
     <a class="right-next"
@@ -667,7 +667,7 @@ $$\begin{cases}
 </ul>
 </li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#first-principle-per-unit-volume">3.1.2.2. First principle per unit volume</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">3.1.2.2.1. Different systems</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.1.2.2.1. Different systems</a></li>
 </ul>
 </li>
 </ul>
