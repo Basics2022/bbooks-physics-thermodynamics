@@ -46,9 +46,9 @@ $$\begin{aligned}
   d Q_{\text{cathode}} & = - z q d n_{\text{Cu}^{2+}} =  - z q N_{A} d N_{\text{Cu}^{2+}} = - z F d N_{\text{Cu}^{2+}} \ , 
 \end{aligned}$$
 
-having introduced the **Faraday's constant**
+having introduced the **Faraday's constant**, representing the electrical charge per mole of ions (with electrical charge $q$ per particle),
 
-$$F = q N_A = 96 485.33 \frac{\text{s} \text{A}}{\text{mol}} \ ,$$
+$$F = q N_A = 96 485.33 \frac{\text{C}}{\text{mol}} \ ,$$
 
 defined as the product of the elementary charge (electron charge, but positive), and the number of Avogadro $N_A$. 
 
@@ -103,4 +103,94 @@ The standard open-circuit cell potential of a Daniell cell is $V_{oc}^\circ = \p
 
 (electro-chemical:batteries:daniell:regimes:load)=
 ### Operation under loads
+
+**todo**
+
+```{dropdown} Todo list
+:open:
+
+* write a full dynamical model
+* write a simplified one, after removing any unnecessary dynamical variable
+
+The goal is to write the constitutive laws of an electro-chemical component with approximately constant voltage and a state of charge internal variable.
+
+```
+
+```{dropdown} Elements of the system
+:open:
+
+* **Electrode-electrolyte interfaces.** 
+  * activation overpotential
+  * double-layer capacitance
+
+* **Diffusion layer**
+
+* **Ions migration**
+```
+
+
+
+(electro-chemical:batteries:daniell:regimes:load:reaction-kinetics)=
+#### Charge transfer kinetics
+
+At the anode, for the [law of mass action]()
+
+$$\begin{aligned}
+  v_a
+  & = v_{a,f} - v_{a,r} = \\
+  & = A_{a,f} \exp \left( - \frac{E_{a,f}}{RT}  \right) a_{\text{Zn}} - A_{a,r} \exp \left( - \frac{E_{a,r}}{RT}  \right) a_{\text{Zn}^{2+}} = \\ 
+\end{aligned}$$
+
+At the equilibrium, $v_a = 0$.
+
+$$A_{a,f} \exp \left( - \frac{E^0_{a,f}}{RT}  \right) \underbrace{a_\text{Zn}^0}_{ = 1} = A_{a,r} \exp \left( - \frac{E^0_{a,r}}{RT}  \right) a_{\text{Zn}^{2+}}^0 =: v_{a}^0 \ .$$
+
+In order to have a net velocity of reaction - out of the equilibrium - a net potential difference across the interface is required so that the energy levels of the reagents and the products shift, and so do the activation energies.
+
+**Activation overpotential** is defined as the difference between the potential under load condition and the potential at the equilibrium
+
+$$\eta_{act, a} = \phi_a - \phi_a^0 \ .$$
+
+The change in energy of a mole of ions due to the activation overpotential becomes $\Delta E_a = z F \eta_{act, a}$ and the activation eneregies for forward and reverse reactions become
+
+$$\begin{aligned}
+  E_{a,f} & = E_{a,f}^0 - \alpha_{a,f} \Delta E_{a} = E_{a,f}^0 - \alpha_{a,f} z F \eta_{act,a}  \\
+  E_{a,r} & = E_{a,r}^0 + \alpha_{a,r} \Delta E_{a} = E_{a,r}^0 + \alpha_{a,r} z F \eta_{act,a}  \\
+\end{aligned}$$
+
+with $\alpha_{a,f} + \alpha_{a,r} = 1$. The velocity of the reaction becomes
+
+$$\begin{aligned}
+  v_a
+  & = A_f \exp\left( - \frac{E_{a,f}}{RT} \right) - A_r \exp\left( - \frac{E_{a,r}}{RT} \right) = \\
+  & = A_f \exp\left( - \frac{E^0_{a,f}}{RT} \right) \exp\left( \frac{\alpha_{a,f} z F \eta_{act,a}}{RT} \right) - A_r \exp\left( - \frac{E^0_{a,r}}{RT} \right) \exp\left( - \frac{ ( 1 - \alpha_{a,f} ) z F \eta_{act,a}}{RT} \right) a_{\text{Zn}^{2+}}^0 \frac{a_{\text{Zn}^{2+}}}{a_{\text{Zn}^{2+}}^0} \ , \\
+\end{aligned}$$
+
+i.e. the velocity of the reaction at the anode reads
+
+$$
+  v_a = v_a^0 \exp\left( \frac{a_{a,f} z F \eta_{act,a}}{RT} \right) \left[ 1 - \frac{z F \eta_{act,a}}{RT} \frac{a_{\text{Zn}^{2+}}}{a_{\text{Zn}^{2+}}^0} \right] \ .
+$$
+
+In order to get a charge current, the velocity of reaction is multiplied by $z F$, i.e. $z q N_A$,
+
+$$i_a = v_a z q N_a \ ,$$
+
+as
+
+$$
+\underbrace{\frac{\text{[charge]}}{\text{[time]}}}_{i_a} = 
+\underbrace{\frac{\text{[n.moles]}}{\text{[time]}}}_{v_a}
+\underbrace{\frac{\text{[n.charges]}}{\text{[n.parts]}}}_{z}
+\underbrace{\frac{\text{[charge]}}{\text{[n.charges]}}}_{q}
+\underbrace{\frac{\text{[n.parts]}}{\text{[n.moles]}}}_{N_a} \  .$$
+
+```{dropdown} Extreme regimes
+:open:
+
+* Linear regime $\eta \ll \frac{RT}{zF}$, extremely rare
+* Tafel regime $\eta \gg \frac{RT}{zF}$, negative exponential of the reverse reaction collapses
+
+```
+
 
