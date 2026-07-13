@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>10. Principles of Thermodynamics - Electro-chemical systems &#8212; Classical Thermodynamics</title>
+    <title>12.3. Daniell cell &#8212; Classical Thermodynamics</title>
   
   
   
@@ -66,11 +66,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/principles-electrochemical';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/batteries-daniell';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="9.3. Radiation" href="heat-transfer-radiation.html" />
+    <link rel="next" title="12.4. Li-ion battery" href="batteries-li.html" />
+    <link rel="prev" title="12. Batteries: thermo-electro-chemical modeling" href="batteries.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -205,7 +206,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Electro-chemical systems</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">10. Principles of Thermodynamics - Electro-chemical systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="principles-electrochemical.html">10. Principles of Thermodynamics - Electro-chemical systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nernst-equation.html">11. Nernst equation</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="batteries.html">12. Batteries: thermo-electro-chemical modeling</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">12.3. Daniell cell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batteries-li.html">12.4. Li-ion battery</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
@@ -260,7 +267,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/principles-electrochemical.md" target="_blank"
+      <li><a href="../_sources/ch/batteries-daniell.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -344,7 +351,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Principles of Thermodynamics - Electro-chemical systems</h1>
+    <h1>Daniell cell</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -354,9 +361,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-reactions">10.1. Chemical reactions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-principle-energy-balance">10.2. First principle - energy balance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-mass-action">10.3. Law of Mass Action</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description">12.3.1. Description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regimes">12.3.2. Regimes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-circuit-equilibrium">12.3.2.1. Open-circuit equilibrium</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operation-under-loads">12.3.2.2. Operation under loads</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -368,118 +378,116 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="principles-of-thermodynamics-electro-chemical-systems">
-<span id="physics-thermodynamics-foundation-principles-electro-chemical"></span><h1><span class="section-number">10. </span>Principles of Thermodynamics - Electro-chemical systems<a class="headerlink" href="#principles-of-thermodynamics-electro-chemical-systems" title="Permalink to this heading">#</a></h1>
-<p>In this section:</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="daniell-cell">
+<span id="electro-chemical-batteries-daniell"></span><h1><span class="section-number">12.3. </span>Daniell cell<a class="headerlink" href="#daniell-cell" title="Permalink to this heading">#</a></h1>
+<div class="section" id="description">
+<span id="electro-chemical-batteries-daniell-description"></span><h2><span class="section-number">12.3.1. </span>Description<a class="headerlink" href="#description" title="Permalink to this heading">#</a></h2>
+<p>The Daniell cell consists of two separate half-cells:</p>
 <ul class="simple">
-<li><p>Introduction to <a class="reference internal" href="#physics-thermodynamics-foundation-principles-electro-chemical-reactions"><span class="std std-ref">chemical reactions</span></a></p></li>
-<li><p><a class="reference internal" href="#physics-thermodynamics-foundation-principles-electro-chemical-first-principle"><span class="std std-ref">Energy balance</span></a></p></li>
-<li><p><a class="reference internal" href="#physics-thermodynamics-foundation-principles-electro-chemical-law-of-mass-action"><span class="std std-ref">Law of mass action</span></a></p></li>
+<li><p>A zinc (<span class="math notranslate nohighlight">\(\text{Zn}\)</span>) electrode immersed in a zinc sulfate (<span class="math notranslate nohighlight">\(\text{ZnSO}_4\)</span>) aqueous solution, with ions <span class="math notranslate nohighlight">\(Zn^{2+}\)</span>, <span class="math notranslate nohighlight">\(SO_4^{2-}\)</span> sully dissolved in that</p></li>
+<li><p>A copper (<span class="math notranslate nohighlight">\(\text{Cu}\)</span>) electrode immersed in a copper(II) sulfate (<span class="math notranslate nohighlight">\(\text{CuSO}_4\)</span>) aqueous solution, ions <span class="math notranslate nohighlight">\(Cu^{2+}\)</span>, <span class="math notranslate nohighlight">\(SO_4^{2-}\)</span> fully dissolved in that</p></li>
+<li><p>A porous barrier (or salt bridge) separating the solutions to prevent rapid mixing while allowing sulfate ions (<span class="math notranslate nohighlight">\(\text{SO}_4^{2-}\)</span>) to migrate, between the 2 half-cells.</p></li>
 </ul>
-<p>In next sections:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="batteries.html#electro-chemical-batteries"><span class="std std-ref">Batteries</span></a></p></li>
-</ul>
-<div class="section" id="chemical-reactions">
-<span id="physics-thermodynamics-foundation-principles-electro-chemical-reactions"></span><h2><span class="section-number">10.1. </span>Chemical reactions<a class="headerlink" href="#chemical-reactions" title="Permalink to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[a A + b B \rightleftharpoons c C + d D \ ,\]</div>
-<p>or</p>
-<div class="math notranslate nohighlight" id="equation-eq-reaction-stoichiometry">
-<span class="eqno">(10.1)<a class="headerlink" href="#equation-eq-reaction-stoichiometry" title="Permalink to this equation">#</a></span>\[\nu_{R_i}  R_i \rightleftharpoons \nu_{P_j} P_j\]</div>
-</div>
-<div class="section" id="first-principle-energy-balance">
-<span id="physics-thermodynamics-foundation-principles-electro-chemical-first-principle"></span><h2><span class="section-number">10.2. </span>First principle - energy balance<a class="headerlink" href="#first-principle-energy-balance" title="Permalink to this heading">#</a></h2>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Energy balance<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Total energy balance</p>
-<div class="math notranslate nohighlight">
-\[d E^{tot} = \delta L^{ext} + \delta Q^{ext} \ .\]</div>
-<p class="sd-card-text">Macroscopic kinetic energy balance (theorem, from mechanics)</p>
-<div class="math notranslate nohighlight">
-\[d K = \delta L^{ext} + \delta L^{int} \ .\]</div>
-<p class="sd-card-text">Internal energy <span class="math notranslate nohighlight">\(E := E^{tot} - K\)</span></p>
-<div class="math notranslate nohighlight">
-\[d E = - \delta L^{int} + \delta Q^{ext} \ .\]</div>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Internal energy, intensive and extensive variables<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[d E = - \delta L^{int,rev} + \underbrace{\delta^+ D + \delta Q^{ext}}_{=:T dS}\]</div>
-<p class="sd-card-text">As <span class="math notranslate nohighlight">\(dE\)</span> is a state function, and <span class="math notranslate nohighlight">\(\delta L^{int,rev}\)</span> must be reversible by definition, the remaining terms must be reversible as well and completing the exact differential of the energy as a state function. The internal nature may have different natures, e.g. mechanical, elelctrical, magnetic, chemical</p>
-<div class="math notranslate nohighlight">
-\[\delta L^{int,rev} = \delta L^{int,mech} + \delta L^{int,el} + \delta L^{int,magn} + \delta L^{int,el} + \dots\]</div>
-<p class="sd-card-text">but all of these works can be written as the product of a intensive variable <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> of the system and the variation of a extensive variable <span class="math notranslate nohighlight">\(\mathbf{X}\)</span>, formally</p>
-<div class="math notranslate nohighlight">
-\[\delta L^{int,rev} = \mathbf{F} \cdot d \mathbf{X} \ ,\]</div>
+<p>The spontanoues half-cell reactions during disharge are:</p>
 <ul>
-<li><p class="sd-card-text">mechanical work, depends on the nature of the system. As an example, for a gas <span class="math notranslate nohighlight">\(\delta L^{int,rev} = - P d V\)</span>, or for an elastic solid <span class="math notranslate nohighlight">\(\delta L^{int,rev} = - V \sigma : d \varepsilon\)</span></p></li>
-<li><p class="sd-card-text">electrical work, being <span class="math notranslate nohighlight">\(V\)</span> the (uniform) electrical potential of the system, and <span class="math notranslate nohighlight">\(Q\)</span> its electrical charge (see <a class="reference external" href="https://basics2022.github.io/bbooks-physics-electromagnetism/ch/regimes-electrostatics.html#systems-with-uniform-potential">Elecetrostatic energy: systems with uniform potential</a>)</p>
-<div class="math notranslate nohighlight">
-\[- V d Q\]</div>
+<li><p>at the anode:</p>
+<div class="math notranslate nohighlight" id="equation-eq-daniell-reaction-anode">
+<span class="eqno">(12.1)<a class="headerlink" href="#equation-eq-daniell-reaction-anode" title="Permalink to this equation">#</a></span>\[\text{Zn}(s) \rightleftharpoons \text{Zn}^{2+}(aq) + 2 e^-(s)\]</div>
 </li>
-<li><p class="sd-card-text">chemical work, with <span class="math notranslate nohighlight">\(\mu_i\)</span> the molar chemical potential <span class="math notranslate nohighlight">\(i\)</span> of the substance (the amount of internal energy added to the system by a change in the number of moles of the <span class="math notranslate nohighlight">\(i\)</span> substance in the system)</p>
-<div class="math notranslate nohighlight">
-\[\mu_i d N_i\]</div>
+<li><p>at the cathode:</p>
+<div class="math notranslate nohighlight" id="equation-eq-daniell-reaction-cathode">
+<span class="eqno">(12.2)<a class="headerlink" href="#equation-eq-daniell-reaction-cathode" title="Permalink to this equation">#</a></span>\[\text{Cu}^{2+}(aq) + 2 e^-(s) \rightleftharpoons \text{Cu}(s)\]</div>
 </li>
 </ul>
-<p class="sd-card-text"><strong>todo</strong> See and uniform the treatment in <span class="xref myst">First principle</span>, <span class="xref myst">Second principle</span>, <span class="xref myst">Gibbs formalization</span>, <a class="reference internal" href="potentials.html#classical-thermodynamics-potentials"><span class="std std-ref">Thermodynamic potentials</span></a></p>
 </div>
-</details><p>Using <span class="math notranslate nohighlight">\(\mathbf{X}, S\)</span> as independent variables,</p>
+<div class="section" id="regimes">
+<span id="electro-chemical-batteries-daniell-regimes"></span><h2><span class="section-number">12.3.2. </span>Regimes<a class="headerlink" href="#regimes" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#electro-chemical-batteries-daniell-regimes-open"><span class="std std-ref">Open circuit equilibrium</span></a>: chemical reactions at equilibrium, no net motion of charges through the electrolytes and the salt bridge</p></li>
+<li><p><a class="reference internal" href="#electro-chemical-batteries-daniell-regimes-load"><span class="std std-ref">Operation under load</span></a>. Chemical kinetics reactions and diffusion process of ions may produce bottlenecks in the process, and thus overpotentials and/or losses</p></li>
+</ul>
+<div class="section" id="open-circuit-equilibrium">
+<span id="electro-chemical-batteries-daniell-regimes-open"></span><h3><span class="section-number">12.3.2.1. </span>Open-circuit equilibrium<a class="headerlink" href="#open-circuit-equilibrium" title="Permalink to this heading">#</a></h3>
+<p><strong>Internal energy</strong></p>
 <div class="math notranslate nohighlight">
-\[d E = \mathbf{F}(\mathbf{X}, S) \cdot d \mathbf{X} + T(\mathbf{X}, S) d S \ .\]</div>
-<p>It the energy of the system is a order-1 homogeneous function of the extensive variables of the system, <span class="math notranslate nohighlight">\(E(\lambda \mathbf{Y}) = \lambda E(\mathbf{Y})\)</span><a class="footnote-reference brackets" href="#energy-extensive" id="id1">1</a>, Euler theorem (<a class="reference internal" href="potentials.html#thm-euler">Theorem 3.1</a>) gives</p>
-<div class="math notranslate nohighlight">
-\[E = T S + \mathbf{F} \cdot \mathbf{X} \ .\]</div>
-<p>Explicitly writing the number of moles of the substances of the system out fror the extensive variables <span class="math notranslate nohighlight">\(\mathbf{X}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{X} \rightarrow \left( \mathbf{X}, \mathbf{N} \right)\)</span>, and the chemical potentials out from the generalized intensive variables <span class="math notranslate nohighlight">\(\mathbf{F} \rightarrow \left( \mathbf{F}, \boldsymbol\mu \right)\)</span>, the expression of the internal energy and its differential reads</p>
+\[dE = - P dV + T dS + \sum_i \mu_i d N_i + \sum_k \phi_k d Q_k\]</div>
+<p>with <span class="math notranslate nohighlight">\(i\)</span> spanning all the substances involved in a reaction, and <span class="math notranslate nohighlight">\(k\)</span> all the regions with uniform electric potential,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-   E &amp; = T S + \boldsymbol\mu \cdot \mathbf{N} + \mathbf{F} \cdot \mathbf{X} \\
-  dE &amp; = T dS + \boldsymbol\mu \cdot d\mathbf{N} + \mathbf{F} \cdot d\mathbf{X} \ .
+  i &amp; \in \{ \text{Zn}, \text{Zn}^{2+}, \text{Cu}^{2+}, \text{Cu} \} \\
+  k &amp; \in \{ \text{anode}, \text{cathode}, \text{electrolytes+bridge} \}
 \end{aligned}\end{split}\]</div>
+<p>Here the chemical potentials include both the energy changes associated with reaction and phase transformation.
+Using the reactions <a class="reference internal" href="#equation-eq-daniell-reaction-anode">(12.1)</a>, <a class="reference internal" href="#equation-eq-daniell-reaction-cathode">(12.2)</a>, it follows (with <span class="math notranslate nohighlight">\(z = 2\)</span>, number of electrons per reacting ion)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  d Q_{\text{anode}}   &amp; = - z q d n_{\text{Zn}^{2+}} =  - z q N_{A} d N_{\text{Zn}^{2+}} = - z F d N_{\text{Zn}^{2+}} \\ 
+  d Q_{\text{cathode}} &amp; = - z q d n_{\text{Cu}^{2+}} =  - z q N_{A} d N_{\text{Cu}^{2+}} = - z F d N_{\text{Cu}^{2+}} \ , 
+\end{aligned}\end{split}\]</div>
+<p>having introduced the <strong>Faraday’s constant</strong></p>
+<div class="math notranslate nohighlight">
+\[F = q N_A = 96 485.33 \frac{\text{s} \text{A}}{\text{mol}} \ ,\]</div>
+<p>defined as the product of the elementary charge (electron charge, but positive), and the number of Avogadro <span class="math notranslate nohighlight">\(N_A\)</span>.</p>
+<p>If the motion of <span class="math notranslate nohighlight">\(\text{SO}_4^{2-}\)</span> ions through the salt bridge keeps the electrolytes electrically neutral, it’s possible to write the variation of the moles of substances in the system as a function of an <strong>extent of reaction variable</strong>, <span class="math notranslate nohighlight">\(\xi\)</span></p>
+<div class="math notranslate nohighlight">
+\[d N_{\text{Zn}^{2+}} = d N_{\text{SO}_4^{2-}, a} = - d N_{\text{SO}_4^{2-}, c} = - dN_{\text{Cu}^{2+}} = d \xi \ .\]</div>
+<p>If the electrolytes and the salt bridge are in an equi-potential region, then the motion of the <span class="math notranslate nohighlight">\(\text{SO}_2^{2-}\)</span> ions doesn’t influence the variation of the internal energy, that can be written as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  d E
+  &amp; = - P dV + T dS + \left( \mu_{\text{Zn}^{2+}} - \mu_{\text{Zn}} - \mu_{\text{Cu}^{2+}} + \mu_{\text{Cu}} \right) d \xi - z F \phi_{a} d \xi + z F \phi_c d \xi = \\
+  &amp; = - P dV + T dS + \left[ \left( \mu_{\text{Zn}^{2+}} - \mu_{\text{Zn}} - \mu_{\text{Cu}^{2+}} + \mu_{\text{Cu}} \right) - z F \left( \phi_{a} - \phi_c \right) \right] d \xi \ .
+\end{aligned}\end{split}\]</div>
+<p><strong>Gibbs’ free energy</strong>, <span class="math notranslate nohighlight">\(G = E + PV - TS\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[d G = V dP + S dT + \sum_i \mu_i dN_i - \sum_k \phi_k d Q_k\]</div>
+<p>Equilibrium condition <span class="math notranslate nohighlight">\(d G = 0\)</span> (see <a class="reference internal" href="notes-equilibrium-conditions.html#notes-equilibrium-conditions-gibbs-free-energy"><span class="std std-ref">Thermodynamic equilibrium: Gibbs’s free energy</span></a> <strong>todo</strong>) for constant <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(T\)</span> (and thus <span class="math notranslate nohighlight">\(d P = 0\)</span>, <span class="math notranslate nohighlight">\(d T = 0\)</span>), requires that the electro-chemical force must be zero, i.e.</p>
+<div class="math notranslate nohighlight">
+\[0 = \mu_{\text{Zn}^{2+}} - \mu_{\text{Zn}} - \mu_{\text{Cu}^{2+}} + \mu_{\text{Cu}} - z F \left( \phi_{a} - \phi_c \right) \ .\]</div>
+<p>Thus, the electrostatic potential at open-circuit equilibrium between the cathode (positive electrode) and the anode (negative electrode) reads</p>
+<div class="math notranslate nohighlight">
+\[V_{oc} = \phi_c - \phi_a = \frac{1}{z F} \left( - \mu_{\text{Zn}^{2+}} + \mu_{\text{Zn}} + \mu_{\text{Cu}^{2+}} - \mu_{\text{Cu}} \right)\]</div>
+<p>Introducing <span class="xref myst">Nernst equation</span> for the chemical potentials, the open-circuit potential can be written as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  V_{oc} 
+  &amp; = \frac{1}{zF} \sum_i \left\{ \text{sign}_i \mu_i + R T \ln a_i \right\} = \\
+  &amp; = \underbrace{ \frac{1}{zF} \left\{ - \mu_{\text{Zn}^{2+}}^\circ + \mu_{\text{Zn}}^\circ + \mu_{\text{Cu}^{2+}}^\circ - \mu_{\text{Cu}}^\circ \right\} }_{ = V_{oc}^\circ} + R T \ln \left( \frac{a_{\text{Cu}^{2+}} a_{\text{Zn}}}{a_{\text{Zn}^{2+}} a_{\text{Cu}}} \right) \\
+  V_{oc} &amp; = V_{oc}^\circ + R T \ln \left( \frac{a_{\text{Cu}^{2+}}}{a_{\text{Zn}^{2+}}} \right) \ ,
+\end{aligned}\end{split}\]</div>
+<p>as the activity of solid phases are equal to <span class="math notranslate nohighlight">\(1\)</span> by definition.<a class="footnote-reference brackets" href="#activity-solid-definition" id="id1">1</a> The activity of the dissolved ions are related (but not equal or proportional, as the behavior of a highly concentrated solution with charged ions deviates significantly from the ideal behavior) to the concentration of the ions at the interface close to the electrode, the regions where the reactions occur,</p>
+<div class="math notranslate nohighlight">
+\[a_i = \gamma_i \frac{C_i}{C_i^\circ} \ .\]</div>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Debye%E2%80%93H%C3%BCckel_theory">Debye-Huckel theory</a> provides a model for the activity coefficient <span class="math notranslate nohighlight">\(\gamma_i\)</span>, as a function of the ionic strength of the solution.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-left head"><p>Ion</p></th>
+<th class="text-center head"><p><span class="math notranslate nohighlight">\(\mu^\circ [\text{J}/\text{mol}]\)</span></p></th>
+<th class="text-center head"><p><span class="math notranslate nohighlight">\(\phi\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(\text{Zn}^{2+}(aq)\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(-147.06 \cdot 10^3\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\phi_a =     - \frac{\mu^0_{\text{Zn}^{2+}}}{2 F} = -0.762 \, \text{V}  \)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><span class="math notranslate nohighlight">\(\text{Cu}^{2+}(aq)\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(  65.49 \cdot 10^3\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\phi_c = \quad \frac{\mu^0_{\text{Cu}^{2+}}}{2 F} =  0.340 \, \text{V}  \)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>The standard open-circuit cell potential of a Daniell cell is <span class="math notranslate nohighlight">\(V_{oc}^\circ = \phi_c^\circ - \phi_a^\circ = 1.102 \text{V}\)</span></p>
 </div>
-<div class="section" id="law-of-mass-action">
-<span id="physics-thermodynamics-foundation-principles-electro-chemical-law-of-mass-action"></span><h2><span class="section-number">10.3. </span>Law of Mass Action<a class="headerlink" href="#law-of-mass-action" title="Permalink to this heading">#</a></h2>
-<p>The law of mass action states that the forward velocity <span class="math notranslate nohighlight">\(v_f\)</span> (<span class="math notranslate nohighlight">\(R \rightarrow P\)</span>) and backward velocity <span class="math notranslate nohighlight">\(v_b\)</span> (<span class="math notranslate nohighlight">\(R \leftarrow P\)</span>) of reaction <a class="reference internal" href="#equation-eq-reaction-stoichiometry">(10.1)</a> reads</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  v_f &amp; := -\frac{1}{\nu_{R_k}}\frac{d [ R_k ]_f}{dt} :=  \frac{1}{\nu_{P_k}}\frac{d [ P_k ]_f}{dt} = k_f \prod_i [ R_i ]^{\alpha_{R_i}} \\ 
-  v_r &amp; :=  \frac{1}{\nu_{R_k}}\frac{d [ R_k ]_r}{dt} := -\frac{1}{\nu_{P_k}}\frac{d [ P_k ]_r}{dt} = k_r \prod_i [ P_i ]^{\alpha_{P_i}} \\ 
-\end{aligned}\end{split}\]</div>
-<p>Taking <span class="math notranslate nohighlight">\(R \rightarrow P\)</span> as the positive direction of the reaction, the velocity of the reaction is defined as <span class="math notranslate nohighlight">\(v = v_r - v_f\)</span>, and the rate of change of the concentrations thus reads</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \frac{d [ R_k ]}{dt} = \frac{d [ R_k ]_f}{dt} + \frac{d [ R_k ]_r}{dt} = \nu_{R_k} \left( v_r - v_f \right) = \nu_{R_k} \, v \\ 
-  \frac{d [ P_k ]}{dt} = \frac{d [ P_k ]_f}{dt} + \frac{d [ P_k ]_r}{dt} = \nu_{P_k} \left( v_f - v_r \right) = \nu_{P_k} \, v \ .
-\end{aligned}\end{split}\]</div>
-<ul class="simple">
-<li><p><strong>Equilibrium</strong> is reached when <span class="math notranslate nohighlight">\(v_r = v_f\)</span>, and thus the rate of change of concentration of the substances is zero.</p></li>
-<li><p><strong>Extent of reaction</strong> <span class="math notranslate nohighlight">\(\xi\)</span>, so that <span class="math notranslate nohighlight">\(d \xi = v dt\)</span>.</p></li>
-</ul>
-<p>Constant <span class="math notranslate nohighlight">\(k_r\)</span> and <span class="math notranslate nohighlight">\(k_f\)</span> usually can be written as</p>
-<div class="math notranslate nohighlight">
-\[k = A \exp \left( - \frac{E}{kT} \right) \ ,\]</div>
-<p>being <span class="math notranslate nohighlight">\(E\)</span> the <strong>activation energy</strong>, <span class="math notranslate nohighlight">\(k\)</span> Boltzmann constant, <span class="math notranslate nohighlight">\(T\)</span> the temperature, and <span class="math notranslate nohighlight">\(A\)</span> a constant summarizing all the other conditions for the reaction to occur.</p>
-<p><strong>References</strong></p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Chemical_equilibrium">https://en.wikipedia.org/wiki/Chemical_equilibrium</a></p></li>
-</ul>
+<div class="section" id="operation-under-loads">
+<span id="electro-chemical-batteries-daniell-regimes-load"></span><h3><span class="section-number">12.3.2.2. </span>Operation under loads<a class="headerlink" href="#operation-under-loads" title="Permalink to this heading">#</a></h3>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
-<dt class="label" id="energy-extensive"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Not all the systems are made by sub-systems that combine “extensively”: it’s likely to be impossible to write the energy of these systems as a homogeneous function of the extensive variables of the system.</p>
+<dt class="label" id="activity-solid-definition"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>By definition the standard state of a solid is chosen to be the pure solid at the system temperature and a standard pressure. From this and Nernst equation, it immediately follows that <span class="math notranslate nohighlight">\(a = 1\)</span> for the solid in the reference condition. From a more intuitive point of view, concentration of a solid doesn’t change: adding a piece of a solid medium doesn’t make the atoms in the crystal more packed, and thus the chemical environment around an atom of the solid lattice doesn’t change, and thus its chemical potential neither.</p>
 </dd>
 </dl>
+</div>
 </div>
 </div>
 
@@ -514,13 +522,22 @@ Internal energy, intensive and extensive variables<div class="sd-summary-down do
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="heat-transfer-radiation.html"
+       href="batteries.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">9.3. </span>Radiation</p>
+        <p class="prev-next-title"><span class="section-number">12. </span>Batteries: thermo-electro-chemical modeling</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="batteries-li.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">12.4. </span>Li-ion battery</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -537,9 +554,12 @@ Internal energy, intensive and extensive variables<div class="sd-summary-down do
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-reactions">10.1. Chemical reactions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-principle-energy-balance">10.2. First principle - energy balance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-mass-action">10.3. Law of Mass Action</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description">12.3.1. Description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regimes">12.3.2. Regimes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-circuit-equilibrium">12.3.2.1. Open-circuit equilibrium</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operation-under-loads">12.3.2.2. Operation under loads</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

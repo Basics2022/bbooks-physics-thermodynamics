@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>10. Principles of Thermodynamics - Electro-chemical systems &#8212; Classical Thermodynamics</title>
+    <title>Thermodynamic equilibrium &#8212; Classical Thermodynamics</title>
   
   
   
@@ -66,11 +66,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/principles-electrochemical';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/notes-equilibrium-conditions';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="9.3. Radiation" href="heat-transfer-radiation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -204,8 +203,14 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Electro-chemical systems</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">10. Principles of Thermodynamics - Electro-chemical systems</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="principles-electrochemical.html">10. Principles of Thermodynamics - Electro-chemical systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nernst-equation.html">11. Nernst equation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="batteries.html">12. Batteries: thermo-electro-chemical modeling</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="batteries-daniell.html">12.3. Daniell cell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batteries-li.html">12.4. Li-ion battery</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
@@ -260,7 +265,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/principles-electrochemical.md" target="_blank"
+      <li><a href="../_sources/ch/notes-equilibrium-conditions.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -344,7 +349,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Principles of Thermodynamics - Electro-chemical systems</h1>
+    <h1>Thermodynamic equilibrium</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -354,9 +359,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-reactions">10.1. Chemical reactions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-principle-energy-balance">10.2. First principle - energy balance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-mass-action">10.3. Law of Mass Action</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gibbs-free-energy">Gibbs’ free energy</a></li>
 </ul>
             </nav>
         </div>
@@ -368,118 +371,15 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="principles-of-thermodynamics-electro-chemical-systems">
-<span id="physics-thermodynamics-foundation-principles-electro-chemical"></span><h1><span class="section-number">10. </span>Principles of Thermodynamics - Electro-chemical systems<a class="headerlink" href="#principles-of-thermodynamics-electro-chemical-systems" title="Permalink to this heading">#</a></h1>
-<p>In this section:</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="thermodynamic-equilibrium">
+<span id="notes-equilibrium-conditions"></span><h1>Thermodynamic equilibrium<a class="headerlink" href="#thermodynamic-equilibrium" title="Permalink to this heading">#</a></h1>
+<p>This section is (better, <strong>will be</strong>) devoted to some personal notes about thermodynamic equilibrium and its stability…</p>
+<div class="section" id="gibbs-free-energy">
+<span id="notes-equilibrium-conditions-gibbs-free-energy"></span><h2>Gibbs’ free energy<a class="headerlink" href="#gibbs-free-energy" title="Permalink to this heading">#</a></h2>
+<p><strong>todo</strong></p>
 <ul class="simple">
-<li><p>Introduction to <a class="reference internal" href="#physics-thermodynamics-foundation-principles-electro-chemical-reactions"><span class="std std-ref">chemical reactions</span></a></p></li>
-<li><p><a class="reference internal" href="#physics-thermodynamics-foundation-principles-electro-chemical-first-principle"><span class="std std-ref">Energy balance</span></a></p></li>
-<li><p><a class="reference internal" href="#physics-thermodynamics-foundation-principles-electro-chemical-law-of-mass-action"><span class="std std-ref">Law of mass action</span></a></p></li>
+<li><p>How to relate <span class="math notranslate nohighlight">\(d G = 0\)</span> with some physical assumptions?</p></li>
 </ul>
-<p>In next sections:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="batteries.html#electro-chemical-batteries"><span class="std std-ref">Batteries</span></a></p></li>
-</ul>
-<div class="section" id="chemical-reactions">
-<span id="physics-thermodynamics-foundation-principles-electro-chemical-reactions"></span><h2><span class="section-number">10.1. </span>Chemical reactions<a class="headerlink" href="#chemical-reactions" title="Permalink to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[a A + b B \rightleftharpoons c C + d D \ ,\]</div>
-<p>or</p>
-<div class="math notranslate nohighlight" id="equation-eq-reaction-stoichiometry">
-<span class="eqno">(10.1)<a class="headerlink" href="#equation-eq-reaction-stoichiometry" title="Permalink to this equation">#</a></span>\[\nu_{R_i}  R_i \rightleftharpoons \nu_{P_j} P_j\]</div>
-</div>
-<div class="section" id="first-principle-energy-balance">
-<span id="physics-thermodynamics-foundation-principles-electro-chemical-first-principle"></span><h2><span class="section-number">10.2. </span>First principle - energy balance<a class="headerlink" href="#first-principle-energy-balance" title="Permalink to this heading">#</a></h2>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Energy balance<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Total energy balance</p>
-<div class="math notranslate nohighlight">
-\[d E^{tot} = \delta L^{ext} + \delta Q^{ext} \ .\]</div>
-<p class="sd-card-text">Macroscopic kinetic energy balance (theorem, from mechanics)</p>
-<div class="math notranslate nohighlight">
-\[d K = \delta L^{ext} + \delta L^{int} \ .\]</div>
-<p class="sd-card-text">Internal energy <span class="math notranslate nohighlight">\(E := E^{tot} - K\)</span></p>
-<div class="math notranslate nohighlight">
-\[d E = - \delta L^{int} + \delta Q^{ext} \ .\]</div>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Internal energy, intensive and extensive variables<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[d E = - \delta L^{int,rev} + \underbrace{\delta^+ D + \delta Q^{ext}}_{=:T dS}\]</div>
-<p class="sd-card-text">As <span class="math notranslate nohighlight">\(dE\)</span> is a state function, and <span class="math notranslate nohighlight">\(\delta L^{int,rev}\)</span> must be reversible by definition, the remaining terms must be reversible as well and completing the exact differential of the energy as a state function. The internal nature may have different natures, e.g. mechanical, elelctrical, magnetic, chemical</p>
-<div class="math notranslate nohighlight">
-\[\delta L^{int,rev} = \delta L^{int,mech} + \delta L^{int,el} + \delta L^{int,magn} + \delta L^{int,el} + \dots\]</div>
-<p class="sd-card-text">but all of these works can be written as the product of a intensive variable <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> of the system and the variation of a extensive variable <span class="math notranslate nohighlight">\(\mathbf{X}\)</span>, formally</p>
-<div class="math notranslate nohighlight">
-\[\delta L^{int,rev} = \mathbf{F} \cdot d \mathbf{X} \ ,\]</div>
-<ul>
-<li><p class="sd-card-text">mechanical work, depends on the nature of the system. As an example, for a gas <span class="math notranslate nohighlight">\(\delta L^{int,rev} = - P d V\)</span>, or for an elastic solid <span class="math notranslate nohighlight">\(\delta L^{int,rev} = - V \sigma : d \varepsilon\)</span></p></li>
-<li><p class="sd-card-text">electrical work, being <span class="math notranslate nohighlight">\(V\)</span> the (uniform) electrical potential of the system, and <span class="math notranslate nohighlight">\(Q\)</span> its electrical charge (see <a class="reference external" href="https://basics2022.github.io/bbooks-physics-electromagnetism/ch/regimes-electrostatics.html#systems-with-uniform-potential">Elecetrostatic energy: systems with uniform potential</a>)</p>
-<div class="math notranslate nohighlight">
-\[- V d Q\]</div>
-</li>
-<li><p class="sd-card-text">chemical work, with <span class="math notranslate nohighlight">\(\mu_i\)</span> the molar chemical potential <span class="math notranslate nohighlight">\(i\)</span> of the substance (the amount of internal energy added to the system by a change in the number of moles of the <span class="math notranslate nohighlight">\(i\)</span> substance in the system)</p>
-<div class="math notranslate nohighlight">
-\[\mu_i d N_i\]</div>
-</li>
-</ul>
-<p class="sd-card-text"><strong>todo</strong> See and uniform the treatment in <span class="xref myst">First principle</span>, <span class="xref myst">Second principle</span>, <span class="xref myst">Gibbs formalization</span>, <a class="reference internal" href="potentials.html#classical-thermodynamics-potentials"><span class="std std-ref">Thermodynamic potentials</span></a></p>
-</div>
-</details><p>Using <span class="math notranslate nohighlight">\(\mathbf{X}, S\)</span> as independent variables,</p>
-<div class="math notranslate nohighlight">
-\[d E = \mathbf{F}(\mathbf{X}, S) \cdot d \mathbf{X} + T(\mathbf{X}, S) d S \ .\]</div>
-<p>It the energy of the system is a order-1 homogeneous function of the extensive variables of the system, <span class="math notranslate nohighlight">\(E(\lambda \mathbf{Y}) = \lambda E(\mathbf{Y})\)</span><a class="footnote-reference brackets" href="#energy-extensive" id="id1">1</a>, Euler theorem (<a class="reference internal" href="potentials.html#thm-euler">Theorem 3.1</a>) gives</p>
-<div class="math notranslate nohighlight">
-\[E = T S + \mathbf{F} \cdot \mathbf{X} \ .\]</div>
-<p>Explicitly writing the number of moles of the substances of the system out fror the extensive variables <span class="math notranslate nohighlight">\(\mathbf{X}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{X} \rightarrow \left( \mathbf{X}, \mathbf{N} \right)\)</span>, and the chemical potentials out from the generalized intensive variables <span class="math notranslate nohighlight">\(\mathbf{F} \rightarrow \left( \mathbf{F}, \boldsymbol\mu \right)\)</span>, the expression of the internal energy and its differential reads</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-   E &amp; = T S + \boldsymbol\mu \cdot \mathbf{N} + \mathbf{F} \cdot \mathbf{X} \\
-  dE &amp; = T dS + \boldsymbol\mu \cdot d\mathbf{N} + \mathbf{F} \cdot d\mathbf{X} \ .
-\end{aligned}\end{split}\]</div>
-</div>
-<div class="section" id="law-of-mass-action">
-<span id="physics-thermodynamics-foundation-principles-electro-chemical-law-of-mass-action"></span><h2><span class="section-number">10.3. </span>Law of Mass Action<a class="headerlink" href="#law-of-mass-action" title="Permalink to this heading">#</a></h2>
-<p>The law of mass action states that the forward velocity <span class="math notranslate nohighlight">\(v_f\)</span> (<span class="math notranslate nohighlight">\(R \rightarrow P\)</span>) and backward velocity <span class="math notranslate nohighlight">\(v_b\)</span> (<span class="math notranslate nohighlight">\(R \leftarrow P\)</span>) of reaction <a class="reference internal" href="#equation-eq-reaction-stoichiometry">(10.1)</a> reads</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  v_f &amp; := -\frac{1}{\nu_{R_k}}\frac{d [ R_k ]_f}{dt} :=  \frac{1}{\nu_{P_k}}\frac{d [ P_k ]_f}{dt} = k_f \prod_i [ R_i ]^{\alpha_{R_i}} \\ 
-  v_r &amp; :=  \frac{1}{\nu_{R_k}}\frac{d [ R_k ]_r}{dt} := -\frac{1}{\nu_{P_k}}\frac{d [ P_k ]_r}{dt} = k_r \prod_i [ P_i ]^{\alpha_{P_i}} \\ 
-\end{aligned}\end{split}\]</div>
-<p>Taking <span class="math notranslate nohighlight">\(R \rightarrow P\)</span> as the positive direction of the reaction, the velocity of the reaction is defined as <span class="math notranslate nohighlight">\(v = v_r - v_f\)</span>, and the rate of change of the concentrations thus reads</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \frac{d [ R_k ]}{dt} = \frac{d [ R_k ]_f}{dt} + \frac{d [ R_k ]_r}{dt} = \nu_{R_k} \left( v_r - v_f \right) = \nu_{R_k} \, v \\ 
-  \frac{d [ P_k ]}{dt} = \frac{d [ P_k ]_f}{dt} + \frac{d [ P_k ]_r}{dt} = \nu_{P_k} \left( v_f - v_r \right) = \nu_{P_k} \, v \ .
-\end{aligned}\end{split}\]</div>
-<ul class="simple">
-<li><p><strong>Equilibrium</strong> is reached when <span class="math notranslate nohighlight">\(v_r = v_f\)</span>, and thus the rate of change of concentration of the substances is zero.</p></li>
-<li><p><strong>Extent of reaction</strong> <span class="math notranslate nohighlight">\(\xi\)</span>, so that <span class="math notranslate nohighlight">\(d \xi = v dt\)</span>.</p></li>
-</ul>
-<p>Constant <span class="math notranslate nohighlight">\(k_r\)</span> and <span class="math notranslate nohighlight">\(k_f\)</span> usually can be written as</p>
-<div class="math notranslate nohighlight">
-\[k = A \exp \left( - \frac{E}{kT} \right) \ ,\]</div>
-<p>being <span class="math notranslate nohighlight">\(E\)</span> the <strong>activation energy</strong>, <span class="math notranslate nohighlight">\(k\)</span> Boltzmann constant, <span class="math notranslate nohighlight">\(T\)</span> the temperature, and <span class="math notranslate nohighlight">\(A\)</span> a constant summarizing all the other conditions for the reaction to occur.</p>
-<p><strong>References</strong></p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Chemical_equilibrium">https://en.wikipedia.org/wiki/Chemical_equilibrium</a></p></li>
-</ul>
-<hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="energy-extensive"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Not all the systems are made by sub-systems that combine “extensively”: it’s likely to be impossible to write the energy of these systems as a homogeneous function of the extensive variables of the system.</p>
-</dd>
-</dl>
 </div>
 </div>
 
@@ -513,15 +413,6 @@ Internal energy, intensive and extensive variables<div class="sd-summary-down do
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="heat-transfer-radiation.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">9.3. </span>Radiation</p>
-      </div>
-    </a>
 </div>
                 </footer>
               
@@ -537,9 +428,7 @@ Internal energy, intensive and extensive variables<div class="sd-summary-down do
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-reactions">10.1. Chemical reactions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-principle-energy-balance">10.2. First principle - energy balance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-mass-action">10.3. Law of Mass Action</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gibbs-free-energy">Gibbs’ free energy</a></li>
 </ul>
   </nav></div>
 
