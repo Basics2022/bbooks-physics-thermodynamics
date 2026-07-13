@@ -72,17 +72,16 @@
 \contentsline {section}{\numberline {10.3}Law of Mass Action}{52}{section.10.3}%
 \contentsline {chapter}{\numberline {11}Nernst equation}{55}{chapter.11}%
 \contentsline {chapter}{\numberline {12}Batteries: thermo\sphinxhyphen {}electro\sphinxhyphen {}chemical modeling}{57}{chapter.12}%
-\contentsline {section}{\numberline {12.1}Introduction and working principles}{57}{section.12.1}%
-\contentsline {section}{\numberline {12.2}Examples}{57}{section.12.2}%
-\contentsline {section}{\numberline {12.3}Daniell cell}{57}{section.12.3}%
-\contentsline {subsection}{\numberline {12.3.1}Description}{57}{subsection.12.3.1}%
-\contentsline {subsection}{\numberline {12.3.2}Regimes}{58}{subsection.12.3.2}%
+\contentsline {section}{\numberline {12.1}Daniell cell}{57}{section.12.1}%
+\contentsline {subsection}{\numberline {12.1.1}Description}{57}{subsection.12.1.1}%
+\contentsline {subsection}{\numberline {12.1.2}Regimes}{58}{subsection.12.1.2}%
 \contentsline {subsubsection}{Open\sphinxhyphen {}circuit equilibrium}{58}{subsubsection*.20}%
 \contentsline {subsubsection}{Operation under loads}{59}{subsubsection*.22}%
-\contentsline {section}{\numberline {12.4}Li\sphinxhyphen {}ion battery}{59}{section.12.4}%
-\contentsline {subsection}{\numberline {12.4.1}Description}{59}{subsection.12.4.1}%
-\contentsline {subsection}{\numberline {12.4.2}Regimes}{59}{subsection.12.4.2}%
-\contentsline {subsubsection}{Open\sphinxhyphen {}circuit equilibrium}{60}{subsubsection*.23}%
-\contentsline {subsubsection}{Operation under loads}{60}{subsubsection*.24}%
-\contentsline {part}{IV\hspace {1em}Random Notes}{61}{part.4}%
-\contentsline {chapter}{Proof Index}{63}{section*.25}%
+\contentsline {paragraph}{Charge transfer kinetics}{60}{paragraph*.23}%
+\contentsline {section}{\numberline {12.2}Li\sphinxhyphen {}ion battery}{61}{section.12.2}%
+\contentsline {subsection}{\numberline {12.2.1}Description}{61}{subsection.12.2.1}%
+\contentsline {subsection}{\numberline {12.2.2}Regimes}{61}{subsection.12.2.2}%
+\contentsline {subsubsection}{Open\sphinxhyphen {}circuit equilibrium}{61}{subsubsection*.24}%
+\contentsline {subsubsection}{Operation under loads}{61}{subsubsection*.25}%
+\contentsline {part}{IV\hspace {1em}Random Notes}{63}{part.4}%
+\contentsline {chapter}{Proof Index}{65}{section*.26}%

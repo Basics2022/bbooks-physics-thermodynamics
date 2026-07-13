@@ -102,7 +102,7 @@
 
 
 \sphinxAtStartPar
-This material is part of the \sphinxhref{https://basics2022.github.io/bbooks}{\sphinxstylestrong{basics\sphinxhyphen{}books project}}. It is also available as a \DUrole{xref,myst}{.pdf document}.
+This material is part of the \sphinxhref{https://basics2022.github.io/bbooks}{\sphinxstylestrong{basics\sphinxhyphen{}books project}}. It is also available as a \DUrole{xref,download,myst}{.pdf document}.
 
 \sphinxAtStartPar
 Classical thermodynamics mainly deals with energy, its forms and the ways it can be transferred.
@@ -2560,8 +2560,7 @@ with statistical mechanics
 \chapter{Batteries: thermo\sphinxhyphen{}electro\sphinxhyphen{}chemical modeling}
 \label{\detokenize{ch/batteries:batteries-thermo-electro-chemical-modeling}}\label{\detokenize{ch/batteries:electro-chemical-batteries}}\label{\detokenize{ch/batteries::doc}}
 
-\section{Introduction and working principles}
-\label{\detokenize{ch/batteries:introduction-and-working-principles}}\label{\detokenize{ch/batteries:electro-chemical-batteries-intro}}
+
 \sphinxAtStartPar
 A battery is an electrochemical system that converts chemical energy directly into electrical energy via spontaneous reduction\sphinxhyphen{}oxidation (redox) reactions. It acts as an electrochemical reactor where the spatial separation of the oxidation and reduction steps forces electrons to flow through an external load to perform work.
 
@@ -2600,8 +2599,10 @@ Secondary (rechargeable): the redox reactions are highly reversible. Applying an
 \end{itemize}
 
 
-\section{Examples}
-\label{\detokenize{ch/batteries:examples}}\label{\detokenize{ch/batteries:electro-chemical-batteries-examples}}\begin{itemize}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Examples.}
+\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 {\hyperref[\detokenize{ch/batteries-daniell:electro-chemical-batteries-daniell}]{\sphinxcrossref{\DUrole{std,std-ref}{Daniell cell}}}}
@@ -2695,9 +2696,9 @@ Using the reactions \eqref{equation:ch/batteries-daniell:eq:daniell:reaction:ano
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-having introduced the \sphinxstylestrong{Faraday’s constant}
+having introduced the \sphinxstylestrong{Faraday’s constant}, representing the electrical charge per mole of ions (with electrical charge \(q\) per particle),
 \begin{equation*}
-\begin{split}F = q N_A = 96 485.33 \frac{\text{s} \text{A}}{\text{mol}} \ ,\end{split}
+\begin{split}F = q N_A = 96 485.33 \frac{\text{C}}{\text{mol}} \ ,\end{split}
 \end{equation*}
 \sphinxAtStartPar
 defined as the product of the elementary charge (electron charge, but positive), and the number of Avogadro \(N_A\).
@@ -2799,6 +2800,123 @@ The standard open\sphinxhyphen{}circuit cell potential of a Daniell cell is \(V_
 
 \subsubsection{Operation under loads}
 \label{\detokenize{ch/batteries-daniell:operation-under-loads}}\label{\detokenize{ch/batteries-daniell:electro-chemical-batteries-daniell-regimes-load}}
+\sphinxAtStartPar
+\sphinxstylestrong{todo}
+\subsubsection*{Todo list}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+write a full dynamical model
+
+\item {} 
+\sphinxAtStartPar
+write a simplified one, after removing any unnecessary dynamical variable
+
+\end{itemize}
+
+\sphinxAtStartPar
+The goal is to write the constitutive laws of an electro\sphinxhyphen{}chemical component with approximately constant voltage and a state of charge internal variable.
+\subsubsection*{Elements of the system}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Electrode\sphinxhyphen{}electrolyte interfaces.}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+activation overpotential
+
+\item {} 
+\sphinxAtStartPar
+double\sphinxhyphen{}layer capacitance
+
+\end{itemize}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Diffusion layer}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Ions migration}
+
+\end{itemize}
+
+
+\paragraph{Charge transfer kinetics}
+\label{\detokenize{ch/batteries-daniell:charge-transfer-kinetics}}\label{\detokenize{ch/batteries-daniell:electro-chemical-batteries-daniell-regimes-load-reaction-kinetics}}
+\sphinxAtStartPar
+At the anode, for the \DUrole{xref,myst}{law of mass action}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  v_a
+  & = v_{a,f} - v_{a,r} = \\
+  & = A_{a,f} \exp \left( - \frac{E_{a,f}}{RT}  \right) a_{\text{Zn}} - A_{a,r} \exp \left( - \frac{E_{a,r}}{RT}  \right) a_{\text{Zn}^{2+}} = \\ 
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+At the equilibrium, \(v_a = 0\).
+\begin{equation*}
+\begin{split}A_{a,f} \exp \left( - \frac{E^0_{a,f}}{RT}  \right) \underbrace{a_\text{Zn}^0}_{ = 1} = A_{a,r} \exp \left( - \frac{E^0_{a,r}}{RT}  \right) a_{\text{Zn}^{2+}}^0 =: v_{a}^0 \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+In order to have a net velocity of reaction \sphinxhyphen{} out of the equilibrium \sphinxhyphen{} a net potential difference across the interface is required so that the energy levels of the reagents and the products shift, and so do the activation energies.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Activation overpotential} is defined as the difference between the potential under load condition and the potential at the equilibrium
+\begin{equation*}
+\begin{split}\eta_{act, a} = \phi_a - \phi_a^0 \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The change in energy of a mole of ions due to the activation overpotential becomes \(\Delta E_a = z F \eta_{act, a}\) and the activation eneregies for forward and reverse reactions become
+\begin{equation*}
+\begin{split}\begin{aligned}
+  E_{a,f} & = E_{a,f}^0 - \alpha_{a,f} \Delta E_{a} = E_{a,f}^0 - \alpha_{a,f} z F \eta_{act,a}  \\
+  E_{a,r} & = E_{a,r}^0 + \alpha_{a,r} \Delta E_{a} = E_{a,r}^0 + \alpha_{a,r} z F \eta_{act,a}  \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(\alpha_{a,f} + \alpha_{a,r} = 1\). The velocity of the reaction becomes
+\begin{equation*}
+\begin{split}\begin{aligned}
+  v_a
+  & = A_f \exp\left( - \frac{E_{a,f}}{RT} \right) - A_r \exp\left( - \frac{E_{a,r}}{RT} \right) = \\
+  & = A_f \exp\left( - \frac{E^0_{a,f}}{RT} \right) \exp\left( \frac{\alpha_{a,f} z F \eta_{act,a}}{RT} \right) - A_r \exp\left( - \frac{E^0_{a,r}}{RT} \right) \exp\left( - \frac{ ( 1 - \alpha_{a,f} ) z F \eta_{act,a}}{RT} \right) a_{\text{Zn}^{2+}}^0 \frac{a_{\text{Zn}^{2+}}}{a_{\text{Zn}^{2+}}^0} \ , \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+i.e. the velocity of the reaction at the anode reads
+\begin{equation*}
+\begin{split}
+  v_a = v_a^0 \exp\left( \frac{a_{a,f} z F \eta_{act,a}}{RT} \right) \left[ 1 - \frac{z F \eta_{act,a}}{RT} \frac{a_{\text{Zn}^{2+}}}{a_{\text{Zn}^{2+}}^0} \right] \ .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+In order to get a charge current, the velocity of reaction is multiplied by \(z F\), i.e. \(z q N_A\),
+\begin{equation*}
+\begin{split}i_a = v_a z q N_a \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+as
+\begin{equation*}
+\begin{split}
+\underbrace{\frac{\text{[charge]}}{\text{[time]}}}_{i_a} = 
+\underbrace{\frac{\text{[n.moles]}}{\text{[time]}}}_{v_a}
+\underbrace{\frac{\text{[n.charges]}}{\text{[n.parts]}}}_{z}
+\underbrace{\frac{\text{[charge]}}{\text{[n.charges]}}}_{q}
+\underbrace{\frac{\text{[n.parts]}}{\text{[n.moles]}}}_{N_a} \  .\end{split}
+\end{equation*}\subsubsection*{Extreme regimes}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Linear regime \(\eta \ll \frac{RT}{zF}\), extremely rare
+
+\item {} 
+\sphinxAtStartPar
+Tafel regime \(\eta \gg \frac{RT}{zF}\), negative exponential of the reverse reaction collapses
+
+\end{itemize}
+
 
 \bigskip\hrule\bigskip
 

@@ -1,8 +1,10 @@
 (electro-chemical:batteries)=
 # Batteries: thermo-electro-chemical modeling
 
+<!--
 (electro-chemical:batteries:intro)=
 ## Introduction and working principles
+-->
 
 A battery is an electrochemical system that converts chemical energy directly into electrical energy via spontaneous reduction-oxidation (redox) reactions. It acts as an electrochemical reactor where the spatial separation of the oxidation and reduction steps forces electrons to flow through an external load to perform work.
 
@@ -18,10 +20,12 @@ A battery is an electrochemical system that converts chemical energy directly in
 * Primary (non-rechargeable): the underlying chemical reactions are thermodynamically irreversible or physically difficult to reverse. Once the reactants are depleted, the battery cannot be recharged (e.g., Alkaline, Zinc-carbon).
 * Secondary (rechargeable): the redox reactions are highly reversible. Applying an external electrical potential drives the current in reverse, regenerating the initial chemical reactants (e.g., Lithium-ion, Lead-acid, NiMH).
 
-
+<!--
 (electro-chemical:batteries:examples)=
 ## Examples
+-->
 
+**Examples.**
 * [Daniell cell](electro-chemical:batteries:daniell)
 * [Li-ion bettery](electro-chemical:batteries:li)
 

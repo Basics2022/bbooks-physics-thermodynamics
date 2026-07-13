@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>12.3. Daniell cell &#8212; Classical Thermodynamics</title>
+    <title>12.1. Daniell cell &#8212; Classical Thermodynamics</title>
   
   
   
@@ -70,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="12.4. Li-ion battery" href="batteries-li.html" />
+    <link rel="next" title="12.2. Li-ion battery" href="batteries-li.html" />
     <link rel="prev" title="12. Batteries: thermo-electro-chemical modeling" href="batteries.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -209,8 +209,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="principles-electrochemical.html">10. Principles of Thermodynamics - Electro-chemical systems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nernst-equation.html">11. Nernst equation</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="batteries.html">12. Batteries: thermo-electro-chemical modeling</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">12.3. Daniell cell</a></li>
-<li class="toctree-l2"><a class="reference internal" href="batteries-li.html">12.4. Li-ion battery</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">12.1. Daniell cell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batteries-li.html">12.2. Li-ion battery</a></li>
 </ul>
 </li>
 </ul>
@@ -361,10 +361,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description">12.3.1. Description</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regimes">12.3.2. Regimes</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-circuit-equilibrium">12.3.2.1. Open-circuit equilibrium</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operation-under-loads">12.3.2.2. Operation under loads</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description">12.1.1. Description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regimes">12.1.2. Regimes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-circuit-equilibrium">12.1.2.1. Open-circuit equilibrium</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operation-under-loads">12.1.2.2. Operation under loads</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#charge-transfer-kinetics">12.1.2.2.1. Charge transfer kinetics</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -379,9 +382,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="daniell-cell">
-<span id="electro-chemical-batteries-daniell"></span><h1><span class="section-number">12.3. </span>Daniell cell<a class="headerlink" href="#daniell-cell" title="Permalink to this heading">#</a></h1>
+<span id="electro-chemical-batteries-daniell"></span><h1><span class="section-number">12.1. </span>Daniell cell<a class="headerlink" href="#daniell-cell" title="Permalink to this heading">#</a></h1>
 <div class="section" id="description">
-<span id="electro-chemical-batteries-daniell-description"></span><h2><span class="section-number">12.3.1. </span>Description<a class="headerlink" href="#description" title="Permalink to this heading">#</a></h2>
+<span id="electro-chemical-batteries-daniell-description"></span><h2><span class="section-number">12.1.1. </span>Description<a class="headerlink" href="#description" title="Permalink to this heading">#</a></h2>
 <p>The Daniell cell consists of two separate half-cells:</p>
 <ul class="simple">
 <li><p>A zinc (<span class="math notranslate nohighlight">\(\text{Zn}\)</span>) electrode immersed in a zinc sulfate (<span class="math notranslate nohighlight">\(\text{ZnSO}_4\)</span>) aqueous solution, with ions <span class="math notranslate nohighlight">\(Zn^{2+}\)</span>, <span class="math notranslate nohighlight">\(SO_4^{2-}\)</span> sully dissolved in that</p></li>
@@ -401,13 +404,13 @@ document.write(`
 </ul>
 </div>
 <div class="section" id="regimes">
-<span id="electro-chemical-batteries-daniell-regimes"></span><h2><span class="section-number">12.3.2. </span>Regimes<a class="headerlink" href="#regimes" title="Permalink to this heading">#</a></h2>
+<span id="electro-chemical-batteries-daniell-regimes"></span><h2><span class="section-number">12.1.2. </span>Regimes<a class="headerlink" href="#regimes" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#electro-chemical-batteries-daniell-regimes-open"><span class="std std-ref">Open circuit equilibrium</span></a>: chemical reactions at equilibrium, no net motion of charges through the electrolytes and the salt bridge</p></li>
 <li><p><a class="reference internal" href="#electro-chemical-batteries-daniell-regimes-load"><span class="std std-ref">Operation under load</span></a>. Chemical kinetics reactions and diffusion process of ions may produce bottlenecks in the process, and thus overpotentials and/or losses</p></li>
 </ul>
 <div class="section" id="open-circuit-equilibrium">
-<span id="electro-chemical-batteries-daniell-regimes-open"></span><h3><span class="section-number">12.3.2.1. </span>Open-circuit equilibrium<a class="headerlink" href="#open-circuit-equilibrium" title="Permalink to this heading">#</a></h3>
+<span id="electro-chemical-batteries-daniell-regimes-open"></span><h3><span class="section-number">12.1.2.1. </span>Open-circuit equilibrium<a class="headerlink" href="#open-circuit-equilibrium" title="Permalink to this heading">#</a></h3>
 <p><strong>Internal energy</strong></p>
 <div class="math notranslate nohighlight">
 \[dE = - P dV + T dS + \sum_i \mu_i d N_i + \sum_k \phi_k d Q_k\]</div>
@@ -424,9 +427,9 @@ Using the reactions <a class="reference internal" href="#equation-eq-daniell-rea
   d Q_{\text{anode}}   &amp; = - z q d n_{\text{Zn}^{2+}} =  - z q N_{A} d N_{\text{Zn}^{2+}} = - z F d N_{\text{Zn}^{2+}} \\ 
   d Q_{\text{cathode}} &amp; = - z q d n_{\text{Cu}^{2+}} =  - z q N_{A} d N_{\text{Cu}^{2+}} = - z F d N_{\text{Cu}^{2+}} \ , 
 \end{aligned}\end{split}\]</div>
-<p>having introduced the <strong>Faraday’s constant</strong></p>
+<p>having introduced the <strong>Faraday’s constant</strong>, representing the electrical charge per mole of ions (with electrical charge <span class="math notranslate nohighlight">\(q\)</span> per particle),</p>
 <div class="math notranslate nohighlight">
-\[F = q N_A = 96 485.33 \frac{\text{s} \text{A}}{\text{mol}} \ ,\]</div>
+\[F = q N_A = 96 485.33 \frac{\text{C}}{\text{mol}} \ ,\]</div>
 <p>defined as the product of the elementary charge (electron charge, but positive), and the number of Avogadro <span class="math notranslate nohighlight">\(N_A\)</span>.</p>
 <p>If the motion of <span class="math notranslate nohighlight">\(\text{SO}_4^{2-}\)</span> ions through the salt bridge keeps the electrolytes electrically neutral, it’s possible to write the variation of the moles of substances in the system as a function of an <strong>extent of reaction variable</strong>, <span class="math notranslate nohighlight">\(\xi\)</span></p>
 <div class="math notranslate nohighlight">
@@ -480,13 +483,103 @@ Using the reactions <a class="reference internal" href="#equation-eq-daniell-rea
 <p>The standard open-circuit cell potential of a Daniell cell is <span class="math notranslate nohighlight">\(V_{oc}^\circ = \phi_c^\circ - \phi_a^\circ = 1.102 \text{V}\)</span></p>
 </div>
 <div class="section" id="operation-under-loads">
-<span id="electro-chemical-batteries-daniell-regimes-load"></span><h3><span class="section-number">12.3.2.2. </span>Operation under loads<a class="headerlink" href="#operation-under-loads" title="Permalink to this heading">#</a></h3>
-<hr class="footnotes docutils" />
+<span id="electro-chemical-batteries-daniell-regimes-load"></span><h3><span class="section-number">12.1.2.2. </span>Operation under loads<a class="headerlink" href="#operation-under-loads" title="Permalink to this heading">#</a></h3>
+<p><strong>todo</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Todo list<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">write a full dynamical model</p></li>
+<li><p class="sd-card-text">write a simplified one, after removing any unnecessary dynamical variable</p></li>
+</ul>
+<p class="sd-card-text">The goal is to write the constitutive laws of an electro-chemical component with approximately constant voltage and a state of charge internal variable.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Elements of the system<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Electrode-electrolyte interfaces.</strong></p>
+<ul>
+<li><p class="sd-card-text">activation overpotential</p></li>
+<li><p class="sd-card-text">double-layer capacitance</p></li>
+</ul>
+</li>
+<li><p class="sd-card-text"><strong>Diffusion layer</strong></p></li>
+<li><p class="sd-card-text"><strong>Ions migration</strong></p></li>
+</ul>
+</div>
+</details><div class="section" id="charge-transfer-kinetics">
+<span id="electro-chemical-batteries-daniell-regimes-load-reaction-kinetics"></span><h4><span class="section-number">12.1.2.2.1. </span>Charge transfer kinetics<a class="headerlink" href="#charge-transfer-kinetics" title="Permalink to this heading">#</a></h4>
+<p>At the anode, for the <span class="xref myst">law of mass action</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  v_a
+  &amp; = v_{a,f} - v_{a,r} = \\
+  &amp; = A_{a,f} \exp \left( - \frac{E_{a,f}}{RT}  \right) a_{\text{Zn}} - A_{a,r} \exp \left( - \frac{E_{a,r}}{RT}  \right) a_{\text{Zn}^{2+}} = \\ 
+\end{aligned}\end{split}\]</div>
+<p>At the equilibrium, <span class="math notranslate nohighlight">\(v_a = 0\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[A_{a,f} \exp \left( - \frac{E^0_{a,f}}{RT}  \right) \underbrace{a_\text{Zn}^0}_{ = 1} = A_{a,r} \exp \left( - \frac{E^0_{a,r}}{RT}  \right) a_{\text{Zn}^{2+}}^0 =: v_{a}^0 \ .\]</div>
+<p>In order to have a net velocity of reaction - out of the equilibrium - a net potential difference across the interface is required so that the energy levels of the reagents and the products shift, and so do the activation energies.</p>
+<p><strong>Activation overpotential</strong> is defined as the difference between the potential under load condition and the potential at the equilibrium</p>
+<div class="math notranslate nohighlight">
+\[\eta_{act, a} = \phi_a - \phi_a^0 \ .\]</div>
+<p>The change in energy of a mole of ions due to the activation overpotential becomes <span class="math notranslate nohighlight">\(\Delta E_a = z F \eta_{act, a}\)</span> and the activation eneregies for forward and reverse reactions become</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  E_{a,f} &amp; = E_{a,f}^0 - \alpha_{a,f} \Delta E_{a} = E_{a,f}^0 - \alpha_{a,f} z F \eta_{act,a}  \\
+  E_{a,r} &amp; = E_{a,r}^0 + \alpha_{a,r} \Delta E_{a} = E_{a,r}^0 + \alpha_{a,r} z F \eta_{act,a}  \\
+\end{aligned}\end{split}\]</div>
+<p>with <span class="math notranslate nohighlight">\(\alpha_{a,f} + \alpha_{a,r} = 1\)</span>. The velocity of the reaction becomes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  v_a
+  &amp; = A_f \exp\left( - \frac{E_{a,f}}{RT} \right) - A_r \exp\left( - \frac{E_{a,r}}{RT} \right) = \\
+  &amp; = A_f \exp\left( - \frac{E^0_{a,f}}{RT} \right) \exp\left( \frac{\alpha_{a,f} z F \eta_{act,a}}{RT} \right) - A_r \exp\left( - \frac{E^0_{a,r}}{RT} \right) \exp\left( - \frac{ ( 1 - \alpha_{a,f} ) z F \eta_{act,a}}{RT} \right) a_{\text{Zn}^{2+}}^0 \frac{a_{\text{Zn}^{2+}}}{a_{\text{Zn}^{2+}}^0} \ , \\
+\end{aligned}\end{split}\]</div>
+<p>i.e. the velocity of the reaction at the anode reads</p>
+<div class="math notranslate nohighlight">
+\[
+  v_a = v_a^0 \exp\left( \frac{a_{a,f} z F \eta_{act,a}}{RT} \right) \left[ 1 - \frac{z F \eta_{act,a}}{RT} \frac{a_{\text{Zn}^{2+}}}{a_{\text{Zn}^{2+}}^0} \right] \ .
+\]</div>
+<p>In order to get a charge current, the velocity of reaction is multiplied by <span class="math notranslate nohighlight">\(z F\)</span>, i.e. <span class="math notranslate nohighlight">\(z q N_A\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[i_a = v_a z q N_a \ ,\]</div>
+<p>as</p>
+<div class="math notranslate nohighlight">
+\[
+\underbrace{\frac{\text{[charge]}}{\text{[time]}}}_{i_a} = 
+\underbrace{\frac{\text{[n.moles]}}{\text{[time]}}}_{v_a}
+\underbrace{\frac{\text{[n.charges]}}{\text{[n.parts]}}}_{z}
+\underbrace{\frac{\text{[charge]}}{\text{[n.charges]}}}_{q}
+\underbrace{\frac{\text{[n.parts]}}{\text{[n.moles]}}}_{N_a} \  .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Extreme regimes<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">Linear regime <span class="math notranslate nohighlight">\(\eta \ll \frac{RT}{zF}\)</span>, extremely rare</p></li>
+<li><p class="sd-card-text">Tafel regime <span class="math notranslate nohighlight">\(\eta \gg \frac{RT}{zF}\)</span>, negative exponential of the reverse reaction collapses</p></li>
+</ul>
+</div>
+</details><hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="activity-solid-definition"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>By definition the standard state of a solid is chosen to be the pure solid at the system temperature and a standard pressure. From this and Nernst equation, it immediately follows that <span class="math notranslate nohighlight">\(a = 1\)</span> for the solid in the reference condition. From a more intuitive point of view, concentration of a solid doesn’t change: adding a piece of a solid medium doesn’t make the atoms in the crystal more packed, and thus the chemical environment around an atom of the solid lattice doesn’t change, and thus its chemical potential neither.</p>
 </dd>
 </dl>
+</div>
 </div>
 </div>
 </div>
@@ -535,7 +628,7 @@ Using the reactions <a class="reference internal" href="#equation-eq-daniell-rea
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">12.4. </span>Li-ion battery</p>
+        <p class="prev-next-title"><span class="section-number">12.2. </span>Li-ion battery</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -554,10 +647,13 @@ Using the reactions <a class="reference internal" href="#equation-eq-daniell-rea
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description">12.3.1. Description</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regimes">12.3.2. Regimes</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-circuit-equilibrium">12.3.2.1. Open-circuit equilibrium</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operation-under-loads">12.3.2.2. Operation under loads</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description">12.1.1. Description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regimes">12.1.2. Regimes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-circuit-equilibrium">12.1.2.1. Open-circuit equilibrium</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operation-under-loads">12.1.2.2. Operation under loads</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#charge-transfer-kinetics">12.1.2.2.1. Charge transfer kinetics</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

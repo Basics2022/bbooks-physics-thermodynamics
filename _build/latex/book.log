@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  13 JUL 2026 13:56
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  13 JUL 2026 17:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1886,50 +1886,58 @@ LaTeX Info: Redefining \ttfamily on input line 2560.
 ]
 Chapter 12.
 [57]
-LaTeX Info: Redefining \rmfamily on input line 2723.
-LaTeX Info: Redefining \sffamily on input line 2723.
-LaTeX Info: Redefining \ttfamily on input line 2723.
+LaTeX Info: Redefining \rmfamily on input line 2732.
+LaTeX Info: Redefining \sffamily on input line 2732.
+LaTeX Info: Redefining \ttfamily on input line 2732.
  [58]
-LaTeX Info: Redefining \rmfamily on input line 2826.
-LaTeX Info: Redefining \sffamily on input line 2826.
-LaTeX Info: Redefining \ttfamily on input line 2826.
+LaTeX Info: Redefining \rmfamily on input line 2819.
+LaTeX Info: Redefining \sffamily on input line 2819.
+LaTeX Info: Redefining \ttfamily on input line 2819.
  [59]
-LaTeX Info: Redefining \rmfamily on input line 2826.
-LaTeX Info: Redefining \sffamily on input line 2826.
-LaTeX Info: Redefining \ttfamily on input line 2826.
- [60] [61
+LaTeX Info: Redefining \rmfamily on input line 2908.
+LaTeX Info: Redefining \sffamily on input line 2908.
+LaTeX Info: Redefining \ttfamily on input line 2908.
+ [60]
+LaTeX Info: Redefining \rmfamily on input line 2944.
+LaTeX Info: Redefining \sffamily on input line 2944.
+LaTeX Info: Redefining \ttfamily on input line 2944.
+ [61]
+LaTeX Info: Redefining \rmfamily on input line 2944.
+LaTeX Info: Redefining \sffamily on input line 2944.
+LaTeX Info: Redefining \ttfamily on input line 2944.
+ [62
 
-] [62]
-Overfull \hbox (33.21036pt too wide) in paragraph at lines 2899--2900
+] [63] [64]
+Overfull \hbox (33.21036pt too wide) in paragraph at lines 3017--3018
 []\TU/FreeSans(0)/m/n/14.4 thermodynamics:principles:open:ex:comb-
  []
 
 
-Overfull \hbox (4.1225pt too wide) in paragraph at lines 2900--2901
+Overfull \hbox (4.1225pt too wide) in paragraph at lines 3018--3019
 []\TU/FreeMono(0)/m/n/10 thermodynamics:principles:open:ex:comb-
  []
 
 
-Overfull \hbox (67.53998pt too wide) in paragraph at lines 2902--2903
+Overfull \hbox (67.53998pt too wide) in paragraph at lines 3020--3021
 []\TU/FreeSans(0)/m/n/14.4 thermodynamics:principles:open:ex:compressor 
  []
 
 
-Overfull \hbox (34.1225pt too wide) in paragraph at lines 2903--2904
+Overfull \hbox (34.1225pt too wide) in paragraph at lines 3021--3022
 []\TU/FreeMono(0)/m/n/10 thermodynamics:principles:open:ex:compressor
  []
 
 
-Overfull \hbox (36.89679pt too wide) in paragraph at lines 2905--2906
+Overfull \hbox (36.89679pt too wide) in paragraph at lines 3023--3024
 []\TU/FreeSans(0)/m/n/14.4 thermodynamics:principles:open:ex:turbine 
  []
 
 
-Overfull \hbox (16.1225pt too wide) in paragraph at lines 2906--2907
+Overfull \hbox (16.1225pt too wide) in paragraph at lines 3024--3025
 []\TU/FreeMono(0)/m/n/10 thermodynamics:principles:open:ex:turbine
  []
 
-[63
+[65
 
 
 ] (./book.ind)
@@ -1967,26 +1975,26 @@ braces):
 >  {english/babelname}  =>  {american}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2914.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2914.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3032.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3032.
  (./book.aux
 LaTeX Info: Redefining \rmfamily on input line 19.
 LaTeX Info: Redefining \sffamily on input line 19.
 LaTeX Info: Redefining \ttfamily on input line 19.
 )
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2914.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2914.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3032.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3032.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: 08EF11276DE815263461DC10E02F5CAD;6907.
+(rerunfilecheck)             Checksum: 04E54C9ACE1B18CAF3FACFE79090182C;6844.
  ) 
 Here is how much of TeX's memory you used:
- 42321 strings out of 481789
- 957179 string characters out of 5937152
- 1634961 words of memory out of 5000000
- 58490 multiletter control sequences out of 15000+600000
+ 42320 strings out of 481789
+ 957163 string characters out of 5937152
+ 1636961 words of memory out of 5000000
+ 58489 multiletter control sequences out of 15000+600000
  541597 words of font info for 135 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191
  71i,27n,109p,1346b,2232s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on book.pdf (67 pages).
+Output written on book.pdf (69 pages).
