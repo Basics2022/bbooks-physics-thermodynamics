@@ -3,6 +3,7 @@
 
 In this section, principles and the mathematical formalism of classical thermodynamics are reviewed.
 
+(classical-thermodynamics:potentials:first-principle)=
 ## First principle
 
 For an extensive system with uniform intensive pro
@@ -22,11 +23,16 @@ $$T := \left.\dfrac{\partial S}{\partial E}\right|_{\mathbf{X}} \quad , \quad \m
 are **intensive** quantities. A discussion about the difference between the concept of *additivity* and *extensivity*[^additivity-extensivity].
 Beside being extensive, internal energy in classical thermodynamics is an homogeneous function[^SE-e-homogeneous] of order 1 of its arguments, namely
 
+[^additivity-extensivity]: [H.Touchette, When is a quantity additive, and when is it extensive?](https://arxiv.org/pdf/cond-mat/0201134)
+[^SE-e-homogeneous]: [https://physics.stackexchange.com/q/677855](https://physics.stackexchange.com/q/677855)
+
 $$E(a \, S, a \, \mathbf{X}) = a \, E(S, \mathbf{X}) \ .$$
 
 **Euler's theorem for homogeneous functions** holds.
 
 ```{prf:theorem} Euler's theorem for homogeneous functions
+:label: thm-euler
+
 Let $f(x_i)$ and homogeneous function of order $m$, i.e.
 
 $$f(a \, x_i) = a^m \, f(x_i) \ .$$ (eq:homogeneous-fun:def)
@@ -47,22 +53,20 @@ and for $a = 1$,
 
 $$f(x_k) = x_i \, \dfrac{\partial f}{\partial x_i} (x_k)\ .$$
 
-[^additivity-extensivity]: [H.Touchette, When is a quantity additive, and when is it extensive?](https://arxiv.org/pdf/cond-mat/0201134)
-[^SE-e-homogeneous]:  [https://physics.stackexchange.com/q/677855](https://physics.stackexchange.com/q/677855)
-
 Thus, internal energy can be written as
 
 $$E(S, \mathbf{X}) = T \, S + \mathbf{F} \cdot \mathbf{X} \ .$$ 
 
 ```
 
+(classical-thermodynamics:potentials:first-principle:examples)
 ### First principle for different systems
 
-- Single-component fluid, $E(S, V, N)$
+- Single-component fluid, $E(S, V, N)$, i.e. internal energy $E$ as a function of the entropy $S$, the volume of the system $V$ and the number of moles $N$ of the substance in the system
 
    $$d E = T \, d S - P \, d V + \mu \, d N$$
 
-- Multi-component fluid, $E(S, V, N_k)$
+- Multi-component fluid, $E(S, V, N_k)$, i.e. internal energy $E$ as a function of the entropy $S$, the volume of the system $V$ and the number of moles $N_k$ of all the substances in the systme
 
    $$d E = T \, dS - P \, d V + \mu_k \, d N_k$$
 
@@ -70,7 +74,52 @@ $$E(S, \mathbf{X}) = T \, S + \mathbf{F} \cdot \mathbf{X} \ .$$
 
 - Single-component solid, $E(S, \mathbf{X})$
 
-   $$d E = T \, dS + \mathbf{F} \cdot d \mathbf{X}$$
+   $$d E = T \, dS + \mathbf{F} \cdot d \mathbf{X} \ ,$$
+
+   in the limit of small-displacement regime, $d E = T \, d S + V \boldsymbol{\sigma} : d \boldsymbol{\varepsilon}$.
+
+```{dropdown} Internal energy of an elastic medium
+:open:
+
+See also:
+* [Small displacement:Statics:Thermodynamics](https://basics2022.github.io/bbooks-physics-continuum-mechanics/ch/solids/small-displacements-statics.html?highlight=thermodynamics) for thermodynamics of elastic media with thermal dilation, for unit-volume
+  * There's a verssion for 1-dimensional systems in [Termodinamica:Stati della materia:Solidi elastici](https://basics2022.github.io/bbooks-physics-hs/ch/thermodynamics/elastic-solid-1d.html), **todo** 
+    * *move that from physics for HS to somewhere else*
+    * *fix the algebra ($T$ and not $\Delta T$ is appearing in the force...), checking against the main page [Small displacement:Statics:Thermodynamics](https://basics2022.github.io/bbooks-physics-continuum-mechanics/ch/solids/small-displacements-statics.html?highlight=thermodynamics)* 
+<!--
+* [Continuum mechanics:Governing equations:Balance equations in reference space](https://basics2022.github.io/bbooks-physics-continuum-mechanics/ch/continuum/balance-reference-integral.html)
+
+Balance equation for the internal energy immediately follows as the difference between the balance equation for total and kinetic energy
+
+$$\begin{aligned}
+  \rho \frac{D e^{tot}}{D t} & = \rho \vec{g} \cdot \vec{v} + \nabla \cdot \left( \mathbb{T} \cdot \vec{v} \right) - \nabla \cdot \vec{q} + \rho r \\
+  \rho \frac{D k      }{D t} & = \rho \vec{g} \cdot \vec{v} + \nabla \cdot \left( \mathbb{T} \cdot \vec{v} \right) - \nabla \vec{v} : \mathbb{T} \ ,
+\end{aligned}$$
+
+so that
+
+$$\rho \frac{D e}{D t} = \nabla \vec{v} : \mathbb{T} - \nabla \cdot \vec{q} + \rho r \ .$$
+
+and using the symmetry of the stress tensor, the definition of the small-strain tensor $\boldsymbol{\varepsilon} = \frac{1}{2} \left[ \nabla \vec{v} + \nabla^T \vec{v} \right]$, and the definition of $\vec{v} = \frac{D \vec{d}}{D t}$, and using the common character $\boldsymbol{\sigma}$ for the stress tensor, it follows
+
+$$\begin{aligned}
+  0
+  & = - \rho \frac{D e}{D t} + \nabla \vec{v} : \boldsymbol{\sigma} - \nabla \cdot \vec{q} + \rho r = \\
+  & = - \rho \frac{D e}{D t} + \frac{D \boldsymbol{\varepsilon}}{D t} : \boldsymbol{\sigma} - \nabla \cdot \vec{q} + \rho r \ .
+\end{aligned}$$
+
+For a material volume (closed system with constant mass $M = \int_{V} \rho $) with uniform physical quantities ($M = \rho V$, $E = \rho V e$), 
+
+$$\frac{D E}{D t} = V \frac{D \boldsymbol{\varepsilon}}{D t} : \boldsymbol{\sigma} + \dot{Q} \ .$$
+
+Now, assuming the thermoelastic constitutive law holds, 
+
+$$\boldsymbol\varepsilon = \mathbb{D} : \boldsymbol\sigma + \boldsymbol\alpha ( T - T_0 )$$
+-->
+
+
+```
+
 
 ### First principle for specific quantities
 

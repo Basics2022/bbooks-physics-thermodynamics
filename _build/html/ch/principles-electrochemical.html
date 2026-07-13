@@ -74,15 +74,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LND40WEVP9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-LND40WEVP9');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -354,10 +345,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-reactions">10.1. Chemical reactions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-mass-action">10.1.1. Law of Mass Action</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-reactions">10.1. Chemical reactions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-principle-energy-balance">10.2. First principle - energy balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-mass-action">10.3. Law of Mass Action</a></li>
 </ul>
             </nav>
         </div>
@@ -371,6 +361,22 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="principles-of-thermodynamics-electro-chemical-systems">
 <span id="physics-hs-thermodynamics-foundation-principles-electro-chemical"></span><h1><span class="section-number">10. </span>Principles of Thermodynamics - Electro-chemical systems<a class="headerlink" href="#principles-of-thermodynamics-electro-chemical-systems" title="Permalink to this heading">#</a></h1>
+<p>In this section:</p>
+<ul class="simple">
+<li><p>Introduction to <a class="reference internal" href="#physics-hs-thermodynamics-foundation-principles-electro-chemical-reactions"><span class="std std-ref">chemical reactions</span></a></p></li>
+<li></li>
+<li></li>
+</ul>
+<div class="section" id="chemical-reactions">
+<span id="physics-hs-thermodynamics-foundation-principles-electro-chemical-reactions"></span><h2><span class="section-number">10.1. </span>Chemical reactions<a class="headerlink" href="#chemical-reactions" title="Permalink to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[a A + b B \rightleftharpoons c C + d D \ ,\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[\nu_{R_i}  R_i \rightleftharpoons \nu_{P_j} P_j\]</div>
+</div>
+<div class="section" id="first-principle-energy-balance">
+<h2><span class="section-number">10.2. </span>First principle - energy balance<a class="headerlink" href="#first-principle-energy-balance" title="Permalink to this heading">#</a></h2>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Energy balance<div class="sd-summary-down docutils">
@@ -419,16 +425,18 @@ Internal energy, intensive and extensive variables<div class="sd-summary-down do
 </details><p>Using <span class="math notranslate nohighlight">\(\mathbf{X}, S\)</span> as independent variables,</p>
 <div class="math notranslate nohighlight">
 \[d E = \mathbf{F}(\mathbf{X}, S) \cdot d \mathbf{X} + T(\mathbf{X}, S) d S \ .\]</div>
-<p>From the nature of the extensive variable, <span class="math notranslate nohighlight">\(E(\lambda \mathbf{Y}) = \lambda E(\mathbf{Y})\)</span>, Euler theorem gives</p>
-<div class="section" id="chemical-reactions">
-<h2><span class="section-number">10.1. </span>Chemical reactions<a class="headerlink" href="#chemical-reactions" title="Permalink to this heading">#</a></h2>
+<p>It the energy of the system is a order-1 homogeneous function of the extensive variables of the system, <span class="math notranslate nohighlight">\(E(\lambda \mathbf{Y}) = \lambda E(\mathbf{Y})\)</span><a class="footnote-reference brackets" href="#energy-extensive" id="id1">1</a>, Euler theorem (<a class="reference internal" href="potentials.html#thm-euler">Theorem 3.1</a>) gives</p>
 <div class="math notranslate nohighlight">
-\[a A + b B \rightleftharpoons c C + d D \ ,\]</div>
-<p>or</p>
+\[E = T S + \mathbf{F} \cdot \mathbf{X} \ .\]</div>
+<p>Explicitly writing the number of moles of the substances of the system out fror the extensive variables <span class="math notranslate nohighlight">\(\mathbf{X}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{X} \rightarrow \left( \mathbf{X}, \mathbf{N} \right)\)</span>, and the chemical potentials out from the generalized intensive variables <span class="math notranslate nohighlight">\(\mathbf{F} \rightarrow \left( \mathbf{F}, \boldsymbol\mu \right)\)</span>, the expression of the internal energy and its differential reads</p>
 <div class="math notranslate nohighlight">
-\[\nu_{R_i}  R_i \rightleftharpoons \nu_{P_j} P_j\]</div>
+\[\begin{split}\begin{aligned}
+   E &amp; = T S + \boldsymbol\mu \cdot \mathbf{N} + \mathbf{F} \cdot \mathbf{X} \\
+  dE &amp; = T dS + \boldsymbol\mu \cdot d\mathbf{N} + \mathbf{F} \cdot d\mathbf{X} \ .
+\end{aligned}\end{split}\]</div>
+</div>
 <div class="section" id="law-of-mass-action">
-<h3><span class="section-number">10.1.1. </span>Law of Mass Action<a class="headerlink" href="#law-of-mass-action" title="Permalink to this heading">#</a></h3>
+<span id="physics-hs-thermodynamics-foundation-principles-electro-chemical-law-of-mass-action"></span><h2><span class="section-number">10.3. </span>Law of Mass Action<a class="headerlink" href="#law-of-mass-action" title="Permalink to this heading">#</a></h2>
 <p>The law of mass action states that the velocity of a reaction reads</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -445,11 +453,20 @@ Internal energy, intensive and extensive variables<div class="sd-summary-down do
 <li><p><strong>Equilibrium</strong> is reached when <span class="math notranslate nohighlight">\(v_r = v_f\)</span>, and thus the rate of change of concentration of the substances is zero.</p></li>
 <li><p><strong>Extent of reaction</strong> <span class="math notranslate nohighlight">\(\xi\)</span>, so that <span class="math notranslate nohighlight">\(d \xi = v dt\)</span>.</p></li>
 </ul>
+<p>Constant <span class="math notranslate nohighlight">\(k_r\)</span> and <span class="math notranslate nohighlight">\(k_f\)</span> usually can be written as</p>
+<div class="math notranslate nohighlight">
+\[k = A \exp \left( - \frac{E}{kT} \right) \ ,\]</div>
+<p>being <span class="math notranslate nohighlight">\(E\)</span> the activation energy, <span class="math notranslate nohighlight">\(k\)</span> Boltzmann constant, <span class="math notranslate nohighlight">\(T\)</span> the temperature, and <span class="math notranslate nohighlight">\(A\)</span> a constant summarizing all the other conditions for the reaction to occur.</p>
 <p><strong>References</strong></p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Chemical_equilibrium">https://en.wikipedia.org/wiki/Chemical_equilibrium</a></p></li>
 </ul>
-</div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="energy-extensive"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Not all the systems are made by sub-systems that combine “extensively”: it’s likely to be impossible to write the energy of these systems as an homogeneous function of extensive variables of the system.</p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -507,10 +524,9 @@ Internal energy, intensive and extensive variables<div class="sd-summary-down do
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-reactions">10.1. Chemical reactions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-mass-action">10.1.1. Law of Mass Action</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-reactions">10.1. Chemical reactions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-principle-energy-balance">10.2. First principle - energy balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-mass-action">10.3. Law of Mass Action</a></li>
 </ul>
   </nav></div>
 
