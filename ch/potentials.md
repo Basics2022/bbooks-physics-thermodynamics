@@ -66,11 +66,13 @@ $$E(S, \mathbf{X}) = T \, S + \mathbf{F} \cdot \mathbf{X} \ .$$
 
    $$d E = T \, d S - P \, d V + \mu \, d N$$
 
-- Multi-component fluid, $E(S, V, N_k)$, i.e. internal energy $E$ as a function of the entropy $S$, the volume of the system $V$ and the number of moles $N_k$ of all the substances in the systme
+   As an alternative to the number of moles, it's possible to the mass of the system $M = N M_m$ as an intependent variable, being $M_m$ the molar mass of the substance.
+
+- Multi-component fluid, $E(S, V, N_k)$, i.e. internal energy $E$ as a function of the entropy $S$, the volume of the system $V$ and the number of moles $N_k$ of all the substances in the system
 
    $$d E = T \, dS - P \, d V + \mu_k \, d N_k$$
 
-   where the change of number of particles (or moles, it depends on the description - anyway a non-dimensional number) $d N_k$ is governed by the stoichiometric ratios of the reactions occurring in the system.
+   where the change of number of particles (or moles, it depends on the description - anyway a non-dimensional number) $d N_k$ is governed by the stoichiometric ratios of the reactions occurring in the system. As an alternative to the moles of the susbstances in the system, it's possible to use the total number of moles $N = \sum_k N_k$ and the molar concentrations $x_k = \frac{N_k}{N}$ as independent variables, with the algebraic constraint $\sum_k x_k = 1$, by the very definition of the molar concentrations; it's also possible to use the mass of the system and the mass concentration of the substances, $M = \sum_k M_k = \sum_k N_k M_{m,k}$, and $y_k = \frac{M_k}{M}$, with the algebraic constraint $\sum_k y_k = 1$.
 
 - Single-component solid, $E(S, \mathbf{X})$
 
@@ -83,7 +85,7 @@ $$E(S, \mathbf{X}) = T \, S + \mathbf{F} \cdot \mathbf{X} \ .$$
 
 See also:
 * [Small displacement:Statics:Thermodynamics](https://basics2022.github.io/bbooks-physics-continuum-mechanics/ch/solids/small-displacements-statics.html?highlight=thermodynamics) for thermodynamics of elastic media with thermal dilation, for unit-volume
-  * There's a verssion for 1-dimensional systems in [Termodinamica:Stati della materia:Solidi elastici](https://basics2022.github.io/bbooks-physics-hs/ch/thermodynamics/elastic-solid-1d.html), **todo** 
+  * There's a version for 1-dimensional systems in [Termodinamica:Stati della materia:Solidi elastici](https://basics2022.github.io/bbooks-physics-hs/ch/thermodynamics/elastic-solid-1d.html), **todo** 
     * *move that from physics for HS to somewhere else*
     * *fix the algebra ($T$ and not $\Delta T$ is appearing in the force...), checking against the main page [Small displacement:Statics:Thermodynamics](https://basics2022.github.io/bbooks-physics-continuum-mechanics/ch/solids/small-displacements-statics.html?highlight=thermodynamics)* 
 <!--

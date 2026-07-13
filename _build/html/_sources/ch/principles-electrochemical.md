@@ -1,21 +1,25 @@
-(physics-hs:thermodynamics:foundation:principles:electro-chemical)=
+(physics:thermodynamics:foundation:principles:electro-chemical)=
 # Principles of Thermodynamics - Electro-chemical systems
 
 In this section:
-- Introduction to [chemical reactions](physics-hs:thermodynamics:foundation:principles:electro-chemical:reactions)
--
-- 
+- Introduction to [chemical reactions](physics:thermodynamics:foundation:principles:electro-chemical:reactions)
+- [Energy balance](physics:thermodynamics:foundation:principles:electro-chemical:first-principle)
+- [Law of mass action](physics:thermodynamics:foundation:principles:electro-chemical:law-of-mass-action)
 
-(physics-hs:thermodynamics:foundation:principles:electro-chemical:reactions)=
+In next sections:
+- [Batteries](electro-chemical:batteries)
+
+
+(physics:thermodynamics:foundation:principles:electro-chemical:reactions)=
 ## Chemical reactions
 
 $$a A + b B \rightleftharpoons c C + d D \ ,$$
 
 or
 
-$$\nu_{R_i}  R_i \rightleftharpoons \nu_{P_j} P_j$$
+$$\nu_{R_i}  R_i \rightleftharpoons \nu_{P_j} P_j$$ (eq:reaction:stoichiometry)
 
-
+(physics:thermodynamics:foundation:principles:electro-chemical:first-principle)=
 ## First principle - energy balance
 
 ```{dropdown} Energy balance
@@ -56,7 +60,7 @@ $$\delta L^{int,rev} = \mathbf{F} \cdot d \mathbf{X} \ ,$$
 
    $$\mu_i d N_i$$
 
-**todo** See and uniform the treatment in [First principle](physics-hs:thermodynamics:foundation:principles:first), [Second principle](physics-hs:thermodynamics:foundation:principles:second), [Gibbs formalization](physics-hs:thermodynamics:foundation:principles:gibbs-phase-rule), [Thermodynamic potentials](classical-thermodynamics:potentials)
+**todo** See and uniform the treatment in [First principle](physics:thermodynamics:foundation:principles:first), [Second principle](physics:thermodynamics:foundation:principles:second), [Gibbs formalization](physics:thermodynamics:foundation:principles:gibbs-phase-rule), [Thermodynamic potentials](classical-thermodynamics:potentials)
 
 ```
 
@@ -68,7 +72,7 @@ It the energy of the system is a order-1 homogeneous function of the extensive v
 
 $$E = T S + \mathbf{F} \cdot \mathbf{X} \ .$$
 
-[^energy-extensive]: Not all the systems are made by sub-systems that combine "extensively": it's likely to be impossible to write the energy of these systems as an homogeneous function of extensive variables of the system.
+[^energy-extensive]: Not all the systems are made by sub-systems that combine "extensively": it's likely to be impossible to write the energy of these systems as a homogeneous function of the extensive variables of the system.
 
 Explicitly writing the number of moles of the substances of the system out fror the extensive variables $\mathbf{X}$, $\mathbf{X} \rightarrow \left( \mathbf{X}, \mathbf{N} \right)$, and the chemical potentials out from the generalized intensive variables $\mathbf{F} \rightarrow \left( \mathbf{F}, \boldsymbol\mu \right)$, the expression of the internal energy and its differential reads
 
@@ -78,21 +82,21 @@ $$\begin{aligned}
 \end{aligned}$$
 
 
-(physics-hs:thermodynamics:foundation:principles:electro-chemical:law-of-mass-action)=
+(physics:thermodynamics:foundation:principles:electro-chemical:law-of-mass-action)=
 ## Law of Mass Action
 
-The law of mass action states that the velocity of a reaction reads
+The law of mass action states that the forward velocity $v_f$ ($R \rightarrow P$) and backward velocity $v_b$ ($R \leftarrow P$) of reaction {eq}`eq:reaction:stoichiometry` reads
 
 $$\begin{aligned}
   v_f & := -\frac{1}{\nu_{R_k}}\frac{d [ R_k ]_f}{dt} :=  \frac{1}{\nu_{P_k}}\frac{d [ P_k ]_f}{dt} = k_f \prod_i [ R_i ]^{\alpha_{R_i}} \\ 
   v_r & :=  \frac{1}{\nu_{R_k}}\frac{d [ R_k ]_r}{dt} := -\frac{1}{\nu_{P_k}}\frac{d [ P_k ]_r}{dt} = k_r \prod_i [ P_i ]^{\alpha_{P_i}} \\ 
 \end{aligned}$$
 
-and 
+Taking $R \rightarrow P$ as the positive direction of the reaction, the velocity of the reaction is defined as $v = v_r - v_f$, and the rate of change of the concentrations thus reads
 
 $$\begin{aligned}
-  \frac{d [ R_k ]}{dt} = \frac{d [ R_k ]_f}{dt} + \frac{d [ R_k ]_r}{dt} = \nu_{R_k} \left( v_r - v_f \right) \\ 
-  \frac{d [ P_k ]}{dt} = \frac{d [ P_k ]_f}{dt} + \frac{d [ P_k ]_r}{dt} = \nu_{P_k} \left( v_f - v_r \right) \\ 
+  \frac{d [ R_k ]}{dt} = \frac{d [ R_k ]_f}{dt} + \frac{d [ R_k ]_r}{dt} = \nu_{R_k} \left( v_r - v_f \right) = \nu_{R_k} \, v \\ 
+  \frac{d [ P_k ]}{dt} = \frac{d [ P_k ]_f}{dt} + \frac{d [ P_k ]_r}{dt} = \nu_{P_k} \left( v_f - v_r \right) = \nu_{P_k} \, v \ .
 \end{aligned}$$
 
 
@@ -103,7 +107,7 @@ Constant $k_r$ and $k_f$ usually can be written as
 
 $$k = A \exp \left( - \frac{E}{kT} \right) \ ,$$
 
-being $E$ the activation energy, $k$ Boltzmann constant, $T$ the temperature, and $A$ a constant summarizing all the other conditions for the reaction to occur.
+being $E$ the **activation energy**, $k$ Boltzmann constant, $T$ the temperature, and $A$ a constant summarizing all the other conditions for the reaction to occur.
 
 
 **References**

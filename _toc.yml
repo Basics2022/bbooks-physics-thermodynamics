@@ -35,3 +35,12 @@ parts:
   numbered: True
   chapters:
   - file: ch/principles-electrochemical
+  - file: ch/nernst-equation
+  - file: ch/batteries
+    sections:
+    - file: ch/batteries-daniell
+    - file: ch/batteries-li
+- caption: Random Notes
+  numbered: True
+  chapters:
+  - file: notes-equilibrium-conditions

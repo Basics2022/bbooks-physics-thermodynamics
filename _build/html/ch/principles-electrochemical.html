@@ -369,23 +369,27 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="principles-of-thermodynamics-electro-chemical-systems">
-<span id="physics-hs-thermodynamics-foundation-principles-electro-chemical"></span><h1><span class="section-number">10. </span>Principles of Thermodynamics - Electro-chemical systems<a class="headerlink" href="#principles-of-thermodynamics-electro-chemical-systems" title="Permalink to this heading">#</a></h1>
+<span id="physics-thermodynamics-foundation-principles-electro-chemical"></span><h1><span class="section-number">10. </span>Principles of Thermodynamics - Electro-chemical systems<a class="headerlink" href="#principles-of-thermodynamics-electro-chemical-systems" title="Permalink to this heading">#</a></h1>
 <p>In this section:</p>
 <ul class="simple">
-<li><p>Introduction to <a class="reference internal" href="#physics-hs-thermodynamics-foundation-principles-electro-chemical-reactions"><span class="std std-ref">chemical reactions</span></a></p></li>
-<li></li>
-<li></li>
+<li><p>Introduction to <a class="reference internal" href="#physics-thermodynamics-foundation-principles-electro-chemical-reactions"><span class="std std-ref">chemical reactions</span></a></p></li>
+<li><p><a class="reference internal" href="#physics-thermodynamics-foundation-principles-electro-chemical-first-principle"><span class="std std-ref">Energy balance</span></a></p></li>
+<li><p><a class="reference internal" href="#physics-thermodynamics-foundation-principles-electro-chemical-law-of-mass-action"><span class="std std-ref">Law of mass action</span></a></p></li>
+</ul>
+<p>In next sections:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="batteries.html#electro-chemical-batteries"><span class="std std-ref">Batteries</span></a></p></li>
 </ul>
 <div class="section" id="chemical-reactions">
-<span id="physics-hs-thermodynamics-foundation-principles-electro-chemical-reactions"></span><h2><span class="section-number">10.1. </span>Chemical reactions<a class="headerlink" href="#chemical-reactions" title="Permalink to this heading">#</a></h2>
+<span id="physics-thermodynamics-foundation-principles-electro-chemical-reactions"></span><h2><span class="section-number">10.1. </span>Chemical reactions<a class="headerlink" href="#chemical-reactions" title="Permalink to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
 \[a A + b B \rightleftharpoons c C + d D \ ,\]</div>
 <p>or</p>
-<div class="math notranslate nohighlight">
-\[\nu_{R_i}  R_i \rightleftharpoons \nu_{P_j} P_j\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-reaction-stoichiometry">
+<span class="eqno">(10.1)<a class="headerlink" href="#equation-eq-reaction-stoichiometry" title="Permalink to this equation">#</a></span>\[\nu_{R_i}  R_i \rightleftharpoons \nu_{P_j} P_j\]</div>
 </div>
 <div class="section" id="first-principle-energy-balance">
-<h2><span class="section-number">10.2. </span>First principle - energy balance<a class="headerlink" href="#first-principle-energy-balance" title="Permalink to this heading">#</a></h2>
+<span id="physics-thermodynamics-foundation-principles-electro-chemical-first-principle"></span><h2><span class="section-number">10.2. </span>First principle - energy balance<a class="headerlink" href="#first-principle-energy-balance" title="Permalink to this heading">#</a></h2>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Energy balance<div class="sd-summary-down docutils">
@@ -429,7 +433,7 @@ Internal energy, intensive and extensive variables<div class="sd-summary-down do
 \[\mu_i d N_i\]</div>
 </li>
 </ul>
-<p class="sd-card-text"><strong>todo</strong> See and uniform the treatment in <a class="reference internal" href="principles-first.html#physics-hs-thermodynamics-foundation-principles-first"><span class="std std-ref">First principle</span></a>, <a class="reference internal" href="principles-second.html#physics-hs-thermodynamics-foundation-principles-second"><span class="std std-ref">Second principle</span></a>, <a class="reference internal" href="principles-gibbs-phase-rule.html#physics-hs-thermodynamics-foundation-principles-gibbs-phase-rule"><span class="std std-ref">Gibbs formalization</span></a>, <a class="reference internal" href="potentials.html#classical-thermodynamics-potentials"><span class="std std-ref">Thermodynamic potentials</span></a></p>
+<p class="sd-card-text"><strong>todo</strong> See and uniform the treatment in <span class="xref myst">First principle</span>, <span class="xref myst">Second principle</span>, <span class="xref myst">Gibbs formalization</span>, <a class="reference internal" href="potentials.html#classical-thermodynamics-potentials"><span class="std std-ref">Thermodynamic potentials</span></a></p>
 </div>
 </details><p>Using <span class="math notranslate nohighlight">\(\mathbf{X}, S\)</span> as independent variables,</p>
 <div class="math notranslate nohighlight">
@@ -445,18 +449,18 @@ Internal energy, intensive and extensive variables<div class="sd-summary-down do
 \end{aligned}\end{split}\]</div>
 </div>
 <div class="section" id="law-of-mass-action">
-<span id="physics-hs-thermodynamics-foundation-principles-electro-chemical-law-of-mass-action"></span><h2><span class="section-number">10.3. </span>Law of Mass Action<a class="headerlink" href="#law-of-mass-action" title="Permalink to this heading">#</a></h2>
-<p>The law of mass action states that the velocity of a reaction reads</p>
+<span id="physics-thermodynamics-foundation-principles-electro-chemical-law-of-mass-action"></span><h2><span class="section-number">10.3. </span>Law of Mass Action<a class="headerlink" href="#law-of-mass-action" title="Permalink to this heading">#</a></h2>
+<p>The law of mass action states that the forward velocity <span class="math notranslate nohighlight">\(v_f\)</span> (<span class="math notranslate nohighlight">\(R \rightarrow P\)</span>) and backward velocity <span class="math notranslate nohighlight">\(v_b\)</span> (<span class="math notranslate nohighlight">\(R \leftarrow P\)</span>) of reaction <a class="reference internal" href="#equation-eq-reaction-stoichiometry">(10.1)</a> reads</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   v_f &amp; := -\frac{1}{\nu_{R_k}}\frac{d [ R_k ]_f}{dt} :=  \frac{1}{\nu_{P_k}}\frac{d [ P_k ]_f}{dt} = k_f \prod_i [ R_i ]^{\alpha_{R_i}} \\ 
   v_r &amp; :=  \frac{1}{\nu_{R_k}}\frac{d [ R_k ]_r}{dt} := -\frac{1}{\nu_{P_k}}\frac{d [ P_k ]_r}{dt} = k_r \prod_i [ P_i ]^{\alpha_{P_i}} \\ 
 \end{aligned}\end{split}\]</div>
-<p>and</p>
+<p>Taking <span class="math notranslate nohighlight">\(R \rightarrow P\)</span> as the positive direction of the reaction, the velocity of the reaction is defined as <span class="math notranslate nohighlight">\(v = v_r - v_f\)</span>, and the rate of change of the concentrations thus reads</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  \frac{d [ R_k ]}{dt} = \frac{d [ R_k ]_f}{dt} + \frac{d [ R_k ]_r}{dt} = \nu_{R_k} \left( v_r - v_f \right) \\ 
-  \frac{d [ P_k ]}{dt} = \frac{d [ P_k ]_f}{dt} + \frac{d [ P_k ]_r}{dt} = \nu_{P_k} \left( v_f - v_r \right) \\ 
+  \frac{d [ R_k ]}{dt} = \frac{d [ R_k ]_f}{dt} + \frac{d [ R_k ]_r}{dt} = \nu_{R_k} \left( v_r - v_f \right) = \nu_{R_k} \, v \\ 
+  \frac{d [ P_k ]}{dt} = \frac{d [ P_k ]_f}{dt} + \frac{d [ P_k ]_r}{dt} = \nu_{P_k} \left( v_f - v_r \right) = \nu_{P_k} \, v \ .
 \end{aligned}\end{split}\]</div>
 <ul class="simple">
 <li><p><strong>Equilibrium</strong> is reached when <span class="math notranslate nohighlight">\(v_r = v_f\)</span>, and thus the rate of change of concentration of the substances is zero.</p></li>
@@ -465,7 +469,7 @@ Internal energy, intensive and extensive variables<div class="sd-summary-down do
 <p>Constant <span class="math notranslate nohighlight">\(k_r\)</span> and <span class="math notranslate nohighlight">\(k_f\)</span> usually can be written as</p>
 <div class="math notranslate nohighlight">
 \[k = A \exp \left( - \frac{E}{kT} \right) \ ,\]</div>
-<p>being <span class="math notranslate nohighlight">\(E\)</span> the activation energy, <span class="math notranslate nohighlight">\(k\)</span> Boltzmann constant, <span class="math notranslate nohighlight">\(T\)</span> the temperature, and <span class="math notranslate nohighlight">\(A\)</span> a constant summarizing all the other conditions for the reaction to occur.</p>
+<p>being <span class="math notranslate nohighlight">\(E\)</span> the <strong>activation energy</strong>, <span class="math notranslate nohighlight">\(k\)</span> Boltzmann constant, <span class="math notranslate nohighlight">\(T\)</span> the temperature, and <span class="math notranslate nohighlight">\(A\)</span> a constant summarizing all the other conditions for the reaction to occur.</p>
 <p><strong>References</strong></p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Chemical_equilibrium">https://en.wikipedia.org/wiki/Chemical_equilibrium</a></p></li>
@@ -473,7 +477,7 @@ Internal energy, intensive and extensive variables<div class="sd-summary-down do
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="energy-extensive"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Not all the systems are made by sub-systems that combine “extensively”: it’s likely to be impossible to write the energy of these systems as an homogeneous function of extensive variables of the system.</p>
+<dd><p>Not all the systems are made by sub-systems that combine “extensively”: it’s likely to be impossible to write the energy of these systems as a homogeneous function of the extensive variables of the system.</p>
 </dd>
 </dl>
 </div>

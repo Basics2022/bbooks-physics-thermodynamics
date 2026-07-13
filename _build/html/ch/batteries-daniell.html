@@ -1,0 +1,617 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12.3. Daniell cell &#8212; Classical Thermodynamics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/batteries-daniell';</script>
+    <link rel="shortcut icon" href="../_static/favicon.svg"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="12.4. Li-ion battery" href="batteries-li.html" />
+    <link rel="prev" title="12. Batteries: thermo-electro-chemical modeling" href="batteries.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LND40WEVP9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LND40WEVP9');
+</script>
+
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.svg" class="logo__image only-light" alt="Classical Thermodynamics - Home"/>
+    <script>document.write(`<img src="../_static/logo-dark.svg" class="logo__image only-dark" alt="Classical Thermodynamics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermodynamics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="history.html">1. Brief History of Thermodynamics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="principles.html">2. Principles of Thermodynamics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="principles-lavoisier.html">2.1. Lavoisier’s Principle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-first.html">2.2. First Law of Thermodynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-gibbs-phase-rule.html">2.3. Gibbs: Internal Energy, Phase Rule, and Multivariable Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-second.html">2.4. Second Law of Thermodynamics - Clausius Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-open.html">2.5. Open Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="potentials.html">3. Thermodynamics potentials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coefficients.html">4. Thermodynamic coefficients</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="media.html">5. Stati della materia e modelli</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ideal_gases.html">5.1. Gas ideali</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermal Engineering</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="thermal-engineering.html">6. Principles of Thermal Engineering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thermodynamic-transformations.html">7. Thermodynamic transformations and thermomechanical systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="heat-engines.html">8. Thermodynamic cycles and heat engines</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="heat-transfer.html">9. Heat transfer</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="heat-transfer-conduction.html">9.1. Conduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="heat-transfer-convection.html">9.2. Convection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="heat-transfer-radiation.html">9.3. Radiation</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Electro-chemical systems</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="principles-electrochemical.html">10. Principles of Thermodynamics - Electro-chemical systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nernst-equation.html">11. Nernst equation</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="batteries.html">12. Batteries: thermo-electro-chemical modeling</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">12.3. Daniell cell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batteries-li.html">12.4. Li-ion battery</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/ch/batteries-daniell.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Daniell cell</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description">12.3.1. Description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regimes">12.3.2. Regimes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-circuit-equilibrium">12.3.2.1. Open-circuit equilibrium</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operation-under-loads">12.3.2.2. Operation under loads</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="daniell-cell">
+<span id="electro-chemical-batteries-daniell"></span><h1><span class="section-number">12.3. </span>Daniell cell<a class="headerlink" href="#daniell-cell" title="Permalink to this heading">#</a></h1>
+<div class="section" id="description">
+<span id="electro-chemical-batteries-daniell-description"></span><h2><span class="section-number">12.3.1. </span>Description<a class="headerlink" href="#description" title="Permalink to this heading">#</a></h2>
+<p>The Daniell cell consists of two separate half-cells:</p>
+<ul class="simple">
+<li><p>A zinc (<span class="math notranslate nohighlight">\(\text{Zn}\)</span>) electrode immersed in a zinc sulfate (<span class="math notranslate nohighlight">\(\text{ZnSO}_4\)</span>) aqueous solution, with ions <span class="math notranslate nohighlight">\(Zn^{2+}\)</span>, <span class="math notranslate nohighlight">\(SO_4^{2-}\)</span> sully dissolved in that</p></li>
+<li><p>A copper (<span class="math notranslate nohighlight">\(\text{Cu}\)</span>) electrode immersed in a copper(II) sulfate (<span class="math notranslate nohighlight">\(\text{CuSO}_4\)</span>) aqueous solution, ions <span class="math notranslate nohighlight">\(Cu^{2+}\)</span>, <span class="math notranslate nohighlight">\(SO_4^{2-}\)</span> fully dissolved in that</p></li>
+<li><p>A porous barrier (or salt bridge) separating the solutions to prevent rapid mixing while allowing sulfate ions (<span class="math notranslate nohighlight">\(\text{SO}_4^{2-}\)</span>) to migrate, between the 2 half-cells.</p></li>
+</ul>
+<p>The spontanoues half-cell reactions during disharge are:</p>
+<ul>
+<li><p>at the anode:</p>
+<div class="math notranslate nohighlight" id="equation-eq-daniell-reaction-anode">
+<span class="eqno">(12.1)<a class="headerlink" href="#equation-eq-daniell-reaction-anode" title="Permalink to this equation">#</a></span>\[\text{Zn}(s) \rightleftharpoons \text{Zn}^{2+}(aq) + 2 e^-(s)\]</div>
+</li>
+<li><p>at the cathode:</p>
+<div class="math notranslate nohighlight" id="equation-eq-daniell-reaction-cathode">
+<span class="eqno">(12.2)<a class="headerlink" href="#equation-eq-daniell-reaction-cathode" title="Permalink to this equation">#</a></span>\[\text{Cu}^{2+}(aq) + 2 e^-(s) \rightleftharpoons \text{Cu}(s)\]</div>
+</li>
+</ul>
+</div>
+<div class="section" id="regimes">
+<span id="electro-chemical-batteries-daniell-regimes"></span><h2><span class="section-number">12.3.2. </span>Regimes<a class="headerlink" href="#regimes" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#electro-chemical-batteries-daniell-regimes-open"><span class="std std-ref">Open circuit equilibrium</span></a>: chemical reactions at equilibrium, no net motion of charges through the electrolytes and the salt bridge</p></li>
+<li><p><a class="reference internal" href="#electro-chemical-batteries-daniell-regimes-load"><span class="std std-ref">Operation under load</span></a>. Chemical kinetics reactions and diffusion process of ions may produce bottlenecks in the process, and thus overpotentials and/or losses</p></li>
+</ul>
+<div class="section" id="open-circuit-equilibrium">
+<span id="electro-chemical-batteries-daniell-regimes-open"></span><h3><span class="section-number">12.3.2.1. </span>Open-circuit equilibrium<a class="headerlink" href="#open-circuit-equilibrium" title="Permalink to this heading">#</a></h3>
+<p><strong>Internal energy</strong></p>
+<div class="math notranslate nohighlight">
+\[dE = - P dV + T dS + \sum_i \mu_i d N_i + \sum_k \phi_k d Q_k\]</div>
+<p>with <span class="math notranslate nohighlight">\(i\)</span> spanning all the substances involved in a reaction, and <span class="math notranslate nohighlight">\(k\)</span> all the regions with uniform electric potential,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  i &amp; \in \{ \text{Zn}, \text{Zn}^{2+}, \text{Cu}^{2+}, \text{Cu} \} \\
+  k &amp; \in \{ \text{anode}, \text{cathode}, \text{electrolytes+bridge} \}
+\end{aligned}\end{split}\]</div>
+<p>Here the chemical potentials include both the energy changes associated with reaction and phase transformation.
+Using the reactions <a class="reference internal" href="#equation-eq-daniell-reaction-anode">(12.1)</a>, <a class="reference internal" href="#equation-eq-daniell-reaction-cathode">(12.2)</a>, it follows (with <span class="math notranslate nohighlight">\(z = 2\)</span>, number of electrons per reacting ion)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  d Q_{\text{anode}}   &amp; = - z q d n_{\text{Zn}^{2+}} =  - z q N_{A} d N_{\text{Zn}^{2+}} = - z F d N_{\text{Zn}^{2+}} \\ 
+  d Q_{\text{cathode}} &amp; = - z q d n_{\text{Cu}^{2+}} =  - z q N_{A} d N_{\text{Cu}^{2+}} = - z F d N_{\text{Cu}^{2+}} \ , 
+\end{aligned}\end{split}\]</div>
+<p>having introduced the <strong>Faraday’s constant</strong></p>
+<div class="math notranslate nohighlight">
+\[F = q N_A = 96 485.33 \frac{\text{s} \text{A}}{\text{mol}} \ ,\]</div>
+<p>defined as the product of the elementary charge (electron charge, but positive), and the number of Avogadro <span class="math notranslate nohighlight">\(N_A\)</span>.</p>
+<p>If the motion of <span class="math notranslate nohighlight">\(\text{SO}_4^{2-}\)</span> ions through the salt bridge keeps the electrolytes electrically neutral, it’s possible to write the variation of the moles of substances in the system as a function of an <strong>extent of reaction variable</strong>, <span class="math notranslate nohighlight">\(\xi\)</span></p>
+<div class="math notranslate nohighlight">
+\[d N_{\text{Zn}^{2+}} = d N_{\text{SO}_4^{2-}, a} = - d N_{\text{SO}_4^{2-}, c} = - dN_{\text{Cu}^{2+}} = d \xi \ .\]</div>
+<p>If the electrolytes and the salt bridge are in an equi-potential region, then the motion of the <span class="math notranslate nohighlight">\(\text{SO}_2^{2-}\)</span> ions doesn’t influence the variation of the internal energy, that can be written as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  d E
+  &amp; = - P dV + T dS + \left( \mu_{\text{Zn}^{2+}} - \mu_{\text{Zn}} - \mu_{\text{Cu}^{2+}} + \mu_{\text{Cu}} \right) d \xi - z F \phi_{a} d \xi + z F \phi_c d \xi = \\
+  &amp; = - P dV + T dS + \left[ \left( \mu_{\text{Zn}^{2+}} - \mu_{\text{Zn}} - \mu_{\text{Cu}^{2+}} + \mu_{\text{Cu}} \right) - z F \left( \phi_{a} - \phi_c \right) \right] d \xi \ .
+\end{aligned}\end{split}\]</div>
+<p><strong>Gibbs’ free energy</strong>, <span class="math notranslate nohighlight">\(G = E + PV - TS\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[d G = V dP + S dT + \sum_i \mu_i dN_i - \sum_k \phi_k d Q_k\]</div>
+<p>Equilibrium condition <span class="math notranslate nohighlight">\(d G = 0\)</span> (see <a class="reference internal" href="notes-equilibrium-conditions.html#notes-equilibrium-conditions-gibbs-free-energy"><span class="std std-ref">Thermodynamic equilibrium: Gibbs’s free energy</span></a> <strong>todo</strong>) for constant <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(T\)</span> (and thus <span class="math notranslate nohighlight">\(d P = 0\)</span>, <span class="math notranslate nohighlight">\(d T = 0\)</span>), requires that the electro-chemical force must be zero, i.e.</p>
+<div class="math notranslate nohighlight">
+\[0 = \mu_{\text{Zn}^{2+}} - \mu_{\text{Zn}} - \mu_{\text{Cu}^{2+}} + \mu_{\text{Cu}} - z F \left( \phi_{a} - \phi_c \right) \ .\]</div>
+<p>Thus, the electrostatic potential at open-circuit equilibrium between the cathode (positive electrode) and the anode (negative electrode) reads</p>
+<div class="math notranslate nohighlight">
+\[V_{oc} = \phi_c - \phi_a = \frac{1}{z F} \left( - \mu_{\text{Zn}^{2+}} + \mu_{\text{Zn}} + \mu_{\text{Cu}^{2+}} - \mu_{\text{Cu}} \right)\]</div>
+<p>Introducing <span class="xref myst">Nernst equation</span> for the chemical potentials, the open-circuit potential can be written as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  V_{oc} 
+  &amp; = \frac{1}{zF} \sum_i \left\{ \text{sign}_i \mu_i + R T \ln a_i \right\} = \\
+  &amp; = \underbrace{ \frac{1}{zF} \left\{ - \mu_{\text{Zn}^{2+}}^\circ + \mu_{\text{Zn}}^\circ + \mu_{\text{Cu}^{2+}}^\circ - \mu_{\text{Cu}}^\circ \right\} }_{ = V_{oc}^\circ} + R T \ln \left( \frac{a_{\text{Cu}^{2+}} a_{\text{Zn}}}{a_{\text{Zn}^{2+}} a_{\text{Cu}}} \right) \\
+  V_{oc} &amp; = V_{oc}^\circ + R T \ln \left( \frac{a_{\text{Cu}^{2+}}}{a_{\text{Zn}^{2+}}} \right) \ ,
+\end{aligned}\end{split}\]</div>
+<p>as the activity of solid phases are equal to <span class="math notranslate nohighlight">\(1\)</span> by definition.<a class="footnote-reference brackets" href="#activity-solid-definition" id="id1">1</a> The activity of the dissolved ions are related (but not equal or proportional, as the behavior of a highly concentrated solution with charged ions deviates significantly from the ideal behavior) to the concentration of the ions at the interface close to the electrode, the regions where the reactions occur,</p>
+<div class="math notranslate nohighlight">
+\[a_i = \gamma_i \frac{C_i}{C_i^\circ} \ .\]</div>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Debye%E2%80%93H%C3%BCckel_theory">Debye-Huckel theory</a> provides a model for the activity coefficient <span class="math notranslate nohighlight">\(\gamma_i\)</span>, as a function of the ionic strength of the solution.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-left head"><p>Ion</p></th>
+<th class="text-center head"><p><span class="math notranslate nohighlight">\(\mu^\circ [\text{J}/\text{mol}]\)</span></p></th>
+<th class="text-center head"><p><span class="math notranslate nohighlight">\(\phi\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(\text{Zn}^{2+}(aq)\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(-147.06 \cdot 10^3\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\phi_a =     - \frac{\mu^0_{\text{Zn}^{2+}}}{2 F} = -0.762 \, \text{V}  \)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><span class="math notranslate nohighlight">\(\text{Cu}^{2+}(aq)\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(  65.49 \cdot 10^3\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\phi_c = \quad \frac{\mu^0_{\text{Cu}^{2+}}}{2 F} =  0.340 \, \text{V}  \)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>The standard open-circuit cell potential of a Daniell cell is <span class="math notranslate nohighlight">\(V_{oc}^\circ = \phi_c^\circ - \phi_a^\circ = 1.102 \text{V}\)</span></p>
+</div>
+<div class="section" id="operation-under-loads">
+<span id="electro-chemical-batteries-daniell-regimes-load"></span><h3><span class="section-number">12.3.2.2. </span>Operation under loads<a class="headerlink" href="#operation-under-loads" title="Permalink to this heading">#</a></h3>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="activity-solid-definition"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>By definition the standard state of a solid is chosen to be the pure solid at the system temperature and a standard pressure. From this and Nernst equation, it immediately follows that <span class="math notranslate nohighlight">\(a = 1\)</span> for the solid in the reference condition. From a more intuitive point of view, concentration of a solid doesn’t change: adding a piece of a solid medium doesn’t make the atoms in the crystal more packed, and thus the chemical environment around an atom of the solid lattice doesn’t change, and thus its chemical potential neither.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./ch"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="batteries.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">12. </span>Batteries: thermo-electro-chemical modeling</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="batteries-li.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">12.4. </span>Li-ion battery</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description">12.3.1. Description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regimes">12.3.2. Regimes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-circuit-equilibrium">12.3.2.1. Open-circuit equilibrium</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operation-under-loads">12.3.2.2. Operation under loads</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By basics
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
