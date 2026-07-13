@@ -71,19 +71,10 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="4. Thermodynamic coefficients" href="coefficients.html" />
-    <link rel="prev" title="2.6. Principles of Thermodynamics - Electro-chemical systems" href="principles-electrochemical.html" />
+    <link rel="prev" title="2.5. Open Systems" href="principles-open.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LND40WEVP9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-LND40WEVP9');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -183,7 +174,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="principles-gibbs-phase-rule.html">2.3. Gibbs: Internal Energy, Phase Rule, and Multivariable Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="principles-second.html">2.4. Second Law of Thermodynamics - Clausius Statement</a></li>
 <li class="toctree-l2"><a class="reference internal" href="principles-open.html">2.5. Open Systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="principles-electrochemical.html">2.6. Principles of Thermodynamics - Electro-chemical systems</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Thermodynamics potentials</a></li>
@@ -204,6 +194,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="heat-transfer-radiation.html">9.3. Radiation</a></li>
 </ul>
 </li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Electro-chemical systems</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="principles-electrochemical.html">10. Principles of Thermodynamics - Electro-chemical systems</a></li>
 </ul>
 
     </div>
@@ -360,7 +354,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#first-principle-per-unit-volume">3.1.2.2. First principle per unit volume</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.1.2.2.1. Different systems</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">3.1.2.2.1. Different systems</a></li>
 </ul>
 </li>
 </ul>
@@ -383,7 +377,7 @@ document.write(`
 <span id="classical-thermodynamics-potentials"></span><h1><span class="section-number">3. </span>Thermodynamics potentials<a class="headerlink" href="#thermodynamics-potentials" title="Permalink to this heading">#</a></h1>
 <p>In this section, principles and the mathematical formalism of classical thermodynamics are reviewed.</p>
 <div class="section" id="first-principle">
-<h2><span class="section-number">3.1. </span>First principle<a class="headerlink" href="#first-principle" title="Permalink to this heading">#</a></h2>
+<span id="classical-thermodynamics-potentials-first-principle"></span><h2><span class="section-number">3.1. </span>First principle<a class="headerlink" href="#first-principle" title="Permalink to this heading">#</a></h2>
 <p>For an extensive system with uniform intensive pro</p>
 <div class="math notranslate nohighlight">
 \[d E = T \, d S + \mathbf{F} \cdot d \mathbf{X} \ ,\]</div>
@@ -394,12 +388,12 @@ document.write(`
 <p>Internal energy <span class="math notranslate nohighlight">\(E\)</span>, entropy <span class="math notranslate nohighlight">\(S\)</span> and the generalized displacement <span class="math notranslate nohighlight">\(\mathbf{X}\)</span> are <strong>extensive</strong> physical quantities, and thus (<strong>thus?</strong>) the derivatives</p>
 <div class="math notranslate nohighlight">
 \[T := \left.\dfrac{\partial S}{\partial E}\right|_{\mathbf{X}} \quad , \quad \mathbf{F} := \left.\dfrac{\partial E}{\partial \mathbf{X}}\right|_S\]</div>
-<p>are <strong>intensive</strong> quantities. A discussion about the difference between the concept of <em>additivity</em> and <em>extensivity</em>[^additivity-extensivity].
-Beside being extensive, internal energy in classical thermodynamics is an homogeneous function[^SE-e-homogeneous] of order 1 of its arguments, namely</p>
+<p>are <strong>intensive</strong> quantities. A discussion about the difference between the concept of <em>additivity</em> and <em>extensivity</em><a class="footnote-reference brackets" href="#additivity-extensivity" id="id1">1</a>.
+Beside being extensive, internal energy in classical thermodynamics is an homogeneous function<a class="footnote-reference brackets" href="#se-e-homogeneous" id="id2">2</a> of order 1 of its arguments, namely</p>
 <div class="math notranslate nohighlight">
 \[E(a \, S, a \, \mathbf{X}) = a \, E(S, \mathbf{X}) \ .\]</div>
 <p><strong>Euler’s theorem for homogeneous functions</strong> holds.</p>
-<div class="proof theorem admonition" id="theorem-0">
+<div class="proof theorem admonition" id="thm-euler">
 <p class="admonition-title"><span class="caption-number">Theorem 3.1 </span> (Euler’s theorem for homogeneous functions)</p>
 <div class="theorem-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f(x_i)\)</span> and homogeneous function of order <span class="math notranslate nohighlight">\(m\)</span>, i.e.</p>
@@ -426,24 +420,77 @@ Proof<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[E(S, \mathbf{X}) = T \, S + \mathbf{F} \cdot \mathbf{X} \ .\]</div>
 </div>
-</details><div class="section" id="first-principle-for-different-systems">
+</details><p>(classical-thermodynamics:potentials:first-principle:examples)</p>
+<div class="section" id="first-principle-for-different-systems">
 <h3><span class="section-number">3.1.1. </span>First principle for different systems<a class="headerlink" href="#first-principle-for-different-systems" title="Permalink to this heading">#</a></h3>
 <ul>
-<li><p>Single-component fluid, <span class="math notranslate nohighlight">\(E(S, V, N)\)</span></p>
+<li><p>Single-component fluid, <span class="math notranslate nohighlight">\(E(S, V, N)\)</span>, i.e. internal energy <span class="math notranslate nohighlight">\(E\)</span> as a function of the entropy <span class="math notranslate nohighlight">\(S\)</span>, the volume of the system <span class="math notranslate nohighlight">\(V\)</span> and the number of moles <span class="math notranslate nohighlight">\(N\)</span> of the substance in the system</p>
 <div class="math notranslate nohighlight">
 \[d E = T \, d S - P \, d V + \mu \, d N\]</div>
 </li>
-<li><p>Multi-component fluid, <span class="math notranslate nohighlight">\(E(S, V, N_k)\)</span></p>
+<li><p>Multi-component fluid, <span class="math notranslate nohighlight">\(E(S, V, N_k)\)</span>, i.e. internal energy <span class="math notranslate nohighlight">\(E\)</span> as a function of the entropy <span class="math notranslate nohighlight">\(S\)</span>, the volume of the system <span class="math notranslate nohighlight">\(V\)</span> and the number of moles <span class="math notranslate nohighlight">\(N_k\)</span> of all the substances in the systme</p>
 <div class="math notranslate nohighlight">
 \[d E = T \, dS - P \, d V + \mu_k \, d N_k\]</div>
 <p>where the change of number of particles (or moles, it depends on the description - anyway a non-dimensional number) <span class="math notranslate nohighlight">\(d N_k\)</span> is governed by the stoichiometric ratios of the reactions occurring in the system.</p>
 </li>
 <li><p>Single-component solid, <span class="math notranslate nohighlight">\(E(S, \mathbf{X})\)</span></p>
 <div class="math notranslate nohighlight">
-\[d E = T \, dS + \mathbf{F} \cdot d \mathbf{X}\]</div>
+\[d E = T \, dS + \mathbf{F} \cdot d \mathbf{X} \ ,\]</div>
+<p>in the limit of small-displacement regime, <span class="math notranslate nohighlight">\(d E = T \, d S + V \boldsymbol{\sigma} : d \boldsymbol{\varepsilon}\)</span>.</p>
 </li>
 </ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Internal energy of an elastic medium<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">See also:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><a class="reference external" href="https://basics2022.github.io/bbooks-physics-continuum-mechanics/ch/solids/small-displacements-statics.html?highlight=thermodynamics">Small displacement:Statics:Thermodynamics</a> for thermodynamics of elastic media with thermal dilation, for unit-volume</p>
+<ul>
+<li><p class="sd-card-text">There’s a verssion for 1-dimensional systems in <a class="reference external" href="https://basics2022.github.io/bbooks-physics-hs/ch/thermodynamics/elastic-solid-1d.html">Termodinamica:Stati della materia:Solidi elastici</a>, <strong>todo</strong></p>
+<ul>
+<li><p class="sd-card-text"><em>move that from physics for HS to somewhere else</em></p></li>
+<li><p class="sd-card-text"><em>fix the algebra (<span class="math notranslate nohighlight">\(T\)</span> and not <span class="math notranslate nohighlight">\(\Delta T\)</span> is appearing in the force…), checking against the main page <a class="reference external" href="https://basics2022.github.io/bbooks-physics-continuum-mechanics/ch/solids/small-displacements-statics.html?highlight=thermodynamics">Small displacement:Statics:Thermodynamics</a></em></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!--
+* [Continuum mechanics:Governing equations:Balance equations in reference space](https://basics2022.github.io/bbooks-physics-continuum-mechanics/ch/continuum/balance-reference-integral.html)
+
+Balance equation for the internal energy immediately follows as the difference between the balance equation for total and kinetic energy
+
+$$\begin{aligned}
+  \rho \frac{D e^{tot}}{D t} & = \rho \vec{g} \cdot \vec{v} + \nabla \cdot \left( \mathbb{T} \cdot \vec{v} \right) - \nabla \cdot \vec{q} + \rho r \\
+  \rho \frac{D k      }{D t} & = \rho \vec{g} \cdot \vec{v} + \nabla \cdot \left( \mathbb{T} \cdot \vec{v} \right) - \nabla \vec{v} : \mathbb{T} \ ,
+\end{aligned}$$
+
+so that
+
+$$\rho \frac{D e}{D t} = \nabla \vec{v} : \mathbb{T} - \nabla \cdot \vec{q} + \rho r \ .$$
+
+and using the symmetry of the stress tensor, the definition of the small-strain tensor $\boldsymbol{\varepsilon} = \frac{1}{2} \left[ \nabla \vec{v} + \nabla^T \vec{v} \right]$, and the definition of $\vec{v} = \frac{D \vec{d}}{D t}$, and using the common character $\boldsymbol{\sigma}$ for the stress tensor, it follows
+
+$$\begin{aligned}
+  0
+  & = - \rho \frac{D e}{D t} + \nabla \vec{v} : \boldsymbol{\sigma} - \nabla \cdot \vec{q} + \rho r = \\
+  & = - \rho \frac{D e}{D t} + \frac{D \boldsymbol{\varepsilon}}{D t} : \boldsymbol{\sigma} - \nabla \cdot \vec{q} + \rho r \ .
+\end{aligned}$$
+
+For a material volume (closed system with constant mass $M = \int_{V} \rho $) with uniform physical quantities ($M = \rho V$, $E = \rho V e$), 
+
+$$\frac{D E}{D t} = V \frac{D \boldsymbol{\varepsilon}}{D t} : \boldsymbol{\sigma} + \dot{Q} \ .$$
+
+Now, assuming the thermoelastic constitutive law holds, 
+
+$$\boldsymbol\varepsilon = \mathbb{D} : \boldsymbol\sigma + \boldsymbol\alpha ( T - T_0 )$$
+-->
 </div>
+</details></div>
 <div class="section" id="first-principle-for-specific-quantities">
 <h3><span class="section-number">3.1.2. </span>First principle for specific quantities<a class="headerlink" href="#first-principle-for-specific-quantities" title="Permalink to this heading">#</a></h3>
 <p>First principle and thermodynamics can be writtenin terms of specific quantites, usually either for unit volume or for unit mass.</p>
@@ -499,8 +546,8 @@ Proof<div class="sd-summary-down docutils">
 <p>The first term is identically zero, since it’s the expression of the internal energy divided by <span class="math notranslate nohighlight">\(V\)</span>. Being <span class="math notranslate nohighlight">\(V &gt; 0\)</span>, the second term gives the first principle per unit volume</p>
 <div class="math notranslate nohighlight">
 \[d \mathcal{E} = T d\mathcal{S} + \mathbf{F} \cdot d \symbf{\chi} \ .\]</div>
-<div class="section" id="id1">
-<h5><span class="section-number">3.1.2.2.1. </span>Different systems<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h5>
+<div class="section" id="id3">
+<h5><span class="section-number">3.1.2.2.1. </span>Different systems<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h5>
 <ul>
 <li><p>Single-component fluid;</p>
 <div class="math notranslate nohighlight">
@@ -593,6 +640,15 @@ $$\begin{cases}
  \dfrac{\partial x_i}{\partial F_j} & =  \dfrac{\partial x_j}{\partial F_i} \\
 \end{cases}$$
 -->
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="additivity-extensivity"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><a class="reference external" href="https://arxiv.org/pdf/cond-mat/0201134">H.Touchette, When is a quantity additive, and when is it extensive?</a></p>
+</dd>
+<dt class="label" id="se-e-homogeneous"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p><a class="reference external" href="https://physics.stackexchange.com/q/677855">https://physics.stackexchange.com/q/677855</a></p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -627,12 +683,12 @@ $$\begin{cases}
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="principles-electrochemical.html"
+       href="principles-open.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.6. </span>Principles of Thermodynamics - Electro-chemical systems</p>
+        <p class="prev-next-title"><span class="section-number">2.5. </span>Open Systems</p>
       </div>
     </a>
     <a class="right-next"
@@ -667,7 +723,7 @@ $$\begin{cases}
 </ul>
 </li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#first-principle-per-unit-volume">3.1.2.2. First principle per unit volume</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.1.2.2.1. Different systems</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">3.1.2.2.1. Different systems</a></li>
 </ul>
 </li>
 </ul>

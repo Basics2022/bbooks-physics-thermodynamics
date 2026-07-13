@@ -1,6 +1,22 @@
 (physics-hs:thermodynamics:foundation:principles:electro-chemical)=
 # Principles of Thermodynamics - Electro-chemical systems
 
+In this section:
+- Introduction to [chemical reactions](physics-hs:thermodynamics:foundation:principles:electro-chemical:reactions)
+-
+- 
+
+(physics-hs:thermodynamics:foundation:principles:electro-chemical:reactions)=
+## Chemical reactions
+
+$$a A + b B \rightleftharpoons c C + d D \ ,$$
+
+or
+
+$$\nu_{R_i}  R_i \rightleftharpoons \nu_{P_j} P_j$$
+
+
+## First principle - energy balance
 
 ```{dropdown} Energy balance
 
@@ -48,18 +64,22 @@ Using $\mathbf{X}, S$ as independent variables,
 
 $$d E = \mathbf{F}(\mathbf{X}, S) \cdot d \mathbf{X} + T(\mathbf{X}, S) d S \ .$$
 
-From the nature of the extensive variable, $E(\lambda \mathbf{Y}) = \lambda E(\mathbf{Y})$, Euler theorem gives
+It the energy of the system is a order-1 homogeneous function of the extensive variables of the system, $E(\lambda \mathbf{Y}) = \lambda E(\mathbf{Y})$[^energy-extensive], Euler theorem ({prf:ref}`thm-euler`) gives
 
-## Chemical reactions
+$$E = T S + \mathbf{F} \cdot \mathbf{X} \ .$$
 
-$$a A + b B \rightleftharpoons c C + d D \ ,$$
+[^energy-extensive]: Not all the systems are made by sub-systems that combine "extensively": it's likely to be impossible to write the energy of these systems as an homogeneous function of extensive variables of the system.
 
-or
+Explicitly writing the number of moles of the substances of the system out fror the extensive variables $\mathbf{X}$, $\mathbf{X} \rightarrow \left( \mathbf{X}, \mathbf{N} \right)$, and the chemical potentials out from the generalized intensive variables $\mathbf{F} \rightarrow \left( \mathbf{F}, \boldsymbol\mu \right)$, the expression of the internal energy and its differential reads
 
-$$\nu_{R_i}  R_i \rightleftharpoons \nu_{P_j} P_j$$
+$$\begin{aligned}
+   E & = T S + \boldsymbol\mu \cdot \mathbf{N} + \mathbf{F} \cdot \mathbf{X} \\
+  dE & = T dS + \boldsymbol\mu \cdot d\mathbf{N} + \mathbf{F} \cdot d\mathbf{X} \ .
+\end{aligned}$$
 
 
-### Law of Mass Action
+(physics-hs:thermodynamics:foundation:principles:electro-chemical:law-of-mass-action)=
+## Law of Mass Action
 
 The law of mass action states that the velocity of a reaction reads
 
@@ -78,6 +98,12 @@ $$\begin{aligned}
 
 * **Equilibrium** is reached when $v_r = v_f$, and thus the rate of change of concentration of the substances is zero.
 * **Extent of reaction** $\xi$, so that $d \xi = v dt$.
+
+Constant $k_r$ and $k_f$ usually can be written as
+
+$$k = A \exp \left( - \frac{E}{kT} \right) \ ,$$
+
+being $E$ the activation energy, $k$ Boltzmann constant, $T$ the temperature, and $A$ a constant summarizing all the other conditions for the reaction to occur.
 
 
 **References**
